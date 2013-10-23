@@ -1,0 +1,62 @@
+﻿archetype (adl_version=1.4)
+	openEHR-EHR-SECTION.rcp_allergies_heading.v1
+
+concept
+	[at0000]	-- Allergies
+language
+	original_language = <[ISO_639-1::en]>
+description
+	original_author = <
+		["name"] = <"Ian McNicoll">
+		["organisation"] = <"Ocean Informatics, UK">
+		["email"] = <"ian.mcnicoll@oceaninformatics.com">
+		["date"] = <"2013-02-12">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"To record Allergies, structured according to the RCP headings standards.">
+			use = <"Use to record a textual description of allergies or a structured record of individual known allergies.">
+			keywords = <"RCP", "Allergy">
+			misuse = <"">
+			copyright = <"© Clinical Models UK">
+		>
+	>
+	lifecycle_state = <"AuthorDraft">
+	other_contributors = <>
+	other_details = <
+		["references"] = <"Royal College of Physicians, Core Clinical Headings, http://www.rcplondon.ac.uk/projects/standards-core-clinical-information">
+		["MD5-CAM-1.0.1"] = <"D6A6AECE9DA8F516E906623E9150D8CF">
+	>
+
+definition
+	SECTION[at0000] matches {	-- Allergies
+		items cardinality matches {1..*; unordered} matches {
+			allow_archetype EVALUATION[at0001] occurrences matches {0..1} matches {	-- Allergies synopsis
+				include
+					archetype_id/value matches {/openEHR-EHR-EVALUATION\.clinical_synopsis(-[a-zA-Z0-9_]+)*\.v1/}
+			}
+			SECTION[at0002] occurrences matches {0..1} matches {*}
+		}
+	}
+
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Allergies">
+					description = <"RCP Allergies Heading.">
+				>
+				["at0001"] = <
+					text = <"Allergies synopsis">
+					description = <"A narrative overview of patient allergies.">
+				>
+				["at0002"] = <
+					text = <"Allergies list">
+					description = <"A list of individual structured allergy records.">
+				>
+			>
+		>
+	>
