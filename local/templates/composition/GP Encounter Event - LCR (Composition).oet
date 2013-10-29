@@ -85,7 +85,6 @@
           <Rule path="/data[at0001]" hide_on_form="true" />
           <Rule path="/data[at0001]/items[at0003.1]" max="0" />
           <Rule path="/protocol[at0006]" hide_on_form="true" />
-          <Rule path="/protocol[at0006]/items[at0005]" max="0" />
         </Item>
       </Item>
       <Item xsi:type="SECTION" archetype_id="openEHR-EHR-SECTION.adhoc.v1" concept_name="Adhoc heading" max="1" path="/items" name="Immunisations">
@@ -119,7 +118,6 @@
           <Rule path="/data[at0001]" hide_on_form="true" />
           <Rule path="/data[at0001]/items[at0003.1]" max="0" />
           <Rule path="/protocol[at0006]" hide_on_form="true" />
-          <Rule path="/protocol[at0006]/items[at0005]" max="0" />
         </Item>
       </Item>
       <Item xsi:type="SECTION" archetype_id="openEHR-EHR-SECTION.adhoc.v1" concept_name="Adhoc heading" max="1" path="/items" name="Procedures">
@@ -144,7 +142,6 @@
           <Rule path="/data[at0001]" hide_on_form="true" />
           <Rule path="/data[at0001]/items[at0003.1]" max="0" />
           <Rule path="/protocol[at0006]" hide_on_form="true" />
-          <Rule path="/protocol[at0006]/items[at0005]" max="0" />
         </Item>
       </Item>
       <Item xsi:type="SECTION" archetype_id="openEHR-EHR-SECTION.adhoc.v1" concept_name="Adhoc heading" max="1" path="/items" name="Medications">
@@ -381,7 +378,7 @@
     <digest id="MD5-CAM-1.0.1">F2F39B817F38FBBFADFBC17540A2B40E</digest>
   </integrity_checks>
   <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-SECTION.adverse_list.v1">
-    <digest id="MD5-CAM-1.0.1">98904B9D7F671ED0CDB6102F89266360</digest>
+    <digest id="MD5-CAM-1.0.1">144A5A5C4BBBB881891ABF650F443DD2</digest>
   </integrity_checks>
   <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-EVALUATION.adverse_reaction_uk.v1">
     <digest id="MD5-CAM-1.0.1">7B4C23C53B0DB170B8D24F1888FA2A97</digest>
@@ -390,7 +387,7 @@
     <digest id="MD5-CAM-1.0.1">9644D12969C045491451EF2A8F9C514E</digest>
   </integrity_checks>
   <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-EVALUATION.exclusion-adverse_reaction.v1">
-    <digest id="MD5-CAM-1.0.1">6E00ABF2B4C68DD8E1E5742331E85B07</digest>
+    <digest id="MD5-CAM-1.0.1">E16FAA97344C551556B200E2559F9CC7</digest>
   </integrity_checks>
   <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-SECTION.adhoc.v1">
     <digest id="MD5-CAM-1.0.1">6FD3128A583EB7081153D0265245E1FA</digest>
@@ -405,19 +402,19 @@
     <digest id="MD5-CAM-1.0.1">F683FB4691EC3FFEE37CCEB3166ECD76</digest>
   </integrity_checks>
   <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-EVALUATION.exclusion-problem_diagnosis.v1">
-    <digest id="MD5-CAM-1.0.1">3CA65DF280F9717B2E63A4E3AFD0737C</digest>
+    <digest id="MD5-CAM-1.0.1">4C8CAFC70D510CF617DD5B580BFDA8F6</digest>
   </integrity_checks>
   <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-ACTION.procedure.v1">
     <digest id="MD5-CAM-1.0.1">3D7A4FCD75127BBE8C9873FF487C6C44</digest>
   </integrity_checks>
   <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-EVALUATION.exclusion-procedure.v1">
-    <digest id="MD5-CAM-1.0.1">81FF756AA696DEFE9382F24899D5D680</digest>
+    <digest id="MD5-CAM-1.0.1">EC8697A3EB07A9B28FD861E7E4037215</digest>
   </integrity_checks>
   <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-SECTION.openhr_medication_events.v1">
     <digest id="MD5-CAM-1.0.1">E2DB059F0CF49A2A3B4361D348B487BC</digest>
   </integrity_checks>
   <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-INSTRUCTION.medication_order_uk.v1">
-    <digest id="MD5-CAM-1.0.1">08488C5F2FD0A93324070458814E40F7</digest>
+    <digest id="MD5-CAM-1.0.1">29DF2668BA45A28D0FB18654239ABE87</digest>
   </integrity_checks>
   <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-CLUSTER.medication_item.v1">
     <digest id="MD5-CAM-1.0.1">AA828181FA26AAB4484A0C2CB2C5B695</digest>
