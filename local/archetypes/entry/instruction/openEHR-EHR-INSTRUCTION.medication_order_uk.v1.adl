@@ -30,7 +30,7 @@ NHS Scotland SCI-XML (SCI-Gateway, ECS, ePharmacy)  http://www.sci.scot.nhs.uk/p
 NHS Wales Informatics Service, Integrated Health Record http://www.wales.nhs.uk/nwis/page/52553
 DM+D drug dictionary: http://www.dmd.nhs.uk/
 Royal College of Physicians, Core Clinical Headings, http://www.rcplondon.ac.uk/projects/standards-core-clinical-information">
-		["MD5-CAM-1.0.1"] = <"08488C5F2FD0A93324070458814E40F7">
+		["MD5-CAM-1.0.1"] = <"29DF2668BA45A28D0FB18654239ABE87">
 	>
 
 definition
@@ -70,6 +70,9 @@ definition
 													at0042, 	-- Continue indefinitely
 													at0043]	-- Do not discontinue
 												}
+											}
+											DV_DURATION matches {
+												value matches {|>=PT0S|}
 											}
 										}
 									}
