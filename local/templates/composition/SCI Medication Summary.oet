@@ -5,7 +5,7 @@
   <description>
     <lifecycle_state>Initial</lifecycle_state>
     <details>
-      <purpose>Example of a SCI-XML orientated Medication summary Template as might be used to define the medication content of an ECS/KIS message or SCI-Referral message</purpose>
+      <purpose>Example of a SCI-XML orientated Medication summary Template as might be used to define the medication content of an ECS/KIS message or SCI-Referral message or Dischage Letter.</purpose>
       <use />
       <misuse />
     </details>
@@ -63,7 +63,7 @@
   <definition xsi:type="COMPOSITION" archetype_id="openEHR-EHR-COMPOSITION.report.v1" concept_name="Report" name="SCI Medication Summary">
     <Content xsi:type="SECTION" archetype_id="openEHR-EHR-SECTION.rcp_medication_heading.v1" concept_name="Medications" max="1" path="/content" hide_on_form="true">
       <Rule path="/items[at0003]" max="0" />
-      <Rule path="/items[at0006]" hide_on_form="true" name="Recent medications" />
+      <Rule path="/items[at0006]" name="Recent medications" />
       <Rule path="/items[at0001]" max="0" />
       <Rule path="/items[at0002]" max="0" />
       <Rule path="/items[at0005]" max="0" />
@@ -71,16 +71,11 @@
         <Rule path="/activities[at0001]" hide_on_form="true" />
         <Rule path="/activities[at0001]/description[at0002]" hide_on_form="true" />
         <Rule path="/activities[at0001]/description[at0002]/items[at0039]/items[at0070]" max="0" />
-        <Rule path="/activities[at0001]/description[at0002]/items[at0039]/items[at0041]" max="0" />
-        <Rule path="/activities[at0001]/description[at0002]/items[at0039]/items[at0045]" max="0" />
         <Rule path="/protocol[at0036]" hide_on_form="true" />
         <Items xsi:type="CLUSTER" archetype_id="openEHR-EHR-CLUSTER.medication_item.v1" concept_name="Medication item" path="/activities[at0001]/description[at0002]/items[at0003]">
-          <Rule path="/items[at0022]" max="0" />
-          <Rule path="/items[at0002]" max="0" />
+          <Rule path="/items[at0002]" max="1" />
           <Rule path="/items[at0029]" max="0" />
-          <Rule path="/items[at0019]/items[at0020]" max="0" />
-          <Rule path="/items[at0019]/items[at0021]" max="0" />
-          <Rule path="/items[at0019]/items[at0005]" max="0" />
+          <Rule path="/items[at0019]/items[at0005]" max="1" />
           <Rule path="/items[at0030]" max="0" />
           <Rule path="/items[at0028]" max="0" />
         </Items>
@@ -215,10 +210,7 @@
             <Rule path="/items[at0127]" max="0" />
             <Rule path="/items[at0122]" max="0" />
             <Rule path="/items[at0136]" max="0" />
-            <Items xsi:type="CLUSTER" archetype_id="openEHR-EHR-CLUSTER.medication_quantity_sct.v1" concept_name="Medication quantity" max="1" path="/items[at0135]/items[at0099]" name="Quantity issued">
-              <Rule path="/items[at0001]" max="0" />
-              <Rule path="/items[at0002]" max="0" />
-            </Items>
+            <Items xsi:type="CLUSTER" archetype_id="openEHR-EHR-CLUSTER.medication_quantity_sct.v1" concept_name="Medication quantity" max="1" path="/items[at0135]/items[at0099]" name="Quantity issued" />
           </Items>
         </Items>
         <Items xsi:type="CLUSTER" archetype_id="openEHR-EHR-CLUSTER.record_provenance.v1" concept_name="Record provenance" path="/protocol[at0036]/items[at0037]" />
@@ -238,7 +230,7 @@
     <digest id="MD5-CAM-1.0.1">C48174EA839E1B96B897AA874767C151</digest>
   </integrity_checks>
   <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-INSTRUCTION.medication_order_uk.v1">
-    <digest id="MD5-CAM-1.0.1">08488C5F2FD0A93324070458814E40F7</digest>
+    <digest id="MD5-CAM-1.0.1">29DF2668BA45A28D0FB18654239ABE87</digest>
   </integrity_checks>
   <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-CLUSTER.medication_item.v1">
     <digest id="MD5-CAM-1.0.1">AA828181FA26AAB4484A0C2CB2C5B695</digest>
