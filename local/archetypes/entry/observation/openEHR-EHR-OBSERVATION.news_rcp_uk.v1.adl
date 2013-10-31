@@ -22,17 +22,17 @@ description
 			misuse = <"Not to be used to record each physical measurement or clinical observation. Use specific OBSERVATION archetypes for this purpose - OBSERVATION.blood_pressure, OBSERVATION.heart_rate, OBSERVATION.respirations, OBSERVATION.body_temperature, OBSERVATION.indirect_oximetry, OBSERVATION.avpu and OBSERVATION.glasgow_coma.
 
 Not to be used for children/teens under the age of 16 years or in pregnancy.">
-			copyright = <"© Clinical Models UK">
+			copyright = <"">
 		>
 	>
 	lifecycle_state = <"AuthorDraft">
 	other_contributors = <"Heather Leslie, Ocean Informatics, Australia", ...>
 	other_details = <
-		["current_contact"] = <"Ian McNicoll, Ocean Informatics UK, ian.mcnicoll@oceaninformatics.com">
 		["references"] = <"Royal College of Physicians. National Early Warning Score (NEWS): Standardising the assessment of acute illness severity in the NHS. Report of a working party. London: RCP, 2012.
 Modified Early Warning Score (NT RMP), draft archetype, NEHTA Clinical Knowledge Manager [Internet]. NEHTA. Authored: 07 Feb 2013. Available at: http://dcm.nehta.org.au/ckm/#showArchetype_1013.1.1172_2 (accessed 01 June 2013).
 
 ">
+		["current_contact"] = <"Ian McNicoll, Ocean Informatics UK, ian.mcnicoll@oceaninformatics.com">
 		["MD5-CAM-1.0.1"] = <"B4B6DBEF9D3148728012D4A01C228A9F">
 	>
 
@@ -112,7 +112,6 @@ definition
 			}
 		}
 	}
-
 
 ontology
 	term_definitions = <

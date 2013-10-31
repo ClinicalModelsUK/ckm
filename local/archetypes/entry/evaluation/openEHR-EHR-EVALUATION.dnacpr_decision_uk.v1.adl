@@ -1,4 +1,4 @@
-﻿archetype (adl_version=1.4)
+archetype (adl_version=1.4)
 	openEHR-EHR-EVALUATION.dnacpr_decision_uk.v1
 
 concept
@@ -8,8 +8,8 @@ language
 description
 	original_author = <
 		["name"] = <"Ian McNicoll">
-		["organisation"] = <"Ocean Informatics, UK">
 		["email"] = <"ian.mcnicoll@oceaninformatics.com">
+		["organisation"] = <"Ocean Informatics, UK">
 		["date"] = <"2013-10-11">
 	>
 	details = <
@@ -23,7 +23,7 @@ This archetype is closely aligned with with the UK Information Standards Board (
 Some patients with capacity to make their own decision may refuse attempted cardio pulmonary resuscitation in advance. These decisions have to be registered as part of an advance decision to refuse treatment (ADRT)">
 			keywords = <"DNACPR", "resuscitation", "EoL", "directive", "preference">
 			misuse = <"This archetype should not be used to convey the results of other advanced directives, patient preferences or resusciation activity *e.g. suction) which falls short of full cardio-pulminary resuscitation.">
-			copyright = <"© Clinical Models UK">
+			copyright = <"">
 		>
 	>
 	lifecycle_state = <"AuthorDraft">
@@ -36,7 +36,7 @@ End of Life Care Co-ordination: Core Content Standard Specification Available at
 NHS Scotland Key Information Summary
 
 Leeds ePaccs team">
-		["MD5-CAM-1.0.1"] = <"EF03DA09B66C4434C4DC9EFEAF03839C">
+		["MD5-CAM-1.0.1"] = <"E9407E7DCD0E1401F538C9E2F7146A3E">
 	>
 
 definition
@@ -145,8 +145,8 @@ definition
 		}
 	}
 
-
 ontology
+	terminologies_available = <"SNOMED-CT", "RCDSY_1999">
 	term_definitions = <
 		["en"] = <
 			items = <
@@ -254,6 +254,22 @@ ontology
 					text = <"Informal carer aware of DNACPR decision">
 					description = <"The informal carer is aware of the do not attempt cardiopulmonary resucitation decision.">
 				>
+			>
+		>
+	>
+	term_bindings = <
+		["SNOMED-CT"] = <
+			items = <
+				["at0004"] = <[SNOMED-CT::450475007]>
+				["at0005"] = <[SNOMED-CT::450476008]>
+				["at0022"] = <[SNOMED-CT::845151000000104]>
+			>
+		>
+		["RCDSY_1999"] = <
+			items = <
+				["at0004"] = <[RCDSY_1999::1R00.]>
+				["at0005"] = <[RCDSY_1999::1R10.]>
+				["at0022"] = <[RCDSY_1999::9NgV.]>
 			>
 		>
 	>

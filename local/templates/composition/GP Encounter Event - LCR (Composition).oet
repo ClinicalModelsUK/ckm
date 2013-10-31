@@ -169,6 +169,28 @@
             </Items>
             <Items xsi:type="CLUSTER" archetype_id="openEHR-EHR-CLUSTER.medication_status.v1" concept_name="Medication status" path="/protocol[at0036]/items[at0071]">
               <Rule path="/items[at0070]" max="0" />
+              <Rule path="/items[at0070]" max="1" clone="true" name="First issued" />
+              <Rule path="/items[at0070 and name/value='First issued']/items[at0047]">
+                <nameConstraint>
+                  <excludedValues>local::at0067</excludedValues>
+                  <excludedValues>local::at0060</excludedValues>
+                  <excludedValues>local::at0061</excludedValues>
+                  <excludedValues>local::at0062</excludedValues>
+                  <excludedValues>local::at0063</excludedValues>
+                  <excludedValues>local::at0064</excludedValues>
+                  <excludedValues>local::at0065</excludedValues>
+                  <excludedValues>local::at0066</excludedValues>
+                  <excludedValues>local::at0072</excludedValues>
+                  <excludedValues>local::at0073</excludedValues>
+                  <excludedValues>local::at0074</excludedValues>
+                  <excludedValues>local::at0075</excludedValues>
+                  <excludedValues>local::at0076</excludedValues>
+                  <excludedValues>local::at0077</excludedValues>
+                  <excludedValues>local::at0078</excludedValues>
+                  <excludedValues>local::at0079</excludedValues>
+                </nameConstraint>
+              </Rule>
+              <Rule path="/items[at0070 and name/value='First issued']/items[at0071]" max="0" />
               <Rule path="/items[at0070]" max="1" clone="true" name="Last reviewed" />
               <Rule path="/items[at0070 and name/value='Last reviewed']/items[at0047]">
                 <nameConstraint>
@@ -213,28 +235,6 @@
                 </nameConstraint>
               </Rule>
               <Rule path="/items[at0070 and name/value='Last issued']/items[at0071]" max="0" />
-              <Rule path="/items[at0070]" max="1" clone="true" name="First issued" />
-              <Rule path="/items[at0070 and name/value='First issued']/items[at0047]">
-                <nameConstraint>
-                  <excludedValues>local::at0067</excludedValues>
-                  <excludedValues>local::at0060</excludedValues>
-                  <excludedValues>local::at0061</excludedValues>
-                  <excludedValues>local::at0062</excludedValues>
-                  <excludedValues>local::at0063</excludedValues>
-                  <excludedValues>local::at0064</excludedValues>
-                  <excludedValues>local::at0065</excludedValues>
-                  <excludedValues>local::at0066</excludedValues>
-                  <excludedValues>local::at0072</excludedValues>
-                  <excludedValues>local::at0073</excludedValues>
-                  <excludedValues>local::at0074</excludedValues>
-                  <excludedValues>local::at0075</excludedValues>
-                  <excludedValues>local::at0076</excludedValues>
-                  <excludedValues>local::at0077</excludedValues>
-                  <excludedValues>local::at0078</excludedValues>
-                  <excludedValues>local::at0079</excludedValues>
-                </nameConstraint>
-              </Rule>
-              <Rule path="/items[at0070 and name/value='First issued']/items[at0071]" max="0" />
               <Items xsi:type="CLUSTER" archetype_id="openEHR-EHR-CLUSTER.medication_event.v1" concept_name="Medication event" path="/items[at0070 and name/value='Last reviewed']/items[at0038]" />
             </Items>
           </Item>

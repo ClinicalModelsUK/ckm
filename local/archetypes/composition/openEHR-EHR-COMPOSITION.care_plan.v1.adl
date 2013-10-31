@@ -18,7 +18,7 @@ description
 			purpose = <"">
 			use = <"">
 			misuse = <"">
-			copyright = <"© Clinical Models UK">
+			copyright = <"">
 		>
 	>
 	lifecycle_state = <"AuthorDraft">
@@ -63,7 +63,6 @@ definition
 			}
 		}
 	}
-
 
 ontology
 	term_definitions = <

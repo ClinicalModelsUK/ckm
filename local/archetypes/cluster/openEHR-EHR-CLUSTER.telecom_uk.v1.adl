@@ -18,8 +18,8 @@ language
 description
 	original_author = <
 		["name"] = <"Ian McNicoll">
-		["organisation"] = <"Ocean Informatics">
 		["email"] = <"ian.mcnicoll@oceaninformatics.com">
+		["organisation"] = <"Ocean Informatics">
 		["date"] = <"14/11/2007">
 	>
 	details = <
@@ -29,7 +29,7 @@ description
 			use = <"Zur Dokumentation von Kontaktdaten einer Person oder Einrichtung, einschließlich Email oder weiterer internetbasierter Kommunikationsmittel.">
 			keywords = <"Telefon", "Mobilfunk", "Email", "Pager", "Handy", "Telefax">
 			misuse = <"">
-			copyright = <"© Clinical Models UK">
+			copyright = <"© openEHR Foundation">
 		>
 		["en"] = <
 			language = <[ISO_639-1::en]>
@@ -40,7 +40,7 @@ http://www.datadictionary.nhs.uk/data_dictionary/classes/c/communication_contact
 			use = <"Use to record telecommunications details for an individual or organisation, including email or other internet based communication.">
 			keywords = <"telephone", "facsimile", "fax", "mobile", "email", "pager">
 			misuse = <"">
-			copyright = <"© Clinical Models UK">
+			copyright = <"© openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"AuthorDraft">
@@ -95,7 +95,6 @@ definition
 			}
 		}
 	}
-
 
 ontology
 	term_definitions = <
