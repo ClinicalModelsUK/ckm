@@ -1,0 +1,63 @@
+﻿archetype (adl_version=1.4)
+	openEHR-EHR-EVALUATION.section_narrative.v1
+
+concept
+	[at0000]	-- Section narrative
+language
+	original_language = <[ISO_639-1::en]>
+description
+	original_author = <
+		["name"] = <"">
+		["date"] = <"03/07/2012">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"">
+			use = <"">
+			misuse = <"">
+			copyright = <"">
+		>
+	>
+	lifecycle_state = <"0">
+	other_contributors = <>
+	other_details = <
+		["MD5-CAM-1.0.1"] = <"01B634144CE638E77A9BD0AE40E04EED">
+	>
+
+definition
+	EVALUATION[at0000] matches {	-- Section narrative
+		data matches {
+			ITEM_TREE[at0001] matches {	-- Tree
+				items cardinality matches {0..*; unordered} matches {
+					ELEMENT[at0002] occurrences matches {0..1} matches {	-- Narrative
+						value matches {
+							DV_PARSABLE matches {
+								formalism matches {"text/plain", "text/rtf", "text/xml", "text/html"}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Section narrative">
+					description = <"To record a single block of narrative within a Section.">
+				>
+				["at0001"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Narrative">
+					description = <"The free text or marked up text">
+				>
+			>
+		>
+	>

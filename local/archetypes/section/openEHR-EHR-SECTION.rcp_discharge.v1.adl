@@ -1,0 +1,169 @@
+﻿archetype (adl_version=1.4)
+	openEHR-EHR-SECTION.rcp_discharge.v1
+
+concept
+	[at0000]	-- RCP Discharge
+language
+	original_language = <[ISO_639-1::en]>
+description
+	original_author = <
+		["name"] = <"">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"">
+			use = <"">
+			misuse = <"">
+			copyright = <"">
+		>
+	>
+	lifecycle_state = <"0">
+	other_contributors = <>
+	other_details = <
+		["MD5-CAM-1.0.1"] = <"88B8B1B83EE9CBE6A7ABE068901D9F34">
+	>
+
+definition
+	SECTION[at0000] matches {	-- RCP Discharge
+		items cardinality matches {0..*; unordered} matches {
+			SECTION[at0003] occurrences matches {0..1} matches {*}
+			SECTION[at0004] occurrences matches {0..1} matches {*}
+			SECTION[at0001] occurrences matches {0..1} matches {	-- Clinical information
+				items cardinality matches {0..*; unordered} matches {
+					SECTION[at0005] occurrences matches {0..1} matches {*}
+					SECTION[at0006] occurrences matches {0..1} matches {*}
+					SECTION[at0007] occurrences matches {0..1} matches {*}
+					SECTION[at0008] occurrences matches {0..1} matches {*}
+					SECTION[at0009] occurrences matches {0..1} matches {*}
+					SECTION[at0010] occurrences matches {0..1} matches {*}
+					SECTION[at0011] occurrences matches {0..1} matches {*}
+					SECTION[at0012] occurrences matches {0..1} matches {*}
+					SECTION[at0013] occurrences matches {0..1} matches {*}
+					SECTION[at0014] occurrences matches {0..1} matches {*}
+					SECTION[at0015] occurrences matches {0..1} matches {*}
+					SECTION[at0016] occurrences matches {0..1} matches {*}
+					SECTION[at0017] occurrences matches {0..1} matches {*}
+					SECTION[at0018] occurrences matches {0..1} matches {*}
+				}
+			}
+			SECTION[at0019] occurrences matches {0..1} matches {	-- Advice, recommendations and future plans
+				items cardinality matches {0..*; unordered} matches {
+					SECTION[at0020] occurrences matches {0..1} matches {*}
+					SECTION[at0021] occurrences matches {0..1} matches {*}
+					SECTION[at0022] occurrences matches {0..1} matches {*}
+					SECTION[at0023] occurrences matches {0..1} matches {*}
+					SECTION[at0024] occurrences matches {0..1} matches {*}
+					SECTION[at0025] occurrences matches {0..1} matches {*}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"RCP Discharge">
+					description = <"RCP Discharge Summary headings">
+				>
+				["at0001"] = <
+					text = <"Clinical information">
+					description = <"*">
+				>
+				["at0003"] = <
+					text = <"Admission details">
+					description = <"*">
+				>
+				["at0004"] = <
+					text = <"Discharge details">
+					description = <"*">
+				>
+				["at0005"] = <
+					text = <"Diagnosis at discharge">
+					description = <"">
+				>
+				["at0006"] = <
+					text = <"Operations and procedures">
+					description = <"*">
+				>
+				["at0007"] = <
+					text = <"Reason for admission and presenting complaints">
+					description = <"*">
+				>
+				["at0008"] = <
+					text = <"Mental capacity">
+					description = <"*">
+				>
+				["at0009"] = <
+					text = <"Advance directions">
+					description = <"*">
+				>
+				["at0010"] = <
+					text = <"Allergies">
+					description = <"*">
+				>
+				["at0011"] = <
+					text = <"Risks and warnings">
+					description = <"*">
+				>
+				["at0012"] = <
+					text = <"Clinical narrative">
+					description = <"*">
+				>
+				["at0013"] = <
+					text = <"Relevant investigations">
+					description = <"*">
+				>
+				["at0014"] = <
+					text = <"Relevant treatments and changes made to treatments">
+					description = <"*">
+				>
+				["at0015"] = <
+					text = <"Measures of phyical ability and cognitive function">
+					description = <"*">
+				>
+				["at0016"] = <
+					text = <"Medication changes">
+					description = <"*">
+				>
+				["at0017"] = <
+					text = <"Discharge medication">
+					description = <"*">
+				>
+				["at0018"] = <
+					text = <"Medication recommendations">
+					description = <"*">
+				>
+				["at0019"] = <
+					text = <"Advice, recommendations and future plans">
+					description = <"*">
+				>
+				["at0020"] = <
+					text = <"Hospital">
+					description = <"*">
+				>
+				["at0021"] = <
+					text = <"GP">
+					description = <"*">
+				>
+				["at0022"] = <
+					text = <"Community and specialist services">
+					description = <"*">
+				>
+				["at0023"] = <
+					text = <"Information given to patient">
+					description = <"*">
+				>
+				["at0024"] = <
+					text = <"Patient's concerns expectations and wishes">
+					description = <"*">
+				>
+				["at0025"] = <
+					text = <"Results awaited">
+					description = <"*">
+				>
+			>
+		>
+	>

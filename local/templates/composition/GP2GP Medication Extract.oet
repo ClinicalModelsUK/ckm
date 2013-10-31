@@ -1,0 +1,155 @@
+<?xml version="1.0"?>
+<template xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="openEHR/v1/Template">
+  <id>32943ae4-1dc7-43e5-812e-da17c460f612</id>
+  <name>GP2GP Medication Extract</name>
+  <description>
+    <lifecycle_state>Initial</lifecycle_state>
+    <details>
+      <purpose />
+      <use />
+      <misuse />
+    </details>
+    <other_details>
+      <item>
+        <key>MetaDataSet:Sample Set </key>
+        <value>Template metadata sample set </value>
+      </item>
+      <item>
+        <key>Acknowledgements</key>
+        <value />
+      </item>
+      <item>
+        <key>Business Process Level</key>
+        <value />
+      </item>
+      <item>
+        <key>Care setting</key>
+        <value />
+      </item>
+      <item>
+        <key>Client group</key>
+        <value />
+      </item>
+      <item>
+        <key>Clinical Record Element</key>
+        <value />
+      </item>
+      <item>
+        <key>Copyright</key>
+        <value />
+      </item>
+      <item>
+        <key>Issues</key>
+        <value />
+      </item>
+      <item>
+        <key>Owner</key>
+        <value />
+      </item>
+      <item>
+        <key>Sign off</key>
+        <value />
+      </item>
+      <item>
+        <key>Speciality</key>
+        <value />
+      </item>
+      <item>
+        <key>User roles</key>
+        <value />
+      </item>
+    </other_details>
+  </description>
+  <definition xsi:type="COMPOSITION" archetype_id="openEHR-EHR-COMPOSITION.encounter.v1" concept_name="Encounter" name="Example GP2GP Medication Extract">
+    <Content xsi:type="ACTION" archetype_id="openEHR-EHR-ACTION.medication_action.v1" concept_name="Medication action" max="1" path="/content" name="Medication Authorisation">
+      <Rule path="/protocol[at0007]" hide_on_form="true" />
+      <Items xsi:type="CLUSTER" archetype_id="openEHR-EHR-CLUSTER.medication_item.v1" concept_name="Medication item" max="1" path="/description[at0001]/items[at0006]" hide_on_form="true">
+        <Rule path="/items[at0001]">
+          <constraint xsi:type="multipleConstraint">
+            <includedTypes>Coded_text</includedTypes>
+          </constraint>
+        </Rule>
+        <Rule path="/items[at0022]" max="0" />
+        <Rule path="/items[at0002]" max="0" />
+        <Rule path="/items[at0029]" max="0" />
+        <Rule path="/items[at0019]/items[at0020]" max="0" />
+        <Rule path="/items[at0019]/items[at0021]" max="0" />
+        <Rule path="/items[at0019]/items[at0005]" max="0" />
+        <Rule path="/items[at0004]" max="0" />
+      </Items>
+      <Items xsi:type="CLUSTER" archetype_id="openEHR-EHR-CLUSTER.medication_event.v1" concept_name="Medication event" max="1" path="/description[at0001]/items[at0003]" name="Medication authorised">
+        <Rule path="/items[at0135]/items[at0052]" max="0" />
+        <Rule path="/items[at0135]/items[at0051]" max="0" />
+        <Rule path="/items[at0033]" hide_on_form="true" />
+        <Rule path="/items[at0037]" max="0" />
+        <Rule path="/items[at0057]" max="0" />
+        <Rule path="/items[at0127]" max="0" />
+        <Rule path="/items[at0122]" max="0" />
+        <Items xsi:type="CLUSTER" archetype_id="openEHR-EHR-CLUSTER.medication_quantity_sct.v1" concept_name="Medication quantity" max="1" path="/items[at0135]/items[at0099]" name="Quantity authorised">
+          <Rule path="/items[at0003]" max="0" />
+        </Items>
+      </Items>
+    </Content>
+    <Content xsi:type="ACTION" archetype_id="openEHR-EHR-ACTION.medication_action.v1" concept_name="Medication action" max="1" path="/content" name="Medication Issue">
+      <Rule path="/description[at0001]" hide_on_form="true" />
+      <Items xsi:type="CLUSTER" archetype_id="openEHR-EHR-CLUSTER.medication_item.v1" concept_name="Medication item" max="1" path="/description[at0001]/items[at0006]" hide_on_form="true">
+        <Rule path="/items[at0022]" max="0" />
+        <Rule path="/items[at0002]" max="0" />
+        <Rule path="/items[at0029]" max="0" />
+        <Rule path="/items[at0019]" max="0" />
+        <Rule path="/items[at0030]" max="0" />
+        <Rule path="/items[at0027]" max="0" />
+        <Rule path="/items[at0004]" max="0" />
+        <Rule path="/items[at0028]" max="0" />
+      </Items>
+      <Items xsi:type="CLUSTER" archetype_id="openEHR-EHR-CLUSTER.medication_event.v1" concept_name="Medication event" max="1" path="/description[at0001]/items[at0003]" name="Medication issued">
+        <Rule path="/items[at0033]" max="0" />
+        <Rule path="/items[at0037]" hide_on_form="true" />
+        <Rule path="/items[at0057]" max="0" />
+        <Rule path="/items[at0127]" max="0" />
+        <Rule path="/items[at0122]" max="0" />
+        <Rule path="/items[at0136]" max="0" />
+        <Items xsi:type="CLUSTER" archetype_id="openEHR-EHR-CLUSTER.medication_quantity_sct.v1" concept_name="Medication quantity" max="1" path="/items[at0135]/items[at0099]" name="Quantity Issued" />
+      </Items>
+    </Content>
+    <Content xsi:type="ACTION" archetype_id="openEHR-EHR-ACTION.medication_action.v1" concept_name="Medication action" max="1" path="/content" name="Medication Discontinuation">
+      <Rule path="/description[at0001]" hide_on_form="true" />
+      <Rule path="/protocol[at0007]" hide_on_form="true" />
+      <Items xsi:type="CLUSTER" archetype_id="openEHR-EHR-CLUSTER.medication_item.v1" concept_name="Medication item" max="1" path="/description[at0001]/items[at0006]" hide_on_form="true">
+        <Rule path="/items[at0022]" max="0" />
+        <Rule path="/items[at0002]" max="0" />
+        <Rule path="/items[at0029]" max="0" />
+        <Rule path="/items[at0019]" max="0" />
+        <Rule path="/items[at0030]" max="0" />
+        <Rule path="/items[at0027]" max="0" />
+        <Rule path="/items[at0004]" max="0" />
+        <Rule path="/items[at0028]" max="0" />
+      </Items>
+      <Items xsi:type="CLUSTER" archetype_id="openEHR-EHR-CLUSTER.medication_event.v1" concept_name="Medication event" max="1" path="/description[at0001]/items[at0003]" name="Medication discontinued">
+        <Rule path="/items[at0121]" max="0" />
+        <Rule path="/items[at0135]" max="0" />
+        <Rule path="/items[at0033]" max="0" />
+        <Rule path="/items[at0037]" max="0" />
+        <Rule path="/items[at0057]" max="0" />
+        <Rule path="/items[at0127]" max="0" />
+        <Rule path="/items[at0122]" hide_on_form="true" />
+      </Items>
+    </Content>
+    <Context />
+  </definition>
+  <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-COMPOSITION.encounter.v1">
+    <digest id="MD5-CAM-1.0.1">EDEB60AEFE411C22B796CBE227E44095</digest>
+  </integrity_checks>
+  <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-ACTION.medication_action.v1">
+    <digest id="MD5-CAM-1.0.1">DED60FD64B7EEE862516D44BBD67237E</digest>
+  </integrity_checks>
+  <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-CLUSTER.medication_item.v1">
+    <digest id="MD5-CAM-1.0.1">AA828181FA26AAB4484A0C2CB2C5B695</digest>
+  </integrity_checks>
+  <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-CLUSTER.medication_event.v1">
+    <digest id="MD5-CAM-1.0.1">09D9EA02808E18EE71B05F888CE0F597</digest>
+  </integrity_checks>
+  <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-CLUSTER.medication_quantity_sct.v1">
+    <digest id="MD5-CAM-1.0.1">60C2BB047D7707475BC4F1103ABA7F85</digest>
+  </integrity_checks>
+</template>

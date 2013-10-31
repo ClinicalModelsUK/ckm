@@ -1,0 +1,151 @@
+﻿archetype (adl_version=1.4)
+	openEHR-EHR-ADMIN_ENTRY.consent_to_share.v1
+
+concept
+	[at0000]	-- Consent to share information
+language
+	original_language = <[ISO_639-1::en]>
+description
+	original_author = <
+		["name"] = <"Ian McNicoll">
+		["email"] = <"ian.mcnicoll@oceaninformatics.com">
+		["organisation"] = <"Ocean Informatics, UK">
+		["date"] = <"2013-10-14">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"To record details of the subject's wishes and consent with respect to sharing their care record, particularly their GP record with external parties.">
+			use = <"">
+			keywords = <"consent", ...>
+			misuse = <"">
+			copyright = <"">
+		>
+	>
+	lifecycle_state = <"AuthorDraft">
+	other_contributors = <>
+	other_details = <
+		["MD5-CAM-1.0.1"] = <"E2D2013860DF251FF56628701F0C6404">
+	>
+
+definition
+	ADMIN_ENTRY[at0000] matches {	-- Consent to share information
+		data matches {
+			ITEM_TREE[at0001] matches {	-- Tree
+				items cardinality matches {0..*; unordered} matches {
+					ELEMENT[at0002] occurrences matches {0..1} matches {	-- Consent to share status
+						value matches {
+							DV_CODED_TEXT matches {
+								defining_code matches {
+									[local::
+									at0005, 	-- Consent given for electronic record sharing
+									at0008, 	-- No consent for electronic record sharing
+									at0007, 	-- Consent given for upload to national shared electronic record	
+									at0010, 	-- Refused consent for upload to national shared electronic record
+									at0006, 	-- Consent given for upload to local shared electronic record
+									at0009, 	-- Refused consent for upload to local shared electronic record
+									at0012, 	-- Consent given to share patient data with specified third party
+									at0011, 	-- Declined consent to share patient data with specified third party
+									at0013, 	-- Consent withdrawn to share patient data with specified third party
+									at0014, 	-- Consent for electronic palliative care upload
+									at0015]	-- Dissent for electronic palliative care upload
+								}
+							}
+						}
+					}
+					ELEMENT[at0017] occurrences matches {0..1} matches {	-- Date last updated
+						value matches {
+							DV_DATE_TIME matches {*}
+						}
+					}
+					ELEMENT[at0003] occurrences matches {0..1} matches {	-- Shared record service name
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0004] occurrences matches {0..*} matches {	-- Specific third party included
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Consent to share information">
+					description = <"Details of the subject's wishes and consent with respect to sharing their care record, particularly their GP record.">
+				>
+				["at0001"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Consent to share status">
+					description = <"The consent status for the shared record service or project identified">
+				>
+				["at0003"] = <
+					text = <"Shared record service name">
+					description = <"The name of the specific shared record service / project or context to which this consent applies.">
+					comment = <"e.g. Summary Care Record, Leeds, 'Shared Care Record'. NHS Scotland KIS record.">
+				>
+				["at0004"] = <
+					text = <"Specific third party included">
+					description = <"The name of specific third-party recipient included in the consent to share.">
+				>
+				["at0005"] = <
+					text = <"Consent given for electronic record sharing">
+					description = <"*">
+				>
+				["at0006"] = <
+					text = <"Consent given for upload to local shared electronic record">
+					description = <"*">
+				>
+				["at0007"] = <
+					text = <"Consent given for upload to national shared electronic record	">
+					description = <"*">
+				>
+				["at0008"] = <
+					text = <"No consent for electronic record sharing">
+					description = <"*">
+				>
+				["at0009"] = <
+					text = <"Refused consent for upload to local shared electronic record">
+					description = <"*">
+				>
+				["at0010"] = <
+					text = <"Refused consent for upload to national shared electronic record">
+					description = <"*">
+				>
+				["at0011"] = <
+					text = <"Declined consent to share patient data with specified third party">
+					description = <"*">
+				>
+				["at0012"] = <
+					text = <"Consent given to share patient data with specified third party">
+					description = <"*">
+				>
+				["at0013"] = <
+					text = <"Consent withdrawn to share patient data with specified third party">
+					description = <"*">
+				>
+				["at0014"] = <
+					text = <"Consent for electronic palliative care upload">
+					description = <"*">
+				>
+				["at0015"] = <
+					text = <"Dissent for electronic palliative care upload">
+					description = <"*">
+				>
+				["at0017"] = <
+					text = <"Date last updated">
+					description = <"The date at which the consent status was last updated.">
+				>
+			>
+		>
+	>

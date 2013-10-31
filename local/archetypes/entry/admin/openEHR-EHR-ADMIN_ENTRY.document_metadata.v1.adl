@@ -1,0 +1,65 @@
+archetype (adl_version=1.4)
+	openEHR-EHR-ADMIN_ENTRY.document_metadata.v1
+
+concept
+	[at0000]	-- Document metadata
+language
+	original_language = <[ISO_639-1::en]>
+description
+	original_author = <
+		["name"] = <"Leo Fogarty">
+		["organisation"] = <"NHS Connecting for Health, UK">
+		["email"] = <"leo.fogarty@nhs.net">
+		["date"] = <"2012-11-16">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"The aim of this archetype is to define the minimum set of document metadata that must be transferred by the EHR_extract message in association with any document attached to the electronic patient record.  This information should be retained by end systems in association with each document, be available to support document management and visible / accessible to users.">
+			use = <"The intention is that in future this metadata will have been created at the time when the original document was created and will travel with the document regardless of the means by which the document may be transferred.  The expectation is that for historical documents as many of the elements as possible will be populated by authomatic / user mediated means.">
+			keywords = <"document", ...>
+			misuse = <"">
+			copyright = <"">
+		>
+	>
+	lifecycle_state = <"AuthorDraft">
+	other_contributors = <"John Williams, NHS Connecting for Health, UK", "Tim Tett, NHS Connecting for Health, UK">
+	other_details = <
+		["MD5-CAM-1.0.1"] = <"619C4C04E1011E3340CE2EBD7A81411E">
+	>
+
+definition
+	ADMIN_ENTRY[at0000] matches {	-- Document metadata
+		data matches {
+			ITEM_TREE[at0001] matches {	-- Tree
+				items cardinality matches {0..*; unordered} matches {
+					allow_archetype CLUSTER[at0002] occurrences matches {0..*} matches {	-- Document metadata
+						include
+							archetype_id/value matches {/openEHR-EHR-CLUSTER\.document_attachment(-[a-zA-Z0-9_]+)*\.v1/}
+						exclude
+							archetype_id/value matches {/.*/}
+					}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Document metadata">
+					description = <"unknown">
+				>
+				["at0001"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Document metadata">
+					description = <"*">
+				>
+			>
+		>
+	>

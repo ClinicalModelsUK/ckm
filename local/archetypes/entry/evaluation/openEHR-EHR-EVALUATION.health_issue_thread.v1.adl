@@ -1,0 +1,164 @@
+﻿archetype (adl_version=1.4)
+	openEHR-EHR-EVALUATION.health_issue_thread.v1
+
+concept
+	[at0000]	-- Health issue thread
+language
+	original_language = <[ISO_639-1::en]>
+description
+	original_author = <
+		["name"] = <"">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"">
+			use = <"">
+			misuse = <"">
+			copyright = <"">
+		>
+	>
+	lifecycle_state = <"0">
+	other_contributors = <>
+	other_details = <
+		["MD5-CAM-1.0.1"] = <"9A4934082AC440C8AB752D0EFCCF8297">
+	>
+
+definition
+	EVALUATION[at0000] matches {	-- Health issue thread
+		data matches {
+			ITEM_TREE[at0001] matches {	-- Tree
+				items cardinality matches {0..*; unordered} matches {
+					ELEMENT[at0002] occurrences matches {0..1} matches {	-- Thread name
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0003] occurrences matches {0..1} matches {	-- Associated entry
+						value matches {
+							DV_EHR_URI matches {*}
+						}
+					}
+					ELEMENT[at0004] occurrences matches {0..1} matches {	-- Start date
+						value matches {
+							DV_DATE_TIME matches {*}
+						}
+					}
+					ELEMENT[at0005] occurrences matches {0..1} matches {	-- End date
+						value matches {
+							DV_DATE_TIME matches {*}
+						}
+					}
+					allow_archetype CLUSTER[at0016] occurrences matches {0..*} matches {	-- Status
+						include
+							archetype_id/value matches {/.*/}
+					}
+					ELEMENT[at0006] occurrences matches {0..1} matches {	-- Anticpated end date
+						value matches {
+							DV_DATE_TIME matches {*}
+						}
+					}
+					ELEMENT[at0012] occurrences matches {0..1} matches {	-- Reason for clousure
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0011] occurrences matches {0..1} matches {	-- Comment
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0007] occurrences matches {0..1} matches {	-- Anticipated duration
+						value matches {
+							DV_DURATION matches {*}
+						}
+					}
+					CLUSTER[at0008] occurrences matches {0..1} matches {	-- Links
+						items cardinality matches {1..*; unordered} matches {
+							ELEMENT[at0009] occurrences matches {0..1} matches {	-- Parent thread
+								value matches {
+									DV_URI matches {*}
+								}
+							}
+							ELEMENT[at0010] occurrences matches {0..1} matches {	-- Child entry
+								value matches {
+									DV_EHR_URI matches {*}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		protocol matches {
+			ITEM_TREE[at0015] matches {*}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Health issue thread">
+					description = <"Health Issue Thread / problem header / concern aligned to Contyss model.">
+				>
+				["at0001"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Thread name">
+					description = <"*">
+				>
+				["at0003"] = <
+					text = <"Associated entry">
+					description = <"*">
+				>
+				["at0004"] = <
+					text = <"Start date">
+					description = <"*">
+				>
+				["at0005"] = <
+					text = <"End date">
+					description = <"*">
+				>
+				["at0006"] = <
+					text = <"Anticpated end date">
+					description = <"*">
+				>
+				["at0007"] = <
+					text = <"Anticipated duration">
+					description = <"*">
+				>
+				["at0008"] = <
+					text = <"Links">
+					description = <"*">
+				>
+				["at0009"] = <
+					text = <"Parent thread">
+					description = <"*">
+				>
+				["at0010"] = <
+					text = <"Child entry">
+					description = <"*">
+				>
+				["at0011"] = <
+					text = <"Comment">
+					description = <"*">
+				>
+				["at0012"] = <
+					text = <"Reason for clousure">
+					description = <"*">
+				>
+				["at0015"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0016"] = <
+					text = <"Status">
+					description = <"*">
+				>
+			>
+		>
+	>
