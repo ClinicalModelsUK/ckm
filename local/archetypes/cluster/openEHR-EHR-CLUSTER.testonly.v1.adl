@@ -2,7 +2,7 @@
 	openEHR-EHR-CLUSTER.testonly.v1
 
 concept
-	[at0000]	-- Testonly
+	[at0000]	-- Testonly2
 language
 	original_language = <[ISO_639-1::en]>
 description
@@ -41,7 +41,7 @@ ontology
 		["en"] = <
 			items = <
 				["at0000"] = <
-					text = <"Testonly">
+					text = <"Testonly2">
 					description = <"unknown">
 				>
 				["at0001"] = <
