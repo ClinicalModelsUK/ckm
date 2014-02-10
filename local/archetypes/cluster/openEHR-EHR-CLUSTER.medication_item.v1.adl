@@ -58,7 +58,7 @@ DM+D drug dictionary: http://www.dmd.nhs.uk/
 Royal College of Physicians, Core Clinical Headings, http://www.rcplondon.ac.uk/projects/standards-core-clinical-information
 
 Royal College of Physicians, Standards for structure and content of medications and medical device records: technical annex, http://www.rcplondon.ac.uk/sites/default/files/medication-and-medical-device-records-technical-annex-2013.pdf">
-		["MD5-CAM-1.0.1"] = <"AA828181FA26AAB4484A0C2CB2C5B695">
+		["MD5-CAM-1.0.1"] = <"C6B7999ED3F71D8B27EB50BCC55B1DAF">
 	>
 
 definition
@@ -109,6 +109,10 @@ definition
 						value matches {
 							DV_TEXT matches {*}
 						}
+					}
+					allow_archetype CLUSTER[at0031] occurrences matches {0..1} matches {	-- Structured dose directions
+						include
+							archetype_id/value matches {/openEHR-EHR-CLUSTER\.structured_dose_directions(-[a-zA-Z0-9_]+)*\.v1/}
 					}
 					ELEMENT[at0005] occurrences matches {0..*} matches {	-- Additional instruction
 						value matches {
@@ -218,6 +222,10 @@ ontology
 				["at0030"] = <
 					text = <"Administration method">
 					description = <"The technique or method by which the medication is to be administered.">
+				>
+				["at0031"] = <
+					text = <"Structured dose directions">
+					description = <"Structured dose directions including dose syntax.">
 				>
 			>
 		>

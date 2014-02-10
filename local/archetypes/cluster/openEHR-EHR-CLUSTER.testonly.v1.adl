@@ -1,0 +1,53 @@
+﻿archetype (adl_version=1.4)
+	openEHR-EHR-CLUSTER.testonly.v1
+
+concept
+	[at0000]	-- Testonly
+language
+	original_language = <[ISO_639-1::en]>
+description
+	original_author = <
+		["name"] = <"">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"">
+			use = <"">
+			misuse = <"">
+			copyright = <"© Clinical Models UK">
+		>
+	>
+	lifecycle_state = <"0">
+	other_contributors = <>
+	other_details = <
+		["MD5-CAM-1.0.1"] = <"9F89BED738198A0C31A0A86684A53669">
+	>
+
+definition
+	CLUSTER[at0000] matches {	-- Testonly
+		items cardinality matches {1..*; unordered} matches {
+			ELEMENT[at0001] occurrences matches {0..1} matches {	-- test
+				value matches {
+					DV_TEXT matches {*}
+				}
+			}
+		}
+	}
+
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Testonly">
+					description = <"unknown">
+				>
+				["at0001"] = <
+					text = <"test">
+					description = <"*">
+				>
+			>
+		>
+	>

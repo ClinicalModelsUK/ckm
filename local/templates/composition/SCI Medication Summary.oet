@@ -72,12 +72,13 @@
         <Rule path="/activities[at0001]/description[at0002]" hide_on_form="true" />
         <Rule path="/activities[at0001]/description[at0002]/items[at0039]/items[at0070]" max="0" />
         <Rule path="/protocol[at0036]" hide_on_form="true" />
-        <Items xsi:type="CLUSTER" archetype_id="openEHR-EHR-CLUSTER.medication_item.v1" concept_name="Medication item" path="/activities[at0001]/description[at0002]/items[at0003]">
+        <Items xsi:type="CLUSTER" archetype_id="openEHR-EHR-CLUSTER.medication_item.v1" concept_name="Medication item" path="/activities[at0001 and name/value='Medication order activity']/description[at0002]/items[at0003]">
           <Rule path="/items[at0002]" max="1" />
           <Rule path="/items[at0029]" max="0" />
           <Rule path="/items[at0019]/items[at0005]" max="1" />
           <Rule path="/items[at0030]" max="0" />
           <Rule path="/items[at0028]" max="0" />
+          <Items xsi:type="CLUSTER" archetype_id="openEHR-EHR-CLUSTER.structured_dose_directions.v1" concept_name="Structured dose directions" path="/items[at0019]/items[at0031]" />
         </Items>
         <Items xsi:type="CLUSTER" archetype_id="openEHR-EHR-CLUSTER.medication_status.v1" concept_name="Medication status" path="/protocol[at0036]/items[at0071]">
           <Rule path="/items[at0070]" max="1" name="First authorised" />
@@ -233,7 +234,10 @@
     <digest id="MD5-CAM-1.0.1">29DF2668BA45A28D0FB18654239ABE87</digest>
   </integrity_checks>
   <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-CLUSTER.medication_item.v1">
-    <digest id="MD5-CAM-1.0.1">AA828181FA26AAB4484A0C2CB2C5B695</digest>
+    <digest id="MD5-CAM-1.0.1">C6B7999ED3F71D8B27EB50BCC55B1DAF</digest>
+  </integrity_checks>
+  <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-CLUSTER.structured_dose_directions.v1">
+    <digest id="MD5-CAM-1.0.1">ECB5310054576C1EFDD894BE90637836</digest>
   </integrity_checks>
   <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-CLUSTER.medication_status.v1">
     <digest id="MD5-CAM-1.0.1">0C2A411028C903FF77C29DBFE56974C1</digest>
