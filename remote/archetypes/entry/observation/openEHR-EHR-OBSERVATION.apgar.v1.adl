@@ -13,6 +13,15 @@ language
 				["organisation"] = <"University of Heidelberg, Central Queensland University, Ocean Informatics">
 			>
 		>
+		["zh-cn"] = <
+			language = <[ISO_639-1::zh-cn]>
+			author = <
+				["name"] = <"Lin Zhang">
+				["organisation"] = <"BIPH">
+				["email"] = <"linforest@163.com">
+			>
+			accreditation = <"What goes here?">
+		>
 		["es-cl"] = <
 			language = <[ISO_639-1::es-cl]>
 			author = <
@@ -168,6 +177,25 @@ O total só pode ser calculado se os cinco valores ordinais forem registrados. O
 Se reconhece que uma ajuda mnemônica para aprender a interpretar o escore Apgar é comumente ensinada. Em Português, por exemplo: A para Aparência (cor da pele), P para pulso ( frequência cardíaca), G para Contração do rosto (grimace-fr); A para atividade (tônus muscular) e R pra Respiração. Embora não seja aplicável em todas as línguas, se sugere que se possa utilizar esse mnemônico para renomear os elementos de dados dentro dos templates se desejado para um cenário clínico específico.">
 			keywords = <"*recém-nascido(s), recém-nato(s)", "*índice", "*escore, escala", "*nascimento(s),", "*bebê(s)", "*neonato(s)", "*avaliação(ões)">
 			misuse = <"Escore parcialmente completado e adicionar o 5 para obter o valor total.">
+			copyright = <"© openEHR Foundation">
+		>
+		["zh-cn"] = <
+			language = <[ISO_639-1::zh-cn]>
+			purpose = <"旨在将Apgar评分记录为简单的可重复性的方法，用于记载新生儿刚刚出生之后的状态。事件系列的根时间始终为出生。">
+			use = <"可用于记录对出生之后1、2、3、5和/或10分钟后新生儿状态的评估，以及所需要的额外事件。
+通常记载1分钟和5分钟时的Apgar评分；依据临床需要，可进一步记录其他评分。利用当前原始型，可以记录出生之后任何时候的Apgar评分。
+常见的临床做法是记录所有5项参数及其总分；不过，当前原始型还允许记录任何不完整的信息，如果现成可用的只是这些信息的话，如来自于历史数据的不完整信息。
+如果要计算总分的话，则需要记录所有5项分级分值（等级型分值）。总分是5项分级分值的总和（最小为0，最大为10）。
+
+目前，在教学时采用助记手段来帮助学习APGAR。例如，采用英语时：
+      A 表示外貌（Appearance）（肤色）
+      P 表示脉搏（Pulse）（心率）
+      G 表示皱眉（Grimace）（反射应激性）
+      A 表示活动（Activity）（肌张力）
+      R 表示呼吸（Respiration）
+这种方法并不普遍适用于所有的语种，因此建议，如果特定的临床场景需要的话，可以通过在模板之中对相应的数据元重新命名，以便能够运用这种助记方法。">
+			keywords = <"新生儿", "指标", "指数", "分数", "评分", "分值", "得分", "出生", "生产", "婴幼儿", "婴儿", "新生婴儿", "评价", "评估">
+			misuse = <"不完整的评分加上5，得到总分。">
 			copyright = <"© openEHR Foundation">
 		>
 	>
@@ -1365,6 +1393,138 @@ ontology
 				["at0037"] = <
 					text = <"Qualquer evento">
 					description = <"Escore Apgar em qualquer tempo adicional, se requerido.">
+				>
+			>
+		>
+		["zh-cn"] = <
+			items = <
+				["at0000"] = <
+					text = <"Apgar评分">
+					description = <"依据对新生儿的呼吸力、心率、反射应激性、肌张力及肤色五个方面的评估而获得的临床评分。">
+				>
+				["at0001"] = <
+					text = <"*structure(en)">
+					description = <"*@ internal @(en)">
+				>
+				["at0002"] = <
+					text = <"*history(en)">
+					description = <"*@ internal @(en)">
+				>
+				["at0003"] = <
+					text = <"1分钟">
+					description = <"出生1分钟之后的Apgar评分">
+				>
+				["at0005"] = <
+					text = <"心率">
+					description = <"对新生儿心率的观察">
+				>
+				["at0006"] = <
+					text = <"无">
+					description = <"没有看到、感到或听到心脏跳动。">
+				>
+				["at0007"] = <
+					text = <"<100次/分钟">
+					description = <"心率低于100次/分钟。">
+				>
+				["at0008"] = <
+					text = <"≥100次/分钟">
+					description = <"心率大于等于（不低于）100次/分钟。">
+				>
+				["at0009"] = <
+					text = <"呼吸力">
+					description = <"对新生儿呼吸力的观察">
+				>
+				["at0010"] = <
+					text = <"无">
+					description = <"没有力量呼吸">
+				>
+				["at0011"] = <
+					text = <"微弱或不规则">
+					description = <"呼吸（胸部运动）有一定的力量">
+				>
+				["at0012"] = <
+					text = <"正常">
+					description = <"呼吸正常或哭声响亮">
+				>
+				["at0013"] = <
+					text = <"肌张力">
+					description = <"对新生儿肌张力的观察">
+				>
+				["at0014"] = <
+					text = <"软弱或松弛无力">
+					description = <"肌肉松弛无力，无自发运动。">
+				>
+				["at0015"] = <
+					text = <"张力降低">
+					description = <"四肢有一定的屈曲。">
+				>
+				["at0016"] = <
+					text = <"张力正常">
+					description = <"正常，运动有力，四肢能活动。">
+				>
+				["at0017"] = <
+					text = <"反射应激性">
+					description = <"对新生儿反射应激性的观察">
+				>
+				["at0018"] = <
+					text = <"无反应">
+					description = <"对刺激无反应。">
+				>
+				["at0019"] = <
+					text = <"反应降低">
+					description = <"当刺激时皱起眉头或微弱哭泣。">
+				>
+				["at0020"] = <
+					text = <"反应正常">
+					description = <"当刺激时皱起眉头、打喷嚏、咳嗽或移开（推开）。">
+				>
+				["at0021"] = <
+					text = <"肤色">
+					description = <"对新生儿皮肤颜色的观察">
+				>
+				["at0022"] = <
+					text = <"全身青紫">
+					description = <"身体或四肢青紫或苍白。">
+				>
+				["at0023"] = <
+					text = <"身体粉红、四肢青紫">
+					description = <"身体粉红、四肢青紫。">
+				>
+				["at0024"] = <
+					text = <"全身粉红">
+					description = <"身体和四肢均粉红，无青紫（发绀）或苍白。">
+				>
+				["at0025"] = <
+					text = <"总分">
+					description = <"每项组成参数的5级评分的总和。">
+				>
+				["at0026"] = <
+					text = <"2分钟">
+					description = <"出生2分钟之后的Apgar评分">
+				>
+				["at0027"] = <
+					text = <"3分钟">
+					description = <"出生3分钟之后的Apgar评分">
+				>
+				["at0028"] = <
+					text = <"5分钟">
+					description = <"出生5分钟之后的Apgar评分">
+				>
+				["at0029"] = <
+					text = <"*List(en)">
+					description = <"*@ internal @(en)">
+				>
+				["at0030"] = <
+					text = <"关于测量的注释">
+					description = <"关于Apgar评分测量的注释">
+				>
+				["at0031"] = <
+					text = <"10分钟">
+					description = <"出生10分钟之后的Apgar评分">
+				>
+				["at0037"] = <
+					text = <"任何事件">
+					description = <"所需要的任何额外时候的Apgar评分。">
 				>
 			>
 		>

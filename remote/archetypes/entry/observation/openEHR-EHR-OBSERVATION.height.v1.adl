@@ -13,6 +13,15 @@ language
 				["organisation"] = <"University of Heidelberg, Ocean Informatics">
 			>
 		>
+		["zh-cn"] = <
+			language = <[ISO_639-1::zh-cn]>
+			author = <
+				["name"] = <"Lin Zhang">
+				["organisation"] = <"BIPH">
+				["email"] = <"linforest@163.com">
+			>
+			accreditation = <"?">
+		>
 		["fa"] = <
 			language = <[ISO_639-1::fa]>
 			author = <
@@ -33,6 +42,14 @@ language
 			author = <
 				["name"] = <"Mona Saleh">
 			>
+		>
+		["ru"] = <
+			language = <[ISO_639-1::ru]>
+			author = <
+				["name"] = <"Andrey Tsaplin">
+				["organisation"] = <"ДГП 99 г. Москвы">
+			>
+			accreditation = <"Russian Medical State University">
 		>
 		["nl"] = <
 			language = <[ISO_639-1::nl]>
@@ -189,12 +206,44 @@ Not to be used to record growth velocity.
 Not to be used to record the length of an object or specific body part.">
 			copyright = <"© openEHR Foundation">
 		>
+		["ru"] = <
+			language = <[ISO_639-1::ru]>
+			purpose = <"Для записи длины тела человека от макушки до пяток - как фактических, так и приближенных, стоя или лежа.
+">
+			use = <"Для записи фактической длины тела индивида в любой момент времени. В случае необходимости физическая неполнота тела может быть записана в протоколе - элемент \"Смешанные факторы. Это обычный образец, который будет использоваться для типичного измерения  длины тела, независимо от клинических условий.
+Может также использоваться для записи приблизителной длины тела в клиническом сценарии, где не возможно измерить точную высоту или длину - например, у ребенка. Это обстоятельство явно не указывается в архетипе, так как модель openEHR позволяет использовать атрибут приближения для любого типа количественных данных. Например, в интерфейсе приложения пользователь может позволить врачам, выбрать надлежащим образом маркированных флажок рядом с полем данных Рост чтобы показать, что записано приблизительное значение, а не фактический.
+Измерения длины тела рекомендуется для детей младше 2 лет и лицам, которые не могут стоять, рост стоя, для всех остальных.
+В идеале, рост измеряется стоя на двух ногах с весом распределяется равномерно, пятки вместе, и обе ягодицы и пятки в контакте с вертикальной поверхностью, длина тела измеряется в вытянутом положении лежа таз находится на плоскости, ноги вытянуты и ноги согнуты .
+Используется для записи роста (ребёнка) и потери высоты. В случае необходимости, подобное применение настоящее время может быть смоделировано путем ограничения \"any event\", до интервала, с соответствующей математической функцией увеличения или уменьшения в шаблоне.
+">
+			keywords = <"сжатие", "Увеличение", "снижение", "высота потери", "Высота", "Длина", "рост">
+			misuse = <"Не следует использовать для записи длины тела новорожденного - использовать специализацию этого архетипа - см. OBSERVATION.height-birth.
+Не следует использовать для записи скорректированной длины тела, например, расчет предполажительного роста человека с контрактурами конечностей, на основании  измерения других частей телаи / или алгоритмов - используйте OBSERVATION.height-adjusted.
+Не следует использовать для записи скорости роста.
+Не использовать для записи длины объекта или определенной части тела.">
+			copyright = <"© openEHR Foundation">
+		>
+		["zh-cn"] = <
+			language = <[ISO_639-1::zh-cn]>
+			purpose = <"旨在用于记录个人身体从头顶至脚底的长度，同时适合于实测值和近似值以及直立位或卧位（平卧位）。">
+			use = <"用于记录个人在任何时间点（时刻）的实际身高/身长。必要时，可在方案元素“干扰因素”（Confounding factors）之中记录表明身体残缺情况的陈述。这是适用于记录典型的身高/身长测量结果的常规原始型，与临床场合无关。
+亦可用于记录在不可能测量准确身高/身长的临床场景下关于身高/身长的近似值。例如，孩子不配合测量。当前原始型并未对这种情况加以明确建模，因为openEHR参考模型（Reference model）允许关于任何数量型（Quantity）数据类型的近似值（Approximation）属性。比如，在实施时，应用程序用户界面可以允许临床医生选择身高数据栏旁边带有合适标签的复选框，以便表示当前所记录的身高仅为近似值，而不是实测值。
+一般而言，对于不到2岁的儿童以及无法站立的患者，推荐进行身长测量，而对于其他受检对象，则进行身高测量。
+理想情况下，测量身高时，受检对象应采取直立位，即体重均匀分布于两脚，脚跟并拢且臀部和脚跟均与背后的垂直背板接触；测量身长时，受检对象应采取卧位（平卧位），即身体完全伸展的卧位（平卧位），且骨盆平展，双腿伸展，脚部屈曲。
+用于记录身高的增长或减低。当前，可以通过适当采用关联有关于增高或降低的数学函数的模板，将“任何事件”（any event）限制到特定的时间区间，从而对此加以建模。">
+			keywords = <"缩短", "变矮", "增加", "增长", "增高", "减低", "降低", "减短", "高度损失", "身高降低", "身高丢失", "身高", "身长", "高度", "个子", "生长", "成长">
+			misuse = <"并非旨在用于记录婴儿出生之后不久的首次身长测量结果；后者被称为“出生身长”（birth length）；对此，请采用当前原始型的特化形式 - 参见出生身高原始型OBSERVATION.height-birth。
+并非旨在用于记录经过调整的身高/身长；例如，利用其他身体部分测量结果和/或某种算法，来计算存在肢体挛缩的受检对象的完整身高的估计值；对此，请采用调整型身高原始型OBSERVATION.height-adjusted。
+并非旨在用于记录身高增长速度或者说生长速度。
+并非旨在用于记录某种物体或特定身体组成部分的长度。">
+			copyright = <"© openEHR Foundation">
+		>
 	>
-	lifecycle_state = <"AuthorDraft">
+	lifecycle_state = <"Published">
 	other_contributors = <"Jeroen Meintjen, Medisch Centrum Alkmaar, Netherlands", "Sebastian Garde, Ocean Informatics, Germany", "Heather Leslie, Ocean Informatics, Australia", "Omer Hotomaroglu, Turkey", "Andrew James, University of Toronto, Canada", "Anne Harbison, Australia", "Thilo Schuler, Germany", "Anneke Goossen, Results 4 Care, Netherlands", "Rikard Lovstrom, Swedish Medical Association, Sweden", "Heather Grain, Llewelyn Informatics, Australia", "Hans Demski, Helmholtz Zentrum München, Germany", "Soon Ghee Yap, Singapore Health Services Pte Ltd, Singapore", "Paul Donaldson, Nursing Informatics Australia, Australia", "Rong Chen, Cambio Healthcare Systems, Sweden", "Sundaresan Jagannathan, Scottish NHS, United Kingdom", "Ian McNicoll, Ocean Informatics, United Kingdom", "Marja Buur, Medisch Centrum Alkmaar, Netherlands">
 	other_details = <
 		["references"] = <"Wilks Z, Bryan S, Mead V and Davies EH. Clinical guideline: Height, measuring a child [Internet]. London, United Kingdom: UCL Institute of Child Health; 2008 Apr 01 [cited 2009 Jul 28 ]. Available from: http://www.ich.ucl.ac.uk/clinical_information/clinical_guidelines/cpg_guideline_00060">
-		["MD5-CAM-1.0.1"] = <"D85CD579475783F0738EAFCF4BC9E4B5">
+		["MD5-CAM-1.0.1"] = <"A4240F6ED2E696597510DB5385D3E4B4">
 	>
 
 definition
@@ -664,6 +713,118 @@ A altura é medida com o indivíduo na posição de pé e comprimento do corpo n
 				["at0020"] = <
 					text = <"Acostado">
 					description = <"La longitud corporal es medida en una posición recostada y completamente extendida, con la pelvis plana, las piernas extendidas y los pies flexionados.">
+				>
+			>
+		>
+		["ru"] = <
+			items = <
+				["at0000"] = <
+					text = <"Рост/длина тела">
+					description = <"Рост или длина тела. Измеряется от макушки до пяток, стоя, или в вытянутом положении.">
+				>
+				["at0001"] = <
+					text = <"*history(en)">
+					description = <"*@ internal @(en)">
+				>
+				["at0002"] = <
+					text = <"Любое событие">
+					description = <"Любой время измерения высоты и длины тела.">
+				>
+				["at0003"] = <
+					text = <"*Simple(en)">
+					description = <"*@ internal @(en)">
+				>
+				["at0004"] = <
+					text = <"Рост/длина тела">
+					description = <"Рост или длина тела. Измеряется от макушки до пяток, стоя, или в вытянутом положении.">
+				>
+				["at0007"] = <
+					text = <"*List(en)">
+					description = <"*@ internal @(en)">
+				>
+				["at0011"] = <
+					text = <"Устройство">
+					description = <"Описание устройства для измерения роста и длины тела.">
+				>
+				["at0013"] = <
+					text = <"*Tree(en)">
+					description = <"*@ internal @(en)">
+				>
+				["at0014"] = <
+					text = <"Положение">
+					description = <"Положение человека при измерении">
+				>
+				["at0016"] = <
+					text = <"Стоя">
+					description = <"Рост измеряется стоя на двух ногах с равномерно распределённым весом, пятки вместе, обе ягодицы и пятки в прижаты к вертикальной поверхности.">
+				>
+				["at0018"] = <
+					text = <"Примечание">
+					description = <"Примечание к измеряемому росту.">
+				>
+				["at0019"] = <
+					text = <"Дополнительные обстоятельсва">
+					description = <"Запишите все вопросы, или факторы, которые могут повлиять на измерения длины тела, например ампутации.">
+				>
+				["at0020"] = <
+					text = <"Лёжа">
+					description = <"Длина тела измеряется в полностью вытянутом положении лежа, таз находится на плоскости, ноги вытянуты и ноги согнуты .">
+				>
+			>
+		>
+		["zh-cn"] = <
+			items = <
+				["at0000"] = <
+					text = <"身高/身长">
+					description = <"从头顶至脚底（足底）所测得的身高（高度）/身长（长度）。身高测量采用直立位，而身长测量则采用的是卧位（平卧位）。">
+				>
+				["at0001"] = <
+					text = <"*history(en)">
+					description = <"*@ internal @(en)">
+				>
+				["at0002"] = <
+					text = <"任何事件">
+					description = <"任何带有时间标记的身高/身长测量。">
+				>
+				["at0003"] = <
+					text = <"*Simple(en)">
+					description = <"*@ internal @(en)">
+				>
+				["at0004"] = <
+					text = <"身高/身长">
+					description = <"从头顶至脚底（足底）的身体高度或长度。">
+				>
+				["at0007"] = <
+					text = <"*List(en)">
+					description = <"*@ internal @(en)">
+				>
+				["at0011"] = <
+					text = <"装置">
+					description = <"关于用来测量身高/身长的装置的描述。">
+				>
+				["at0013"] = <
+					text = <"*Tree(en)">
+					description = <"*@ internal @(en)">
+				>
+				["at0014"] = <
+					text = <"体位">
+					description = <"测量身高/身长时受检对象的体位或者说身体姿势。">
+				>
+				["at0016"] = <
+					text = <"直立位">
+					description = <"测量身高时受检对象采取的姿势为：体重均匀分布于两脚，脚跟并拢且臀部和脚跟均与背后的垂直背板接触。">
+				>
+				["at0018"] = <
+					text = <"注释">
+					description = <"关于身高/身长测量结果的注释、评论或意见。">
+				>
+				["at0019"] = <
+					text = <"干扰因素">
+					description = <"记录任何可能对身高/身长测量结果造成影响的事项或因素；比如，对于截肢情况的记录。">
+				>
+				["at0020"] = <
+					text = <"卧位">
+					description = <"测量身长时受检对象采取的姿势为：身体完全伸展的卧位（平卧位），且骨盆平展，双腿伸展，脚部屈曲。">
 				>
 			>
 		>
