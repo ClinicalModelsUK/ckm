@@ -14,22 +14,27 @@ language
 				["email"] = <"demski@helmholtz-muenchen.de">
 			>
 		>
+		["es-ar"] = <
+			language = <[ISO_639-1::es-ar]>
+			author = <
+				["name"] = <"Alan March">
+				["organisation"] = <"Hospital Universitario Austral, Pilar, Buenos Aires, Argentina">
+			>
+		>
+		["ar-sy"] = <
+			language = <[ISO_639-1::ar-sy]>
+			author = <
+				["name"] = <"Mona Saleh">
+			>
+		>
 	>
 description
 	original_author = <
 		["name"] = <"Ian McNicoll">
 		["organisation"] = <"Ocean Informatics">
-		["date"] = <"11/11/2007">
+		["date"] = <"2007-11-11">
 	>
 	details = <
-		["en"] = <
-			language = <[ISO_639-1::en]>
-			purpose = <"To record details of one or more personal addresses for an individual.">
-			use = <"">
-			keywords = <"address", ...>
-			misuse = <"">
-			copyright = <"© openEHR Foundation">
-		>
 		["de"] = <
 			language = <[ISO_639-1::de]>
 			purpose = <"Zur Dokumentation einer oder mehrerer Adressen einer Person oder Einrichtung.">
@@ -38,12 +43,36 @@ description
 			misuse = <"">
 			copyright = <"© openEHR Foundation">
 		>
+		["es-ar"] = <
+			language = <[ISO_639-1::es-ar]>
+			purpose = <"Registrar los detalles de uno o mas domicilios personales de un individuo.">
+			use = <"">
+			keywords = <"domicilio", "dirección">
+			misuse = <"">
+			copyright = <"© openEHR Foundation">
+		>
+		["ar-sy"] = <
+			language = <[ISO_639-1::ar-sy]>
+			purpose = <"لتسجيل تفاصيل عنوان شخصي أو أكثر الخاص بشخص ما">
+			use = <"">
+			keywords = <"العنوان", ...>
+			misuse = <"">
+			copyright = <"© openEHR Foundation">
+		>
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"To record details of one or more personal addresses for an individual.">
+			use = <"">
+			keywords = <"address", ...>
+			misuse = <"">
+			copyright = <"© openEHR Foundation">
+		>
 	>
 	lifecycle_state = <"Initial">
 	other_contributors = <>
 	other_details = <
 		["references"] = <"From NHS Scotland SCI-XML messaging standards http://www.isdscotland.org/isd/files/general-v2-7.xsd NHS Scotland Interoperability Working Group http://www.isdscotland.org/isd/5194.htm originally based on: Postal address of person.  ENV 13606 - 4:2000 7.11.13">
-		["MD5-CAM-1.0.1"] = <"CD4E0D86020F35378BB03F30F08B56B4">
+		["MD5-CAM-1.0.1"] = <"5ADC860BDD36C01B7F528C9E17DAED5F">
 	>
 
 definition
@@ -236,6 +265,137 @@ ontology
 				["at0015"] = <
 					text = <"Gültigkeitszeitraum">
 					description = <"Der Zeitraum in dem die Adresse gültig ist.  ENV 13606 - 4:2000 7.11.11.">
+				>
+			>
+		>
+		["es-ar"] = <
+			items = <
+				["at0000"] = <
+					text = <"domicilio">
+					description = <"Registrar los detalles de uno o mas domicilios personales de un individuo.">
+				>
+				["at0001"] = <
+					text = <"domicilio">
+					description = <"Uno o mas domicilios personales de un individuo.">
+				>
+				["at0002"] = <
+					text = <"Domicilio no estructurado">
+					description = <"Un domicilio postal expresado en formato no estructurado. ENV 13606 - 4:2000 7.11.15.">
+				>
+				["at0003"] = <
+					text = <"Domicilio estructurado">
+					description = <"La estructura de un domicilio postal que representa la residencia de un paciente o la localización física de una organización. ENV 13606-4:2000 7.11.1.">
+				>
+				["at0004"] = <
+					text = <"Código postal">
+					description = <"Código postal.">
+				>
+				["at0005"] = <
+					text = <"Número de la propiedad">
+					description = <"El número de la propiedad.">
+				>
+				["at0006"] = <
+					text = <"Tipo de domicilio">
+					description = <"El tipo de domicilio.">
+				>
+				["at0007"] = <
+					text = <"Valido desde">
+					description = <"El comienzo del período durante el cual el domicilio es válido.">
+				>
+				["at0008"] = <
+					text = <"Valido hasta">
+					description = <"La fecha a partir de la cual el domicilio deja de ser válido.">
+				>
+				["at0009"] = <
+					text = <"Linea de domicilio.">
+					description = <"Una serie de lineas de domicilio.">
+				>
+				["at0011"] = <
+					text = <"Residencial">
+					description = <"Domicilio del lugar de residencia.">
+				>
+				["at0012"] = <
+					text = <"Correspondencia">
+					description = <"Domicilio para correspondencia.">
+				>
+				["at0013"] = <
+					text = <"Laboral">
+					description = <"Domicilio laboral.">
+				>
+				["at0014"] = <
+					text = <"Temporario">
+					description = <"Domicilio temporario.">
+				>
+				["at0015"] = <
+					text = <"Período de validez del domicilio">
+					description = <"El período durante el cual el domicilio asociado es aplicable a una persona / organización. ENV 13606 - 4:2000 7.11.11.  Esto describe el período actual.">
+				>
+			>
+		>
+		["ar-sy"] = <
+			items = <
+				["at0000"] = <
+					text = <"العنوان">
+					description = <"لتسجيل تفاصيل عنوان شخصي واحد أو أكثر">
+				>
+				["at0001"] = <
+					text = <"العنوان">
+					description = <"عنوان واحد أو أكثر بالنسبة لفرد ما">
+				>
+				["at0002"] = <
+					text = <"عنوان غير مركب">
+					description = <"عنوان بريدي يتم التعبير عنه بتصميم غير مركب. 
+مثلا: ENV 13606 - 4:2000 7.11.15.">
+				>
+				["at0003"] = <
+					text = <"العنوان المركب">
+					description = <"تركيب العنوان البريدي الذي يمثل مكان إقامة المريض أو المكان الفيزيائي لمؤسسة ما.  ENV 13606-4:2000 7.11.1.">
+				>
+				["at0004"] = <
+					text = <"الرمز البريدي">
+					description = <"الرمز البريدي">
+				>
+				["at0005"] = <
+					text = <"رقم العقار">
+					description = <"رقم العقار">
+				>
+				["at0006"] = <
+					text = <"نوع العنوان">
+					description = <"نوع العنوان">
+				>
+				["at0007"] = <
+					text = <"صالح من">
+					description = <"نقطة بداية الفترة التي يكون فيها العنوان صالحا">
+				>
+				["at0008"] = <
+					text = <"صالح حتى">
+					description = <"التاريخ الذي يكون فيه العنوان غير صالح">
+				>
+				["at0009"] = <
+					text = <"خط العنوان">
+					description = <"سلسلة من خطوط العنوان">
+				>
+				["at0011"] = <
+					text = <"مكان الإقامة">
+					description = <"عنوان مكان الإقامة">
+				>
+				["at0012"] = <
+					text = <"عنوان المراسلة">
+					description = <"عنوان المراسلة">
+				>
+				["at0013"] = <
+					text = <"العمل">
+					description = <"عنوان مكان العمل">
+				>
+				["at0014"] = <
+					text = <"مؤقت">
+					description = <"العنوان المؤقت">
+				>
+				["at0015"] = <
+					text = <"فترة صلاحية العنوان">
+					description = <"الفترة التي يكون فيها العنوان المصاحب قابلا للتطبيق. 
+ENV 13606 - 4:2000 7.11.11. 
+و هذا يصف الفترة الحقيقية.">
 				>
 			>
 		>

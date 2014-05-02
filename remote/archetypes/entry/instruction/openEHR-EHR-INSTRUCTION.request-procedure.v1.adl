@@ -7,6 +7,22 @@ concept
 	[at0000.1]	-- Procedure request
 language
 	original_language = <[ISO_639-1::en]>
+	translations = <
+		["es-ar"] = <
+			language = <[ISO_639-1::es-ar]>
+			author = <
+				["name"] = <"Alan March">
+				["organisation"] = <"Hospital Universitario Austral, Buenos Aires, Argentina">
+			>
+			accreditation = <"MD">
+		>
+		["ar-sy"] = <
+			language = <[ISO_639-1::ar-sy]>
+			author = <
+				["name"] = <"Mona Saleh">
+			>
+		>
+	>
 description
 	original_author = <
 		["name"] = <"Dr Ian McNicoll">
@@ -20,6 +36,24 @@ description
 			purpose = <"Provide simple and generic details about the request for a procedure to be performed.">
 			use = <"Use to share details about the order or request for a procedure to be performed. This archetype has been designed to provide the core information required for a simple request for most procedures.  If more specific detail is required about the procedure it can be added via CLUSTER archetypes inserted into the Specific Details slot.">
 			keywords = <"request", "refer", "order", "service", "provide">
+			misuse = <"">
+			copyright = <"© openEHR Foundation">
+		>
+		["ar-sy"] = <
+			language = <[ISO_639-1::ar-sy]>
+			purpose = <"يمثل هذا النموذج تفاصيل جنيسة (غير محدودة الملكية) و بسيطة عن طلب إجراءات طبية ينبغي إجراؤها.">
+			use = <"يستخدم لمشاركة معلومات حول الأمر أو الطلب بإجراء طبي. 
+تم تصميم هذا النموذج ليقوم بالإمداد بالمعلومات الجوهرية المطلوبة لطلب بسيط لغالبية الإجراءات الطبية. 
+إذا كان من المطلوب المزيد من التفاصيل عن الإجراءات فيمكن إضافة ذلك باستخدام عناقيد مناسبة يتم إدراجها في شرفات التفاصيل الخاصة.">
+			keywords = <"الطلب", "يُحيل", "الأمر", "الخدمة", "المُزَوِّد">
+			misuse = <"">
+			copyright = <"© openEHR Foundation">
+		>
+		["es-ar"] = <
+			language = <[ISO_639-1::es-ar]>
+			purpose = <"Proveer detalles simples y generales acerca de la solicitud para un procedimiento a ser realizado.">
+			use = <"Utilizar para compartir detalles acerca de una orden o solicitud para un procedimiento a a ser realizado. Este arquetipo ha sido diseñado para proveer la información central requerida para una solicitus simple de la mayor parte de los procedimientos de salud. Si se requiere un detalles específico, el mismo puede ser agregado mediante los arquetipos CLUSTER introducidos en el slot de Detalles Específicos.">
+			keywords = <"solicitud", "derivar", "referir", "orden", "servicio", "proveer">
 			misuse = <"">
 			copyright = <"© openEHR Foundation">
 		>
@@ -282,6 +316,249 @@ Status is used to denote whether this is the initial request, or a follow-up req
 				["at0144"] = <
 					text = <"Latest date service required">
 					description = <"The latest date that is acceptable for the service to be completed.">
+				>
+			>
+		>
+		["ar-sy"] = <
+			items = <
+				["at0.145"] = <
+					text = <"المقصد">
+					description = <"تفاصيل حول الهدف أو المقصد المحدَّد الذي ينبغي تحقيقه بواسطة هذا الإجراء الطبي.">
+				>
+				["at0.146"] = <
+					text = <"نوع الإجراء الطبي">
+					description = <"*">
+				>
+				["at0000"] = <
+					text = <"*Healthcare service request(en)">
+					description = <"*Generic request for a range of different healthcare services e.g referral, lab request, equipment request.(en)">
+				>
+				["at0000.1"] = <
+					text = <"طلب الإجراء الطبي">
+					description = <"طلب لتنفيذ إجراء طبي">
+				>
+				["at0001"] = <
+					text = <"الطلب">
+					description = <"النشاط الحالي">
+				>
+				["at0008"] = <
+					text = <"*Tree(en)">
+					description = <"*@ internal @(en)">
+				>
+				["at0009"] = <
+					text = <"*Tree(en)">
+					description = <"*@ internal @(en)">
+				>
+				["at0010"] = <
+					text = <"العنصر التعريفي الخاص بطالب الخدمة">
+					description = <"العنصر التعريفي المحلي الذي تم تعيينه للأمر بواسطة مُزَوِّد الخدمة الصحية أو المؤسسة الصحية التي قامت بطلب الخدمة. و يتم الإشارة إليه أيضا بأنه العنصر التعريفي لمن قام بالأمر.">
+				>
+				["at0011"] = <
+					text = <"العتصر التعريفي الخاص بمُستقبِل الطلب">
+					description = <"العنصر التعريفي الذي تم تعيينه للأمر بواسطة مُزَوِّد الخدمة الصحية أو المؤسسة الصحية التي تستقبل الأمر لإجراء الخدمة. و يتم الإشارة إليه أيضا بالعنصر التعريفي لمُنَفِّذ الأمر.">
+				>
+				["at0040"] = <
+					text = <"تاريخ و توقيت الخدمة المطلوبة">
+					description = <"التاريخ و التوقيت الذي ينبغي إجراء أو إتمام الخدمة فيه">
+				>
+				["at0062"] = <
+					text = <"سبب الطلب">
+					description = <"وصف قصير لسبب الطلب. و عادةً ما يكون ذلك مُرمَزًا بواسطة نظام مصطلحات خارجي.">
+				>
+				["at0064"] = <
+					text = <"وصف السبب">
+					description = <"وصف برواية تصف سبب الطلب.">
+				>
+				["at0065"] = <
+					text = <"القصد">
+					description = <"التأثير المقصود أو الظرف/القضية الصحية وراء هذا الإجراء, مثلا: وقائي, علاجي, مُساعِد/إضافي, مُسانِد أو داعم">
+				>
+				["at0068"] = <
+					text = <"الإلحاح">
+					description = <"إلحاح الطلب">
+				>
+				["at0076"] = <
+					text = <"معلومات تكميلية ينبغي اتباعها">
+					description = <"إذا كانت هذه المعلومة صحيحة فذلك يشير إلى أنه تم التعرف على معلومات إضافية و سيتم إحالتها حينما تكون متاحة, مثلا: نتائج غير مكتملة لاختبار خاص بالباثولوجيا/المَرَضية.">
+				>
+				["at0078"] = <
+					text = <"المعلومات التكميلية المُتَوَقَّعة">
+					description = <"تفاصيل حول طبيعة المعلومات التكميلية التي ينبغي اتباعها, مثل اسم الاختبارات المعملية.">
+				>
+				["at0112"] = <
+					text = <"التوطين">
+					description = <"المعلومات الخاصة بالتفاصيل المحلية مثل متطلبات إجراءات الفوترة.">
+				>
+				["at0116"] = <
+					text = <"مُتطلبات المريض">
+					description = <"اللغة, وسيلة الانتقال, أو المتطلبات الشخصية الأخرى لدعم حضور و مشاركة المريض في أثناء تقديم الخدمة.">
+				>
+				["at0121"] = <
+					text = <"الإجراء الطبي الذي تم طلبه">
+					description = <"تعريف الخدمة التي تم طلبها. و عادة ما يكون مُرْمَزًا بواسطة نظام مصطلحات خارجي.">
+				>
+				["at0127"] = <
+					text = <"حالة الطلب">
+					description = <"حالة طلب الخدمة كما تتم الإشارة إليه بواسطة من طلب الأمر. 
+تستخدم الحالة للإشارة إلى ما إذا كان هذا هو الطلب المبدئي أم أنه طلب متابعة لتغيير معلومات أو التزويد بمعلومات تكميلية.
+">
+				>
+				["at0128"] = <
+					text = <"قائمة التوزيع للاستجابة">
+					description = <"قائمة من الأشخاص أو المؤسسات الذين ينبغي أن يستقبلوا نُسَخًا من أي نوع من الاتصال.">
+				>
+				["at0132"] = <
+					text = <"التفاصيل المُخصصة">
+					description = <"تفاصيل مُرَكَّبة لتعريف الخدمة التي تم طلبها, مثل عنقود في إحدى النماذج يصف تفاصيل الإجراء الطبي مع وجود أو عدم وجود متطلبات الاختبار.">
+				>
+				["at0135"] = <
+					text = <"وصف الإجراء الطبي">
+					description = <"وصف برواية مفصلة عن الخدمة التي تم طلبها.">
+				>
+				["at0136"] = <
+					text = <"طارئة">
+					description = <"هذا الطلب هو حالة طارئة">
+				>
+				["at0137"] = <
+					text = <"مُلِحّ">
+					description = <"هذا الطلب مُلِحّ">
+				>
+				["at0138"] = <
+					text = <"روتيني">
+					description = <"هذا الطلب روتيني">
+				>
+				["at0141"] = <
+					text = <"الطالب">
+					description = <"تفاصيل حول مُزَوِّد الخدمة الصحية أو المؤسسة الصحية التي تطلب الخدمة.">
+				>
+				["at0142"] = <
+					text = <"المُستقبِل">
+					description = <"تفاصيل حول مُزَوِّد الخدمة الصحية أو المؤسسة الصحية التي تستقبل طلب تقديم الخدمة.">
+				>
+				["at0144"] = <
+					text = <"آخر تاريخ لاتزال الخدمة مطلوبة في أثناءه">
+					description = <"آخر تاريخ لا يزال فيه مقبولا أن يتم إكمال/إتمام الخدمة.">
+				>
+			>
+		>
+		["es-ar"] = <
+			items = <
+				["at0.145"] = <
+					text = <"Objetivo">
+					description = <"Detalles acerca del objetivo específico o meta que se busca lograr mediante el procedimiento.">
+				>
+				["at0.146"] = <
+					text = <"Tipo de procedimiento">
+					description = <"*">
+				>
+				["at0000"] = <
+					text = <"*Healthcare service request(en)">
+					description = <"*Generic request for a range of different healthcare services e.g referral, lab request, equipment request.(en)">
+				>
+				["at0000.1"] = <
+					text = <"Solicitud de procedimiento">
+					description = <"Solicitud para un procedimiento a ser realizado.">
+				>
+				["at0001"] = <
+					text = <"Solicitud">
+					description = <"Actividad actual">
+				>
+				["at0008"] = <
+					text = <"*Tree(en)">
+					description = <"*@ internal @(en)">
+				>
+				["at0009"] = <
+					text = <"*Tree(en)">
+					description = <"*@ internal @(en)">
+				>
+				["at0010"] = <
+					text = <"Identificador del Solicitante">
+					description = <"El ID local asignado a la solicitud por parte del prestador u organización proveedora de servicios de salud que solicita el servicio. También conocido como Identificador del Colocador de la Orden.">
+				>
+				["at0011"] = <
+					text = <"Identificador del Receptor">
+					description = <"El ID asignado a la solicitud por parte del prestador u organización proveedora de servicios de salud que recibe la solicitud del servicio. También conocido como Identificador del Receptor de la Orden.">
+				>
+				["at0040"] = <
+					text = <"Fecha y/o hora para el servicio solicitado">
+					description = <"La fecha y hora en la que el servicio debería ser realizado o cumplido.">
+				>
+				["at0062"] = <
+					text = <"Motivo de la solicitud">
+					description = <"Breve descripción del motivo de la solicitud. A menudo codificado mediante una terminología externa.">
+				>
+				["at0064"] = <
+					text = <"Descripción del motivo">
+					description = <"Descripción narrativa que explica el motivo de la solicitud.">
+				>
+				["at0065"] = <
+					text = <"Propósito">
+					description = <"Propósito declarado de la solicitud por parte del solicitante.">
+				>
+				["at0068"] = <
+					text = <"Urgencia">
+					description = <"Urgencia de la solicitud.">
+				>
+				["at0076"] = <
+					text = <"Información suplementaria a proveer">
+					description = <"\"Verdadero\" indica que se ha identificado información adicional y que será remitida cuando se encuentre disponible. Ej.: resultados de una prueba de patología incompleta.">
+				>
+				["at0078"] = <
+					text = <"Información suplementaria prevista">
+					description = <"Detalle de la naturaleza de la información suplementaria que se prevé. Ej.: nombre del resultado de laboratorio.">
+				>
+				["at0112"] = <
+					text = <"Localización">
+					description = <"Información local detallada, tal como la requerida para facturación.">
+				>
+				["at0116"] = <
+					text = <"Requerimientos para el paciente">
+					description = <"Requerimientos de idioma, transporte, u otros, que asistan al paciente para concurrir o participar en la provisión del servicio.">
+				>
+				["at0121"] = <
+					text = <"Procedimiento solicitado">
+					description = <"Identificación del procedimiento solicitado. A menudo se lo codifica mediante una terminología externa.">
+				>
+				["at0127"] = <
+					text = <"Estado de la solicitud">
+					description = <"El estado de la solicitud de servicio según el solicitante. 
+El \"estado\" se utiliza para denotar si se trata de un solicitud inicial, a una solicitud de cambio o provisión de información de la solicitud en curso.">
+				>
+				["at0128"] = <
+					text = <"Lista de distribución para la respuesta">
+					description = <"Lista de personas o la organización que debería recibir copias de cualquier comunicación.">
+				>
+				["at0132"] = <
+					text = <"Detalles específicos">
+					description = <"Información estructurada que detalla el servicio solicitado. Ej.: Arquetipo CLUSTER que especifica detalles del procedimiento: si requiere anestesia, o no.">
+				>
+				["at0135"] = <
+					text = <"Descripción del procedimiento">
+					description = <"Descripción narrativa del servicio solicitado.">
+				>
+				["at0136"] = <
+					text = <"Emergencia">
+					description = <"La solicitud es de emergencia.">
+				>
+				["at0137"] = <
+					text = <"Urgente">
+					description = <"La solicitud es urgente.">
+				>
+				["at0138"] = <
+					text = <"Rutina">
+					description = <"La solicitud es de rutina.">
+				>
+				["at0141"] = <
+					text = <"Solicitante">
+					description = <"Detalles del prestador u organización proveedora de servicios de atención de la salud que solicita el servicio.">
+				>
+				["at0142"] = <
+					text = <"Receptor">
+					description = <"Detalles del prestador u organización proveedora de servicios de atención de la salud que recibe la solicitud del servicio.">
+				>
+				["at0144"] = <
+					text = <"Fecha límite del servicio solicitado">
+					description = <"La fecha mas tardía aceptable para el cumplimiento del servicio.">
 				>
 			>
 		>

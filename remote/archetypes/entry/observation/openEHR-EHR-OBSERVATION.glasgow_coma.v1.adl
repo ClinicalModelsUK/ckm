@@ -6,6 +6,12 @@ concept
 language
 	original_language = <[ISO_639-1::en]>
 	translations = <
+		["ar-sy"] = <
+			language = <[ISO_639-1::ar-sy]>
+			author = <
+				["name"] = <"Mona Saleh">
+			>
+		>
 		["pt-br"] = <
 			language = <[ISO_639-1::pt-br]>
 			author = <
@@ -21,12 +27,12 @@ description
 		["name"] = <"Heather Leslie">
 		["organisation"] = <"Ocean Informatics">
 		["email"] = <"heather.leslie@oceaninformatics.com">
-		["date"] = <"13/03/2007">
+		["date"] = <"2007-13-03">
 	>
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
-			purpose = <"To record clinical observations regarding responsiveness of a subject to stimuli as an objective assessment of the conscious state of a subject. ">
+			purpose = <"To record clinical observations regarding responsiveness of a subject to stimuli as an objective assessment of the conscious state of a subject.">
 			use = <"Use in any clinical situation to assess the level of consciousness of a subject, with the exception of infants and young children.
 The three response values are considered separately as well as their sum. The minimum possible Total score value is 3 and the maximum possible is 15.
 The Total score can be derived as the sum of the recorded scores for each of the eye, motor and verbal responses. 
@@ -51,13 +57,28 @@ As Clínica de apoio devem basear sua decisão em cada um dos registros específ
 			misuse = <"Não deve ser utilizado para avaliar recém nascidos e e crianças de colo - para tal, utilizar OBSERVATION.glasgow_coma-paediatric.v1.adl para garantir respostas apropriados para a idade e capacidade da criança.">
 			copyright = <"© openEHR Foundation">
 		>
+		["ar-sy"] = <
+			language = <[ISO_639-1::ar-sy]>
+			purpose = <"لتسجيل الملاحظات السريرية المتعلقة بمدى استجابة الشخص للمنبهات لاعتبارها تقييما موضوعيا لدرجة وعي المريض.">
+			use = <"يستخدم في أي موقف سريري لتقييم مستوى وعي الشخص, باستثناء الرضع و الأطفال صغار السن.
+و يتم الأخذ في الاعتبار لكل من الثلاثة ردود الأفعال منفردة كما يتم أخذ مجموعها في الاعتبار. الحد الأدنى لإجمالي الحَرْز هو 3 و الحد الأقصى هو 15.
+و يمكن اشتقاق الحرز الكلي من مجموع الأحراز المنفردة المسجلة لكل من رد فعل العين, و رد الفعل الحركي و رد الفعل اللفظي.
+و يمكن اختصار التعبير عن الحرز بالحرف الأول من كل رد فعل ليتمثل في (العين - الحركي - اللفظي) ع ح ل ليكون متركبا من كل رد فعل منفردا, مثلا: ع 3, ح 2, ل 4 يعني حالة من الوعي للمريض يكون فيها قادرا على فتح عينينه استجابة للاستماع للكلام, و و رد فعل حركي انبساطي عند الألم و ينطق بأصوات غير مفهومة.
+و في حالة عدم القدرة على تقييم أي من ردود الفعل سواء الخاصة بالعين أو رد الفعل الحركي أو اللفظي - مثلا إذا كان الشخص مُنَبَّبًا و لا يستطيع التلفظ بكلمات, أو مصابا بالشلل و لا يستطيع القيام برد فعل حركي - فإن رد الفعل الذي يتم تسجيله في هذه الحالة هو 1 و يتم إلحاق عنصر معدِّل. مثلا إذا كان منببا يمكن التعبير عن رد الفعل اللفظي باستخدام الرمز ل3 م حيث م = منبب,, أو ل3منبب.
+إذا كان الشخص يعاني من تورم شديد في الوجه أو انتفاخ في العين أو بإصابات أو لا يستطيع فتح عينيه, يمكن تمثيل عنصر استجابة العين بالرمز ع 1 م , حيث م = مغلق.
+و غالبا ما يتم حذف الرقم 1, و بالتالي يتم التعبير باستخدام رد الفعل ع م ,, مثلا ع م ح2 ل4.
+و ينبغي بناء دعم القرار السريري على كل من التسجيلات المنفردة لرد فعل العين و رد الفعل الحركي و رد الفعل اللفظي, بالإضافة إلى البيانات الصريحة في حالة عدم القدرة على تقييم رد فعل معين, و يكون ذلك مفضلا على الحرز المشتق أو المركب - المختصر.">
+			keywords = <"الاستجابة", "حركي", "لفظي", "العين", "المنبه", "غلاسغو", "غيبوبة", "سُلَّم", "عصبيّ", "مدى الاستجابة", "العين الحركة و اللفظ", "واعي">
+			misuse = <"لا يستخدم لتقييم الرضع و الأطفال صغار السن - استخدم لذلك نموذج ملاحظة. حرز غلاسغو - الغيبوبة - فيما يتعلق بطب الأطفال. للتأكد من أن الخيارات المتعلقة بردود فعل العين و الحركة و التلفظ مناسبة لعمر و قدرة الطفل.">
+			copyright = <"© openEHR Foundation">
+		>
 	>
 	lifecycle_state = <"Initial">
 	other_contributors = <>
 	other_details = <
 		["references"] = <"Teasdale G, Jennett B. Assessment of coma and impaired consciousness. A practical scale. Lancet 1974,2:81-84.
 Teasdale GM, Murray L. Revisiting the Glasgow Coma Scale and Coma Score. Intensive Care Medicine. 2000; 26: 153-154.">
-		["MD5-CAM-1.0.1"] = <"BEC05942DDC81A3CCA708956DC2D6383">
+		["MD5-CAM-1.0.1"] = <"92936EAD4A13E9954949D2441F301193">
 	>
 
 definition
@@ -174,7 +195,7 @@ ontology
 				>
 				["at0002"] = <
 					text = <"Any event">
-					description = <"Any event">
+					description = <"Any event.">
 				>
 				["at0003"] = <
 					text = <"Tree">
@@ -415,6 +436,134 @@ ontology
 				["at0040"] = <
 					text = <"Motivo da impossibilidade de testar MRM">
 					description = <"Motivo da impossibilidade de testar a resposta motora.">
+				>
+			>
+		>
+		["ar-sy"] = <
+			items = <
+				["at0000"] = <
+					text = <"سلم غلاسغو للغيبوبة">
+					description = <"سلم يتكون من 15 نقطة لتقييم مستوى الوعي لدى الشخص. و يعرف أيضا بسلم غلاسغو المعدل للغيبوبة.">
+				>
+				["at0001"] = <
+					text = <"*Event Series(en)">
+					description = <"*@ internal @(en)">
+				>
+				["at0002"] = <
+					text = <"إحدى الوقائع">
+					description = <"إحدى الوقائع">
+				>
+				["at0003"] = <
+					text = <"*Tree(en)">
+					description = <"*@ internal @(en)">
+				>
+				["at0007"] = <
+					text = <"أفضل استجابة لفظية">
+					description = <"أفضل استجابة لفظية للمنبه.">
+				>
+				["at0008"] = <
+					text = <"أفضل استجابة حركية">
+					description = <"أفضل استجابة حركية للمنبه.">
+				>
+				["at0009"] = <
+					text = <"أفضل استجابة للعين">
+					description = <"أفضل استجابة للعين عند وجود المنبه.">
+				>
+				["at0010"] = <
+					text = <"لا توجد استجابة">
+					description = <"لا يفتح عينيه">
+				>
+				["at0011"] = <
+					text = <"يفتح عينيه استجابة للألم">
+					description = <"يفتح عينيه استجابة للمنبه المؤلم في الأطراف.">
+				>
+				["at0012"] = <
+					text = <"يفتح عينيه استجابة للكلام">
+					description = <"يفتح عينيه استجابة لأي اقتراب لفظي.">
+				>
+				["at0013"] = <
+					text = <"يفتح عينيه تلقائيا">
+					description = <"يفتح عينيه تلقائيا">
+				>
+				["at0014"] = <
+					text = <"لا توجد استجابة">
+					description = <"لا توجد استجابة لفظية">
+				>
+				["at0015"] = <
+					text = <"أصوات غير مفهومة">
+					description = <"المريض يهذي أو يتأوه, و لكن بكلمات غير مفهومة.">
+				>
+				["at0016"] = <
+					text = <"كلام غير مناسب">
+					description = <"كلام مفهوم و لكن بدون تبادل للحوار.">
+				>
+				["at0017"] = <
+					text = <"محادثة مرتبكة/ مشوشة">
+					description = <"الشخص يتحاور و لكنه مرتبك / مشوش و غير مدرك لما يحيطه.">
+				>
+				["at0018"] = <
+					text = <"مدرك لما حوله">
+					description = <".يتحاور و مدرك لما حوله">
+				>
+				["at0019"] = <
+					text = <"لا توجد استجابة">
+					description = <"لا توجد استجابة حركية, الأطراف مرتخية.">
+				>
+				["at0020"] = <
+					text = <"استجابة انبساطية">
+					description = <"انبساط غير طبيعي بسبب الألم.">
+				>
+				["at0021"] = <
+					text = <"استجابة بالانثناء">
+					description = <"ثنيْ غير طبيعي استجابة للألم.">
+				>
+				["at0022"] = <
+					text = <"منعَكَس السحب">
+					description = <"استجابة بسحب و ثني العضلة بسبب الألم.">
+				>
+				["at0023"] = <
+					text = <"يُوَضِّع الألم">
+					description = <"حركة متوضِّعة استجابة للألم.">
+				>
+				["at0024"] = <
+					text = <"يطيع الأوامر">
+					description = <"يطيع الأوامر اللفظية البسيطة.">
+				>
+				["at0026"] = <
+					text = <"إجمالي الحرز">
+					description = <"مجموع الأحراز الثلاثة لكل من المقاييس التي يتكون منها.">
+				>
+				["at0030"] = <
+					text = <"شاكلة العين و الحركة و اللفظ">
+					description = <"شاكلة استجابة العين و الحركة و اللفظ و التي تعبر عن كل معيار منفردا. و يمكن اشتقاقه من تجميع المكونات السابق ذكرها.">
+				>
+				["at0034"] = <
+					text = <"تعذر اختبار استجابة العين">
+					description = <"ليس من الممكن اختبار استجابة العينين - مثلا في حالة التورم الشديد في الوجه أو العينين أو إصابة/ضرر العينين.">
+				>
+				["at0035"] = <
+					text = <"تعذر اختبار الاستجابة اللفظية">
+					description = <"تعذر اختبار الاستجابة اللفظية - مثلا في حالة وجود تَنَبُّب.">
+				>
+				["at0036"] = <
+					text = <"غير قادر على اختبار الاستجابة الحركية">
+					description = <"اختبار الاستجابات الحركية غير ممكن, مثلا في حالة وجود شلل في الأطراف.">
+				>
+				["at0037"] = <
+					text = <"تعليق">
+					description = <"تعليق حول قياس السلم, خاصة إذا تعذر تقييم الاستجابة.">
+				>
+				["at0038"] = <
+					text = <"سبب عدم القدرة على اختبار استجابة العين">
+					description = <"سبب عدم القدرة على اختبار استجابة العين">
+				>
+				["at0039"] = <
+					text = <"سبب عدم القدرة على اختبار الاستجابة اللفظية">
+					description = <"سبب عدم القدرة على اختبار الاستجابة اللفظية.">
+				>
+				["at0040"] = <
+					text = <"سبب عدم القدرة على اختبار الاستجابة الحركية">
+					description = <"سبب عدم القدرة على اختبار الاستجابة الحركية.">
 				>
 			>
 		>
