@@ -38,14 +38,14 @@ The medication Name is normally represented by a dm+d product-code (VMP/AMP), wh
 B. Hospital settings (Inpatient and some outpatient settings):
 The medication Name is normally represented by a dm+d code (VTM), Form and Route are normally specified explicitly  and Dosage is generally expressed as Dose / Frequency which should be carried in 'Dose Instructions' as simple text strings. 
 
-More extensive adoption of the HSCIC Dose Syntax would allow Dose and Frequency to be captured in a more structured and computable form but this is recognised as being potentially complex to implement, at least in complete form, safely and consistently across all care settings.">
+A parsable Dose Syntax element has been added to allow dose amount and timing to be captured in a more structured and computable form but this is recognised as being potentially complex to implement, at least in complete form, safely and consistently across all care settings.">
 			keywords = <"medication", "prescription", "dosage", "administration", "dispensing", "drug", "therapeutics", "pharmacology", "pharmacy">
 			misuse = <"This archetype has not been designed for use in an inpatient setting, other than at transitions of care to facilitate medicines reconciliation at patient transfer from/to a community setting. It is possible that the archetype would be suitable for inpatient use with some modification or specialisation.">
 			copyright = <"© Clinical Models UK">
 		>
 	>
 	lifecycle_state = <"AuthorDraft">
-	other_contributors = <"Steve Bentley, HSCIC, United Kingdom", "Colin Brown, SCIMP, United Kingdom", "Richard Cottrell, NHS Ayrshire and Arran, United Kingdom", "RCP Health Informatics Unit, UK", "Dr John Williams, GP2GP project, UK", "Dr Leo Fogarty, GP2GP project, UK", "Heather Leslie, Ocean Informatics, Australia", "Dawn MacDermid, United Kingdom", "Ian McNicoll, Ocean Informatics, United Kingdom (Editor)", "Barry Melia, NHS Lothian, United Kingdom", "Mike Robinson, INPS, United Kingdom", "Laura Sato, Health and Social Care Information Centre, United Kingdom">
+	other_contributors = <"Marcus Baw, openGPSoC / Baw Medical Ltd, United Kingdom (Editor)", "Steve Bentley, HSCIC, United Kingdom", "Colin Brown, SCIMP, United Kingdom", "Richard Cottrell, NHS Ayrshire and Arran, United Kingdom", "Leo Fogarty, SCIMP/HSCIC, United Kingdom (Editor)", "RCP Health Informatics Unit, UK", "Heather Leslie, Ocean Informatics, Australia", "Dawn MacDermid, United Kingdom", "Ian McNicoll, Ocean Informatics, United Kingdom (Editor)", "Barry Melia, NHS Lothian, United Kingdom", "Paul Miller, SCIMP, United Kingdom (Editor)", "Mike Robinson, INPS, United Kingdom", "Laura Sato, Health and Social Care Information Centre, United Kingdom", "Ian Thompson, SCIMP, United Kingdom (Editor)", "John Williams, GP2GP, United Kingdom (Editor)">
 	other_details = <
 		["references"] = <"HSCIC Messaging Implementation Manual (GP2GP messages) http://www.uktcregistration.nss.cfh.nhs.uk/trud3
 
@@ -58,7 +58,7 @@ DM+D drug dictionary: http://www.dmd.nhs.uk/
 Royal College of Physicians, Core Clinical Headings, http://www.rcplondon.ac.uk/projects/standards-core-clinical-information
 
 Royal College of Physicians, Standards for structure and content of medications and medical device records: technical annex, http://www.rcplondon.ac.uk/sites/default/files/medication-and-medical-device-records-technical-annex-2013.pdf">
-		["MD5-CAM-1.0.1"] = <"C6B7999ED3F71D8B27EB50BCC55B1DAF">
+		["MD5-CAM-1.0.1"] = <"4F67C781305964662F40D5981DD6EA20">
 	>
 
 definition
@@ -68,18 +68,18 @@ definition
 				value matches {
 					DV_TEXT matches {*}
 					DV_CODED_TEXT matches {
-						defining_code matches {[ac0003]}		-- NHS dm+d AMP/AMPP/VMP/VMPP/VTM
+						defining_code matches {[ac0003]}		-- MedicationName
 					}
 				}
 			}
 			ELEMENT[at0022] occurrences matches {0..1} matches {	-- Form
 				value matches {
 					DV_CODED_TEXT matches {
-						defining_code matches {[ac0005]}		-- SNOMED-CT CFH::MedicationDoseForm
+						defining_code matches {[ac0005]}		-- MedicationDoseForm
 					}
 				}
 			}
-			ELEMENT[at0002] occurrences matches {0..*} matches {	-- Route
+			ELEMENT[at0002] occurrences matches {0..1} matches {	-- Route
 				value matches {
 					DV_CODED_TEXT matches {
 						defining_code matches {[ac0001]}		-- RouteOfAdministration
@@ -89,44 +89,65 @@ definition
 			ELEMENT[at0029] occurrences matches {0..1} matches {	-- Site
 				value matches {
 					DV_CODED_TEXT matches {
-						defining_code matches {[ac0006]}		-- Medication administration site
+						defining_code matches {[ac0006]}		-- SiteOfMedicationAdministration
 					}
 				}
 			}
-			CLUSTER[at0019] occurrences matches {0..1} matches {	-- Dose directions
-				items cardinality matches {1..*; unordered} matches {
-					ELEMENT[at0003] occurrences matches {0..1} matches {	-- Dose directions description
-						value matches {
-							DV_TEXT matches {*}
-						}
-					}
-					ELEMENT[at0020] occurrences matches {0..1} matches {	-- Dose strength description
-						value matches {
-							DV_TEXT matches {*}
-						}
-					}
-					ELEMENT[at0021] occurrences matches {0..1} matches {	-- Dose frequency description
-						value matches {
-							DV_TEXT matches {*}
-						}
-					}
-					allow_archetype CLUSTER[at0031] occurrences matches {0..1} matches {	-- Structured dose directions
-						include
-							archetype_id/value matches {/openEHR-EHR-CLUSTER\.structured_dose_directions(-[a-zA-Z0-9_]+)*\.v1/}
-					}
-					ELEMENT[at0005] occurrences matches {0..*} matches {	-- Additional instruction
-						value matches {
-							DV_TEXT matches {*}
-						}
-					}
-				}
-			}
-			ELEMENT[at0030] occurrences matches {0..1} matches {	-- Administration method
+			ELEMENT[at0030] occurrences matches {0..1} matches {	-- Method
 				value matches {
 					DV_TEXT matches {*}
 				}
 			}
-			ELEMENT[at0027] occurrences matches {0..*} matches {	-- Patient instruction
+			ELEMENT[at0003] occurrences matches {0..1} matches {	-- Dose directions description
+				value matches {
+					DV_TEXT matches {*}
+				}
+			}
+			ELEMENT[at0020] occurrences matches {0..1} matches {	-- Dose amount description
+				value matches {
+					DV_TEXT matches {*}
+				}
+			}
+			ELEMENT[at0021] occurrences matches {0..1} matches {	-- Dose timing description
+				value matches {
+					DV_TEXT matches {*}
+				}
+			}
+			ELEMENT[at0033] occurrences matches {0..1} matches {	-- Parsable dose directions
+				value matches {
+					DV_PARSABLE matches {
+						formalism matches {"text/plain"}
+					}
+				}
+			}
+			CLUSTER[at0045] occurrences matches {0..*} matches {	-- Structured dose direction
+				items cardinality matches {1..*; unordered} matches {
+					allow_archetype CLUSTER[at0044] occurrences matches {0..*} matches {	-- Structured dose
+						include
+							archetype_id/value matches {/.*/}
+					}
+					ELEMENT[at0037] occurrences matches {0..1} matches {	-- Dose direction duration
+						value matches {
+							DV_CODED_TEXT matches {
+								defining_code matches {
+									[local::
+									at0042, 	-- Continue indefinitely
+									at0043]	-- Do not discontinue
+								}
+							}
+							DV_DURATION matches {
+								value matches {PYMWDTH/|>=P0D|}
+							}
+						}
+					}
+				}
+			}
+			ELEMENT[at0005] occurrences matches {0..*} matches {	-- Additional instruction
+				value matches {
+					DV_TEXT matches {*}
+				}
+			}
+			ELEMENT[at0027] occurrences matches {0..*} matches {	-- Patient advice
 				value matches {
 					DV_TEXT matches {*}
 				}
@@ -136,14 +157,52 @@ definition
 					DV_TEXT matches {*}
 				}
 			}
+			CLUSTER[at0046] occurrences matches {0..1} matches {	-- Course details
+				items cardinality matches {1..*; unordered} matches {
+					ELEMENT[at0049] occurrences matches {0..1} matches {	-- Course status
+						value matches {
+							DV_CODED_TEXT matches {
+								defining_code matches {
+									[local::
+									at0050, 	-- Active
+									at0051, 	-- Discontinued
+									at0052, 	-- Never active
+									at0053, 	-- Completed
+									at0054]	-- Obsolete
+								}
+							}
+						}
+					}
+					ELEMENT[at0039] occurrences matches {0..1} matches {	-- Start datetime
+						value matches {
+							DV_DATE_TIME matches {*}
+						}
+					}
+					ELEMENT[at0040] occurrences matches {0..1} matches {	-- End datetime
+						value matches {
+							DV_DATE_TIME matches {*}
+						}
+					}
+					ELEMENT[at0047] occurrences matches {0..1} matches {	-- Indication
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0048] occurrences matches {0..1} matches {	-- Link to Indication record
+						value matches {
+							DV_URI matches {*}
+						}
+					}
+					ELEMENT[at0028] occurrences matches {0..*} matches {	-- Comment / recommendation
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+				}
+			}
 			allow_archetype CLUSTER[at0026] occurrences matches {0..1} matches {	-- Total daily dose quantity
 				include
 					archetype_id/value matches {/openEHR-EHR-CLUSTER\.medication_quantity_sct(-[a-zA-Z0-9_]+)*\.v1/}
-			}
-			ELEMENT[at0028] occurrences matches {0..1} matches {	-- Comment
-				value matches {
-					DV_TEXT matches {*}
-				}
 			}
 		}
 	}
@@ -160,12 +219,12 @@ ontology
 				>
 				["at0001"] = <
 					text = <"Medication name">
-					description = <"Mandatory medication name coded using a SNOMEDCT/dm+d term where possible, allowing plain text for historical/patient reported items , extemporaneous preparations or those not registered in dm+d.">
+					description = <"Mandatory medication name coded using a SNOMED CT/dm+d term where possible, allowing plain text for historical/patient reported items , extemporaneous preparations or those not registered in dm+d.">
 					comment = <"e.g.“Citalopram tab 20mg”, \"Trimethoprim\"">
 				>
 				["at0002"] = <
 					text = <"Route">
-					description = <"Optional medication route, using SNOMED terms where possible. Not generally applicable to product-based medication. Should not be used to specify a specific administration site, for which a separate archetype is used e.g. The Route is 'intraocular' the Site may be 'Left eye'.">
+					description = <"Optional medication route, using SNOMED CT terms where possible. Not generally applicable to product-based medication. Should not be used to specify a specific administration site, for which a separate archetype is used e.g. The Route is 'intraocular' the Site may be 'Left eye'.">
 					comment = <"e.g. \"Oral\", \"Intraocular\"">
 				>
 				["at0003"] = <
@@ -181,20 +240,16 @@ ontology
 				["at0005"] = <
 					text = <"Additional instruction">
 					description = <"Additional multiple dosage or administration instructions as plain text. This may include guidance to the prescriber, patient or person administering the medication.">
-					comment = <"e.g. “Omit morning dose on day of procedure”">
-				>
-				["at0019"] = <
-					text = <"Dose directions">
-					description = <"Structured details of medication dosage directions.">
+					comment = <"e.g. “Omit morning dose on day of procedure”, \"for pain or fever\"">
 				>
 				["at0020"] = <
-					text = <"Dose strength description">
-					description = <"A plain text description of medication single dose amount.">
+					text = <"Dose amount description">
+					description = <"A plain text description of medication single dose amount, as described in the AoMRC medication headings.">
 					comment = <"e.g. \"30 mg\" or \"2 tabs\"">
 				>
 				["at0021"] = <
-					text = <"Dose frequency description">
-					description = <"A plain text description of medication dose frequency.">
+					text = <"Dose timing description">
+					description = <"A plain text description of medication dose frequency,  as described in the AoMRC medication headings.">
 					comment = <"e.g. \"Twice a day\"">
 				>
 				["at0022"] = <
@@ -207,12 +262,13 @@ ontology
 					description = <"The total daily dose of this medication.  This is helpful for estimating optimal adherance to dosing guidance. It may be computed from product/dose strength and frequency or entered manually.">
 				>
 				["at0027"] = <
-					text = <"Patient instruction">
+					text = <"Patient advice">
 					description = <"Multiple plain text instructions intended for patient or carer.">
+					comment = <"Intended for general advice for the medication course as a whole, as might be carried in a Patient Information Leaflet (PIL) and not for specific dosage instructions.">
 				>
 				["at0028"] = <
-					text = <"Comment">
-					description = <"An additional comment about the medication item as a whole e.g. 'Patient named supply', 'unlicensed medication', 'Foreign brand'.">
+					text = <"Comment / recommendation">
+					description = <"Additional comment or recommendation about the medication course e.g. 'Patient named supply', 'unlicensed medication', 'Foreign brand' or monitoring recommendations.">
 				>
 				["at0029"] = <
 					text = <"Site">
@@ -220,12 +276,81 @@ ontology
 					comment = <"e.g. \"Left eye\"">
 				>
 				["at0030"] = <
-					text = <"Administration method">
+					text = <"Method">
 					description = <"The technique or method by which the medication is to be administered.">
 				>
-				["at0031"] = <
-					text = <"Structured dose directions">
-					description = <"Structured dose directions including dose syntax.">
+				["at0033"] = <
+					text = <"Parsable dose directions">
+					description = <"A parsable 'dose syntax' which carries dose strength, dose timing, dose duration and maximum dose information.">
+					comment = <"e.g. \"20-30mg ^4/6h prn [180mg /24h]\" = 20 to 30 mgs, up to 4-6 hourly as required. Maximum 180mg in 24 hours. The 'as required reason' e.g 'for pain' should be carried in the Additional Instruction element. Note that this is generally a symptom and is not the same as the Indication which will usually describe a diagnosis or condition.">
+				>
+				["at0037"] = <
+					text = <"Dose direction duration">
+					description = <"The duration of a single dose direction. Where multiple dose directions are required for a course of medication e.g for a tapering or increasing dose, the duration refers to the duration of a single direction, not the whole course.">
+					comment = <"e.g. \"for 7 days\", \"Indefinitely\".">
+				>
+				["at0039"] = <
+					text = <"Start datetime">
+					description = <"The date and/or time that the medication course should begin.">
+				>
+				["at0040"] = <
+					text = <"End datetime">
+					description = <"The date and/or time that the medication course should finish.">
+				>
+				["at0042"] = <
+					text = <"Continue indefinitely">
+					description = <"The medication should be continued indefinitely.">
+				>
+				["at0043"] = <
+					text = <"Do not discontinue">
+					description = <"The medication should be continued indefinitely and the prescriber highly recommends that it should never be discontinued.">
+				>
+				["at0044"] = <
+					text = <"Structured dose">
+					description = <"A slot containing a structural, computable representation of dose strength / timing and maximum dose.">
+					comment = <"Structural representations (class models) of dose strength and timing can be extremely complex, particularly in secondary care systems. Using a slot here allows for some variation in the models that are used internally within systems.">
+				>
+				["at0045"] = <
+					text = <"Structured dose direction">
+					description = <"A structural representation of the elements carried by the dose syntax in 'Parsable dose strength/timing' i.e. dose strength, dose timing, dose duration and maximum dose.">
+					comment = <"Structured dose will normally be used within systems rather than in cross-system communication but may be helpful where legacy systems expose some structured data e.g Direction duration">
+				>
+				["at0046"] = <
+					text = <"Course details">
+					description = <"Details of the overall course of medication.">
+				>
+				["at0047"] = <
+					text = <"Indication">
+					description = <"The clinical indication or reason for ordering the medication. Coded terms are preferable.">
+					comment = <"e.g. \"Angina\". The Indication generally describes a condition or diagnosis .">
+				>
+				["at0048"] = <
+					text = <"Link to Indication record">
+					description = <"A link to the record which contains the Indication for this medication order.">
+				>
+				["at0049"] = <
+					text = <"Course status">
+					description = <"The status of this prescription in an ambulatory (outpatient/GP/community) context.">
+				>
+				["at0050"] = <
+					text = <"Active">
+					description = <"This an active medication.">
+				>
+				["at0051"] = <
+					text = <"Discontinued">
+					description = <"This is a medication that has been issued. dispensed or administered but has now been discontinued.">
+				>
+				["at0052"] = <
+					text = <"Never active">
+					description = <"A medication which was ordered or authorised but has been cancelled prior to being issued, dispensed or adiminstered.">
+				>
+				["at0053"] = <
+					text = <"Completed">
+					description = <"The medication course has been completed.">
+				>
+				["at0054"] = <
+					text = <"Obsolete">
+					description = <"This medication order has been superseded by another.">
 				>
 			>
 		>
@@ -235,29 +360,34 @@ ontology
 			items = <
 				["ac0001"] = <
 					text = <"RouteOfAdministration">
-					description = <"NHS e-Prescribing route of administration subset.
-Id : 353901000001136
+					description = <"NHS e-Prescribing route of administration subset Current Id: 580601000001131
+
 Original Id : 30201000001137
 
 
 ">
 				>
 				["ac0003"] = <
-					text = <"NHS dm+d AMP/AMPP/VMP/VMPP/VTM">
+					text = <"MedicationName">
 					description = <"Any AMP/VMP/VTM/AMPP/VMPP subsets from the dm+d terminology.
 
+
 NHS dm+d AMP   ::352201000001139
+ 
 NHS dm+d AMPP ::352401000001135
+ 
 NHS dm+d VMP   ::352701000001133
-NHS dm+d VMPP ::352301000001131
+ 
+NHS dm+d VMPP ::352301000001131 
+
 NHS dm+d VTM   ::352601000001138">
 				>
 				["ac0005"] = <
-					text = <"SNOMED-CT CFH::MedicationDoseForm">
-					description = <"SNOMED-CT CFH::DoseForm termset">
+					text = <"MedicationDoseForm">
+					description = <"SNOMED CT CFH::DoseForm termset">
 				>
 				["ac0006"] = <
-					text = <"Medication administration site">
+					text = <"SiteOfMedicationAdministration">
 					description = <"Any valid site for the administration of a medication.">
 				>
 			>
@@ -266,7 +396,7 @@ NHS dm+d VTM   ::352601000001138">
 	constraint_bindings = <
 		["SNOMED-CT"] = <
 			items = <
-				["ac0001"] = <terminology:SNOMED-CT?subset=%20353901000001136>
+				["ac0001"] = <terminology:SNOMED-CT?subset=580601000001131>
 				["ac0005"] = <terminology:SNOMED-CT?subset=CFH%3A%3ADoseForm>
 				["ac0006"] = <terminology:SNOMED-CT?subset=MedicationAdministrationSite>
 			>
