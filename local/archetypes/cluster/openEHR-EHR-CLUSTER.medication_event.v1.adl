@@ -27,7 +27,7 @@ The 'Date of medication event' element may be renamed in the context of a partic
 		>
 	>
 	lifecycle_state = <"AuthorDraft">
-	other_contributors = <"Dr John Williams, GP2GP project, UK", "Dr Leo Fogarty, GP2GP project, UK", "RCP Health Informatics Unit, UK">
+	other_contributors = <"Marcus Baw, openGPSoC / Baw Medical Ltd, United Kingdom (Editor)", "Leo Fogarty, SCIMP/HSCIC, United Kingdom (Editor)", "RCP Health Informatics Unit, UK", "Dr John Williams, GP2GP project, UK", "Dr Leo Fogarty, GP2GP project, UK", "Ian McNicoll, Ocean Informatics, United Kingdom (Editor)", "Paul Miller, SCIMP, United Kingdom (Editor)", "Ian Thompson, SCIMP, United Kingdom (Editor)", "John Williams, GP2GP, United Kingdom (Editor)">
 	other_details = <
 		["current_contact"] = <"Ian McNicoll, Ocean Informatics UK, ian.mcnicoll@oceaninformatics.com">
 		["references"] = <"HSCIC Messaging Implementation Manual (GP2GP messages) http://www.uktcregistration.nss.cfh.nhs.uk/trud3/
@@ -35,7 +35,7 @@ NHS Scotland SCI-XML (SCI-Gateway, ECS, ePharmacy)  http://www.sci.scot.nhs.uk/p
 NHS Wales Informatics Service, Integrated Health Record http://www.wales.nhs.uk/nwis/page/52553
 DM+D drug dictionary: http://www.dmd.nhs.uk/
 Royal College of Physicians, Core Clinical Headings, http://www.rcplondon.ac.uk/projects/standards-core-clinical-information">
-		["MD5-CAM-1.0.1"] = <"09D9EA02808E18EE71B05F888CE0F597">
+		["MD5-CAM-1.0.1"] = <"1BCF4B8C46C33B28AD801298F67DFBCD">
 	>
 
 definition
@@ -80,8 +80,8 @@ definition
 									at0137, 	-- Issued without script
 									at0133, 	-- Handwritten
 									at0138, 	-- Electronic
-									at0140, 	-- Dispensing
-									at0139, 	-- Repeat dispensing
+									at0140, 	-- Dispensed
+									at0139, 	-- Repeat dispensed
 									at0116, 	-- Over the counter (OTC)
 									at0077, 	-- NHS Scotland Minor Ailments Service (MAS)
 									at0078, 	-- NHS Scotland Acute Medication Service (AMS)
@@ -162,7 +162,7 @@ definition
 					}
 				}
 			}
-			CLUSTER[at0037] occurrences matches {0..1} matches {	-- Issue
+			CLUSTER[at0037] occurrences matches {0..1} matches {	-- Prescription issue
 				items cardinality matches {1..*; unordered} matches {
 					ELEMENT[at0038] occurrences matches {0..1} matches {	-- Number of repeats issued
 						value matches {
@@ -269,7 +269,7 @@ Source GP2GP">
 					description = <"The contract or scheme which applies to this medication.">
 				>
 				["at0037"] = <
-					text = <"Issue">
+					text = <"Prescription issue">
 					description = <"Details of a single issue of an acute or repeat medication prescription.">
 				>
 				["at0038"] = <
@@ -312,7 +312,7 @@ Source GP2GP">
 				>
 				["at0063"] = <
 					text = <"ACBS">
-					description = <"ACBS endorsed product  included in Part XV (Borderline Substances) of the Drug Tariff.">
+					description = <"ACBS endorsed product  included in Part XV (Borderline Substances) of the Drug Tariff. May not be prescribed privately.">
 				>
 				["at0064"] = <
 					text = <"Assorted flavours">
@@ -471,11 +471,11 @@ Source: GP systems">
 					description = <"The prescription was issued elctronically.">
 				>
 				["at0139"] = <
-					text = <"Repeat dispensing">
+					text = <"Repeat dispensed">
 					description = <"The prescription was issued via a repeat dispensing arrangement.">
 				>
 				["at0140"] = <
-					text = <"Dispensing">
+					text = <"Dispensed">
 					description = <"The prescription was dispensed.">
 				>
 				["at0141"] = <
