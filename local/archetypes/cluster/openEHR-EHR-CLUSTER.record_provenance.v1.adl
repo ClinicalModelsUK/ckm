@@ -25,7 +25,7 @@ description
 	lifecycle_state = <"AuthorDraft">
 	other_contributors = <>
 	other_details = <
-		["MD5-CAM-1.0.1"] = <"F36B2F9FA2C4CD0B66A10C6D10B7FA00">
+		["MD5-CAM-1.0.1"] = <"388291FE1E6D5ECE35B761CC8940A9EC">
 	>
 
 definition
@@ -56,7 +56,7 @@ definition
 					DV_TEXT matches {*}
 				}
 			}
-			ELEMENT[at0004] occurrences matches {0..1} matches {	-- Date commited
+			ELEMENT[at0004] occurrences matches {0..1} matches {	-- Date committed
 				value matches {
 					DV_DATE_TIME matches {*}
 				}
@@ -88,7 +88,7 @@ ontology
 Consider use of coded Care Settings">
 				>
 				["at0004"] = <
-					text = <"Date commited">
+					text = <"Date committed">
 					description = <"The date at which the information was recorded i.e committed. Equivalent to availabilityTime in HL7v3.">
 					comment = <"e.g. “02-Feb-2012”
 Use CUI date formatting in displays
