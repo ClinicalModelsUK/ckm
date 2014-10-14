@@ -1,8 +1,8 @@
 ﻿archetype (adl_version=1.4; uid=6213dce5-6884-4f15-918b-2e3daaf8fcb1)
-	openEHR-EHR-EVALUATION.medicines_reconciliation_uk.v1
+	openEHR-EHR-CLUSTER.medication_reconciliation_admit_uk.v1
 
 concept
-	[at0000]	-- Medicine reconciliation
+	[at0000]	-- Admission medication reconciliation
 language
 	original_language = <[ISO_639-1::en]>
 description
@@ -15,8 +15,9 @@ description
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
-			purpose = <"To record the result of a medicines reconciliation process for a single medication Entry.">
-			use = <"Use to record additional data captured during the process of medicines reconciliation.">
+			purpose = <"To record the result of an admission medicines reconciliation process for a single medication item.">
+			use = <"Use to record additional data captured during the process of medicines reconciliation on admission.">
+			keywords = <"medication", "medicine", "drug", "admission">
 			misuse = <"">
 			copyright = <"© Clinical Models UK">
 		>
@@ -27,107 +28,97 @@ description
 		["references"] = <"NHS National Prescribing Centre, Medicines Reconciliation, A guide to implementation. 
 Available from http://www.npc.nhs.uk/improving_safety/medicines_reconciliation/resources/reconciliation_guide.pdf
 
-Health Quality and Sefety Commission New Zealand, Medicine Reconciliation Standard V3, September 2012
+Health Quality and Safety Commission New Zealand, Medicine Reconciliation Standard V3, September 2012
 Available from: http://ithealthboard.health.nz/system/files/documents/publications/medication-reconciliation-standard-v3.pdf">
-		["MD5-CAM-1.0.1"] = <"84969AB8657D57786F8D0666159DAC04">
+		["MD5-CAM-1.0.1"] = <"2FC6E98080368D67658342AD6791D7CF">
 	>
 
 definition
-	EVALUATION[at0000] matches {	-- Medicine reconciliation
-		data matches {
-			ITEM_TREE[at0001] matches {	-- Tree
-				items cardinality matches {0..*; unordered} matches {
-					ELEMENT[at0024] occurrences matches {0..1} matches {	-- Discrepancy identified
-						value matches {
-							DV_CODED_TEXT matches {
-								defining_code matches {[local::at0030]}		-- Discrepancy identified
-							}
+	CLUSTER[at0000] matches {	-- Admission medication reconciliation
+		items cardinality matches {1..*; unordered} matches {
+			ELEMENT[at0024] occurrences matches {0..1} matches {	-- Discrepancy identified
+				value matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {[local::at0030]}		-- Discrepancy identified
+					}
+				}
+			}
+			ELEMENT[at0014] occurrences matches {0..1} matches {	-- Disrcepancy intentional?
+				value matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::
+							at0016, 	-- Intentional
+							at0017]	-- Unintentional
 						}
 					}
-					ELEMENT[at0014] occurrences matches {0..1} matches {	-- Disrcepancy intentional?
+				}
+			}
+			CLUSTER[at0025] occurrences matches {0..1} matches {	-- Reconciliation detail
+				items cardinality matches {1..*; unordered} matches {
+					ELEMENT[at0003] occurrences matches {0..1} matches {	-- Reconciliation action
 						value matches {
 							DV_CODED_TEXT matches {
 								defining_code matches {
 									[local::
-									at0016, 	-- Intentional
-									at0017]	-- Unintentional
+									at0023, 	-- Add medication
+									at0019, 	-- Change medication
+									at0020, 	-- Stop medication
+									at0021]	-- Withhold medication
 								}
 							}
 						}
 					}
-					CLUSTER[at0025] occurrences matches {0..1} matches {	-- Reconciliation detail
-						items cardinality matches {1..*; unordered} matches {
-							ELEMENT[at0003] occurrences matches {0..1} matches {	-- Reconciliation action
-								value matches {
-									DV_CODED_TEXT matches {
-										defining_code matches {
-											[local::
-											at0023, 	-- Add medication
-											at0019, 	-- Change medication
-											at0020, 	-- Stop medication
-											at0021]	-- Withhold medication
-										}
-									}
-								}
+					ELEMENT[at0028] occurrences matches {0..1} matches {	-- Target medication record updated?
+						value matches {
+							DV_BOOLEAN matches {
+								value matches {True, False}
 							}
-							ELEMENT[at0028] occurrences matches {0..1} matches {	-- Target medication record updated?
-								value matches {
-									DV_BOOLEAN matches {
-										value matches {True, False}
-									}
-								}
-							}
-							ELEMENT[at0004] occurrences matches {0..1} matches {	-- Reason
-								value matches {
-									DV_TEXT matches {*}
-								}
-							}
-							ELEMENT[at0012] occurrences matches {0..1} matches {	-- Change details
-								value matches {
-									DV_TEXT matches {*}
-								}
-							}
-							ELEMENT[at0013] occurrences matches {0..1} matches {	-- Withhold until
-								value matches {
-									DV_TEXT matches {*}
-									DV_DURATION matches {
-										value matches {PYMWDTHM/|>=PT0M|}
-									}
-								}
+						}
+					}
+					ELEMENT[at0004] occurrences matches {0..1} matches {	-- Reason
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0012] occurrences matches {0..1} matches {	-- Change details
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0013] occurrences matches {0..1} matches {	-- Withhold until
+						value matches {
+							DV_TEXT matches {*}
+							DV_DURATION matches {
+								value matches {PYMWDTHM/|>=PT0M|}
 							}
 						}
 					}
 				}
 			}
-		}
-		protocol matches {
-			ITEM_TREE[at0005] matches {	-- Tree
-				items cardinality matches {0..*; unordered} matches {
-					ELEMENT[at0006] occurrences matches {0..1} matches {	-- Date reconciled
-						value matches {
-							DV_DATE_TIME matches {*}
-						}
-					}
-					ELEMENT[at0026] occurrences matches {0..1} matches {	-- Source of information
-						value matches {
-							DV_TEXT matches {*}
-						}
-					}
-					ELEMENT[at0027] occurrences matches {0..1} matches {	-- Source contact details
-						value matches {
-							DV_TEXT matches {*}
-						}
-					}
-					ELEMENT[at0007] occurrences matches {0..1} matches {	-- Link to source medication entry
-						value matches {
-							DV_URI matches {*}
-						}
-					}
-					ELEMENT[at0029] occurrences matches {0..1} matches {	-- Link to target medication entry
-						value matches {
-							DV_URI matches {*}
-						}
-					}
+			ELEMENT[at0006] occurrences matches {0..1} matches {	-- Date reconciled
+				value matches {
+					DV_DATE_TIME matches {*}
+				}
+			}
+			ELEMENT[at0026] occurrences matches {0..1} matches {	-- Source of information
+				value matches {
+					DV_TEXT matches {*}
+				}
+			}
+			ELEMENT[at0027] occurrences matches {0..1} matches {	-- Source contact details
+				value matches {
+					DV_TEXT matches {*}
+				}
+			}
+			ELEMENT[at0007] occurrences matches {0..1} matches {	-- Link to source medication entry
+				value matches {
+					DV_URI matches {*}
+				}
+			}
+			ELEMENT[at0029] occurrences matches {0..1} matches {	-- Link to target medication entry
+				value matches {
+					DV_URI matches {*}
 				}
 			}
 		}
@@ -139,12 +130,8 @@ ontology
 		["en"] = <
 			items = <
 				["at0000"] = <
-					text = <"Medicine reconciliation">
-					description = <"The results of reconciliation of a single medication entry.">
-				>
-				["at0001"] = <
-					text = <"Tree">
-					description = <"@ internal @">
+					text = <"Admission medication reconciliation">
+					description = <"Information about admission reconciliation of a single medication entry.">
 				>
 				["at0003"] = <
 					text = <"Reconciliation action">
@@ -153,10 +140,6 @@ ontology
 				["at0004"] = <
 					text = <"Reason">
 					description = <"The rationale, evidence or reason for the reconciliation.">
-				>
-				["at0005"] = <
-					text = <"Tree">
-					description = <"@ internal @">
 				>
 				["at0006"] = <
 					text = <"Date reconciled">
