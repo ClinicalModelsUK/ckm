@@ -1,5 +1,5 @@
 ﻿archetype (adl_version=1.4)
-	openEHR-EHR-CLUSTER.medication_status.v1
+	openEHR-EHR-CLUSTER.medication_event_summary.v1
 
 concept
 	[at0000]	-- Medication status
@@ -30,7 +30,7 @@ NHS Scotland SCI-XML (SCI-Gateway, ECS, ePharmacy)  http://www.sci.scot.nhs.uk/p
 NHS Wales Informatics Service, Integrated Health Record http://www.wales.nhs.uk/nwis/page/52553
 DM+D drug dictionary: http://www.dmd.nhs.uk/
 Royal College of Physicians, Core Clinical Headings, http://www.rcplondon.ac.uk/projects/standards-core-clinical-information">
-		["MD5-CAM-1.0.1"] = <"0C2A411028C903FF77C29DBFE56974C1">
+		["MD5-CAM-1.0.1"] = <"24E250D3D7ABAF34B3BE02EF8474F25E">
 	>
 
 definition
