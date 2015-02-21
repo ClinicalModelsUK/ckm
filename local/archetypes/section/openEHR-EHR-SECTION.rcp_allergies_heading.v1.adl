@@ -22,7 +22,7 @@ description
 			copyright = <"© Clinical Models UK">
 		>
 	>
-	lifecycle_state = <"AuthorDraft">
+	lifecycle_state = <"Rejected">
 	other_contributors = <>
 	other_details = <
 		["references"] = <"Royal College of Physicians, Core Clinical Headings, http://www.rcplondon.ac.uk/projects/standards-core-clinical-information">
