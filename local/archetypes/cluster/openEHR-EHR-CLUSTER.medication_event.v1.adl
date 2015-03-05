@@ -35,7 +35,7 @@ NHS Scotland SCI-XML (SCI-Gateway, ECS, ePharmacy)  http://www.sci.scot.nhs.uk/p
 NHS Wales Informatics Service, Integrated Health Record http://www.wales.nhs.uk/nwis/page/52553
 DM+D drug dictionary: http://www.dmd.nhs.uk/
 Royal College of Physicians, Core Clinical Headings, http://www.rcplondon.ac.uk/projects/standards-core-clinical-information">
-		["MD5-CAM-1.0.1"] = <"1BCF4B8C46C33B28AD801298F67DFBCD">
+		["MD5-CAM-1.0.1"] = <"FBA31094711AFCE8561CC07B0538B168">
 	>
 
 definition
@@ -191,6 +191,20 @@ definition
 						}
 					}
 					ELEMENT[at0089] occurrences matches {0..1} matches {	-- Link to issue
+						value matches {
+							DV_URI matches {*}
+						}
+					}
+				}
+			}
+			CLUSTER[at0142] occurrences matches {0..1} matches {	-- Adjustment
+				items cardinality matches {1..*; unordered} matches {
+					ELEMENT[at0143] occurrences matches {0..1} matches {	-- Reason adjusted
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0144] occurrences matches {0..1} matches {	-- Link to reason adjusted
 						value matches {
 							DV_URI matches {*}
 						}
@@ -481,6 +495,18 @@ Source: GP systems">
 				["at0141"] = <
 					text = <"Schedule 1 product">
 					description = <"Product pack is included in Part XVIIIA of the Drug Tariff  i.e. Schedule 1.">
+				>
+				["at0142"] = <
+					text = <"Adjustment">
+					description = <"Details of adjustment of a medication order e.g dosage or formulation change.">
+				>
+				["at0143"] = <
+					text = <"Reason adjusted">
+					description = <"The reason for adjusting a medication.">
+				>
+				["at0144"] = <
+					text = <"Link to reason adjusted">
+					description = <"A link to a record which contains the reason why the medication was adjusted.">
 				>
 			>
 		>
