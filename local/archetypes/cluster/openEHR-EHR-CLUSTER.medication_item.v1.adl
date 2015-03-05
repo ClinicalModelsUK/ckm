@@ -60,7 +60,7 @@ DM+D drug dictionary: http://www.dmd.nhs.uk/
 Royal College of Physicians, Core Clinical Headings, http://www.rcplondon.ac.uk/projects/standards-core-clinical-information
 
 Royal College of Physicians, Standards for structure and content of medications and medical device records: technical annex, http://www.rcplondon.ac.uk/sites/default/files/medication-and-medical-device-records-technical-annex-2013.pdf">
-		["MD5-CAM-1.0.1"] = <"894329BBC110B0E27D8186E4A80E9DC8">
+		["MD5-CAM-1.0.1"] = <"26608CB4FF57D8C0571C7CEC34B0DBD4">
 	>
 
 definition
@@ -79,6 +79,7 @@ definition
 					DV_CODED_TEXT matches {
 						defining_code matches {[ac0005]}		-- DrugDoseForm
 					}
+					DV_TEXT matches {*}
 				}
 			}
 			ELEMENT[at0002] occurrences matches {0..*} matches {	-- Route
@@ -86,6 +87,7 @@ definition
 					DV_CODED_TEXT matches {
 						defining_code matches {[ac0001]}		-- NHS e-Prescribing route of administration subset
 					}
+					DV_TEXT matches {*}
 				}
 			}
 			ELEMENT[at0029] occurrences matches {0..1} matches {	-- Site
@@ -93,6 +95,7 @@ definition
 					DV_CODED_TEXT matches {
 						defining_code matches {[ac0006]}		-- SiteOfMedicationAdministration
 					}
+					DV_TEXT matches {*}
 				}
 			}
 			ELEMENT[at0030] occurrences matches {0..1} matches {	-- Method
@@ -156,7 +159,8 @@ definition
 							[local::
 							at0005, 	-- Additional instruction
 							at0004, 	-- Dispensing instruction
-							at0027]	-- Patient advice
+							at0027, 	-- Patient advice
+							at0057]	-- Monitoring
 						}
 					}
 				}
@@ -376,6 +380,10 @@ This element will generally only be used when persisting data within systems wit
 					description = <"A structural representation of dose amount.">
 					comment = <"e.g. 20mg or 2 tablets
 This element will generally only be used when persisting data within systems with 'Parsable dose directions' being used to exchange the same information between systems.">
+				>
+				["at0057"] = <
+					text = <"Monitoring">
+					description = <"Special instructions realted to monitoring of medication, such as lab tests.">
 				>
 			>
 		>
