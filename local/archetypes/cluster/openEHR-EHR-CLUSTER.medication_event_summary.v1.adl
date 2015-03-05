@@ -30,7 +30,7 @@ NHS Scotland SCI-XML (SCI-Gateway, ECS, ePharmacy)  http://www.sci.scot.nhs.uk/p
 NHS Wales Informatics Service, Integrated Health Record http://www.wales.nhs.uk/nwis/page/52553
 DM+D drug dictionary: http://www.dmd.nhs.uk/
 Royal College of Physicians, Core Clinical Headings, http://www.rcplondon.ac.uk/projects/standards-core-clinical-information">
-		["MD5-CAM-1.0.1"] = <"B1E4DF05334534FA14ED0A7060698AF2">
+		["MD5-CAM-1.0.1"] = <"59FE40222ED03E662DFD9CA1251ABEEC">
 	>
 
 definition
@@ -59,7 +59,8 @@ definition
 									at0076, 	-- Date administered
 									at0077, 	-- Date administration withheld
 									at0078, 	-- Date reviewed
-									at0079]	-- Date last reviewed
+									at0079, 	-- Date last reviewed
+									at0080]	-- Date changed
 								}
 							}
 						}
@@ -173,6 +174,10 @@ ontology
 				["at0079"] = <
 					text = <"Date last reviewed">
 					description = <"The date at which the medication order was last reviewed.">
+				>
+				["at0080"] = <
+					text = <"Date changed">
+					description = <"The date at which the medication instruction was modified.">
 				>
 			>
 		>
