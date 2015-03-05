@@ -103,12 +103,9 @@
             <Rule path="/items[at0003]" max="0" />
             <Rule path="/items[at0033]" max="0" />
             <Rule path="/items[at0045]" max="0" />
-            <Rule path="/items[at0005]" max="1">
-              <nameConstraint>
-                <excludedValues>local::at0004</excludedValues>
-                <excludedValues>local::at0027</excludedValues>
-              </nameConstraint>
-            </Rule>
+            <Rule path="/items[at0005]" max="0" />
+            <Rule path="/items[at0005]" clone="true" name="Additional instruction" />
+            <Rule path="/items[at0005]" max="1" clone="true" name="Monitoring" />
             <Rule path="/items[at0046]" hide_on_form="true" />
             <Rule path="/items[at0046]/items[at0039]" max="0" />
             <Rule path="/items[at0046]/items[at0040]" max="0" />
@@ -134,11 +131,12 @@
                 <excludedValues>local::at0077</excludedValues>
                 <excludedValues>local::at0078</excludedValues>
                 <excludedValues>local::at0079</excludedValues>
+                <excludedValues>local::at0080</excludedValues>
               </nameConstraint>
             </Rule>
             <Rule path="/items[at0070 and name/value='First authorised']/items[at0071]" max="0" />
-            <Rule path="/items[at0070]" max="1" clone="true" name="Last dispensed" />
-            <Rule path="/items[at0070 and name/value='Last dispensed']/items[at0047]">
+            <Rule path="/items[at0070]" max="1" clone="true" name="Last adjusted" />
+            <Rule path="/items[at0070 and name/value='Last adjusted']/items[at0047]">
               <nameConstraint>
                 <excludedValues>local::at0067</excludedValues>
                 <excludedValues>local::at0059</excludedValues>
@@ -146,6 +144,7 @@
                 <excludedValues>local::at0061</excludedValues>
                 <excludedValues>local::at0062</excludedValues>
                 <excludedValues>local::at0063</excludedValues>
+                <excludedValues>local::at0064</excludedValues>
                 <excludedValues>local::at0065</excludedValues>
                 <excludedValues>local::at0066</excludedValues>
                 <excludedValues>local::at0072</excludedValues>
@@ -158,7 +157,6 @@
                 <excludedValues>local::at0079</excludedValues>
               </nameConstraint>
             </Rule>
-            <Rule path="/items[at0070 and name/value='Last dispensed']/items[at0071]" max="0" />
             <Rule path="/items[at0070]" max="1" clone="true" name="Discontinued" />
             <Rule path="/items[at0070 and name/value='Discontinued']/items[at0047]">
               <nameConstraint>
@@ -178,6 +176,7 @@
                 <excludedValues>local::at0077</excludedValues>
                 <excludedValues>local::at0078</excludedValues>
                 <excludedValues>local::at0079</excludedValues>
+                <excludedValues>local::at0080</excludedValues>
               </nameConstraint>
             </Rule>
             <Rule path="/items[at0070 and name/value='Discontinued']/items[at0071]" max="0" />
@@ -200,24 +199,44 @@
                 <excludedValues>local::at0077</excludedValues>
                 <excludedValues>local::at0078</excludedValues>
                 <excludedValues>local::at0079</excludedValues>
+                <excludedValues>local::at0080</excludedValues>
               </nameConstraint>
             </Rule>
             <Rule path="/items[at0070 and name/value='Last administered']/items[at0071]" max="0" />
-            <Items xsi:type="CLUSTER" archetype_id="openEHR-EHR-CLUSTER.medication_event.v1" concept_name="Medication event" max="1" path="/items[at0070 and name/value='Last dispensed']/items[at0038]" name="Last dispensed details" hide_on_form="true">
+            <Rule path="/items[at0070]" max="1" clone="true" name="Last dispensed" />
+            <Rule path="/items[at0070 and name/value='Last dispensed']/items[at0047]">
+              <nameConstraint>
+                <excludedValues>local::at0067</excludedValues>
+                <excludedValues>local::at0059</excludedValues>
+                <excludedValues>local::at0060</excludedValues>
+                <excludedValues>local::at0061</excludedValues>
+                <excludedValues>local::at0062</excludedValues>
+                <excludedValues>local::at0063</excludedValues>
+                <excludedValues>local::at0065</excludedValues>
+                <excludedValues>local::at0066</excludedValues>
+                <excludedValues>local::at0072</excludedValues>
+                <excludedValues>local::at0073</excludedValues>
+                <excludedValues>local::at0074</excludedValues>
+                <excludedValues>local::at0075</excludedValues>
+                <excludedValues>local::at0076</excludedValues>
+                <excludedValues>local::at0077</excludedValues>
+                <excludedValues>local::at0078</excludedValues>
+                <excludedValues>local::at0079</excludedValues>
+                <excludedValues>local::at0080</excludedValues>
+              </nameConstraint>
+            </Rule>
+            <Rule path="/items[at0070 and name/value='Last dispensed']/items[at0071]" max="0" />
+            <Items xsi:type="CLUSTER" archetype_id="openEHR-EHR-CLUSTER.medication_event.v1" concept_name="Medication event" path="/items[at0070 and name/value='Last adjusted']/items[at0038]">
               <Rule path="/items[at0121]" max="0" />
-              <Rule path="/items[at0135]" hide_on_form="true" />
-              <Rule path="/items[at0135]/items[at0052]" max="0" />
-              <Rule path="/items[at0135]/items[at0051]" max="0" />
+              <Rule path="/items[at0135]" max="0" />
               <Rule path="/items[at0033]" max="0" />
               <Rule path="/items[at0037]" max="0" />
               <Rule path="/items[at0057]" max="0" />
+              <Rule path="/items[at0142]" hide_on_form="true" />
+              <Rule path="/items[at0142]/items[at0144]" max="0" />
               <Rule path="/items[at0127]" max="0" />
               <Rule path="/items[at0122]" max="0" />
               <Rule path="/items[at0136]" max="0" />
-              <Items xsi:type="CLUSTER" archetype_id="openEHR-EHR-CLUSTER.medication_quantity_sct.v1" concept_name="Medication quantity" max="1" path="/items[at0135]/items[at0099]" name="Quantity dispensed" hide_on_form="true">
-                <Rule path="/items[at0001]" max="0" />
-                <Rule path="/items[at0002]" max="0" />
-              </Items>
             </Items>
             <Items xsi:type="CLUSTER" archetype_id="openEHR-EHR-CLUSTER.medication_event.v1" concept_name="Medication event" max="1" path="/items[at0070 and name/value='Discontinued']/items[at0038]" name="Discontinued details" hide_on_form="true">
               <Rule path="/items[at0121]" max="0" />
@@ -225,6 +244,7 @@
               <Rule path="/items[at0033]" max="0" />
               <Rule path="/items[at0037]" max="0" />
               <Rule path="/items[at0057]" max="0" />
+              <Rule path="/items[at0142]" max="0" />
               <Rule path="/items[at0127]" max="0" />
               <Rule path="/items[at0122]" hide_on_form="true" />
               <Rule path="/items[at0122]/items[at0128]" max="0" />
@@ -240,10 +260,27 @@
               <Rule path="/items[at0122]" max="0" />
               <Rule path="/items[at0136]" max="0" />
             </Items>
+            <Items xsi:type="CLUSTER" archetype_id="openEHR-EHR-CLUSTER.medication_event.v1" concept_name="Medication event" max="1" path="/items[at0070 and name/value='Last dispensed']/items[at0038]" name="Last dispensed details" hide_on_form="true">
+              <Rule path="/items[at0121]" max="0" />
+              <Rule path="/items[at0135]" hide_on_form="true" />
+              <Rule path="/items[at0135]/items[at0052]" max="0" />
+              <Rule path="/items[at0135]/items[at0051]" max="0" />
+              <Rule path="/items[at0033]" max="0" />
+              <Rule path="/items[at0037]" max="0" />
+              <Rule path="/items[at0057]" max="0" />
+              <Rule path="/items[at0142]" max="0" />
+              <Rule path="/items[at0127]" max="0" />
+              <Rule path="/items[at0122]" max="0" />
+              <Rule path="/items[at0136]" max="0" />
+              <Items xsi:type="CLUSTER" archetype_id="openEHR-EHR-CLUSTER.medication_quantity_sct.v1" concept_name="Medication quantity" max="1" path="/items[at0135]/items[at0099]" name="Quantity dispensed" hide_on_form="true">
+                <Rule path="/items[at0001]" max="0" />
+                <Rule path="/items[at0002]" max="0" />
+              </Items>
+            </Items>
           </Items>
         </Item>
       </Item>
-      <Item xsi:type="SECTION" archetype_id="openEHR-EHR-SECTION.current_medication_rcp.v1" concept_name="Current medication" max="0" path="/items" name="Discontinued GP medication">
+      <Item xsi:type="SECTION" archetype_id="openEHR-EHR-SECTION.current_medication_rcp.v1" concept_name="Current medication" max="1" path="/items" name="Discontinued GP medication">
         <Item xsi:type="EVALUATION" archetype_id="openEHR-EHR-EVALUATION.medication_statement_uk.v1" concept_name="Medication statement" path="/items">
           <Rule path="/data[at0001]" hide_on_form="true" />
           <Rule path="/protocol[at0003]" hide_on_form="true" />
@@ -285,6 +322,7 @@
                 <excludedValues>local::at0077</excludedValues>
                 <excludedValues>local::at0078</excludedValues>
                 <excludedValues>local::at0079</excludedValues>
+                <excludedValues>local::at0080</excludedValues>
               </nameConstraint>
             </Rule>
             <Rule path="/items[at0070 and name/value='Discontinued']/items[at0071]" max="0" />
@@ -294,6 +332,7 @@
               <Rule path="/items[at0033]" max="0" />
               <Rule path="/items[at0037]" max="0" />
               <Rule path="/items[at0057]" max="0" />
+              <Rule path="/items[at0142]" max="0" />
               <Rule path="/items[at0127]" max="0" />
               <Rule path="/items[at0122]/items[at0128]" max="0" />
               <Rule path="/items[at0136]" max="0" />
@@ -378,13 +417,13 @@
     <digest id="MD5-CAM-1.0.1">B484628D972812857F047E0C5D63B0C3</digest>
   </integrity_checks>
   <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-CLUSTER.medication_item.v1">
-    <digest id="MD5-CAM-1.0.1">894329BBC110B0E27D8186E4A80E9DC8</digest>
+    <digest id="MD5-CAM-1.0.1">26608CB4FF57D8C0571C7CEC34B0DBD4</digest>
   </integrity_checks>
   <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-CLUSTER.medication_event_summary.v1">
-    <digest id="MD5-CAM-1.0.1">B1E4DF05334534FA14ED0A7060698AF2</digest>
+    <digest id="MD5-CAM-1.0.1">59FE40222ED03E662DFD9CA1251ABEEC</digest>
   </integrity_checks>
   <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-CLUSTER.medication_event.v1">
-    <digest id="MD5-CAM-1.0.1">1BCF4B8C46C33B28AD801298F67DFBCD</digest>
+    <digest id="MD5-CAM-1.0.1">FBA31094711AFCE8561CC07B0538B168</digest>
   </integrity_checks>
   <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-CLUSTER.medication_quantity_sct.v1">
     <digest id="MD5-CAM-1.0.1">60C2BB047D7707475BC4F1103ABA7F85</digest>
