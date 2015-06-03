@@ -63,6 +63,23 @@
   <definition xsi:type="COMPOSITION" archetype_id="openEHR-EHR-COMPOSITION.report.v1" concept_name="Report" name="Cancer MDT Output Report">
     <Content xsi:type="SECTION" archetype_id="openEHR-EHR-SECTION.demographics_rcp.v1" concept_name="Patient demographics" max="0" path="/content" name="Holistic needs assessment" />
     <Content xsi:type="SECTION" archetype_id="openEHR-EHR-SECTION.referral_details_rcp.v1" concept_name="Referral details" path="/content">
+      <Item xsi:type="INSTRUCTION" archetype_id="openEHR-EHR-INSTRUCTION.request-referral.v1" concept_name="Referral request" max="1" path="/items" name="MDT Referral ">
+        <Rule path="/activities[at0001]" hide_on_form="true" />
+        <Rule path="/activities[at0001]/description[at0009]" hide_on_form="true" />
+        <Rule path="/activities[at0001]/description[at0009]/items[at0121]" default="MDT referral" />
+        <Rule path="/activities[at0001]/description[at0009]/items[at0135]" max="0" />
+        <Rule path="/activities[at0001]/description[at0009]/items[at0062]" max="0" />
+        <Rule path="/activities[at0001]/description[at0009]/items[at0064]" max="0" />
+        <Rule path="/activities[at0001]/description[at0009]/items[at0065]" max="0" />
+        <Rule path="/activities[at0001]/description[at0009]/items[at0144]" max="0" />
+        <Rule path="/activities[at0001]/description[at0009]/items[at0076]" max="0" />
+        <Rule path="/activities[at0001]/description[at0009]/items[at0078]" max="0" />
+        <Rule path="/protocol[at0008]" hide_on_form="true" />
+        <Rule path="/protocol[at0008]/items[at0010]" max="0" />
+        <Rule path="/protocol[at0008]/items[at0011]" max="0" />
+        <Rule path="/protocol[at0008]/items[at0127]" max="0" />
+        <Rule path="/protocol[at0008]/items[at0.2]" max="0" />
+      </Item>
       <Item xsi:type="INSTRUCTION" archetype_id="openEHR-EHR-INSTRUCTION.request-referral.v1" concept_name="Referral request" max="1" path="/items" name="Original referral">
         <Rule path="/activities[at0001]/description[at0009]" hide_on_form="true" />
         <Rule path="/activities[at0001]/description[at0009]/items[at0121]" default="Oncology referral" hide_on_form="true" />
@@ -81,26 +98,9 @@
         <Rule path="/protocol[at0008]/items[at0127]" max="0" />
         <Rule path="/protocol[at0008]/items[at0.2]" max="0" />
       </Item>
-      <Item xsi:type="INSTRUCTION" archetype_id="openEHR-EHR-INSTRUCTION.request-referral.v1" concept_name="Referral request" max="1" path="/items" name="MDT Referral ">
-        <Rule path="/activities[at0001]" hide_on_form="true" />
-        <Rule path="/activities[at0001]/description[at0009]" hide_on_form="true" />
-        <Rule path="/activities[at0001]/description[at0009]/items[at0121]" default="MDT referral" />
-        <Rule path="/activities[at0001]/description[at0009]/items[at0135]" max="0" />
-        <Rule path="/activities[at0001]/description[at0009]/items[at0062]" max="0" />
-        <Rule path="/activities[at0001]/description[at0009]/items[at0064]" max="0" />
-        <Rule path="/activities[at0001]/description[at0009]/items[at0065]" max="0" />
-        <Rule path="/activities[at0001]/description[at0009]/items[at0144]" max="0" />
-        <Rule path="/activities[at0001]/description[at0009]/items[at0076]" max="0" />
-        <Rule path="/activities[at0001]/description[at0009]/items[at0078]" max="0" />
-        <Rule path="/protocol[at0008]" hide_on_form="true" />
-        <Rule path="/protocol[at0008]/items[at0010]" max="0" />
-        <Rule path="/protocol[at0008]/items[at0011]" max="0" />
-        <Rule path="/protocol[at0008]/items[at0127]" max="0" />
-        <Rule path="/protocol[at0008]/items[at0.2]" max="0" />
-      </Item>
     </Content>
     <Content xsi:type="SECTION" archetype_id="openEHR-EHR-SECTION.history_rcp.v1" concept_name="History" path="/content">
-      <Item xsi:type="EVALUATION" archetype_id="openEHR-EHR-EVALUATION.reason_for_encounter.v1" concept_name="Reason for Encounter" max="1" path="/items" name="Question for MDT">
+      <Item xsi:type="EVALUATION" archetype_id="openEHR-EHR-EVALUATION.reason_for_encounter.v1" concept_name="Reason for encounter" max="1" path="/items" name="Question for MDT">
         <Rule path="/data[at0001]" hide_on_form="true" />
         <Rule path="/data[at0001]/items[at0002]" max="0" />
         <Rule path="/data[at0001]/items[at0004]" max="1" name="Question to MDT" />
@@ -130,6 +130,7 @@
           <Rule path="/data[at0001]" hide_on_form="true" />
           <Rule path="/data[at0001]/events[at0002]" hide_on_form="true" />
           <Rule path="/data[at0001]/events[at0002]/data[at0003]" hide_on_form="true" />
+          <Rule path="/data[at0001]/events[at0002]/data[at0003]/items[at0005]" hide_on_form="true" />
           <Rule path="/data[at0001]/events[at0002]/data[at0003]/items[at0077]" max="0" />
           <Rule path="/data[at0001]/events[at0002]/data[at0003]/items[at0073]" max="0" />
           <Rule path="/data[at0001]/events[at0002]/data[at0003]/items[at0078]" max="1" name="Test result">
@@ -145,12 +146,11 @@
           <Rule path="/protocol[at0004]/items[at0068]" max="0" />
           <Rule path="/protocol[at0004]/items[at0075]" max="0" />
         </Item>
-        <Item xsi:type="OBSERVATION" archetype_id="openEHR-EHR-OBSERVATION.exam.v1" concept_name="Physical examination findings" max="1" path="/items" name="DRE">
+        <Item xsi:type="OBSERVATION" archetype_id="openEHR-EHR-OBSERVATION.exam.v1" concept_name="Physical examination findings" path="/items">
           <Rule path="/data[at0001]" hide_on_form="true" />
           <Rule path="/data[at0001]/events[at0002]" hide_on_form="true" />
           <Rule path="/data[at0001]/events[at0002]/data[at0003]" hide_on_form="true" />
           <Rule path="/data[at0001]/events[at0002]/data[at0003]/items[at0004]" max="0" />
-          <Rule path="/data[at0001]/events[at0002]/data[at0003]/items[at0006]" max="1" name="Digital rectal examination" />
           <Rule path="/data[at0001]/events[at0002]/data[at0003]/items[at0011]" max="0" />
           <Rule path="/data[at0001]/events[at0002]/state[at0009]" hide_on_form="true" />
           <Rule path="/data[at0001]/events[at0002]/state[at0009]/items[at0008]" max="0" />
@@ -163,10 +163,7 @@
           <Rule path="/data[at0001]/events[at0002]" hide_on_form="true" />
           <Rule path="/data[at0001]/events[at0002]/data[at0003]" hide_on_form="true" />
           <Rule path="/data[at0001]/events[at0002]/data[at0003]/items[at0004]">
-            <constraint xsi:type="textConstraint" limitToList="false">
-              <includedValues>Staging CT</includedValues>
-              <includedValues>Prostate MRI</includedValues>
-            </constraint>
+            <constraint xsi:type="textConstraint" limitToList="false" />
           </Rule>
           <Rule path="/data[at0001]/events[at0002]/data[at0003]/items[at0005]" max="0" />
           <Rule path="/data[at0001]/events[at0002]/data[at0003]/items[at0007]" default="local::at0011::Final" />
@@ -185,7 +182,7 @@
           <Rule path="/data[at0001]" hide_on_form="true" />
           <Rule path="/data[at0001]/events[at0002]" hide_on_form="true" />
           <Rule path="/data[at0001]/events[at0002]/data[at0003]" hide_on_form="true" />
-          <Rule path="/data[at0001]/events[at0002]/data[at0003]/items[at0005]" default="Histopathology" />
+          <Rule path="/data[at0001]/events[at0002]/data[at0003]/items[at0005]" default="Histopathology" hide_on_form="true" />
           <Rule path="/data[at0001]/events[at0002]/data[at0003]/items[at0077]" max="0" />
           <Rule path="/data[at0001]/events[at0002]/data[at0003]/items[at0073]" max="0" />
           <Rule path="/data[at0001]/events[at0002]/data[at0003]/items[at0.86]" max="0" />
@@ -197,13 +194,14 @@
           <Rule path="/protocol[at0004]/items[at0013]" max="0" />
           <Rule path="/protocol[at0004]/items[at0075]" max="0" />
         </Item>
-        <Item xsi:type="OBSERVATION" archetype_id="openEHR-EHR-OBSERVATION.exam.v1" concept_name="Physical examination findings" max="1" path="/items" name="Cytoscopy findings">
+        <Item xsi:type="OBSERVATION" archetype_id="openEHR-EHR-OBSERVATION.exam.v1" concept_name="Physical examination findings" max="1" path="/items" name="Cystoscopy">
           <Rule path="/data[at0001]" hide_on_form="true" />
           <Rule path="/data[at0001]/events[at0002]" hide_on_form="true">
             <eventConstraint>
               <allowedType>PointInTime</allowedType>
             </eventConstraint>
           </Rule>
+          <Rule path="/data[at0001]/events[at0002]/data[at0003]" hide_on_form="true" />
           <Rule path="/data[at0001]/events[at0002]/data[at0003]/items[at0006]" max="0" />
           <Rule path="/data[at0001]/events[at0002]/data[at0003]/items[at0011]" max="0" />
           <Rule path="/data[at0001]/events[at0002]/state[at0009]" hide_on_form="true" />
@@ -212,7 +210,11 @@
         </Item>
       </Item>
       <Item xsi:type="SECTION" archetype_id="openEHR-EHR-SECTION.assessment_scales_rcp.v1" concept_name="Assessment scales" path="/items">
-        <Item xsi:type="OBSERVATION" archetype_id="openEHR-EHR-OBSERVATION.who_performance_status.v0" concept_name="WHO Performance Status" path="/items" />
+        <Item xsi:type="OBSERVATION" archetype_id="openEHR-EHR-OBSERVATION.who_performance_status.v0" concept_name="WHO Performance Status" path="/items">
+          <Rule path="/data[at0001]" hide_on_form="true" />
+          <Rule path="/data[at0001]/events[at0002]" hide_on_form="true" />
+          <Rule path="/data[at0001]/events[at0002]/data[at0003]" hide_on_form="true" />
+        </Item>
       </Item>
     </Content>
     <Content xsi:type="SECTION" archetype_id="openEHR-EHR-SECTION.problems_and_diagnoses.v1" concept_name="Problems and diagnoses" path="/content">
@@ -230,6 +232,7 @@
         <Rule path="/protocol[at0032]" hide_on_form="true" />
         <Rule path="/protocol[at0032]/items[at0070]" max="0" />
         <Items xsi:type="CLUSTER" archetype_id="openEHR-EHR-CLUSTER.tnm_staging.v1" concept_name="Tumour - TNM Cancer staging" path="/data[at0001]/items[at0043]">
+          <Rule path="/items[at0002]" hide_on_form="true" />
           <Rule path="/items[at0002]/items[at0003]" max="0" />
           <Rule path="/items[at0002]/items[at0004]" max="0" />
           <Rule path="/items[at0002]/items[at0005]" max="0" />
@@ -243,6 +246,7 @@
     <Content xsi:type="SECTION" archetype_id="openEHR-EHR-SECTION.plan_requested_actions_rcp.v1" concept_name="Plan and requested actions" path="/content">
       <Item xsi:type="EVALUATION" archetype_id="openEHR-EHR-EVALUATION.recommendation.v1" concept_name="Recommendation" path="/items">
         <Rule path="/data[at0001]" hide_on_form="true" />
+        <Rule path="/data[at0001]/items[at0003]" max="0" />
       </Item>
     </Content>
     <Context>
