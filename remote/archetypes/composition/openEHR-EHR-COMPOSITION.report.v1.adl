@@ -1,4 +1,4 @@
-﻿archetype (adl_version=1.4)
+﻿archetype (adl_version=1.4; uid=1b7dc82e-55a1-4033-b5ab-67e3194772f9)
 	openEHR-EHR-COMPOSITION.report.v1
 
 concept
@@ -60,18 +60,6 @@ The Sections component has been deliberately left unconstrained to maximise re-u
 			misuse = <"">
 			copyright = <"© openEHR Foundation">
 		>
-		["en"] = <
-			language = <[ISO_639-1::en]>
-			purpose = <"Generic container archetype to carry information that needs to be shared with others.">
-			use = <"Use as a generic archetype to carry information that needs to be shared with others.  Common examples are: documenting a response to a request for information; the outcome of testing; activities that have been performed; or events that have occurred.
-The Context component contains an optional unnamed slot that can be used to:
-- add optional content during templating to support a use-case specific requirements;
-- add EHR model demographic archetypes representing participating parties. While this may not be desired at implementation, this can be useful to demonstrate how demographics may be represented in an implementation ie as a support to clinical content requirements gathering or template review.
-The Sections component has been deliberately left unconstrained to maximise re-use of this archetype.">
-			keywords = <"report", ...>
-			misuse = <"">
-			copyright = <"© openEHR Foundation">
-		>
 		["es-ar"] = <
 			language = <[ISO_639-1::es-ar]>
 			purpose = <"Arquetipo contenedor genérico para la portación de información que necesita ser compartida con otros.">
@@ -83,12 +71,31 @@ El componente de Contexto contiene un slot innominado que puede ser utilizado pa
 			misuse = <"">
 			copyright = <"© openEHR Foundation">
 		>
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"Generic container archetype to carry information that needs to be shared with others.">
+			use = <"Use as a generic archetype to carry information that needs to be shared with others.  
+
+Common use cases are: documenting a response to a request for information; the outcome of testing; activities that have been performed; or events that have occurred.
+
+The Sections component has been deliberately left unconstrained to maximise re-use of this archetype.">
+			keywords = <"report", ...>
+			misuse = <"">
+			copyright = <"© openEHR Foundation">
+		>
 	>
-	lifecycle_state = <"AuthorDraft">
-	other_contributors = <"Heath Frankel, Ocean Informatics, Australia", "Sam Heard, Ocean Informatics, Australia", "Sistine Barretto-Daniels, Ocean Informatics, Australia", "Hugh Leslie, Ocean Informatics, Australia", "Ian McNicoll, Ocean Informatics, Australia">
+	lifecycle_state = <"published">
+	other_contributors = <"Koray Atalag, University of Auckland, New Zealand", "Silje Ljosland Bakke, Bergen Hospital Trust, Norway (openEHR Editor)", "Sistine Barretto-Daniels, Ocean Informatics, Australia", "Lars Bitsch-Larsen, Haukeland University hospital, Norway", "Einar Fosse, National Centre for Integrated Care and Telemedicine, Norway", "Heath Frankel, Ocean Informatics, Australia", "Sam Heard, Ocean Informatics, Australia", "Lars Karlsen, DIPS ASA, Norway", "Shinji Kobayashi, Kyoto University, Japan", "Heather Leslie, Ocean Informatics, Australia (openEHR Editor)", "Hugh Leslie, Ocean Informatics, Australia", "Ian McNicoll, freshEHR Clinical Informatics, United Kingdom (openEHR Editor)", "Bjoern Naess, DIPS ASA, Norway", "Andrej Orel, Marand d.o.o., Slovenia">
 	other_details = <
 		["current_contact"] = <"Heather Leslie, Ocean Informatics, heather.leslie@oceaninformatics.com">
-		["MD5-CAM-1.0.1"] = <"AA03B74E02546F77F2FAA9ECE452F333">
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 3.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/3.0/.">
+		["revision"] = <"1.0.0">
+		["build_uid"] = <"1fded0ea-1be4-4b05-b751-b9a2f1ed7c97">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["MD5-CAM-1.0.1"] = <"FD053BE0456D849CACD864F274EED32E">
+		["custodian_namespace"] = <"org.openehr">
+		["custodian_organisation"] = <"openEHR Foundation">
 	>
 
 definition
@@ -199,7 +206,7 @@ ontology
 				["at0006"] = <
 					text = <"Extension">
 					description = <"Additional information required to capture local context or to align with other reference models/formalisms.">
-					comment = <" e.g. Local hospital departmental infomation or additional metadata to align with FHIR or CIMI equivalents.">
+					comment = <"For example: local information requirements or additional metadata to align with FHIR or CIMI equivalents.">
 				>
 			>
 		>
