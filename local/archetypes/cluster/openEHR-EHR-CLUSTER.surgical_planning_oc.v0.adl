@@ -1,0 +1,174 @@
+﻿archetype (adl_version=1.4; uid=5fd5b645-9c31-4ef9-914c-9784920ced33)
+	openEHR-EHR-CLUSTER.surgical_planning_oc.v0
+
+concept
+	[at0000]	-- Surgical Planning Details
+language
+	original_language = <[ISO_639-1::en]>
+description
+	original_author = <
+		["name"] = <"Hildegard Franke">
+		["organisation"] = <"freshEHR Clinical Informatics Ltd.">
+		["email"] = <"hildi@freshehr.com">
+		["date"] = <"2016-06-01">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"This local cluster archetype allows the capture of a range of surgical planning details prior to prostate cancer surgery.">
+			use = <"Use to record surgical planning data to inform prostate cancer surgery.">
+			keywords = <"prostate", "cancer", "surgery", "surgical", "planning">
+			misuse = <"">
+			copyright = <"© Clinical Models UK">
+		>
+	>
+	lifecycle_state = <"in_development">
+	other_contributors = <>
+	other_details = <
+		["current_contact"] = <"Hildegard Franke, freshEHR Clinical Informatics Ltd.<hildi@freshehr.com>">
+		["revision"] = <"0.0.1-alpha">
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 3.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/3.0/.">
+		["build_uid"] = <"a5466476-23bb-4066-b91a-1a519a2a70b8">
+		["original_publisher"] = <"UK Clinical Models">
+		["original_namespace"] = <"uk.org.clinicalmodels">
+		["MD5-CAM-1.0.1"] = <"28218B459178D5A24ACCB1B69EE85928">
+		["custodian_namespace"] = <"uk.org.clinicalmodels">
+		["custodian_organisation"] = <"UK Clinical Models">
+	>
+
+definition
+	CLUSTER[at0000] matches {	-- Surgical Planning Details
+		items cardinality matches {1..*; unordered} matches {
+			ELEMENT[at0001] occurrences matches {0..*} matches {	-- MRI predictor of surgical difficulty
+				value matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::
+							at0002, 	-- Large gland
+							at0003, 	-- Significant median lobe
+							at0004, 	-- Large seminal vesicles
+							at0005, 	-- Narrow pelvis / ethnicity
+							at0006, 	-- Previous laparotomy
+							at0007, 	-- Previous pelvic radiotherapy
+							at0008, 	-- Previous TURP
+							at0009]	-- Previous prostate ablation
+						}
+					}
+					DV_TEXT matches {*}
+				}
+			}
+			ELEMENT[at0012] occurrences matches {0..1} matches {	-- Nerve spare right intended
+				value matches {
+					DV_BOOLEAN matches {
+						value matches {True, False}
+					}
+				}
+			}
+			ELEMENT[at0013] occurrences matches {0..1} matches {	-- Nerve spare left intended
+				value matches {
+					DV_BOOLEAN matches {
+						value matches {True, False}
+					}
+				}
+			}
+			ELEMENT[at0014] occurrences matches {0..1} matches {	-- Lymph node dissection intended
+				value matches {
+					DV_BOOLEAN matches {
+						value matches {True, False}
+					}
+				}
+			}
+			ELEMENT[at0015] occurrences matches {0..1} matches {	-- MRI quality score
+				value matches {
+					DV_COUNT matches {
+						magnitude matches {|1..5|}
+					}
+				}
+			}
+			ELEMENT[at0016] occurrences matches {0..1} matches {	-- Grade of difficulty
+				value matches {
+					DV_COUNT matches {
+						magnitude matches {|1..3|}
+					}
+				}
+			}
+			ELEMENT[at0017] occurrences matches {0..1} matches {	-- MRI location
+				value matches {
+					DV_TEXT matches {*}
+				}
+			}
+		}
+	}
+
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Surgical Planning Details">
+					description = <"Surgical Planning Details for Prostate Cancer Robotic Surgery Radiology Planning Meeting.">
+				>
+				["at0001"] = <
+					text = <"MRI predictor of surgical difficulty">
+					description = <"Details of predictors of surgical difficulty obtained from MRI scan pr patient history.">
+				>
+				["at0002"] = <
+					text = <"Large gland">
+					description = <"MRI revealed large gland.">
+				>
+				["at0003"] = <
+					text = <"Significant median lobe">
+					description = <"MRI revealed significant median lobe.">
+				>
+				["at0004"] = <
+					text = <"Large seminal vesicles">
+					description = <"MRI revealed large seminal vesicles.">
+				>
+				["at0005"] = <
+					text = <"Narrow pelvis / ethnicity">
+					description = <"MRI revealed a narrow pelvis.">
+				>
+				["at0006"] = <
+					text = <"Previous laparotomy">
+					description = <"MRI or patient history revealed a previous laparotomy.">
+				>
+				["at0007"] = <
+					text = <"Previous pelvic radiotherapy">
+					description = <"MRI or patient history revealed previous pelvic radiotherapy.">
+				>
+				["at0008"] = <
+					text = <"Previous TURP">
+					description = <"MRI revealed previous TURP.">
+				>
+				["at0009"] = <
+					text = <"Previous prostate ablation">
+					description = <"MRI revealed previous prostate ablation.">
+				>
+				["at0012"] = <
+					text = <"Nerve spare right intended">
+					description = <"Statement of intent whether nerve spare right is proposed.">
+				>
+				["at0013"] = <
+					text = <"Nerve spare left intended">
+					description = <"Statement of intent whether nerve spare left is proposed.">
+				>
+				["at0014"] = <
+					text = <"Lymph node dissection intended">
+					description = <"Statement of intent whether lymph node dissection is proposed.">
+				>
+				["at0015"] = <
+					text = <"MRI quality score">
+					description = <"The MRI quality score on a scale of 1-5.">
+				>
+				["at0016"] = <
+					text = <"Grade of difficulty">
+					description = <"Score used to decide which operating list the patient goes on, and who can do the operation (trainee, experienced consultant etc).">
+				>
+				["at0017"] = <
+					text = <"MRI location">
+					description = <"Hospital/department where MRI scan is performed.">
+				>
+			>
+		>
+	>
