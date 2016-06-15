@@ -5,9 +5,9 @@
   <description>
     <lifecycle_state>Initial</lifecycle_state>
     <details>
-      <purpose />
-      <use />
-      <misuse />
+      <purpose>Intended to represent the way in which the details of a planning meeting for prostate cancer surgery might appear in MDT tools and applications, both for data entry and for reporting purposes</purpose>
+      <use>Use for Robotic Surgery Radiology Planning meeting for prostate cancer.</use>
+      <misuse>Not to be used for MDT scenarios other than prostate cancer surgery planning.</misuse>
     </details>
     <other_details>
       <item>
@@ -61,7 +61,7 @@
     </other_details>
   </description>
   <definition xsi:type="COMPOSITION" archetype_id="openEHR-EHR-COMPOSITION.report.v1" concept_name="Report" name="Robotic Surgery Radiology Planning Meeting">
-    <Content xsi:type="ACTION" archetype_id="openEHR-EHR-ACTION.procedure.v1" concept_name="Procedure" max="1" path="/content" name="Proposed procedure">
+    <Content xsi:type="ACTION" archetype_id="openEHR-EHR-ACTION.procedure.v1" concept_name="Procedure" max="1" path="/content" name="Proposed procedure" hide_on_form="true">
       <Rule path="/description[at0001]" hide_on_form="true" />
       <Rule path="/description[at0001]/items[at0002]" name="Proposed procedure" />
       <Rule path="/description[at0001]/items[at0049]" max="0" />
@@ -78,9 +78,9 @@
       <Rule path="/protocol[at0053]" hide_on_form="true" />
       <Rule path="/protocol[at0053]/items[at0054]" max="0" />
       <Rule path="/protocol[at0053]/items[at0056]" max="0" />
-      <Items xsi:type="CLUSTER" archetype_id="openEHR-EHR-CLUSTER.surgical_planning_oc.v0" concept_name="Surgical Planning Details" path="/description[at0001]/items[at0003]" />
+      <Items xsi:type="CLUSTER" archetype_id="openEHR-EHR-CLUSTER.surgical_planning_oc.v0" concept_name="Surgical Planning Details" path="/description[at0001]/items[at0003]" hide_on_form="true" />
     </Content>
-    <Content xsi:type="OBSERVATION" archetype_id="openEHR-EHR-OBSERVATION.laboratory_test.v0" concept_name="Laboratory test" path="/content">
+    <Content xsi:type="OBSERVATION" archetype_id="openEHR-EHR-OBSERVATION.laboratory_test.v0" concept_name="Laboratory test" path="/content" hide_on_form="true">
       <Rule path="/data[at0001]" hide_on_form="true" />
       <Rule path="/data[at0001]/events[at0002]" hide_on_form="true">
         <eventConstraint>
@@ -114,7 +114,7 @@
         <Rule path="/items[at0002]/items[at0006]" max="0" />
       </Items>
     </Content>
-    <Content xsi:type="OBSERVATION" archetype_id="openEHR-EHR-OBSERVATION.exam.v1" concept_name="Physical examination findings" path="/content">
+    <Content xsi:type="OBSERVATION" archetype_id="openEHR-EHR-OBSERVATION.exam.v1" concept_name="Physical examination findings" path="/content" hide_on_form="true">
       <Rule path="/data[at0001]" hide_on_form="true" />
       <Rule path="/data[at0001]/events[at0002]" hide_on_form="true">
         <eventConstraint>
@@ -162,12 +162,12 @@
       <Rule path="/data[at0001]/events[at0002]/state[at0027]/items[at0028]" max="0" />
       <Rule path="/protocol[at0029]" hide_on_form="true" />
     </Content>
-    <Content xsi:type="EVALUATION" archetype_id="openEHR-EHR-EVALUATION.clinical_synopsis.v1" concept_name="Clinical Synopsis" path="/content">
+    <Content xsi:type="EVALUATION" archetype_id="openEHR-EHR-EVALUATION.clinical_synopsis.v1" concept_name="Clinical Synopsis" path="/content" hide_on_form="true">
       <Rule path="/data[at0001]" hide_on_form="true" />
       <Rule path="/data[at0001]/items[at0002]" name="Summary" />
     </Content>
     <Content xsi:type="SECTION" archetype_id="openEHR-EHR-SECTION.adhoc.v1" concept_name="Ad hoc heading" max="1" path="/content" name="Preoperative">
-      <Item xsi:type="OBSERVATION" archetype_id="openEHR-EHR-OBSERVATION.body_mass_index.v1" concept_name="Body mass index" path="/items">
+      <Item xsi:type="OBSERVATION" archetype_id="openEHR-EHR-OBSERVATION.body_mass_index.v1" concept_name="Body mass index" path="/items" hide_on_form="true">
         <Rule path="/data[at0001]" hide_on_form="true" />
         <Rule path="/data[at0001]/events[at0002]" hide_on_form="true">
           <eventConstraint>
@@ -180,7 +180,7 @@
         <Rule path="/protocol[at0005]/items[at0010]" max="0" />
         <Rule path="/protocol[at0005]/items[at0011]" max="0" />
       </Item>
-      <Item xsi:type="OBSERVATION" archetype_id="openEHR-EHR-OBSERVATION.exam.v1" concept_name="Physical examination findings" path="/items">
+      <Item xsi:type="OBSERVATION" archetype_id="openEHR-EHR-OBSERVATION.exam.v1" concept_name="Physical examination findings" path="/items" hide_on_form="true">
         <Rule path="/data[at0001]" hide_on_form="true" />
         <Rule path="/data[at0001]/events[at0002]" hide_on_form="true">
           <eventConstraint>
@@ -300,7 +300,7 @@
       <Rule path="/data[at0001]/events[at0002]/state[at0031]" hide_on_form="true" />
       <Rule path="/data[at0001]/events[at0002]/state[at0031]/items[at0032]" max="0" />
       <Rule path="/protocol[at0033]" hide_on_form="true" />
-      <Items xsi:type="CLUSTER" archetype_id="openEHR-EHR-CLUSTER.gleason_score.v0" concept_name="Gleason Score" max="0" path="/data[at0001]/events[at0002]/data[at0003]/items[at0035]" />
+      <Items xsi:type="CLUSTER" archetype_id="openEHR-EHR-CLUSTER.gleason_score.v0" concept_name="Gleason Score" path="/data[at0001]/events[at0002]/data[at0003]/items[at0035]" />
       <Items xsi:type="CLUSTER" archetype_id="openEHR-EHR-CLUSTER.tnm_staging_7th-prostate.v1" concept_name="Tumour - Prostate Cancer TNM staging 7th Edition" max="0" path="/data[at0001]/events[at0002]/data[at0003]/items[at0019]">
         <Rule path="/items[at0004]" max="0" />
         <Rule path="/items[at0005]" max="0" />
@@ -312,7 +312,7 @@
         <Rule path="/items[at0012]" max="0" />
       </Items>
     </Content>
-    <Content xsi:type="OBSERVATION" archetype_id="openEHR-EHR-OBSERVATION.laboratory_test-histopathology.v0" concept_name="Histopathology test" path="/content">
+    <Content xsi:type="OBSERVATION" archetype_id="openEHR-EHR-OBSERVATION.laboratory_test-histopathology.v0" concept_name="Histopathology test" path="/content" hide_on_form="true">
       <Rule path="/data[at0001]" hide_on_form="true" />
       <Rule path="/data[at0001]/events[at0002]" hide_on_form="true">
         <eventConstraint>
