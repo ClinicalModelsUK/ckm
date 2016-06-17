@@ -88,7 +88,9 @@
         </eventConstraint>
       </Rule>
       <Rule path="/data[at0001]/events[at0002]/data[at0003]" hide_on_form="true" />
-      <Rule path="/data[at0001]/events[at0002]/data[at0003]/items[at0005]" name="PSA" />
+      <Rule path="/data[at0001]/events[at0002]/data[at0003]/items[at0005]" hide_on_form="true" name="PSA" />
+      <Rule path="/data[at0001]/events[at0002]/data[at0003]/items[at0073]" hide_on_form="true" />
+      <Rule path="/data[at0001]/events[at0002]/data[at0003]/items[at0075]" hide_on_form="true" />
       <Rule path="/data[at0001]/events[at0002]/data[at0003]/items[at0077]" max="0" />
       <Rule path="/data[at0001]/events[at0002]/data[at0003]/items[at0100]" max="0" />
       <Rule path="/data[at0001]/events[at0002]/data[at0003]/items[at0057]" max="0" />
@@ -103,7 +105,7 @@
       <Rule path="/protocol[at0004]/items[at0111]" max="0" />
       <Items xsi:type="CLUSTER" archetype_id="openEHR-EHR-CLUSTER.laboratory_test_panel.v0" concept_name="Laboratory test panel" path="/data[at0001]/events[at0002]/data[at0003]/items[at0097]" hide_on_form="true">
         <Rule path="/items[at0002]" hide_on_form="true" />
-        <Rule path="/items[at0002]/items[at0001]" name="PSA Result">
+        <Rule path="/items[at0002]/items[at0001]" name="Current prostatic specific antigen (PSA) level">
           <constraint xsi:type="multipleConstraint">
             <includedTypes>Quantity</includedTypes>
           </constraint>
@@ -331,6 +333,8 @@
         </constraint>
       </Rule>
       <Rule path="/data[at0001]/events[at0002]/data[at0003]/items[at0077]" max="0" />
+      <Rule path="/data[at0001]/events[at0002]/data[at0003]/items[at0073]" hide_on_form="true" />
+      <Rule path="/data[at0001]/events[at0002]/data[at0003]/items[at0075]" hide_on_form="true" />
       <Rule path="/data[at0001]/events[at0002]/data[at0003]/items[at0100]" max="0" />
       <Rule path="/data[at0001]/events[at0002]/data[at0003]/items[at0.118]" max="0" />
       <Rule path="/data[at0001]/events[at0002]/data[at0003]/items[at0057]" max="0" />
