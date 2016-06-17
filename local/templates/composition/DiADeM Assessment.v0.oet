@@ -70,6 +70,9 @@
       </Rule>
       <Rule path="/data[at0001]/events[at0002]/data[at0003]" hide_on_form="true" />
       <Rule path="/data[at0001]/events[at0002]/data[at0003]/items[at0019]" max="0" />
+      <Rule path="/data[at0001]/events[at0002]/state[at0025]" hide_on_form="true" />
+      <Rule path="/data[at0001]/events[at0002]/state[at0025]/items[at0026]" max="0" />
+      <Rule path="/protocol[at0027]" hide_on_form="true" />
     </Content>
     <Content xsi:type="OBSERVATION" archetype_id="openEHR-EHR-OBSERVATION.six_cit_assessment.v0" concept_name="6 CIT Assessment v0" path="/content">
       <Rule path="/data[at0001]" hide_on_form="true" />
@@ -100,7 +103,7 @@
     <digest id="MD5-CAM-1.0.1">4DF6B3DE1A7F7899B4F88A97FED974E7</digest>
   </integrity_checks>
   <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-OBSERVATION.yhscn_diadem_assessment.v0">
-    <digest id="MD5-CAM-1.0.1">B9D1BFFB629394FEE0CCB541915720C6</digest>
+    <digest id="MD5-CAM-1.0.1">63AFC5A0DC2F27348FF3B4FA29FC123C</digest>
   </integrity_checks>
   <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-OBSERVATION.six_cit_assessment.v0">
     <digest id="MD5-CAM-1.0.1">A5F5F24C78395D534ECAE2657601FC76</digest>
