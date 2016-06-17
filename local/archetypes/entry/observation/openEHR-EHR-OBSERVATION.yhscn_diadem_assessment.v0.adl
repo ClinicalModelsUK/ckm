@@ -15,8 +15,8 @@ description
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
-			purpose = <"Local archetype for Yorkshire and the Humber Strategic Clinical Networks Dementia Management. This archetype forms part of the DiADeM (Diagnosing Advanced Dementia Mandate for care home settings) Tool.">
-			use = <"Local use by Yorkshire and the Humber Strategic Clinical Networks for their dementia management programme.">
+			purpose = <"Local archetype for Yorkshire and the Humber Clinical Networks Dementia Management. This archetype forms part of the DiADeM (Diagnosing Advanced Dementia Mandate for care home settings) Tool.">
+			use = <"Local use by Yorkshire and the Humber Clinical Networks for their dementia management programme.">
 			keywords = <"diadem", "dementia">
 			misuse = <"">
 			copyright = <"© Clinical Models UK">
@@ -28,10 +28,10 @@ description
 		["current_contact"] = <"Hildegard Franke, freshEHR Clinical Informatics Ltd.<hildi@freshehr.com>">
 		["revision"] = <"0.0.1-alpha">
 		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 3.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/3.0/.">
-		["build_uid"] = <"6ff1703d-5c89-4f32-b3cf-40aa5b071fe7">
+		["build_uid"] = <"03e13a87-4e2c-4c70-b66c-a2bd543c5d38">
 		["original_publisher"] = <"UK Clinical Models">
 		["original_namespace"] = <"uk.org.clinicalmodels">
-		["MD5-CAM-1.0.1"] = <"B9D1BFFB629394FEE0CCB541915720C6">
+		["MD5-CAM-1.0.1"] = <"63AFC5A0DC2F27348FF3B4FA29FC123C">
 		["custodian_namespace"] = <"uk.org.clinicalmodels">
 		["custodian_organisation"] = <"UK Clinical Models">
 	>
@@ -73,9 +73,15 @@ definition
 												defining_code matches {
 													[local::
 													at0012, 	-- Normal Dementia screening bloods
-													at0013]	-- Abnormal Dementia screening bloods
+													at0013, 	-- Abnormal Dementia screening bloods
+													at0023]	-- Screening bloods not done
 												}
 											}
+										}
+									}
+									ELEMENT[at0024] occurrences matches {0..1} matches {	-- Reason why bloods not done
+										value matches {
+											DV_TEXT matches {*}
 										}
 									}
 									ELEMENT[at0009] occurrences matches {0..1} matches {	-- Exclusion criteria
@@ -87,6 +93,11 @@ definition
 													at0015]	-- Acute underlying cause to explain confusion
 												}
 											}
+										}
+									}
+									ELEMENT[at0022] occurrences matches {0..1} matches {	-- Interpretation
+										value matches {
+											DV_TEXT matches {*}
 										}
 									}
 									CLUSTER[at0019] occurrences matches {0..1} matches {	-- Other assessment tool
@@ -117,6 +128,27 @@ definition
 								}
 							}
 						}
+						state matches {
+							ITEM_TREE[at0025] matches {	-- Tree
+								items cardinality matches {0..*; unordered} matches {
+									ELEMENT[at0026] occurrences matches {0..*} matches {	-- Confounding factors
+										value matches {
+											DV_TEXT matches {*}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		protocol matches {
+			ITEM_TREE[at0027] matches {	-- Tree
+				items cardinality matches {0..*; unordered} matches {
+					allow_archetype CLUSTER[at0028] occurrences matches {0..*} matches {	-- Extension
+						include
+							archetype_id/value matches {/.*/}
 					}
 				}
 			}
@@ -218,6 +250,35 @@ impairment.">
 				["at0021"] = <
 					text = <"Link to original result">
 					description = <"Patient record entry showing original score result.">
+				>
+				["at0022"] = <
+					text = <"Interpretation">
+					description = <"The overall interpretation of the assessment, i.e. a narrative statement of whether the assessment indicates that the patient suffers from dementia or whether the assessment indicates that the patient does not suffer from dementia.">
+				>
+				["at0023"] = <
+					text = <"Screening bloods not done">
+					description = <"Blood tests screening for other causes have not been done.">
+				>
+				["at0024"] = <
+					text = <"Reason why bloods not done">
+					description = <"Statement why screening blood tests have not been done, e.g. patient refusal.">
+				>
+				["at0025"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0026"] = <
+					text = <"Confounding factors">
+					description = <"Record any issues or factors that may impact on the overall assessment.">
+				>
+				["at0027"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0028"] = <
+					text = <"Extension">
+					description = <"Additional information required to capture local context or to align with other reference models/formalisms.">
+					comment = <"e.g. Local hospital departmental infomation or additional metadata to align with HL7 or CDISC equivalents.">
 				>
 			>
 		>
