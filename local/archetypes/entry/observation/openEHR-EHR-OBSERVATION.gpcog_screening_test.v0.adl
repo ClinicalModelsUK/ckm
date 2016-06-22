@@ -29,13 +29,13 @@ For patients requiring a informant questionnaire, scores of 3 or less out of 6 i
 	other_contributors = <>
 	other_details = <
 		["current_contact"] = <"Hildegard Franke, freshEHR Clinical Informatics Ltd.<hildi@freshehr.com>">
-		["revision"] = <"0.0.1-alpha">
 		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 3.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/3.0/.">
+		["revision"] = <"0.0.1-alpha">
 		["references"] = <"Dementia Partnerships: http://www.dementiapartnerships.org.uk/archive/primary-care/primarycaretoolkit/3-improving-diagnosis/cognitive-assessment-tools/ [cited 13-Jun-2016].">
-		["build_uid"] = <"27db84c8-34ec-4cae-89e7-be17a0b8be99">
+		["build_uid"] = <"28bfe808-227e-4290-b0b8-b78f290456d8">
 		["original_publisher"] = <"UK Clinical Models">
 		["original_namespace"] = <"uk.org.clinicalmodels">
-		["MD5-CAM-1.0.1"] = <"D4E1BF69D2ABBDD53C0FCCCAFFB15134">
+		["MD5-CAM-1.0.1"] = <"3529EC8ECFF905198D07B04589C26328">
 		["custodian_namespace"] = <"uk.org.clinicalmodels">
 		["custodian_organisation"] = <"UK Clinical Models">
 	>
@@ -45,7 +45,7 @@ definition
 		data matches {
 			HISTORY[at0001] matches {	-- Event Series
 				events cardinality matches {1..*; unordered} matches {
-					EVENT[at0002] occurrences matches {0..1} matches {	-- Any event
+					POINT_EVENT[at0002] occurrences matches {0..1} matches {	-- Point in time
 						data matches {
 							ITEM_TREE[at0003] matches {	-- Tree
 								items cardinality matches {0..*; unordered} matches {
@@ -244,7 +244,7 @@ ontology
 					description = <"@ internal @">
 				>
 				["at0002"] = <
-					text = <"Any event">
+					text = <"Point in time">
 					description = <"A specific date and/or time which may be explicitly defined in a template or at run-time.">
 				>
 				["at0003"] = <
