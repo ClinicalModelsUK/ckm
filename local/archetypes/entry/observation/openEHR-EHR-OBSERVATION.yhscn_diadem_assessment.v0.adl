@@ -28,10 +28,10 @@ description
 		["current_contact"] = <"Hildegard Franke, freshEHR Clinical Informatics Ltd.<hildi@freshehr.com>">
 		["revision"] = <"0.0.1-alpha">
 		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 3.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/3.0/.">
-		["build_uid"] = <"03e13a87-4e2c-4c70-b66c-a2bd543c5d38">
+		["build_uid"] = <"098bb6a3-8b88-43d6-bd7f-8585934e9dc1">
 		["original_publisher"] = <"UK Clinical Models">
 		["original_namespace"] = <"uk.org.clinicalmodels">
-		["MD5-CAM-1.0.1"] = <"63AFC5A0DC2F27348FF3B4FA29FC123C">
+		["MD5-CAM-1.0.1"] = <"B070F99A4DB6FE418B59CBDCDBE6690F">
 		["custodian_namespace"] = <"uk.org.clinicalmodels">
 		["custodian_organisation"] = <"UK Clinical Models">
 	>
@@ -41,7 +41,7 @@ definition
 		data matches {
 			HISTORY[at0001] matches {	-- Event Series
 				events cardinality matches {1..*; unordered} matches {
-					EVENT[at0002] occurrences matches {0..1} matches {	-- Any event
+					POINT_EVENT[at0002] occurrences matches {0..1} matches {	-- Any event
 						data matches {
 							ITEM_TREE[at0003] matches {	-- Tree
 								items cardinality matches {0..*; unordered} matches {
@@ -97,30 +97,11 @@ definition
 									}
 									ELEMENT[at0022] occurrences matches {0..1} matches {	-- Interpretation
 										value matches {
-											DV_TEXT matches {*}
-										}
-									}
-									CLUSTER[at0019] occurrences matches {0..1} matches {	-- Other assessment tool
-										items cardinality matches {1..*; unordered} matches {
-											ELEMENT[at0020] occurrences matches {0..1} matches {	-- Tool name
-												value matches {
-													DV_TEXT matches {*}
-												}
-											}
-											ELEMENT[at0016] occurrences matches {0..1} matches {	-- Tool result
-												value matches {
-													DV_CODED_TEXT matches {
-														defining_code matches {
-															[local::
-															at0017, 	-- Score indicates impairment
-															at0018]	-- Score does not indicate impairment
-														}
-													}
-												}
-											}
-											ELEMENT[at0021] occurrences matches {0..1} matches {	-- Link to original result
-												value matches {
-													DV_EHR_URI matches {*}
+											DV_CODED_TEXT matches {
+												defining_code matches {
+													[local::
+													at0029, 	-- Dementia diagnosis likely
+													at0030]	-- Dementia diagnosis not likely
 												}
 											}
 										}
@@ -128,27 +109,6 @@ definition
 								}
 							}
 						}
-						state matches {
-							ITEM_TREE[at0025] matches {	-- Tree
-								items cardinality matches {0..*; unordered} matches {
-									ELEMENT[at0026] occurrences matches {0..*} matches {	-- Confounding factors
-										value matches {
-											DV_TEXT matches {*}
-										}
-									}
-								}
-							}
-						}
-					}
-				}
-			}
-		}
-		protocol matches {
-			ITEM_TREE[at0027] matches {	-- Tree
-				items cardinality matches {0..*; unordered} matches {
-					allow_archetype CLUSTER[at0028] occurrences matches {0..*} matches {	-- Extension
-						include
-							archetype_id/value matches {/.*/}
 					}
 				}
 			}
@@ -227,33 +187,9 @@ impairment.">
 					text = <"Acute underlying cause to explain confusion">
 					description = <"There are acute underlying causes to explain confusion.">
 				>
-				["at0016"] = <
-					text = <"Tool result">
-					description = <"Result of assessment using another assessment tool.">
-				>
-				["at0017"] = <
-					text = <"Score indicates impairment">
-					description = <"Assessment tool score indicates cognitive impairment.">
-				>
-				["at0018"] = <
-					text = <"Score does not indicate impairment">
-					description = <"Assessment tool score does not indicate cognitive impairment.">
-				>
-				["at0019"] = <
-					text = <"Other assessment tool">
-					description = <"Another assessment tool (other than 6 CIT Score) has been used.">
-				>
-				["at0020"] = <
-					text = <"Tool name">
-					description = <"Name of other assessment tool used.">
-				>
-				["at0021"] = <
-					text = <"Link to original result">
-					description = <"Patient record entry showing original score result.">
-				>
 				["at0022"] = <
 					text = <"Interpretation">
-					description = <"The overall interpretation of the assessment, i.e. a narrative statement of whether the assessment indicates that the patient suffers from dementia or whether the assessment indicates that the patient does not suffer from dementia.">
+					description = <"The overall interpretation of the assessment, i.e. a coded statement of whether the assessment indicates a likely diagnosis of dementia or not.">
 				>
 				["at0023"] = <
 					text = <"Screening bloods not done">
@@ -263,22 +199,13 @@ impairment.">
 					text = <"Reason why bloods not done">
 					description = <"Statement why screening blood tests have not been done, e.g. patient refusal.">
 				>
-				["at0025"] = <
-					text = <"Tree">
-					description = <"@ internal @">
+				["at0029"] = <
+					text = <"Dementia diagnosis likely">
+					description = <"The assessment indicates that a diagnosis of dementia is likely.">
 				>
-				["at0026"] = <
-					text = <"Confounding factors">
-					description = <"Record any issues or factors that may impact on the overall assessment.">
-				>
-				["at0027"] = <
-					text = <"Tree">
-					description = <"@ internal @">
-				>
-				["at0028"] = <
-					text = <"Extension">
-					description = <"Additional information required to capture local context or to align with other reference models/formalisms.">
-					comment = <"e.g. Local hospital departmental infomation or additional metadata to align with HL7 or CDISC equivalents.">
+				["at0030"] = <
+					text = <"Dementia diagnosis not likely">
+					description = <"The assessment indicates that a diagnosis of dementia is not likely.">
 				>
 			>
 		>
