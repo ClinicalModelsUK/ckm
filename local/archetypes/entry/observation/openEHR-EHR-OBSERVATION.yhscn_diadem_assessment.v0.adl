@@ -28,10 +28,10 @@ description
 		["current_contact"] = <"Hildegard Franke, freshEHR Clinical Informatics Ltd.<hildi@freshehr.com>">
 		["revision"] = <"0.0.1-alpha">
 		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 3.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/3.0/.">
-		["build_uid"] = <"098bb6a3-8b88-43d6-bd7f-8585934e9dc1">
+		["build_uid"] = <"eed70ee2-164d-4333-8eff-2a6e2e9834e2">
 		["original_publisher"] = <"UK Clinical Models">
 		["original_namespace"] = <"uk.org.clinicalmodels">
-		["MD5-CAM-1.0.1"] = <"B070F99A4DB6FE418B59CBDCDBE6690F">
+		["MD5-CAM-1.0.1"] = <"F128A3ADE52FA99A6A47E4E4C776D7F8">
 		["custodian_namespace"] = <"uk.org.clinicalmodels">
 		["custodian_organisation"] = <"UK Clinical Models">
 	>
@@ -41,7 +41,7 @@ definition
 		data matches {
 			HISTORY[at0001] matches {	-- Event Series
 				events cardinality matches {1..*; unordered} matches {
-					POINT_EVENT[at0002] occurrences matches {0..1} matches {	-- Any event
+					POINT_EVENT[at0002] occurrences matches {0..1} matches {	-- Point in time
 						data matches {
 							ITEM_TREE[at0003] matches {	-- Tree
 								items cardinality matches {0..*; unordered} matches {
@@ -129,7 +129,7 @@ ontology
 					description = <"@ internal @">
 				>
 				["at0002"] = <
-					text = <"Any event">
+					text = <"Point in time">
 					description = <"A specific date and/or time which may be explicitly defined in a template or at run-time.">
 				>
 				["at0003"] = <
