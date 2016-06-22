@@ -30,15 +30,15 @@ Its primary use is as a 'Recognition tool' to help identify people who should be
 	other_contributors = <"Ian McNicoll, freshEHR Clinical Informatics Ltd.", ...>
 	other_details = <
 		["current_contact"] = <"Hildegard Franke, freshEHR Clinical Informatics Ltd.<hildi@freshehr.com>">
-		["revision"] = <"0.0.1-alpha">
 		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 3.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/3.0/.">
+		["revision"] = <"0.0.1-alpha">
 		["references"] = <"6CIT Test – Official Application Website: http://6cit.co.uk/ [cited 12-Jun-2016].
 
 Dementia Partnerships: http://www.dementiapartnerships.org.uk/archive/primary-care/primarycaretoolkit/3-improving-diagnosis/cognitive-assessment-tools/ [cited 12-Jun-2016].">
-		["build_uid"] = <"626155c5-a0fb-4df4-aa48-3dc536636cb1">
+		["build_uid"] = <"7df0bcaa-bda7-4745-823e-71b2bdd7fcc5">
 		["original_publisher"] = <"UK Clinical Models">
 		["original_namespace"] = <"uk.org.clinicalmodels">
-		["MD5-CAM-1.0.1"] = <"A5F5F24C78395D534ECAE2657601FC76">
+		["MD5-CAM-1.0.1"] = <"FFF40EDD52B506E1134D20A52218810F">
 		["custodian_namespace"] = <"uk.org.clinicalmodels">
 		["custodian_organisation"] = <"UK Clinical Models">
 	>
@@ -48,7 +48,7 @@ definition
 		data matches {
 			HISTORY[at0001] matches {	-- Event Series
 				events cardinality matches {1..*; unordered} matches {
-					EVENT[at0002] occurrences matches {0..1} matches {	-- Any event
+					POINT_EVENT[at0002] occurrences matches {0..1} matches {	-- Point in time
 						data matches {
 							ITEM_TREE[at0003] matches {	-- Tree
 								items cardinality matches {0..*; unordered} matches {
@@ -145,7 +145,7 @@ ontology
 					description = <"@ internal @">
 				>
 				["at0002"] = <
-					text = <"Any event">
+					text = <"Point in time">
 					description = <"A specific date and/or time which may be explicitly defined in a template or at run-time.">
 				>
 				["at0003"] = <
