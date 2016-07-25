@@ -2,7 +2,7 @@
 	openEHR-EHR-OBSERVATION.six_cit_assessment.v0
 
 concept
-	[at0000]	-- 6 CIT Assessment v0
+	[at0000]	-- 6 CIT Assessment
 language
 	original_language = <[ISO_639-1::en]>
 description
@@ -35,16 +35,16 @@ Its primary use is as a 'Recognition tool' to help identify people who should be
 		["references"] = <"6CIT Test – Official Application Website: http://6cit.co.uk/ [cited 12-Jun-2016].
 
 Dementia Partnerships: http://www.dementiapartnerships.org.uk/archive/primary-care/primarycaretoolkit/3-improving-diagnosis/cognitive-assessment-tools/ [cited 12-Jun-2016].">
-		["build_uid"] = <"7df0bcaa-bda7-4745-823e-71b2bdd7fcc5">
+		["build_uid"] = <"d46d0855-7f7b-4aa4-bb33-a670943d3b86">
 		["original_publisher"] = <"UK Clinical Models">
 		["original_namespace"] = <"uk.org.clinicalmodels">
-		["MD5-CAM-1.0.1"] = <"FFF40EDD52B506E1134D20A52218810F">
+		["MD5-CAM-1.0.1"] = <"089BF08253D467A2040D166189CFFA04">
 		["custodian_namespace"] = <"uk.org.clinicalmodels">
 		["custodian_organisation"] = <"UK Clinical Models">
 	>
 
 definition
-	OBSERVATION[at0000] matches {	-- 6 CIT Assessment v0
+	OBSERVATION[at0000] matches {	-- 6 CIT Assessment
 		data matches {
 			HISTORY[at0001] matches {	-- Event Series
 				events cardinality matches {1..*; unordered} matches {
@@ -137,7 +137,7 @@ ontology
 		["en"] = <
 			items = <
 				["at0000"] = <
-					text = <"6 CIT Assessment v0">
+					text = <"6 CIT Assessment">
 					description = <"The 6CIT Test used to test for Dementia.">
 				>
 				["at0001"] = <
