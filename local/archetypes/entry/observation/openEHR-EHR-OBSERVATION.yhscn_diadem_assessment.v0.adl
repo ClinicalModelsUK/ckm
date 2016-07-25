@@ -2,7 +2,7 @@
 	openEHR-EHR-OBSERVATION.yhscn_diadem_assessment.v0
 
 concept
-	[at0000]	-- YHSCN - DiADeM assessment v0
+	[at0000]	-- YHSCN - DiADeM assessment
 language
 	original_language = <[ISO_639-1::en]>
 description
@@ -28,16 +28,16 @@ description
 		["current_contact"] = <"Hildegard Franke, freshEHR Clinical Informatics Ltd.<hildi@freshehr.com>">
 		["revision"] = <"0.0.1-alpha">
 		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 3.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/3.0/.">
-		["build_uid"] = <"eed70ee2-164d-4333-8eff-2a6e2e9834e2">
+		["build_uid"] = <"9d6c420e-beef-4761-a1d0-b189d31df637">
 		["original_publisher"] = <"UK Clinical Models">
 		["original_namespace"] = <"uk.org.clinicalmodels">
-		["MD5-CAM-1.0.1"] = <"F128A3ADE52FA99A6A47E4E4C776D7F8">
+		["MD5-CAM-1.0.1"] = <"9944A9ADBCB7A68D73E49660578BE184">
 		["custodian_namespace"] = <"uk.org.clinicalmodels">
 		["custodian_organisation"] = <"UK Clinical Models">
 	>
 
 definition
-	OBSERVATION[at0000] matches {	-- YHSCN - DiADeM assessment v0
+	OBSERVATION[at0000] matches {	-- YHSCN - DiADeM assessment
 		data matches {
 			HISTORY[at0001] matches {	-- Event Series
 				events cardinality matches {1..*; unordered} matches {
@@ -121,7 +121,7 @@ ontology
 		["en"] = <
 			items = <
 				["at0000"] = <
-					text = <"YHSCN - DiADeM assessment v0">
+					text = <"YHSCN - DiADeM assessment">
 					description = <"Additional clinical information used to complete DiADeM assessment.">
 				>
 				["at0001"] = <
