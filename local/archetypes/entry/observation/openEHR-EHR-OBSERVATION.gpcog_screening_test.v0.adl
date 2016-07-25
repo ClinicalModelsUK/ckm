@@ -2,7 +2,7 @@
 	openEHR-EHR-OBSERVATION.gpcog_screening_test.v0
 
 concept
-	[at0000]	-- GPCOG screening test.v0
+	[at0000]	-- GPCOG screening test
 language
 	original_language = <[ISO_639-1::en]>
 description
@@ -32,16 +32,16 @@ For patients requiring a informant questionnaire, scores of 3 or less out of 6 i
 		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 3.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/3.0/.">
 		["revision"] = <"0.0.1-alpha">
 		["references"] = <"Dementia Partnerships: http://www.dementiapartnerships.org.uk/archive/primary-care/primarycaretoolkit/3-improving-diagnosis/cognitive-assessment-tools/ [cited 13-Jun-2016].">
-		["build_uid"] = <"28bfe808-227e-4290-b0b8-b78f290456d8">
+		["build_uid"] = <"54130a8b-5ae5-4a7f-9d32-ad29086b74c0">
 		["original_publisher"] = <"UK Clinical Models">
 		["original_namespace"] = <"uk.org.clinicalmodels">
-		["MD5-CAM-1.0.1"] = <"3529EC8ECFF905198D07B04589C26328">
+		["MD5-CAM-1.0.1"] = <"541EFF994F69A7ED42E543C62C75E494">
 		["custodian_namespace"] = <"uk.org.clinicalmodels">
 		["custodian_organisation"] = <"UK Clinical Models">
 	>
 
 definition
-	OBSERVATION[at0000] matches {	-- GPCOG screening test.v0
+	OBSERVATION[at0000] matches {	-- GPCOG screening test
 		data matches {
 			HISTORY[at0001] matches {	-- Event Series
 				events cardinality matches {1..*; unordered} matches {
@@ -236,7 +236,7 @@ ontology
 		["en"] = <
 			items = <
 				["at0000"] = <
-					text = <"GPCOG screening test.v0">
+					text = <"GPCOG screening test">
 					description = <"The General Practitioner Assessment of Cognition (GPCOG) screening test.">
 				>
 				["at0001"] = <
