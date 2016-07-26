@@ -28,10 +28,10 @@ description
 		["current_contact"] = <"Hildegard Franke, freshEHR Clinical Informatics Ltd.<hildi@freshehr.com>">
 		["revision"] = <"0.0.1-alpha">
 		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 3.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/3.0/.">
-		["build_uid"] = <"a5466476-23bb-4066-b91a-1a519a2a70b8">
+		["build_uid"] = <"1db86b6a-51aa-48b8-8318-856b4f4780a9">
 		["original_publisher"] = <"UK Clinical Models">
 		["original_namespace"] = <"uk.org.clinicalmodels">
-		["MD5-CAM-1.0.1"] = <"28218B459178D5A24ACCB1B69EE85928">
+		["MD5-CAM-1.0.1"] = <"36B107E39EB3ACFF3250301579D29E41">
 		["custodian_namespace"] = <"uk.org.clinicalmodels">
 		["custodian_organisation"] = <"UK Clinical Models">
 	>
@@ -92,7 +92,7 @@ definition
 					}
 				}
 			}
-			ELEMENT[at0017] occurrences matches {0..1} matches {	-- MRI location
+			ELEMENT[at0017] occurrences matches {0..1} matches {	-- Department where MRI performed
 				value matches {
 					DV_TEXT matches {*}
 				}
@@ -111,47 +111,47 @@ ontology
 				>
 				["at0001"] = <
 					text = <"MRI predictor of surgical difficulty">
-					description = <"Details of predictors of surgical difficulty obtained from MRI scan pr patient history.">
+					description = <"Details of predictors of surgical difficulty obtained from MRI scan or patient history.">
 				>
 				["at0002"] = <
 					text = <"Large gland">
-					description = <"MRI revealed large gland.">
+					description = <"Investigations revealed large gland.">
 				>
 				["at0003"] = <
 					text = <"Significant median lobe">
-					description = <"MRI revealed significant median lobe.">
+					description = <"Investigations revealed significant median lobe.">
 				>
 				["at0004"] = <
 					text = <"Large seminal vesicles">
-					description = <"MRI revealed large seminal vesicles.">
+					description = <"Investigations revealed large seminal vesicles.">
 				>
 				["at0005"] = <
 					text = <"Narrow pelvis / ethnicity">
-					description = <"MRI revealed a narrow pelvis.">
+					description = <"Investigations revealed a narrow pelvis.">
 				>
 				["at0006"] = <
 					text = <"Previous laparotomy">
-					description = <"MRI or patient history revealed a previous laparotomy.">
+					description = <"Investigations or patient history revealed a previous laparotomy.">
 				>
 				["at0007"] = <
 					text = <"Previous pelvic radiotherapy">
-					description = <"MRI or patient history revealed previous pelvic radiotherapy.">
+					description = <"Investigations or patient history revealed previous pelvic radiotherapy.">
 				>
 				["at0008"] = <
 					text = <"Previous TURP">
-					description = <"MRI revealed previous TURP.">
+					description = <"Investigations or patient history revealed previous TURP.">
 				>
 				["at0009"] = <
 					text = <"Previous prostate ablation">
-					description = <"MRI revealed previous prostate ablation.">
+					description = <"Investigation or patient history revealed previous prostate ablation.">
 				>
 				["at0012"] = <
 					text = <"Nerve spare right intended">
-					description = <"Statement of intent whether nerve spare right is proposed.">
+					description = <"Statement of intent whether prostatic neurovascular bundle (right) sparing is proposed.">
 				>
 				["at0013"] = <
 					text = <"Nerve spare left intended">
-					description = <"Statement of intent whether nerve spare left is proposed.">
+					description = <"Statement of intent whether prostatic neurovascular bundle (left) sparing is proposed.">
 				>
 				["at0014"] = <
 					text = <"Lymph node dissection intended">
@@ -159,14 +159,15 @@ ontology
 				>
 				["at0015"] = <
 					text = <"MRI quality score">
-					description = <"The MRI quality score on a scale of 1-5.">
+					description = <"The quality of the MRI acquired (including whether all required sequences acquired or presence of artifact), scored from 1 (poor) to 5 (excellent).">
 				>
 				["at0016"] = <
 					text = <"Grade of difficulty">
-					description = <"Score used to decide which operating list the patient goes on, and who can do the operation (trainee, experienced consultant etc).">
+					description = <"A score to describe the difficulty of the case by considering all the recorded factors. From 1 (easy) to 3 (difficult).">
+					comment = <"Different sites will use the score for different purposes - eg which operating list the patient goes on, who can do the operation (trainee, experienced consultant etc).">
 				>
 				["at0017"] = <
-					text = <"MRI location">
+					text = <"Department where MRI performed">
 					description = <"Hospital/department where MRI scan is performed.">
 				>
 			>
