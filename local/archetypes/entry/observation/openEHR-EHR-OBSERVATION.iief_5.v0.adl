@@ -26,13 +26,13 @@ description
 	other_contributors = <>
 	other_details = <
 		["current_contact"] = <"Hildegard Franke, freshEHR Clinical Informatics Ltd.<hildi@freshehr.com>">
-		["revision"] = <"0.0.1-alpha">
 		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 3.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/3.0/.">
+		["revision"] = <"0.0.1-alpha">
 		["references"] = <"http://www.nottinghamurologygroup.co.uk/sites/nottinghamurologygroup.co.uk/files/pages/iief-5.pdf">
-		["build_uid"] = <"ef54b143-6443-4d10-92cc-a35c3cf06c7a">
+		["build_uid"] = <"1eb19e16-3466-4e1c-bac6-328da920d616">
 		["original_publisher"] = <"UK Clinical Models">
 		["original_namespace"] = <"uk.org.clinicalmodels">
-		["MD5-CAM-1.0.1"] = <"D9C34F63454CA3DFD9F23C99F13B9794">
+		["MD5-CAM-1.0.1"] = <"7606607D7643C3336A79FDE0D56985D6">
 		["custodian_namespace"] = <"uk.org.clinicalmodels">
 		["custodian_organisation"] = <"UK Clinical Models">
 	>
@@ -95,7 +95,7 @@ definition
 											5|[local::at0037]  	-- Almost always or always
 										}
 									}
-									ELEMENT[at0038] occurrences matches {0..1} matches {	-- Score
+									ELEMENT[at0038] occurrences matches {0..1} matches {	-- IIEF-5 Score
 										value matches {
 											DV_COUNT matches {
 												magnitude matches {|1..25|}
@@ -297,7 +297,7 @@ with sexual stimulation, how often were your erections hard enough for penetrati
 					description = <"Over the past 6 months intercourse was almost always or always satisfactory.">
 				>
 				["at0038"] = <
-					text = <"Score">
+					text = <"IIEF-5 Score">
 					description = <"The IIEF-5 is administered as a screening instrument for the presence & severity of ED in conjunction with the clinical assessment. The score is the sum of the responses to the five items, so that overall score may range from 1 to 25. A score of 20 or higher indicates a normal degree of erectile functioning. Low scores (10 or less) indicate moderate to severe ED.">
 				>
 				["at0039"] = <
