@@ -1,8 +1,8 @@
-﻿archetype (adl_version=1.4; uid=431c85fb-e892-4f4b-a5e2-4fbf0b1c3438)
-	openEHR-EHR-OBSERVATION.icom_lpc_epic_26.v0
+﻿archetype (adl_version=1.4; uid=f1d39778-dc98-43ae-b133-67199ad85047)
+	openEHR-EHR-OBSERVATION.ichom_lpc_epic_26.v0
 
 concept
-	[at0000]	-- ICOM LPC EPIC-26 Questionnaire
+	[at0000]	-- ICHOM LPC EPIC-26 Questionnaire
 language
 	original_language = <[ISO_639-1::en]>
 description
@@ -29,16 +29,16 @@ description
 		["revision"] = <"0.0.1-alpha">
 		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 3.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/3.0/.">
 		["references"] = <"EPIC-26  The Expanded Prostate Cancer Index Composite Short Form, cited 05-Aug-2016  https://medicine.umich.edu/sites/default/files/content/downloads/EPIC%20Short%20Form_0.pdf">
-		["build_uid"] = <"140fcfad-cefb-4169-8beb-491fcc93c58a">
+		["build_uid"] = <"542f9d96-44f6-4150-903b-cd3846108075">
 		["original_publisher"] = <"UK Clinical Models">
 		["original_namespace"] = <"uk.org.clinicalmodels">
-		["MD5-CAM-1.0.1"] = <"89D3BEB4F535F817F0B106A18EB2855B">
+		["MD5-CAM-1.0.1"] = <"8CA26ED3917C225463E04DCA2BA41BFC">
 		["custodian_namespace"] = <"uk.org.clinicalmodels">
 		["custodian_organisation"] = <"UK Clinical Models">
 	>
 
 definition
-	OBSERVATION[at0000] matches {	-- ICOM LPC EPIC-26 Questionnaire
+	OBSERVATION[at0000] matches {	-- ICHOM LPC EPIC-26 Questionnaire
 		data matches {
 			HISTORY[at0001] matches {	-- Event Series
 				events cardinality matches {1..*; unordered} matches {
@@ -309,7 +309,7 @@ ontology
 		["en"] = <
 			items = <
 				["at0000"] = <
-					text = <"ICOM LPC EPIC-26 Questionnaire">
+					text = <"ICHOM LPC EPIC-26 Questionnaire">
 					description = <"Questionnaire and score designed to measure quality of life issues in patients with prostrate cancer.">
 				>
 				["at0001"] = <
