@@ -27,13 +27,13 @@ The form was developed as an extract from the National Cancer Dataset v4.0. We a
 	other_contributors = <>
 	other_details = <
 		["current_contact"] = <"Hildegard Franke, freshEHR Clinical Informatics Ltd.<hildi@freshehr.com>">
-		["revision"] = <"0.0.1-alpha">
 		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 3.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/3.0/.">
+		["revision"] = <"0.0.1-alpha">
 		["references"] = <"Adult Co-morbidity Evaluation (ACE-27) UK Values, cited 09-Aug-2016 http://digital.nhs.uk/catalogue/PUB14257/clin-audi-supp-prog-head-neck-dahn-12-13-rep18.pdf">
-		["build_uid"] = <"3cb0cbbe-7c75-4611-aa01-59e848bc2a39">
+		["build_uid"] = <"07eb9f2e-53a5-42f9-a20f-cec7e5f4f3d1">
 		["original_publisher"] = <"UK Clinical Models">
 		["original_namespace"] = <"uk.org.clinicalmodels">
-		["MD5-CAM-1.0.1"] = <"80066B930548C1236042C9966EDDBE8D">
+		["MD5-CAM-1.0.1"] = <"CAE462922B59D1B88C1FF78A4F48899A">
 		["custodian_namespace"] = <"uk.org.clinicalmodels">
 		["custodian_organisation"] = <"UK Clinical Models">
 	>
@@ -232,6 +232,11 @@ definition
 											2|[local::at0109], 	-- Grade 2
 											3|[local::at0110], 	-- Grade 3
 											9|[local::at0111]  	-- Unknown
+										}
+									}
+									ELEMENT[at0114] occurrences matches {0..1} matches {	-- Comment
+										value matches {
+											DV_TEXT matches {*}
 										}
 									}
 								}
@@ -730,6 +735,10 @@ neurologic deficit.">
 					text = <"Extension">
 					description = <"Additional information required to capture local context or to align with other reference models/formalisms.">
 					comment = <"e.g. Local hospital departmental infomation or additional metadata to align with HL7 or CDISC equivalents.">
+				>
+				["at0114"] = <
+					text = <"Comment">
+					description = <"Optinal narrative comment about any other relevant information.">
 				>
 			>
 		>
