@@ -2,7 +2,7 @@
 	openEHR-EHR-CLUSTER.urology_ref_details_oc.v0
 
 concept
-	[at0000]	-- Urology MDT referral details for openCancer
+	[at0000]	-- Cancer MDT referral details
 language
 	original_language = <[ISO_639-1::en]>
 description
@@ -28,16 +28,16 @@ description
 		["current_contact"] = <"Hildegard Franke, freshEHR Clinical Informatics Ltd.<hildi@freshehr.com>">
 		["revision"] = <"0.0.1-alpha">
 		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 3.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/3.0/.">
-		["build_uid"] = <"dbea4664-0e2d-4d7a-bba4-30d27f929c44">
+		["build_uid"] = <"d05c4d9f-f9e7-42a8-8e33-a41dfe0cf42e">
 		["original_publisher"] = <"UK Clinical Models">
 		["original_namespace"] = <"uk.org.clinicalmodels">
-		["MD5-CAM-1.0.1"] = <"B68C44D26EBE3168092903249F40A66A">
+		["MD5-CAM-1.0.1"] = <"311BE7F6C85F8B8670D701B40E50A6B5">
 		["custodian_namespace"] = <"uk.org.clinicalmodels">
 		["custodian_organisation"] = <"UK Clinical Models">
 	>
 
 definition
-	CLUSTER[at0000] matches {	-- Urology MDT referral details for openCancer
+	CLUSTER[at0000] matches {	-- Cancer MDT referral details
 		items cardinality matches {1..*; unordered} matches {
 			ELEMENT[at0001] occurrences matches {0..1} matches {	-- MDT schedule
 				value matches {
@@ -62,9 +62,24 @@ definition
 					}
 				}
 			}
+			ELEMENT[at0011] occurrences matches {0..1} matches {	-- Specific questions for MDT
+				value matches {
+					DV_TEXT matches {*}
+				}
+			}
 			ELEMENT[at0004] occurrences matches {0..1} matches {	-- Special MDT office instructions
 				value matches {
 					DV_TEXT matches {*}
+				}
+			}
+			ELEMENT[at0009] occurrences matches {0..1} matches {	-- Clinical Details
+				value matches {
+					DV_TEXT matches {*}
+				}
+			}
+			ELEMENT[at0010] occurrences matches {0..1} matches {	-- Date symptoms first noticed
+				value matches {
+					DV_DATE_TIME matches {*}
 				}
 			}
 		}
@@ -76,7 +91,7 @@ ontology
 		["en"] = <
 			items = <
 				["at0000"] = <
-					text = <"Urology MDT referral details for openCancer">
+					text = <"Cancer MDT referral details">
 					description = <"Urology cancer MDT referral form specific details.">
 				>
 				["at0001"] = <
@@ -110,6 +125,18 @@ ontology
 				["at0008"] = <
 					text = <"Case discussion only">
 					description = <"Case discussion only required.">
+				>
+				["at0009"] = <
+					text = <"Clinical Details">
+					description = <"Narrative description of relevant clinical details.">
+				>
+				["at0010"] = <
+					text = <"Date symptoms first noticed">
+					description = <"Date when patient first experienced symptoms.">
+				>
+				["at0011"] = <
+					text = <"Specific questions for MDT">
+					description = <"Narrative description of specific questions to be raised at MDT.">
 				>
 			>
 		>
