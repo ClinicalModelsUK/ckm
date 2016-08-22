@@ -28,10 +28,10 @@ description
 		["current_contact"] = <"Hildegard Franke, freshEHR Clinical Informatics Ltd.<hildi@freshehr.com>">
 		["revision"] = <"0.0.1-alpha">
 		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 3.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/3.0/.">
-		["build_uid"] = <"d05c4d9f-f9e7-42a8-8e33-a41dfe0cf42e">
+		["build_uid"] = <"479aac30-56fb-4548-9bfe-c1989d0e1846">
 		["original_publisher"] = <"UK Clinical Models">
 		["original_namespace"] = <"uk.org.clinicalmodels">
-		["MD5-CAM-1.0.1"] = <"311BE7F6C85F8B8670D701B40E50A6B5">
+		["MD5-CAM-1.0.1"] = <"EF3C07F7D8C7C5F737206A5BC05EFA5B">
 		["custodian_namespace"] = <"uk.org.clinicalmodels">
 		["custodian_organisation"] = <"UK Clinical Models">
 	>
@@ -62,17 +62,7 @@ definition
 					}
 				}
 			}
-			ELEMENT[at0011] occurrences matches {0..1} matches {	-- Specific questions for MDT
-				value matches {
-					DV_TEXT matches {*}
-				}
-			}
 			ELEMENT[at0004] occurrences matches {0..1} matches {	-- Special MDT office instructions
-				value matches {
-					DV_TEXT matches {*}
-				}
-			}
-			ELEMENT[at0009] occurrences matches {0..1} matches {	-- Clinical Details
 				value matches {
 					DV_TEXT matches {*}
 				}
@@ -126,17 +116,9 @@ ontology
 					text = <"Case discussion only">
 					description = <"Case discussion only required.">
 				>
-				["at0009"] = <
-					text = <"Clinical Details">
-					description = <"Narrative description of relevant clinical details.">
-				>
 				["at0010"] = <
 					text = <"Date symptoms first noticed">
 					description = <"Date when patient first experienced symptoms.">
-				>
-				["at0011"] = <
-					text = <"Specific questions for MDT">
-					description = <"Narrative description of specific questions to be raised at MDT.">
 				>
 			>
 		>
