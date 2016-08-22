@@ -74,7 +74,7 @@
             <includedValues>Management during or following treatment</includedValues>
           </constraint>
         </Rule>
-        <Rule path="/activities[at0001]/description[at0009]/items[at0064]" name="Specific question for MDT" />
+        <Rule path="/activities[at0001]/description[at0009]/items[at0064]" max="0" />
         <Rule path="/activities[at0001]/description[at0009]/items[at0065]" max="0" />
         <Rule path="/activities[at0001]/description[at0009]/items[at0068]" name="MDT review priority">
           <constraint xsi:type="textConstraint">
