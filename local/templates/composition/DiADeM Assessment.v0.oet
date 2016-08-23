@@ -5,7 +5,7 @@
   <description>
     <lifecycle_state>Initial</lifecycle_state>
     <details>
-      <purpose>Use to record DiADeM assessment.</purpose>
+      <purpose>Use to record DiADeM assessment. The tools have been developed for Clinicians who have a good primary care knowledge of dementia/depression and delirium to enable them to make a diagnosis of Advanced Dementia in a care home setting.</purpose>
       <use />
       <misuse />
     </details>
@@ -120,12 +120,12 @@
         </Items>
       </Items>
     </Content>
-    <Content xsi:type="OBSERVATION" archetype_id="openEHR-EHR-OBSERVATION.yhscn_diadem_assessment.v0" concept_name="YHSCN - DiADeM assessment v0" max="1" path="/content">
+    <Content xsi:type="OBSERVATION" archetype_id="openEHR-EHR-OBSERVATION.yhscn_diadem_assessment.v0" concept_name="YHSCN - DiADeM assessment" max="1" path="/content">
       <Rule path="/data[at0001]" hide_on_form="true" />
       <Rule path="/data[at0001]/events[at0002]" hide_on_form="true" />
       <Rule path="/data[at0001]/events[at0002]/data[at0003]" hide_on_form="true" />
     </Content>
-    <Content xsi:type="OBSERVATION" archetype_id="openEHR-EHR-OBSERVATION.six_cit_assessment.v0" concept_name="6 CIT Assessment v0" max="1" path="/content">
+    <Content xsi:type="OBSERVATION" archetype_id="openEHR-EHR-OBSERVATION.six_cit_assessment.v0" concept_name="6 CIT Assessment" max="1" path="/content">
       <Rule path="/data[at0001]" hide_on_form="true" />
       <Rule path="/data[at0001]/events[at0002]" hide_on_form="true" />
       <Rule path="/data[at0001]/events[at0002]/data[at0003]" hide_on_form="true" />
@@ -133,7 +133,7 @@
       <Rule path="/data[at0001]/events[at0002]/state[at0029]/items[at0030]" max="0" />
       <Rule path="/protocol[at0031]" hide_on_form="true" />
     </Content>
-    <Content xsi:type="OBSERVATION" archetype_id="openEHR-EHR-OBSERVATION.gpcog_screening_test.v0" concept_name="GPCOG screening test.v0" max="1" path="/content">
+    <Content xsi:type="OBSERVATION" archetype_id="openEHR-EHR-OBSERVATION.gpcog_screening_test.v0" concept_name="GPCOG screening test" max="1" path="/content">
       <Rule path="/data[at0001]" hide_on_form="true" />
       <Rule path="/data[at0001]/events[at0002]" hide_on_form="true" />
       <Rule path="/data[at0001]/events[at0002]/data[at0003]" hide_on_form="true" />
@@ -177,7 +177,7 @@
     <digest id="MD5-CAM-1.0.1">B932A22934CC38489610A47273A86DA8</digest>
   </integrity_checks>
   <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-OBSERVATION.yhscn_diadem_assessment.v0">
-    <digest id="MD5-CAM-1.0.1">9944A9ADBCB7A68D73E49660578BE184</digest>
+    <digest id="MD5-CAM-1.0.1">6BBC5997C18A320FA8FCE31BF2958A21</digest>
   </integrity_checks>
   <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-OBSERVATION.six_cit_assessment.v0">
     <digest id="MD5-CAM-1.0.1">089BF08253D467A2040D166189CFFA04</digest>
