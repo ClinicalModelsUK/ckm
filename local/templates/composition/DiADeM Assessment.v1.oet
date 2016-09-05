@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <template xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="openEHR/v1/Template">
   <id>8db6bdf2-7f9b-4dcc-ad49-453002d4ba4f</id>
-  <name>DiADeM Assessment.v0</name>
+  <name>DiADeM Assessment.v1</name>
   <description>
     <lifecycle_state>Initial</lifecycle_state>
     <details>
