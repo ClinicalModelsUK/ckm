@@ -140,6 +140,8 @@
           <constraint xsi:type="quantityConstraint">
             <excludedUnits>in3</excludedUnits>
             <excludedUnits>ft3</excludedUnits>
+            <excludedUnits>cc</excludedUnits>
+            <excludedUnits>mm3</excludedUnits>
           </constraint>
         </Rule>
       </Items>
@@ -227,6 +229,7 @@
         </Item>
         <Item xsi:type="EVALUATION" archetype_id="openEHR-EHR-EVALUATION.exclusion-problem_diagnosis.v0" concept_name="Exclusion of a Problem/Diagnosis" max="1" path="/items">
           <Rule path="/data[at0001]" hide_on_form="true" />
+          <Rule path="/data[at0001]/items[at0002.1]" max="1" name="No relevant past medical history" />
           <Rule path="/data[at0001]/items[at0003.1]" max="0" />
           <Rule path="/data[at0001]/items[at0007]" max="0" />
           <Rule path="/protocol[at0006]" hide_on_form="true" />
@@ -259,6 +262,7 @@
         </Item>
         <Item xsi:type="EVALUATION" archetype_id="openEHR-EHR-EVALUATION.exclusion-medication.v1" concept_name="Exclusion of a Medication" max="1" path="/items">
           <Rule path="/data[at0001]" hide_on_form="true" />
+          <Rule path="/data[at0001]/items[at0002.1]" max="1" name="No relevant medication" />
           <Rule path="/data[at0001]/items[at0003.1]" max="0" />
           <Rule path="/data[at0001]/items[at0007]" max="0" />
           <Rule path="/protocol[at0006]" hide_on_form="true" />
@@ -287,6 +291,7 @@
         </Item>
         <Item xsi:type="EVALUATION" archetype_id="openEHR-EHR-EVALUATION.exclusion-procedure.v1" concept_name="Exclusion of a Procedure" max="1" path="/items">
           <Rule path="/data[at0001]" hide_on_form="true" />
+          <Rule path="/data[at0001]/items[at0002.1]" max="1" name="No previous abdominal surgery" />
           <Rule path="/data[at0001]/items[at0003.1]" max="0" />
           <Rule path="/data[at0001]/items[at0007]" max="0" />
           <Rule path="/protocol[at0006]" hide_on_form="true" />
@@ -313,6 +318,21 @@
       <Rule path="/data[at0001]/events[at0002]/state[at0031]" hide_on_form="true" />
       <Rule path="/data[at0001]/events[at0002]/state[at0031]/items[at0032]" max="0" />
       <Rule path="/protocol[at0033]" hide_on_form="true" />
+      <Items xsi:type="CLUSTER" archetype_id="openEHR-EHR-CLUSTER.gleason_score.v0" concept_name="Gleason Score" path="/data[at0001]/events[at0002]/data[at0003]/items[at0035]">
+        <Rule path="/items[at0166]">
+          <constraint xsi:type="ordinalConstraint">
+            <excludedValues>1|Grade 1</excludedValues>
+            <excludedValues>2|Grade 2</excludedValues>
+          </constraint>
+        </Rule>
+        <Rule path="/items[at0182]">
+          <constraint xsi:type="ordinalConstraint">
+            <excludedValues>1|Grade 1</excludedValues>
+            <excludedValues>2|Grade 2</excludedValues>
+          </constraint>
+        </Rule>
+        <Rule path="/items[at0183]" max="0" />
+      </Items>
     </Content>
     <Content xsi:type="OBSERVATION" archetype_id="openEHR-EHR-OBSERVATION.laboratory_test-histopathology.v0" concept_name="Histopathology test" max="1" path="/content">
       <Rule path="/data[at0001]" hide_on_form="true" />
@@ -368,12 +388,7 @@
             <excludedValues>2|Grade 2</excludedValues>
           </constraint>
         </Rule>
-        <Rule path="/items[at0183]">
-          <constraint xsi:type="ordinalConstraint">
-            <excludedValues>1|Grade 1</excludedValues>
-            <excludedValues>2|Grade 2</excludedValues>
-          </constraint>
-        </Rule>
+        <Rule path="/items[at0183]" max="0" />
       </Items>
     </Content>
     <Context>
@@ -390,7 +405,7 @@
     <digest id="MD5-CAM-1.0.1">232D4A2B8E6A250F5D3A715FBE564726</digest>
   </integrity_checks>
   <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-CLUSTER.surgical_planning_oc.v0">
-    <digest id="MD5-CAM-1.0.1">36B107E39EB3ACFF3250301579D29E41</digest>
+    <digest id="MD5-CAM-1.0.1">5A7C39FEB7EAF640047FD96B83959A39</digest>
   </integrity_checks>
   <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-OBSERVATION.laboratory_test.v0">
     <digest id="MD5-CAM-1.0.1">64F4898018F4D87C7D8ADAF36558AAF7</digest>
@@ -440,13 +455,13 @@
   <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-OBSERVATION.briganti_risk_score.v0">
     <digest id="MD5-CAM-1.0.1">9130AAF2B659E0BAD35E8FAC80F8299C</digest>
   </integrity_checks>
+  <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-CLUSTER.gleason_score.v0">
+    <digest id="MD5-CAM-1.0.1">F561BC0D245364912E50D6D2425DB4F3</digest>
+  </integrity_checks>
   <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-OBSERVATION.laboratory_test-histopathology.v0">
     <digest id="MD5-CAM-1.0.1">5D4C5CFDABE14897E91B4F3FD7B774A3</digest>
   </integrity_checks>
   <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-CLUSTER.tnm_staging_7th-prostate.v1">
     <digest id="MD5-CAM-1.0.1">E533BECCE960A42F8E540AA1534A4963</digest>
-  </integrity_checks>
-  <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-CLUSTER.gleason_score.v0">
-    <digest id="MD5-CAM-1.0.1">F561BC0D245364912E50D6D2425DB4F3</digest>
   </integrity_checks>
 </template>
