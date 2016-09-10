@@ -28,10 +28,10 @@ description
 		["current_contact"] = <"Hildegard Franke, freshEHR Clinical Informatics Ltd.<hildi@freshehr.com>">
 		["revision"] = <"0.0.1-alpha">
 		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 3.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/3.0/.">
-		["build_uid"] = <"1db86b6a-51aa-48b8-8318-856b4f4780a9">
+		["build_uid"] = <"c0f5a3be-3af7-4df3-aa3f-60d192d7b9cf">
 		["original_publisher"] = <"UK Clinical Models">
 		["original_namespace"] = <"uk.org.clinicalmodels">
-		["MD5-CAM-1.0.1"] = <"36B107E39EB3ACFF3250301579D29E41">
+		["MD5-CAM-1.0.1"] = <"5A7C39FEB7EAF640047FD96B83959A39">
 		["custodian_namespace"] = <"uk.org.clinicalmodels">
 		["custodian_organisation"] = <"UK Clinical Models">
 	>
@@ -45,13 +45,15 @@ definition
 						defining_code matches {
 							[local::
 							at0002, 	-- Large gland
+							at0018, 	-- Small gland
 							at0003, 	-- Significant median lobe
 							at0004, 	-- Large seminal vesicles
 							at0005, 	-- Narrow pelvis / ethnicity
 							at0006, 	-- Previous laparotomy
 							at0007, 	-- Previous pelvic radiotherapy
 							at0008, 	-- Previous TURP
-							at0009]	-- Previous prostate ablation
+							at0009, 	-- Previous prostate ablation
+							at0019]	-- Hernia repair
 						}
 					}
 					DV_TEXT matches {*}
@@ -159,7 +161,7 @@ ontology
 				>
 				["at0015"] = <
 					text = <"MRI quality score">
-					description = <"The quality of the MRI acquired (including whether all required sequences acquired or presence of artifact), scored from 1 (poor) to 5 (excellent).">
+					description = <"A subjective score to reflect the quality of the MRI acquired - including whether all required sequences were acquired and whether there is significant artefact. Scored from 1 (poor) to 5 (excellent).">
 				>
 				["at0016"] = <
 					text = <"Grade of difficulty">
@@ -169,6 +171,14 @@ ontology
 				["at0017"] = <
 					text = <"Department where MRI performed">
 					description = <"Hospital/department where MRI scan is performed.">
+				>
+				["at0018"] = <
+					text = <"Small gland">
+					description = <"Investigations revealed small gland.">
+				>
+				["at0019"] = <
+					text = <"Hernia repair">
+					description = <"Investigations or patient history revealed hernia repair.">
 				>
 			>
 		>
