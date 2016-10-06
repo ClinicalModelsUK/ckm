@@ -24,15 +24,15 @@ description
 	lifecycle_state = <"in_development">
 	other_contributors = <"Teresa Ross", "Brendan O'Brien", "Alexander Davey", "Andrew Patton">
 	other_details = <
-		["current_contact"] = <"Hildegard Franke, freshEHR Clinical Informatics Ltd.<hildi@freshehr.com>">
-		["revision"] = <"0.0.1-alpha">
 		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 3.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/3.0/.">
-		["build_uid"] = <"228459e8-69a8-4fa6-8f3d-8a49b0406787">
-		["original_publisher"] = <"UK Clinical Models">
-		["original_namespace"] = <"uk.org.clinicalmodels">
-		["MD5-CAM-1.0.1"] = <"6B8903BAB2BCE5037A3A8D3F6645FAA8">
-		["custodian_namespace"] = <"uk.org.clinicalmodels">
 		["custodian_organisation"] = <"UK Clinical Models">
+		["current_contact"] = <"Hildegard Franke, freshEHR Clinical Informatics Ltd.<hildi@freshehr.com>">
+		["original_namespace"] = <"uk.org.clinicalmodels">
+		["original_publisher"] = <"UK Clinical Models">
+		["custodian_namespace"] = <"uk.org.clinicalmodels">
+		["MD5-CAM-1.0.1"] = <"6B8903BAB2BCE5037A3A8D3F6645FAA8">
+		["build_uid"] = <"228459e8-69a8-4fa6-8f3d-8a49b0406787">
+		["revision"] = <"0.0.1-alpha">
 	>
 
 definition

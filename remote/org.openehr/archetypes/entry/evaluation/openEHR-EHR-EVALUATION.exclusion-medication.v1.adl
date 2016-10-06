@@ -31,9 +31,9 @@ Exclusion statements can only be considered to be current and accurate at the ti
 	lifecycle_state = <"AuthorDraft">
 	other_contributors = <"Sam Heard, Ocean Informatics, Australia", "Ian McNicoll, Ocean Informatics, Australia", "Stephen Chu, NEHTA, Australia", "Stephen Royce, NEHTA, Australia">
 	other_details = <
-		["current_contact"] = <"Heather Leslie, Ocean Informatics, heather.leslie@oceaninformatics.com">
 		["references"] = <"Exclusion of a Medication, draft archetype, NEHTA Clinical Knowledge Manager [Internet]. NEHTA. Authored: 02 Mar 2010. Available at: 
 http://dcm.nehta.org.au/ckm/#showArchetype_1013.1.1303_2 (accessed 3 Sep 2013)">
+		["current_contact"] = <"Heather Leslie, Ocean Informatics, heather.leslie@oceaninformatics.com">
 		["MD5-CAM-1.0.1"] = <"20AE44E213800D8CCFE164F6B7515D8F">
 	>
 

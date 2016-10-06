@@ -29,12 +29,12 @@ The 'Date of medication event' element may be renamed in the context of a partic
 	lifecycle_state = <"AuthorDraft">
 	other_contributors = <"Marcus Baw, openGPSoC / Baw Medical Ltd, United Kingdom (Editor)", "Leo Fogarty, SCIMP/HSCIC, United Kingdom (Editor)", "RCP Health Informatics Unit, UK", "Dr John Williams, GP2GP project, UK", "Dr Leo Fogarty, GP2GP project, UK", "Ian McNicoll, Ocean Informatics, United Kingdom (Editor)", "Paul Miller, SCIMP, United Kingdom (Editor)", "Ian Thompson, SCIMP, United Kingdom (Editor)", "John Williams, GP2GP, United Kingdom (Editor)">
 	other_details = <
-		["current_contact"] = <"Ian McNicoll, Ocean Informatics UK, ian.mcnicoll@oceaninformatics.com">
 		["references"] = <"HSCIC Messaging Implementation Manual (GP2GP messages) http://www.uktcregistration.nss.cfh.nhs.uk/trud3/
 NHS Scotland SCI-XML (SCI-Gateway, ECS, ePharmacy)  http://www.sci.scot.nhs.uk/products/gateway/gate_down_xml.htm
 NHS Wales Informatics Service, Integrated Health Record http://www.wales.nhs.uk/nwis/page/52553
 DM+D drug dictionary: http://www.dmd.nhs.uk/
 Royal College of Physicians, Core Clinical Headings, http://www.rcplondon.ac.uk/projects/standards-core-clinical-information">
+		["current_contact"] = <"Ian McNicoll, Ocean Informatics UK, ian.mcnicoll@oceaninformatics.com">
 		["MD5-CAM-1.0.1"] = <"FBA31094711AFCE8561CC07B0538B168">
 	>
 

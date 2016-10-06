@@ -25,16 +25,16 @@ description
 	lifecycle_state = <"in_development">
 	other_contributors = <>
 	other_details = <
-		["current_contact"] = <"Hildegard Franke, freshEHR Clinical Informatics Ltd.<hildi@freshehr.com>">
 		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 3.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/3.0/.">
-		["revision"] = <"0.0.1-alpha">
-		["references"] = <"http://www.nottinghamurologygroup.co.uk/sites/nottinghamurologygroup.co.uk/files/pages/iief-5.pdf">
-		["build_uid"] = <"1eb19e16-3466-4e1c-bac6-328da920d616">
-		["original_publisher"] = <"UK Clinical Models">
-		["original_namespace"] = <"uk.org.clinicalmodels">
-		["MD5-CAM-1.0.1"] = <"7606607D7643C3336A79FDE0D56985D6">
-		["custodian_namespace"] = <"uk.org.clinicalmodels">
 		["custodian_organisation"] = <"UK Clinical Models">
+		["references"] = <"http://www.nottinghamurologygroup.co.uk/sites/nottinghamurologygroup.co.uk/files/pages/iief-5.pdf">
+		["current_contact"] = <"Hildegard Franke, freshEHR Clinical Informatics Ltd.<hildi@freshehr.com>">
+		["original_namespace"] = <"uk.org.clinicalmodels">
+		["original_publisher"] = <"UK Clinical Models">
+		["custodian_namespace"] = <"uk.org.clinicalmodels">
+		["MD5-CAM-1.0.1"] = <"7606607D7643C3336A79FDE0D56985D6">
+		["build_uid"] = <"1eb19e16-3466-4e1c-bac6-328da920d616">
+		["revision"] = <"0.0.1-alpha">
 	>
 
 definition

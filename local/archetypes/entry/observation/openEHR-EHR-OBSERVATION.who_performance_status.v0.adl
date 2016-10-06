@@ -28,15 +28,15 @@ description
 	other_contributors = <"Navin Ramachandran, UCLH, UK", ...>
 	other_details = <
 		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 3.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/3.0/.">
-		["revision"] = <"0.0.1-alpha">
+		["custodian_organisation"] = <"UK Clinical Models">
 		["references"] = <"Performance status [Internet]. Wikipedia, the free encyclopedia. 2015 [cited 2015 May 27]. Available from: http://en.wikipedia.org/w/index.php?title=Performance_status&oldid=661884138
 ">
-		["build_uid"] = <"ad877b5e-abda-4bc9-9d66-1c19bc38c7c7">
-		["original_publisher"] = <"UK Clinical Models">
 		["original_namespace"] = <"uk.org.clinicalmodels">
-		["MD5-CAM-1.0.1"] = <"C9044F571693EF6AB420E91B52A1D12B">
+		["original_publisher"] = <"UK Clinical Models">
 		["custodian_namespace"] = <"uk.org.clinicalmodels">
-		["custodian_organisation"] = <"UK Clinical Models">
+		["MD5-CAM-1.0.1"] = <"C9044F571693EF6AB420E91B52A1D12B">
+		["build_uid"] = <"ad877b5e-abda-4bc9-9d66-1c19bc38c7c7">
+		["revision"] = <"0.0.1-alpha">
 	>
 
 definition

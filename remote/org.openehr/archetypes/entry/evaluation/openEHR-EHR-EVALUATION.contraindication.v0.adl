@@ -39,15 +39,15 @@ The 'Absolute?' data element allows refinement of the contraindication as absolu
 	lifecycle_state = <"in_development">
 	other_contributors = <"Vebjoern Arntzen, Oslo university hospital, Norway", "Silje Ljosland Bakke, National ICT Norway, Norway (openEHR Editor)", "Lars Bitsch-Larsen, Haukeland University hospital, Norway", "Heather Grain, Llewelyn Grain Informatics, Australia", "Sam Heard, Ocean Informatics, Australia", "Lars Karlsen, DIPS ASA, Norway", "Heather Leslie, Ocean Informatics, Australia (openEHR Editor)", "Ian McNicoll, freshEHR Clinical Informatics, United Kingdom (openEHR Editor)", "Bjoern Naess, DIPS ASA, Norway", "Andrej Orel, Marand d.o.o., Slovenia">
 	other_details = <
-		["current_contact"] = <"Heather Leslie, Ocean Informatics, heather.leslie@oceaninformatics.com">
 		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 3.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/3.0/.">
-		["revision"] = <"0.0.1-alpha">
-		["build_uid"] = <"0be322da-fd88-4c96-a350-98b6809927cf">
+		["custodian_organisation"] = <"openEHR Foundation">
+		["current_contact"] = <"Heather Leslie, Ocean Informatics, heather.leslie@oceaninformatics.com">
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
-		["MD5-CAM-1.0.1"] = <"CDF8AF81E0938F0E8E24D6AADE400E8A">
 		["custodian_namespace"] = <"org.openehr">
-		["custodian_organisation"] = <"openEHR Foundation">
+		["MD5-CAM-1.0.1"] = <"CDF8AF81E0938F0E8E24D6AADE400E8A">
+		["build_uid"] = <"0be322da-fd88-4c96-a350-98b6809927cf">
+		["revision"] = <"0.0.1-alpha">
 	>
 
 definition

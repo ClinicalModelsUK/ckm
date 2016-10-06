@@ -25,13 +25,13 @@ description
 	other_contributors = <>
 	other_details = <
 		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 3.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/3.0/.">
-		["revision"] = <"0.0.1-alpha">
-		["build_uid"] = <"87e08655-49d5-4a8d-b302-37747afbf037">
-		["original_publisher"] = <"UK Clinical Models">
-		["original_namespace"] = <"uk.org.clinicalmodels">
-		["MD5-CAM-1.0.1"] = <"51EE03A9602E6CE35995296D96ED2E8B">
-		["custodian_namespace"] = <"uk.org.clinicalmodels">
 		["custodian_organisation"] = <"UK Clinical Models">
+		["original_namespace"] = <"uk.org.clinicalmodels">
+		["original_publisher"] = <"UK Clinical Models">
+		["custodian_namespace"] = <"uk.org.clinicalmodels">
+		["MD5-CAM-1.0.1"] = <"51EE03A9602E6CE35995296D96ED2E8B">
+		["build_uid"] = <"87e08655-49d5-4a8d-b302-37747afbf037">
+		["revision"] = <"0.0.1-alpha">
 	>
 
 definition

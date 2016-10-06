@@ -25,16 +25,16 @@ description
 	lifecycle_state = <"in_development">
 	other_contributors = <>
 	other_details = <
-		["current_contact"] = <"Hildegard Franke, freshEHR Clinical Informatics Ltd.<hildi@freshehr.com>">
-		["revision"] = <"0.0.1-alpha">
 		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 3.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/3.0/.">
-		["references"] = <"EPIC-26  The Expanded Prostate Cancer Index Composite Short Form, cited 05-Aug-2016  https://medicine.umich.edu/sites/default/files/content/downloads/EPIC%20Short%20Form_0.pdf">
-		["build_uid"] = <"542f9d96-44f6-4150-903b-cd3846108075">
-		["original_publisher"] = <"UK Clinical Models">
-		["original_namespace"] = <"uk.org.clinicalmodels">
-		["MD5-CAM-1.0.1"] = <"8CA26ED3917C225463E04DCA2BA41BFC">
-		["custodian_namespace"] = <"uk.org.clinicalmodels">
 		["custodian_organisation"] = <"UK Clinical Models">
+		["references"] = <"EPIC-26  The Expanded Prostate Cancer Index Composite Short Form, cited 05-Aug-2016  https://medicine.umich.edu/sites/default/files/content/downloads/EPIC%20Short%20Form_0.pdf">
+		["current_contact"] = <"Hildegard Franke, freshEHR Clinical Informatics Ltd.<hildi@freshehr.com>">
+		["original_namespace"] = <"uk.org.clinicalmodels">
+		["original_publisher"] = <"UK Clinical Models">
+		["custodian_namespace"] = <"uk.org.clinicalmodels">
+		["MD5-CAM-1.0.1"] = <"8CA26ED3917C225463E04DCA2BA41BFC">
+		["build_uid"] = <"542f9d96-44f6-4150-903b-cd3846108075">
+		["revision"] = <"0.0.1-alpha">
 	>
 
 definition

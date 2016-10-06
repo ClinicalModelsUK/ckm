@@ -107,7 +107,6 @@ There is a date and time at which this ACTION took place (as there is for all AC
 	lifecycle_state = <"in_development">
 	other_contributors = <"Stephen Chu, NEHTA, Australia (Editor)", "Samo Drnovšek, Marand, Slovenia (Editor)", "Jacquie Garton-Smith, Royal Perth Hospital and DoHWA, Australia", "Sam Heard, Ocean Informatics, Australia (Editor)", "Robert L'egan, NEHTA, Australia", "Heather Leslie, Ocean Informatics, Australia (Editor)", "Ian McNicoll, Ocean Informatics, UK", "Jude Michel, Queensland Health, Australia", "Chris Mitchell, RACGP, Australia", "Jodie Pycroft, Adelaide Northern Division of General Practice Ltd, Australia", "Gordon Tomes, Australian Institute of Health and Welfare, Australia", "Richard Townley-O'Neill, NEHTA, Australia (Editor)", "Kylie Young, The Royal Australian College of General Practitioners, Australia">
 	other_details = <
-		["revision"] = <"0.0.1-alpha">
 		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 3.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/3.0/.">
 		["references"] = <"Based on NEHTA Medication action archetype http://dcm.nehta.org.au/ckm/#showArchetype_1013.1.876_6
 
@@ -120,8 +119,9 @@ Royal Australian College of General Practitioners. Fact Sheet: Medicines List. 2
 NHS HSCIC Messaging Implementation Manual (GP2GP messages) http://www.uktcregistration.nss.cfh.nhs.uk/trud3
 
 Standards for medication and medical device records – technical annex [Internet]. RCP London. [cited 2015 Dec 15]. Available from: https://www.rcplondon.ac.uk/projects/outputs/standards-medication-and-medical-device-records-technical-annex">
-		["build_uid"] = <"061216e2-46e3-41f3-ab10-61c806a413b1">
 		["MD5-CAM-1.0.1"] = <"E7FAC74F77BE12D6EDD689E76DB3B787">
+		["build_uid"] = <"061216e2-46e3-41f3-ab10-61c806a413b1">
+		["revision"] = <"0.0.1-alpha">
 	>
 
 definition

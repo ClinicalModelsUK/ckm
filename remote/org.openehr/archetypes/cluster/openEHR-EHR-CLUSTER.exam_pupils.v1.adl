@@ -47,7 +47,6 @@ Specifically designed to be used within the OBSERVATION.exam archetype, but may 
 	lifecycle_state = <"AuthorDraft">
 	other_contributors = <"Sam Heard, Ocean Informatics, Australia", "Gustavo M Bacelar-Silva, Brazil">
 	other_details = <
-		["current_contact"] = <"Ian McNicoll, Ocean Informatics, UK, ian.mcnicoll@oceaninformatics.com">
 		["references"] = <"IHE Eye Care Domain. General Eye Evaluation (GEE) [Internet]. IHE; 2012. Available from: http://www.ihe.net/Technical_Framework/upload/IHE_EyeCare_Supp_GEE_Rev1-1_TI_2012-06-29.pdf
 
 Royal College of Opthalmologists. Cataract National Dataset for Adults [Internet]. 2011. Available from: http://www.rcophth.ac.uk/page.asp?section=583&sectionTitle=Cataract+National+Data+Set+for+Adults
@@ -57,6 +56,7 @@ CfH, UK. Do Once & Share - Glaucoma [Internet]. [cited 2012 Sep 26]. Available f
 Eye Color [Internet]. Wikipedia. Available from: http://en.wikipedia.org/wiki/Eye_color
 
 Pupillary abnormalities [Internet], openEyes Project.  Available from: http://www.openeyes.org.uk/elements/pupil/pupil.html">
+		["current_contact"] = <"Ian McNicoll, Ocean Informatics, UK, ian.mcnicoll@oceaninformatics.com">
 		["MD5-CAM-1.0.1"] = <"F6FF509EA71274B781DACD32519934E3">
 	>
 

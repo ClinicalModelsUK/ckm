@@ -40,14 +40,14 @@ description
 	lifecycle_state = <"in_development">
 	other_contributors = <"Sharmila Biswas, Dr Sharmila Biswas, Australia", "Stephen Chu, NEHTA, Australia (Editor)", "David Evans, Queensland Health, Australia", "Sam Heard, Ocean Informatics, Australia (Editor)", "Heather Leslie, Ocean Informatics, Australia (Editor)", "Richard Townley-O'Neill, NEHTA, Australia (Editor)">
 	other_details = <
-		["revision"] = <"0.0.1-alpha">
 		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 3.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/3.0/.">
-		["build_uid"] = <"a39ce5b8-de69-4098-a2dc-1f9285adec2a">
-		["original_publisher"] = <"UK Clinical Models">
-		["original_namespace"] = <"uk.org.clinicalmodels">
-		["MD5-CAM-1.0.1"] = <"BCB54C670C9B1774754FDA265208BEFA">
-		["custodian_namespace"] = <"uk.org.clinicalmodels">
 		["custodian_organisation"] = <"UK Clinical Models">
+		["original_namespace"] = <"uk.org.clinicalmodels">
+		["original_publisher"] = <"UK Clinical Models">
+		["custodian_namespace"] = <"uk.org.clinicalmodels">
+		["MD5-CAM-1.0.1"] = <"BCB54C670C9B1774754FDA265208BEFA">
+		["build_uid"] = <"a39ce5b8-de69-4098-a2dc-1f9285adec2a">
+		["revision"] = <"0.0.1-alpha">
 	>
 
 definition

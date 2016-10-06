@@ -28,18 +28,18 @@ Not to be used for children/teens under the age of 16 years or in pregnancy.">
 	lifecycle_state = <"in_development">
 	other_contributors = <"Heather Leslie, Ocean Informatics, Australia", "Ian McNicoll, freshEHR Clinical Informatics Ltd, UK">
 	other_details = <
-		["current_contact"] = <"Hildegard Franke">
-		["revision"] = <"0.0.1-alpha">
 		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 3.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/3.0/.">
+		["custodian_organisation"] = <"UK Clinical Models">
 		["references"] = <"Health Service Executive Ireland (HSE)  http://www.hse.ie/eng/about/Who/ONMSD/Practicedevelopment/MEWS/
 
 ">
-		["build_uid"] = <"be6a0238-d1cb-4f44-895d-6db12baa7e40">
-		["original_publisher"] = <"UK Clinical Models">
+		["current_contact"] = <"Hildegard Franke">
 		["original_namespace"] = <"uk.org.clinicalmodels">
-		["MD5-CAM-1.0.1"] = <"27561A19A33DD2558AD4BC5DFFA5CFEE">
+		["original_publisher"] = <"UK Clinical Models">
 		["custodian_namespace"] = <"uk.org.clinicalmodels">
-		["custodian_organisation"] = <"UK Clinical Models">
+		["MD5-CAM-1.0.1"] = <"27561A19A33DD2558AD4BC5DFFA5CFEE">
+		["build_uid"] = <"be6a0238-d1cb-4f44-895d-6db12baa7e40">
+		["revision"] = <"0.0.1-alpha">
 	>
 
 definition

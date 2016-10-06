@@ -29,11 +29,11 @@ Not to be used to record information about consumption of other substances other
 	lifecycle_state = <"CommitteeDraft">
 	other_contributors = <"Rita Apelt, Department of Health,NT, Australia", "Stephen Chu, NEHTA, Australia", "Matthew Cordell, NEHTA, Australia", "David Evans, Queensland Health, Australia", "Tim Garden, NTG Department of Health, Australia", "Andrew Goodchild, NEHTA, Australia", "Sam Heard, Ocean Informatics, Australia (Editor)", "Mary Kelaher, NEHTA, Australia", "Robert L'Egan, NEHTA, Australia", "Heather Leslie, Ocean Informatics, Australia (Editor)", "Ian McNicoll, Ocean Informatics UK, United Kingdom", "Chris Mitchell, RACGP, Australia", "Stewart Morrison, NEHTA, Australia", "Jeremy Oats, NT Health, Australia", "Rosalie Schultz, Central Australia Remote Health, Australia", "John Taylor, NEHTA, Australia", "Richard Townley-O'Neill, NEHTA, Australia", "Jo Wright, NT Dept of Health, Australia (Editor)">
 	other_details = <
-		["current_contact"] = <"Heather Leslie, Ocean Informatics, heather.leslie@oceaninformatics.com">
 		["references"] = <"openEHR Clinical Knowledge Manager [Internet]. London: openEHR Foundation. [Draft EVALUATION archetype] Alcohol Use Summary; [authored 2009 Jun 21, cited 2011 Jul 15]. Available from: http://www.openehr.org/knowledge/OKM.html#showArchetype_1013.1.362_1.
 
 NEHTA Clinical Knowledge Manager [Internet]. : NEHTA. [Draft EVALUATION archetype] Alcohol Use Summary; [authored 2009 Jun 21, cited 2013 Nov 02].
 Available from: http://dcm.nehta.org.au/ckm/#showArchetype_1013.1.1028_3">
+		["current_contact"] = <"Heather Leslie, Ocean Informatics, heather.leslie@oceaninformatics.com">
 		["MD5-CAM-1.0.1"] = <"B380D590E3A1AA1FFEDD68F7B061FAB4">
 	>
 

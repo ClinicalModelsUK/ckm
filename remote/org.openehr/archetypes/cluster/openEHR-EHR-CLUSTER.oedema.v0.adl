@@ -61,14 +61,14 @@ Use to incorporate the narrative descriptions of clinical findings within existi
 	lifecycle_state = <"in_development">
 	other_contributors = <"Heather Leslie, Ocean Informatics, Australia (Editor)", "Ian McNicoll, Ocean Informatics, United Kingdom (Editor)">
 	other_details = <
-		["revision"] = <"0.0.1-alpha">
 		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 3.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/3.0/.">
-		["build_uid"] = <"69ac4fd2-b0c0-49e8-aafe-c0beca238594">
-		["original_publisher"] = <"openEHR Foundation">
-		["original_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"6E90916149B444AB6BAF8CDDE86CA1F6">
-		["custodian_namespace"] = <"org.openehr">
 		["custodian_organisation"] = <"openEHR Foundation">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["MD5-CAM-1.0.1"] = <"6E90916149B444AB6BAF8CDDE86CA1F6">
+		["build_uid"] = <"69ac4fd2-b0c0-49e8-aafe-c0beca238594">
+		["revision"] = <"0.0.1-alpha">
 	>
 
 definition

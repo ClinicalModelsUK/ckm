@@ -25,10 +25,10 @@ description
 	lifecycle_state = <"CommitteeDraft">
 	other_contributors = <"Rita Apelt, Department of Health,NT, Australia", "Stephen Chu, NEHTA, Australia (Editor)", "Sam Heard, Ocean Informatics, Australia", "Heather Leslie, Ocean Informatics, Australia (Editor)", "Ian McNicoll, Ocean Informatics UK, United Kingdom", "Jeremy Oats, NT Health, Australia", "Rosalie Schultz, Anyinginyi Health Aboriginal Corporation, Australia">
 	other_details = <
-		["current_contact"] = <"Heather Leslie, Ocean Informatics, heather.leslie@oceaninformatics.com">
 		["references"] = <"Tobacco Use Summary draft archetype [Internet]. London: openEHR Clinical Knowledge Manager, openEHR Foundation; 21 Jun 2009 [cited 2011 Jul 15]. Available from: http://www.openehr.org/knowledge/OKM.html#showArchetype_1013.1.363_
 
 Tobacco Use Summary draft archetype [Internet]: NEHTA Clinical Knowledge Manager, NEHTA; 21 Jun 2009 [cited 2013 Oct 31]. Available from: http://dcm.nehta.org.au/ckm/#showArchetype_1013.1.1026_3.">
+		["current_contact"] = <"Heather Leslie, Ocean Informatics, heather.leslie@oceaninformatics.com">
 		["MD5-CAM-1.0.1"] = <"3E9C0C9426B322BA4C68464D98138410">
 	>
 

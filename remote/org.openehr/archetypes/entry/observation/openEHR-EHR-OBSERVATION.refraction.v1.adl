@@ -27,7 +27,6 @@ The 'Description' data element can be used to record simple narrative summary or
 	lifecycle_state = <"AuthorDraft">
 	other_contributors = <"Gustavo M Bacelar-Silva, Brazil", ...>
 	other_details = <
-		["current_contact"] = <"Ian McNicoll, Ocean Informatics, UK, ian.mcnicoll@oceaninformatics.com">
 		["references"] = <"Visual Acuity [Internet]. Wikipedia. Available from: http://en.wikipedia.org/wiki/Visual_acuity
 
 Aylward W [Internet].Coding Visual Acuity, openEyes Project;2012.Available from http://www.openeyes.org.uk/documents/OpenEyes%20Coding%20Visual%20Acuity.pdf
@@ -42,6 +41,7 @@ DICOM Supplement 30 [Internet]. [cited 2012 Sep 26]. Available from: http://medi
 
 Practical Ophthalmology: A Manual for Beginning Residents, 6th Edition [Paperback]
 American Academy Of Ophthalmology (Author), Fred M. Wilson II (Editor), MD (Editor)">
+		["current_contact"] = <"Ian McNicoll, Ocean Informatics, UK, ian.mcnicoll@oceaninformatics.com">
 		["MD5-CAM-1.0.1"] = <"1FC072ECEFE11FA70A8F99BAEC6B2282">
 	>
 

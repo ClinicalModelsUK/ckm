@@ -43,18 +43,18 @@ description
 	lifecycle_state = <"in_development">
 	other_contributors = <>
 	other_details = <
-		["current_contact"] = <"Heather Leslie, Ocean Informatics, heather.leslie@oceaninformatics.com">
-		["revision"] = <"0.0.1-alpha">
 		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 3.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/3.0/.">
+		["custodian_organisation"] = <"UK Clinical Models">
 		["references"] = <"AVPU, draft archetype, NEHTA Clinical Knowledge Manager [Internet]. NEHTA. Authored: 07 Feb 2013. Available at: http://dcm.nehta.org.au/ckm/#showArchetype_1013.1.1173_1 (accessed 2 June 2013).
 Kelly, CA; Upex A; Bateman DN. (February 2005). \"Comparison of consciousness level assessment in the poisoned patient using the alert/verbal/painful/unresponsive scale and the Glasgow Coma Scale\". Annals of Emergency Medicine 45 (2).
 http://en.wikipedia.org/wiki/AVPU">
-		["build_uid"] = <"b315206d-a01f-4d5c-98b3-03184cf6b12c">
-		["original_publisher"] = <"UK Clinical Models">
+		["current_contact"] = <"Heather Leslie, Ocean Informatics, heather.leslie@oceaninformatics.com">
 		["original_namespace"] = <"uk.org.clinicalmodels">
-		["MD5-CAM-1.0.1"] = <"ED7A298F76D57C39D0024E84FCE8A185">
+		["original_publisher"] = <"UK Clinical Models">
 		["custodian_namespace"] = <"uk.org.clinicalmodels">
-		["custodian_organisation"] = <"UK Clinical Models">
+		["MD5-CAM-1.0.1"] = <"ED7A298F76D57C39D0024E84FCE8A185">
+		["build_uid"] = <"b315206d-a01f-4d5c-98b3-03184cf6b12c">
+		["revision"] = <"0.0.1-alpha">
 	>
 
 definition

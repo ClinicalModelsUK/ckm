@@ -27,12 +27,12 @@ Specifically designed to be used within the EVALUATION.social_summary archetype,
 	lifecycle_state = <"CommitteeDraft">
 	other_contributors = <>
 	other_details = <
-		["current_contact"] = <"Heather Leslie, Ocean Informatics, heather.leslie@oceaninformatics.com">
 		["references"] = <"METeOR (Metadata Online Registry) [Internet]. Australia: Australian Institute of Health and Welfare. Person—living arrangement. Available from: http://meteor.aihw.gov.au/content/index.phtml/itemId/299712 (accessed 2013 Mar 01).
 
 METeOR (Metadata Online Registry) [Internet]. Australia: Australian Institute of Health and Welfare. Household—household composition. Available from: http://meteor.aihw.gov.au/content/index.phtml/itemId/301755 (accessed 2013 Mar 01).
 
 METeOR (Metadata Online Registry) [Internet]. Australia: Australian Institute of Health and Welfare. Household—household type. Available from: http://meteor.aihw.gov.au/content/index.phtml/itemId/351188 (accessed 2013 Mar 01).">
+		["current_contact"] = <"Heather Leslie, Ocean Informatics, heather.leslie@oceaninformatics.com">
 		["MD5-CAM-1.0.1"] = <"78343BA03C7D5847A3607BFB22D2B0C0">
 	>
 

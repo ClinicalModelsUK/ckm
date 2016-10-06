@@ -1,8 +1,8 @@
-﻿archetype (adl_version=1.4; uid=7e08757e-261b-4323-a8b1-0cbe3aa01d9f)
-	openEHR-EHR-OBSERVATION.conclusion_assess_a_reset.v0
+﻿archetype (adl_version=1.4; uid=52904074-2165-4b1b-b03a-a0e9d294dbf7)
+	openEHR-EHR-OBSERVATION.conclusion_assess_c_reset.v0
 
 concept
-	[at0000]	-- Conclusion Assessment A RESET
+	[at0000]	-- Conclusion Assessment C RESET
 language
 	original_language = <[ISO_639-1::en]>
 description
@@ -15,10 +15,9 @@ description
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
-			purpose = <"Local archetype for RESET (Rapid response based Emergency Structured Exam Tool) to describe conclusion of Assessment Part A (Airway assessment).">
-			use = <"Use for RESET project for airway assessment conclusion.">
-			keywords = <"RESET", "Rapid response", "emergency", "assessment">
-			misuse = <"Not to be used outside the scope of RESET.">
+			purpose = <"Local archetype for RESET (Rapid response based Emergency Structured Exam Tool) to describe conclusion of Assessment Part C (Cardiovascular assessment).">
+			use = <"Use for RESET project for cardiovascular assessment conclusion.">
+			misuse = <"Not to be used outside the scope of the RESET project.">
 			copyright = <"© Clinical Models UK">
 		>
 	>
@@ -31,13 +30,13 @@ description
 		["original_namespace"] = <"uk.org.clinicalmodels">
 		["original_publisher"] = <"UK Clinical Models">
 		["custodian_namespace"] = <"uk.org.clinicalmodels">
-		["MD5-CAM-1.0.1"] = <"B47C11525897D0D765B85532DECCCCE5">
-		["build_uid"] = <"0bb1afe8-14b2-4609-9981-d067318372f2">
+		["MD5-CAM-1.0.1"] = <"D63A9DD92F85B08E6AC227044E139B23">
+		["build_uid"] = <"1ca480d6-aaba-48e9-9ad1-688104917344">
 		["revision"] = <"0.0.1-alpha">
 	>
 
 definition
-	OBSERVATION[at0000] matches {	-- Conclusion Assessment A RESET
+	OBSERVATION[at0000] matches {	-- Conclusion Assessment C RESET
 		data matches {
 			HISTORY[at0001] matches {	-- Event Series
 				events cardinality matches {1..*; unordered} matches {
@@ -45,15 +44,15 @@ definition
 						data matches {
 							ITEM_TREE[at0003] matches {	-- Tree
 								items cardinality matches {0..*; unordered} matches {
-									ELEMENT[at0004] occurrences matches {0..1} matches {	-- Assessment A Conclusion
+									ELEMENT[at0004] occurrences matches {0..1} matches {	-- Assessment C Conclusion
 										value matches {
 											DV_CODED_TEXT matches {
 												defining_code matches {
 													[local::
-													at0005, 	-- Patent
-													at0006, 	-- At risk
-													at0007, 	-- Not threatened
-													at0008]	-- Obstructed
+													at0005, 	-- Shocked
+													at0006, 	-- Hyperdynamic
+													at0007, 	-- Not compromised
+													at0008]	-- At risk
 												}
 											}
 										}
@@ -62,9 +61,9 @@ definition
 							}
 						}
 						state matches {
-							ITEM_TREE[at0009] matches {	-- Tree
+							ITEM_TREE[at0011] matches {	-- Tree
 								items cardinality matches {0..*; unordered} matches {
-									ELEMENT[at0010] occurrences matches {0..*} matches {	-- Confounding factors
+									ELEMENT[at0012] occurrences matches {0..*} matches {	-- Confounding factors
 										value matches {
 											DV_TEXT matches {*}
 										}
@@ -77,9 +76,9 @@ definition
 			}
 		}
 		protocol matches {
-			ITEM_TREE[at0011] matches {	-- Tree
+			ITEM_TREE[at0009] matches {	-- Tree
 				items cardinality matches {0..*; unordered} matches {
-					allow_archetype CLUSTER[at0012] occurrences matches {0..*} matches {	-- Extension
+					allow_archetype CLUSTER[at0010] occurrences matches {0..*} matches {	-- Extension
 						include
 							archetype_id/value matches {/.*/}
 					}
@@ -94,8 +93,8 @@ ontology
 		["en"] = <
 			items = <
 				["at0000"] = <
-					text = <"Conclusion Assessment A RESET">
-					description = <"RESET project Assessment A Conclusion.">
+					text = <"Conclusion Assessment C RESET">
+					description = <"Conclusion of RESET Assessment C.">
 				>
 				["at0001"] = <
 					text = <"Event Series">
@@ -110,41 +109,41 @@ ontology
 					description = <"@ internal @">
 				>
 				["at0004"] = <
-					text = <"Assessment A Conclusion">
-					description = <"Describes the conclusion from the airway assessment (Part A of the RESET assessment).">
+					text = <"Assessment C Conclusion">
+					description = <"Describes the conclusion of the cardiovascular assessment (Part C of the RESET assessment).">
 				>
 				["at0005"] = <
-					text = <"Patent">
-					description = <"The assessment of the patient's airway indicates that the airway is patent.">
+					text = <"Shocked">
+					description = <"The cardiovascular assessment indicates that the patient is shocked.">
 				>
 				["at0006"] = <
-					text = <"At risk">
-					description = <"The assessment of the patient's airway indicates that the airway is at risk.">
+					text = <"Hyperdynamic">
+					description = <"The cardiovascular assessment indicates that the patient is hyperdynamic.">
 				>
 				["at0007"] = <
-					text = <"Not threatened">
-					description = <"The assessment of the patient's airway indicates that the airway is not threatened.">
+					text = <"Not compromised">
+					description = <"The cardiovascular assessment indicates that the patient is not compromised.">
 				>
 				["at0008"] = <
-					text = <"Obstructed">
-					description = <"The assessment of the patient's airway indicates that the airway is obstructed.">
+					text = <"At risk">
+					description = <"The cardiovascular assessment indicates that the patient is at risk.">
 				>
 				["at0009"] = <
 					text = <"Tree">
 					description = <"@ internal @">
 				>
 				["at0010"] = <
-					text = <"Confounding factors">
-					description = <"Record any issues or factors that may impact on the conclusion.">
+					text = <"Extension">
+					description = <"Additional information required to capture local context or to align with other reference models/formalisms.">
+					comment = <"e.g. Local hospital departmental infomation or additional metadata to align with HL7 or CDISC equivalents.">
 				>
 				["at0011"] = <
 					text = <"Tree">
 					description = <"@ internal @">
 				>
 				["at0012"] = <
-					text = <"Extension">
-					description = <"Additional information required to capture local context or to align with other reference models/formalisms.">
-					comment = <"e.g. Local hospital departmental infomation or additional metadata to align with HL7 or CDISC equivalents.">
+					text = <"Confounding factors">
+					description = <"Record any issues or factors that may impact on the conclusion of assessment B.">
 				>
 			>
 		>

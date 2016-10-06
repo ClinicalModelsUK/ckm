@@ -30,7 +30,7 @@ Where other more complex result patterns are required it may be helpful to speci
 	other_contributors = <"Heather Leslie, Ocean Informatics, Australia", ...>
 	other_details = <
 		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 3.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/3.0/.">
-		["revision"] = <"0.0.1-alpha">
+		["custodian_organisation"] = <"openEHR Foundation">
 		["references"] = <"Based on NEHTA 'Pathology Test' archetype. Available from: http://dcm.nehta.org.au/ckm/OKM.html#showarchetype_1013.1.839_8
 
 Pathology (Data Specifications) Version 1.0 [Internet]. Sydney, Australia: National E-Health Transition Authority; 2007 May 29 [cited 2011 Jul 11]; Available at http://www.nehta.gov.au/component/docman/doc_download/962-pathology-v10.
@@ -38,12 +38,12 @@ Pathology (Data Specifications) Version 1.0 [Internet]. Sydney, Australia: Natio
 Laboratory Technical Framework, Volume 3: Content, Revision 3.0 [Internet]. USA: IHE International; 2011 May 19; [cited 2011 Jul 11]. Available from: http://www.ihe.net/Technical_Framework/index.cfm#laboratory
 
 Hl7 FHIR Observation resource: HL7 FHIR; Available from http://www.hl7.org/implement/standards/fhir/observation.html">
-		["build_uid"] = <"51e00c1a-d812-44ad-903f-32b1ec449fbf">
-		["original_publisher"] = <"openEHR Foundation">
 		["original_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"4609D4C2AA596C22113E03DFFBB7737C">
+		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["custodian_organisation"] = <"openEHR Foundation">
+		["MD5-CAM-1.0.1"] = <"4609D4C2AA596C22113E03DFFBB7737C">
+		["build_uid"] = <"51e00c1a-d812-44ad-903f-32b1ec449fbf">
+		["revision"] = <"0.0.1-alpha">
 	>
 
 definition

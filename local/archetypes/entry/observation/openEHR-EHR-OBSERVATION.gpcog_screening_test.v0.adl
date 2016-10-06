@@ -28,16 +28,16 @@ For patients requiring a informant questionnaire, scores of 3 or less out of 6 i
 	lifecycle_state = <"in_development">
 	other_contributors = <>
 	other_details = <
-		["current_contact"] = <"Hildegard Franke, freshEHR Clinical Informatics Ltd.<hildi@freshehr.com>">
 		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 3.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/3.0/.">
-		["revision"] = <"0.0.1-alpha">
-		["references"] = <"Dementia Partnerships: http://www.dementiapartnerships.org.uk/archive/primary-care/primarycaretoolkit/3-improving-diagnosis/cognitive-assessment-tools/ [cited 13-Jun-2016].">
-		["build_uid"] = <"54130a8b-5ae5-4a7f-9d32-ad29086b74c0">
-		["original_publisher"] = <"UK Clinical Models">
-		["original_namespace"] = <"uk.org.clinicalmodels">
-		["MD5-CAM-1.0.1"] = <"541EFF994F69A7ED42E543C62C75E494">
-		["custodian_namespace"] = <"uk.org.clinicalmodels">
 		["custodian_organisation"] = <"UK Clinical Models">
+		["references"] = <"Dementia Partnerships: http://www.dementiapartnerships.org.uk/archive/primary-care/primarycaretoolkit/3-improving-diagnosis/cognitive-assessment-tools/ [cited 13-Jun-2016].">
+		["current_contact"] = <"Hildegard Franke, freshEHR Clinical Informatics Ltd.<hildi@freshehr.com>">
+		["original_namespace"] = <"uk.org.clinicalmodels">
+		["original_publisher"] = <"UK Clinical Models">
+		["custodian_namespace"] = <"uk.org.clinicalmodels">
+		["MD5-CAM-1.0.1"] = <"541EFF994F69A7ED42E543C62C75E494">
+		["build_uid"] = <"54130a8b-5ae5-4a7f-9d32-ad29086b74c0">
+		["revision"] = <"0.0.1-alpha">
 	>
 
 definition
