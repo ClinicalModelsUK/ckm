@@ -107,6 +107,8 @@
         <Rule path="/protocol[at0011]/items[at1033]" max="0" />
         <Rule path="/protocol[at0011]/items[at1035]" max="0" />
         <Rule path="/protocol[at0011]/items[at1038]" max="0" />
+        <Rule path="/protocol[at0011]/items[at1054]" max="0" />
+        <Rule path="/protocol[at0011]/items[at1055]" max="0" />
         <Rule path="/protocol[at0011]/items[at1010]" max="0" />
       </Item>
     </Content>
@@ -157,6 +159,7 @@
         </Rule>
         <Rule path="/data[at0001]/events[at0002]/data[at0003]" hide_on_form="true" />
         <Rule path="/data[at0001]/events[at0002]/data[at0003]/items[at0004]" max="0" />
+        <Rule path="/protocol[at0007]" hide_on_form="true" />
         <Items xsi:type="CLUSTER" archetype_id="openEHR-EHR-CLUSTER.altered_mental_state_reset.v0" concept_name="Altered mental state RESET" path="/data[at0001]/events[at0002]/data[at0003]/items[at0006]" />
       </Item>
     </Content>
@@ -250,6 +253,7 @@
         <Rule path="/data[at0001]/events[at0002]" hide_on_form="true" />
         <Rule path="/data[at0001]/events[at0002]/data[at0003]" hide_on_form="true" />
         <Rule path="/data[at0001]/events[at0002]/state[at0041]" hide_on_form="true" />
+        <Rule path="/protocol[at0045]" hide_on_form="true" />
       </Item>
       <Item xsi:type="OBSERVATION" archetype_id="openEHR-EHR-OBSERVATION.story.v1" concept_name="Story/History" path="/items" hide_on_form="true">
         <Rule path="/data[at0001]" hide_on_form="true" />
@@ -260,6 +264,7 @@
         </Rule>
         <Rule path="/data[at0001]/events[at0002]/data[at0003]" hide_on_form="true" />
         <Rule path="/data[at0001]/events[at0002]/data[at0003]/items[at0004]" max="0" />
+        <Rule path="/protocol[at0007]" hide_on_form="true" />
         <Items xsi:type="CLUSTER" archetype_id="openEHR-EHR-CLUSTER.symptom_sign.v1" concept_name="Symptom/Sign" path="/data[at0001]/events[at0002]/data[at0003]/items[at0006]">
           <Rule path="/items[at0001]" name="Pain" />
           <Rule path="/items[at0002]" max="0" />
@@ -903,6 +908,7 @@
         <Rule path="/data[at0001]" hide_on_form="true" />
         <Rule path="/data[at0001]/events[at0002]" hide_on_form="true" />
         <Rule path="/data[at0001]/events[at0002]/data[at0003]" hide_on_form="true" />
+        <Rule path="/protocol[at0009]" hide_on_form="true" />
       </Item>
     </Content>
     <Context>
