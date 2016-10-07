@@ -122,9 +122,33 @@
         </Rule>
         <Rule path="/data[at0001]/events[at0002]/data[at0003]" hide_on_form="true" />
         <Rule path="/data[at0001]/events[at0002]/data[at0003]/items[at0004]" max="0" />
+        <Rule path="/protocol[at0007]" hide_on_form="true" />
         <Items xsi:type="CLUSTER" archetype_id="openEHR-EHR-CLUSTER.skin_colour_reset.v0" concept_name="Skin colour RESET" path="/data[at0001]/events[at0002]/data[at0003]/items[at0006]" />
         <Items xsi:type="CLUSTER" archetype_id="openEHR-EHR-CLUSTER.skin_temp_gradient_reset.v0" concept_name="Skin temperature gradient RESET" path="/data[at0001]/events[at0002]/data[at0003]/items[at0006]" />
         <Items xsi:type="CLUSTER" archetype_id="openEHR-EHR-CLUSTER.capillary_refill_time.v0" concept_name="Capillary refill" path="/data[at0001]/events[at0002]/data[at0003]/items[at0006]" />
+      </Item>
+      <Item xsi:type="OBSERVATION" archetype_id="openEHR-EHR-OBSERVATION.fluid_output.v0" concept_name="Fluid Output" path="/items">
+        <Rule path="/data[at0001]" hide_on_form="true" />
+        <Rule path="/data[at0001]/events[at0002]" max="0" />
+        <Rule path="/data[at0001]/events[at0039]" hide_on_form="true" />
+        <Rule path="/data[at0001]/events[at0039]/data[at0003]" hide_on_form="true" />
+        <Rule path="/data[at0001]/events[at0039]/data[at0003]/items[at0036]" default="Urine" />
+        <Rule path="/data[at0001]/events[at0039]/data[at0003]/items[at0032]" max="0" />
+        <Rule path="/protocol[at0008]" hide_on_form="true" />
+        <Rule path="/protocol[at0008]/items[at0031]" max="0" />
+        <Items xsi:type="CLUSTER" archetype_id="openEHR-EHR-CLUSTER.daily_timing.v0" concept_name="Daily timing" path="/data[at0001]/events[at0039]/data[at0003]/items[at0038]" hide_on_form="true">
+          <Rule path="/items[at0003]" max="0" />
+          <Rule path="/items[at0014]">
+            <constraint xsi:type="multipleConstraint">
+              <includedTypes>Duration</includedTypes>
+            </constraint>
+          </Rule>
+          <Rule path="/items[at0004]" max="0" />
+          <Rule path="/items[at0026]" max="0" />
+          <Rule path="/items[at0023]" max="0" />
+          <Rule path="/items[at0024]" max="0" />
+          <Rule path="/items[at0025]" max="0" />
+        </Items>
       </Item>
       <Item xsi:type="OBSERVATION" archetype_id="openEHR-EHR-OBSERVATION.body_weight.v1" concept_name="Body weight" path="/items">
         <Rule path="/data[at0002]" hide_on_form="true" />
@@ -939,6 +963,12 @@
   </integrity_checks>
   <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-CLUSTER.capillary_refill_time.v0">
     <digest id="MD5-CAM-1.0.1">75ADEC193F9D23257C195F9D35CF2C4C</digest>
+  </integrity_checks>
+  <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-OBSERVATION.fluid_output.v0">
+    <digest id="MD5-CAM-1.0.1">4BA414019131C8D2D1A2EC597330BA49</digest>
+  </integrity_checks>
+  <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-CLUSTER.daily_timing.v0">
+    <digest id="MD5-CAM-1.0.1">BCB54C670C9B1774754FDA265208BEFA</digest>
   </integrity_checks>
   <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-OBSERVATION.body_weight.v1">
     <digest id="MD5-CAM-1.0.1">00796FC78634E1F9B128CBDEE62B825D</digest>
