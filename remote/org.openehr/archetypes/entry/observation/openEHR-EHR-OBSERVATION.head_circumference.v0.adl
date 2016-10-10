@@ -1,0 +1,274 @@
+﻿archetype (adl_version=1.4; uid=3fc167d3-972f-4319-ac45-2f4f7226528a)
+	openEHR-EHR-OBSERVATION.head_circumference.v0
+
+concept
+	[at0000]	-- Head circumference
+language
+	original_language = <[ISO_639-1::en]>
+	translations = <
+		["pt-br"] = <
+			language = <[ISO_639-1::pt-br]>
+			author = <
+				["name"] = <"Marivan Abrahão, Gabriela Alves, Adriana Kitajima e Maria Ângela Scatena">
+				["organisation"] = <"Core Consulting">
+				["email"] = <"contato@coreconsulting.com.br">
+			>
+			accreditation = <"Hospital Alemão Oswaldo Cruz (HAOC)">
+		>
+	>
+description
+	original_author = <
+		["name"] = <"Heather Leslie">
+		["organisation"] = <"Ocean Informatics, Australia">
+		["email"] = <"heather.leslie@oceaninformatics.com">
+		["date"] = <"2016-08-22">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"To record the circumference of the head of an individual.">
+			use = <"Use to record the circumference of the head of an individual. 
+
+This archetype can also be used for recording an approximation of the head circumference measurement in a clinical scenario where it is not possible to measure an accurate height or length - for example, measuring an uncooperative child. This is not modelled explicitly in the archetype as the openEHR Reference model allows the attribute of Approximation for any Quantity data type. At implementation, for example, an application user interface could allow clinicians to select an appropriately labelled check box adjacent to the Height data field to indicate that the recorded height is an approximation, rather than actual.A statement identifying the physical incompleteness of the head can be recorded in the 'Confounding factors' protocol element, if required.
+
+Use to record growth from repeated measurements. This can currently be modelled by constraining the 'any event' to an interval in a template with associated mathematical function of increase, as appropriate.">
+			keywords = <"anthropometry", "measurement", "estimation", "circumference">
+			misuse = <"Not to be used to record growth velocity.
+
+Not to be used to record the circumference of another body part. Use OBSERVATION.body_segment in these circumstances except where more specific archetypes exist such as OBSERVATION.waist_hip.">
+			copyright = <"© openEHR Foundation">
+		>
+		["pt-br"] = <
+			language = <[ISO_639-1::pt-br]>
+			purpose = <"Para gravar o perímetro cefálico de um indivíduo.">
+			use = <"Use para gravar o perímetro cefálico de um indivíduo.
+
+Este arquétipo também pode ser usado para gravar uma medição aproximada do perímetro cefálico, em um cenário clínico em que não é possível medir uma altura ou comprimento exato - por exemplo, medição de uma criança não colaborativa. Isto não é modelado explicitamente no arquétipo, com o modelo de referência openEHR é possível que o atributo de aproximação para qualquer de tipo de dados quantitativo. Na aplicação, por exemplo, uma interface de usuário da aplicação pode permitir aos clínicos selecionar numa caixa de verificação, apropriadamente marcada ao lado do campo de dados de altura, para indicar que a altura gravada é uma aproximação, em vez de instrução atual. A declaração identificando a incompletude física da cabeça, pode ser gravado no elemento de protocolo \"Fatores de confusão\", se necessário.
+
+Usar para registar o crescimento a partir de medições repetidas. Este atualmente pode ser modelado para restringir o \"algum evento\" para um intervalo em um modelo com função matemática de aumento associada, conforme o caso.">
+			keywords = <"antropometria", "medição", "estimativa", "circunferência">
+			misuse = <"Não deve ser usado para gravar a velocidade de crescimento.
+
+Não deve ser usado para gravar a circunferência de outra parte do corpo. Usar OBSERVATION.body_segment nestas circunstâncias, exceto quando existem arquétipos mais específicos tais como OBSERVATION.waist_hip.">
+		>
+	>
+	lifecycle_state = <"in_development">
+	other_contributors = <>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 3.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/3.0/.">
+		["custodian_organisation"] = <"openEHR Foundation">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["MD5-CAM-1.0.1"] = <"000B7C026BEECD34BAE0B28C3895F370">
+		["build_uid"] = <"2d48adbf-62d4-49cf-a5f0-12eb27f1b6d9">
+		["revision"] = <"0.0.1-alpha">
+	>
+
+definition
+	OBSERVATION[at0000] matches {	-- Head circumference
+		data matches {
+			HISTORY[at0001] matches {	-- Event Series
+				events cardinality matches {1..*; unordered} matches {
+					POINT_EVENT[at0010] occurrences matches {0..1} matches {	-- Any point in time event
+						data matches {
+							ITEM_TREE[at0003] matches {	-- Tree
+								items cardinality matches {1..*; unordered} matches {
+									ELEMENT[at0004] matches {	-- Head circumference
+										value matches {
+											C_DV_QUANTITY <
+												property = <[openehr::122]>
+												list = <
+													["1"] = <
+														units = <"cm">
+														magnitude = <|0.0..100.0|>
+														precision = <|1|>
+													>
+													["2"] = <
+														units = <"[in_i]">
+														magnitude = <|0.0..40.0|>
+														precision = <|1|>
+													>
+												>
+											>
+										}
+									}
+									ELEMENT[at0007] occurrences matches {0..1} matches {	-- Comment
+										value matches {
+											DV_TEXT matches {*}
+										}
+									}
+								}
+							}
+						}
+						state matches {
+							ITEM_TREE[at0008] matches {	-- Tree
+								items cardinality matches {0..*; unordered} matches {
+									ELEMENT[at0009] occurrences matches {0..1} matches {	-- Confounding factors
+										value matches {
+											DV_TEXT matches {*}
+										}
+									}
+								}
+							}
+						}
+					}
+					POINT_EVENT[at0011] occurrences matches {0..1} matches {	-- Birth
+						data matches {
+							use_node ITEM_TREE /data[at0001]/events[at0010]/data[at0003]	-- /data[Event Series]/events[Any point in time event]/data[Tree]
+						}
+						state matches {
+							use_node ITEM_TREE /data[at0001]/events[at0010]/state[at0008]	-- /data[Event Series]/events[Any point in time event]/state[Tree]
+						}
+					}
+					INTERVAL_EVENT[at0002] occurrences matches {0..1} matches {	-- Any interval event
+						data matches {
+							use_node ITEM_TREE /data[at0001]/events[at0010]/data[at0003]	-- /data[Event Series]/events[Any point in time event]/data[Tree]
+						}
+						state matches {
+							use_node ITEM_TREE /data[at0001]/events[at0010]/state[at0008]	-- /data[Event Series]/events[Any point in time event]/state[Tree]
+						}
+					}
+				}
+			}
+		}
+		protocol matches {
+			ITEM_TREE[at0005] matches {	-- Tree
+				items cardinality matches {0..*; unordered} matches {
+					allow_archetype CLUSTER[at0006] occurrences matches {0..1} matches {	-- Device
+						include
+							archetype_id/value matches {/openEHR-EHR-CLUSTER\.device(-[a-zA-Z0-9_]+)*\.v1/}
+					}
+					allow_archetype CLUSTER[at0012] occurrences matches {0..*} matches {	-- Extension
+						include
+							archetype_id/value matches {/.*/}
+					}
+				}
+			}
+		}
+	}
+
+
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Head circumference">
+					description = <"Head circumference is measured across the frontal bones of the skull, slightly above the eyebrows and
+perpendicular to the long axis of the face; above the ears; and the location over the occipital
+prominence that registers the maximal circumference of the head.">
+				>
+				["at0001"] = <
+					text = <"Event Series">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Any interval event">
+					description = <"Unspecified interval event which may be explicitly defined in a template or at run-time. This event will be used to record mathematical functions about the measurement over intervals of time, for example: increase in head circumference.">
+				>
+				["at0003"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0004"] = <
+					text = <"Head circumference">
+					description = <"Measurement of the circumference of the head.">
+				>
+				["at0005"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0006"] = <
+					text = <"Device">
+					description = <"Details about the medical device used for the measurement.">
+				>
+				["at0007"] = <
+					text = <"Comment">
+					description = <"Comment about the measurement of head circumference.">
+				>
+				["at0008"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0009"] = <
+					text = <"Confounding factors">
+					description = <"Record any issues or factors that may impact on the measurement.">
+					comment = <"For example: uncooperative child.">
+				>
+				["at0010"] = <
+					text = <"Any point in time event">
+					description = <"Default, unspecified point in time which may be explicitly defined in a template or at run-time. This event will be used for recording measurements in clinical encounters.">
+				>
+				["at0011"] = <
+					text = <"Birth">
+					description = <"The first measurement of head circumference that is recorded soon after birth.">
+				>
+				["at0012"] = <
+					text = <"Extension">
+					description = <"Additional information required to capture local context or to align with other reference models/formalisms.">
+					comment = <"For example: Local hospital departmental infomation or additional metadata to align with FHIR or CIMI equivalents.">
+				>
+			>
+		>
+		["pt-br"] = <
+			items = <
+				["at0000"] = <
+					text = <"Perímetro cefálico">
+					description = <"O perímetro cefálico é medida através dos ossos frontais do crânio, um pouco acima das sobrancelhas e
+perpendicular ao eixo longo da face; acima das orelhas; e o local acima da proeminência occipital, que registra a circunferência máxima da cabeça.">
+				>
+				["at0001"] = <
+					text = <"Event Series">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Qualquer intervalo do evento">
+					description = <"Intervalo não especificado no evento, que pode ser explicitamente definido em um modelo ou durante a execução. Este evento será usado para gravar funções matemáticas sobre a medição em intervalos de tempo, por exemplo: aumento da circunferência da cabeça.">
+				>
+				["at0003"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0004"] = <
+					text = <"Perímetro cefálico">
+					description = <"A medição da circunferência da cabeça.">
+				>
+				["at0005"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0006"] = <
+					text = <"Dispositivo">
+					description = <"Detalhes sobre o dispositivo médico usado para a medição.">
+				>
+				["at0007"] = <
+					text = <"Comentário">
+					description = <"Comentário sobre a medição da circunferência da cabeça.">
+				>
+				["at0008"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0009"] = <
+					text = <"Fatores de confusão">
+					description = <"Grave qualquer questão ou fatores que podem impactar na medição.">
+					comment = <"Por exemplo: criança não colabora.">
+				>
+				["at0010"] = <
+					text = <"Qualquer ponto de tempo no evento.">
+					description = <"Padrão, ponto não especificado no tempo que pode ser explicitamente definido em um modelo ou em tempo de execução. Este evento será usado para gravar as medições em encontros clínicos.">
+				>
+				["at0011"] = <
+					text = <"Nascimento">
+					description = <"A primeira medição do perímetro cefálico, que é gravado logo após o nascimento.">
+				>
+				["at0012"] = <
+					text = <"Extensão">
+					description = <"Informações adicionais, necessárias para capturar o contexto local ou para alinhar com outros modelos de referência / formalismos.">
+					comment = <"Por exemplo: departamento de informações do hospital local ou metadados adicionais para alinhar ao FHIR ou CIMI equivalentes.">
+				>
+			>
+		>
+	>
