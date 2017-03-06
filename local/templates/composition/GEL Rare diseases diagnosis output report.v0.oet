@@ -93,25 +93,6 @@
     </items>
   </annotations>
   <definition xsi:type="COMPOSITION" archetype_id="openEHR-EHR-COMPOSITION.report.v1" concept_name="Report" name="GEL Rare diseases diagnosis">
-    <Content xsi:type="ADMIN_ENTRY" archetype_id="openEHR-EHR-ADMIN_ENTRY.participant_gel.v0" concept_name="Participant GEL" max="1" path="/content" name="Participant">
-      <Items xsi:type="CLUSTER" archetype_id="openEHR-EHR-CLUSTER.person_identifiable_parent.v0" concept_name="Identifiable Person (PARENT)" max="1" path="/data[at0001]/items[at0005]" name="Identifiable Person" hide_on_form="true">
-        <Rule path="/items[at0001]" max="1" min="1" name="Participant Identifier" />
-        <Rule path="/items[at0001]" max="1" min="1" clone="true" name="NHS number" />
-        <Rule path="/items[at0001]" max="1" clone="true" name="CHI number" />
-        <Rule path="/items[at0001]" max="1" clone="true" name="Hospital number" />
-        <Rule path="/items[at0008]" min="1" />
-        <Rule path="/items[at0006]" max="0" />
-        <Rule path="/items[at0007]" max="0" />
-        <Items xsi:type="CLUSTER" archetype_id="openEHR-EHR-CLUSTER.person_name_isa.v0" concept_name="Person name (ISA)" max="1" path="/items[at0002]" name="Person name" hide_on_form="true">
-          <Rule path="/items[at0004]" max="0" />
-          <Rule path="/items[at0001]" min="1" name="Surname" />
-          <Rule path="/items[at0002]" min="1" name="Forename" />
-          <Rule path="/items[at0005]" max="0" />
-          <Rule path="/items[at0003]" max="0" />
-          <Rule path="/items[at0006]" max="0" />
-        </Items>
-      </Items>
-    </Content>
     <Content xsi:type="EVALUATION" archetype_id="openEHR-EHR-EVALUATION.problem_diagnosis.v1" concept_name="Problem/Diagnosis" max="1" path="/content" hide_on_form="true">
       <Rule path="/data[at0001]" hide_on_form="true" />
       <Rule path="/data[at0001]/items[at0002]" name="Specific disease" />
@@ -136,8 +117,12 @@
           </constraint>
         </Rule>
       </Items>
+      <Items xsi:type="CLUSTER" archetype_id="openEHR-EHR-CLUSTER.eligibility_gel.v0" concept_name="Eligibility GEL" max="1" path="/data[at0001]/items[at0043]" name="Eligibility" />
     </Content>
     <Context>
+      <Items xsi:type="CLUSTER" archetype_id="openEHR-EHR-CLUSTER.participant_gel.v0" concept_name="Participant GEL" max="1" path="/context/other_context[at0001]/items[at0006]" name="Participant">
+        <Rule path="/items[at0015]" min="1" />
+      </Items>
       <Rule path="/context/other_context[at0001]" hide_on_form="true" />
       <Rule path="/context/other_context[at0001]/items[at0002]" max="0" />
       <Rule path="/context/other_context[at0001]/items[at0005]" max="0" />
@@ -147,14 +132,8 @@
   <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-COMPOSITION.report.v1">
     <digest id="MD5-CAM-1.0.1">FD053BE0456D849CACD864F274EED32E</digest>
   </integrity_checks>
-  <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-ADMIN_ENTRY.participant_gel.v0">
-    <digest id="MD5-CAM-1.0.1">FDB2BAF12DC5E2F8E1821764577449B7</digest>
-  </integrity_checks>
-  <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-CLUSTER.person_identifiable_parent.v0">
-    <digest id="MD5-CAM-1.0.1">9129BFFDA38C4ABB7BE5B41BD7580191</digest>
-  </integrity_checks>
-  <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-CLUSTER.person_name_isa.v0">
-    <digest id="MD5-CAM-1.0.1">D20CCDC47F4E9C7C5D6043DB1149EC8C</digest>
+  <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-CLUSTER.participant_gel.v0">
+    <digest id="MD5-CAM-1.0.1">C4E628BB6ADBA4F6337F58CF5322B4EE</digest>
   </integrity_checks>
   <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-EVALUATION.problem_diagnosis.v1">
     <digest id="MD5-CAM-1.0.1">6110E221A71B0A223ACDF7184471D1C8</digest>
@@ -164,5 +143,8 @@
   </integrity_checks>
   <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-CLUSTER.age_debra.v0">
     <digest id="MD5-CAM-1.0.1">9D5CA3810481F48FDD07834E204F4E00</digest>
+  </integrity_checks>
+  <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-CLUSTER.eligibility_gel.v0">
+    <digest id="MD5-CAM-1.0.1">A96D81CC3867B1DEF830BDFE84C0F1F0</digest>
   </integrity_checks>
 </template>
