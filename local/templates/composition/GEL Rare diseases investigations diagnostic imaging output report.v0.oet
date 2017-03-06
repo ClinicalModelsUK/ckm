@@ -1369,6 +1369,7 @@
           </Items>
           <Items xsi:type="CLUSTER" archetype_id="openEHR-EHR-CLUSTER.heart_liver_iron_gel.v0" concept_name="Heart or liver iron measurement GEL" max="1" path="/data[at0001]/events[at0002]/data[at0003]/items[at0043]" name="Heart or liver iron measurement" hide_on_form="true" />
           <Items xsi:type="CLUSTER" archetype_id="openEHR-EHR-CLUSTER.fetal_imaging_gel.v0" concept_name="Fetal imaging GEL" max="1" path="/data[at0001]/events[at0002]/data[at0003]/items[at0043]" name="Fetal imaging" hide_on_form="true" />
+          <Items xsi:type="CLUSTER" archetype_id="openEHR-EHR-CLUSTER.patient_status_gel.v0" concept_name="Patient Status GEL" max="1" path="/protocol[at0025]/items[at0045]" name="Patient Status" hide_on_form="true" />
         </Item>
       </Item>
       <Item xsi:type="SECTION" archetype_id="openEHR-EHR-SECTION.adhoc.v1" concept_name="Ad hoc heading" max="1" path="/items" name="Cardiac MRI">
@@ -1455,6 +1456,7 @@
             </Rule>
           </Items>
           <Items xsi:type="CLUSTER" archetype_id="openEHR-EHR-CLUSTER.fetal_imaging_gel.v0" concept_name="Fetal imaging GEL" max="1" path="/data[at0001]/events[at0002]/data[at0003]/items[at0043]" name="Fetal imaging" hide_on_form="true" />
+          <Items xsi:type="CLUSTER" archetype_id="openEHR-EHR-CLUSTER.patient_status_gel.v0" concept_name="Patient Status GEL" max="1" path="/protocol[at0025]/items[at0045]" name="Patient Status" hide_on_form="true" />
         </Item>
       </Item>
       <Item xsi:type="SECTION" archetype_id="openEHR-EHR-SECTION.adhoc.v1" concept_name="Ad hoc heading" max="1" path="/items" name="Doppler diastolic function assessment">
@@ -1539,6 +1541,7 @@
             </Rule>
           </Items>
           <Items xsi:type="CLUSTER" archetype_id="openEHR-EHR-CLUSTER.fetal_imaging_gel.v0" concept_name="Fetal imaging GEL" max="1" path="/data[at0001]/events[at0002]/data[at0003]/items[at0043]" name="Fetal imaging" hide_on_form="true" />
+          <Items xsi:type="CLUSTER" archetype_id="openEHR-EHR-CLUSTER.patient_status_gel.v0" concept_name="Patient Status GEL" max="1" path="/protocol[at0025]/items[at0045]" name="Patient Status" hide_on_form="true" />
         </Item>
       </Item>
     </Content>
