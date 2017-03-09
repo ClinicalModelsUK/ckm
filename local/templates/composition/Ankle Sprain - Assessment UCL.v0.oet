@@ -288,6 +288,7 @@
           <Rule path="/protocol[at0007]" hide_on_form="true" />
           <Items xsi:type="CLUSTER" archetype_id="openEHR-EHR-CLUSTER.symptom_sign.v1" concept_name="Symptom/Sign" max="1" path="/data[at0001]/events[at0002]/data[at0003]/items[at0006]" name="Impaired weight bearing">
             <Rule path="/items[at0001]" default="Impaired weight bearing" hide_on_form="true" />
+            <Rule path="/items[at0035]" name="No impaired weight bearing" />
             <Rule path="/items[at0002]" max="0" />
             <Rule path="/items[at0151]" max="0" />
             <Rule path="/items[at0175]" max="0" />
@@ -316,6 +317,7 @@
           </Items>
           <Items xsi:type="CLUSTER" archetype_id="openEHR-EHR-CLUSTER.symptom_sign.v1" concept_name="Symptom/Sign" max="1" path="/data[at0001]/events[at0002]/data[at0003]/items[at0006]" name="Impaired mobility">
             <Rule path="/items[at0001]" default="Impaired mobility" hide_on_form="true" />
+            <Rule path="/items[at0035]" name="No impaired mobility" />
             <Rule path="/items[at0002]" max="0" />
             <Rule path="/items[at0151]" max="0" />
             <Rule path="/items[at0175]" max="0" />
@@ -343,6 +345,7 @@
           </Items>
           <Items xsi:type="CLUSTER" archetype_id="openEHR-EHR-CLUSTER.symptom_sign.v1" concept_name="Symptom/Sign" max="1" path="/data[at0001]/events[at0002]/data[at0003]/items[at0006]" name="Pain">
             <Rule path="/items[at0001]" default="Pain" hide_on_form="true" />
+            <Rule path="/items[at0035]" name="No pain" />
             <Rule path="/items[at0002]" max="0" />
             <Rule path="/items[at0151]" max="0" />
             <Rule path="/items[at0175]" max="0" />
@@ -370,6 +373,7 @@
           </Items>
           <Items xsi:type="CLUSTER" archetype_id="openEHR-EHR-CLUSTER.symptom_sign.v1" concept_name="Symptom/Sign" max="1" path="/data[at0001]/events[at0002]/data[at0003]/items[at0006]" name="Swelling">
             <Rule path="/items[at0001]" default="Swelling" hide_on_form="true" />
+            <Rule path="/items[at0035]" name="No swelling" />
             <Rule path="/items[at0002]" max="0" />
             <Rule path="/items[at0151]" max="0" />
             <Rule path="/items[at0175]" max="0" />
@@ -397,6 +401,7 @@
           </Items>
           <Items xsi:type="CLUSTER" archetype_id="openEHR-EHR-CLUSTER.symptom_sign.v1" concept_name="Symptom/Sign" max="1" path="/data[at0001]/events[at0002]/data[at0003]/items[at0006]" name="Haemorrhage/ecchymosis">
             <Rule path="/items[at0001]" default="Haemorrhage/ecchymosis" hide_on_form="true" />
+            <Rule path="/items[at0035]" name="No haemorrhage/ecchymosis" />
             <Rule path="/items[at0002]" max="0" />
             <Rule path="/items[at0151]" max="0" />
             <Rule path="/items[at0175]" max="0" />
@@ -420,6 +425,7 @@
           </Items>
           <Items xsi:type="CLUSTER" archetype_id="openEHR-EHR-CLUSTER.symptom_sign.v1" concept_name="Symptom/Sign" max="1" path="/data[at0001]/events[at0002]/data[at0003]/items[at0006]" name="Tender point">
             <Rule path="/items[at0001]" default="Tender point" hide_on_form="true" />
+            <Rule path="/items[at0035]" name="No tender point" />
             <Rule path="/items[at0002]" max="0" />
             <Rule path="/items[at0151]" max="0" />
             <Rule path="/items[at0175]" max="0" />
@@ -449,6 +455,7 @@
           </Items>
           <Items xsi:type="CLUSTER" archetype_id="openEHR-EHR-CLUSTER.symptom_sign.v1" concept_name="Symptom/Sign" max="1" path="/data[at0001]/events[at0002]/data[at0003]/items[at0006]" name="Weakness and Stiffness">
             <Rule path="/items[at0001]" default="Weakness and stiffness" hide_on_form="true" />
+            <Rule path="/items[at0035]" name="No weakness and stiffness" />
             <Rule path="/items[at0002]" max="0" />
             <Rule path="/items[at0151]" max="0" />
             <Rule path="/items[at0175]" max="0" />
