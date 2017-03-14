@@ -1,5 +1,5 @@
-﻿archetype (adl_version=1.4)
-	openEHR-EHR-OBSERVATION.refraction.v1
+﻿archetype (adl_version=1.4; uid=098f8a46-e359-4a1d-9fec-5a5afce6dd81)
+	openEHR-EHR-OBSERVATION.refraction.v0
 
 concept
 	[at0000]	-- Refraction assessment
@@ -24,9 +24,11 @@ The 'Description' data element can be used to record simple narrative summary or
 			copyright = <"© openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"AuthorDraft">
+	lifecycle_state = <"in_development">
 	other_contributors = <"Gustavo M Bacelar-Silva, Brazil", ...>
 	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 3.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/3.0/.">
+		["custodian_organisation"] = <"openEHR Foundation">
 		["references"] = <"Visual Acuity [Internet]. Wikipedia. Available from: http://en.wikipedia.org/wiki/Visual_acuity
 
 Aylward W [Internet].Coding Visual Acuity, openEyes Project;2012.Available from http://www.openeyes.org.uk/documents/OpenEyes%20Coding%20Visual%20Acuity.pdf
@@ -42,7 +44,12 @@ DICOM Supplement 30 [Internet]. [cited 2012 Sep 26]. Available from: http://medi
 Practical Ophthalmology: A Manual for Beginning Residents, 6th Edition [Paperback]
 American Academy Of Ophthalmology (Author), Fred M. Wilson II (Editor), MD (Editor)">
 		["current_contact"] = <"Ian McNicoll, Ocean Informatics, UK, ian.mcnicoll@oceaninformatics.com">
-		["MD5-CAM-1.0.1"] = <"1FC072ECEFE11FA70A8F99BAEC6B2282">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["MD5-CAM-1.0.1"] = <"D42803F6CFAD0179CF57A9D3B831E924">
+		["build_uid"] = <"2be5f074-ea89-4f39-b057-87ddb2b5d621">
+		["revision"] = <"0.0.1-alpha">
 	>
 
 definition
@@ -50,7 +57,7 @@ definition
 		data matches {
 			HISTORY[at0001] matches {	-- Event Series
 				events cardinality matches {1..*; unordered} matches {
-					POINT_EVENT[at0134] occurrences matches {0..1} matches {	-- Any event
+					EVENT[at0134] occurrences matches {0..*} matches {	-- Any event
 						data matches {
 							ITEM_TREE[at0003] matches {	-- Tree
 								items cardinality matches {0..*; unordered} matches {
@@ -59,23 +66,34 @@ definition
 											DV_TEXT matches {*}
 										}
 									}
-									CLUSTER[at0053] occurrences matches {0..2} matches {	-- Per Eye
+									CLUSTER[at0053] occurrences matches {0..2} matches {	-- Result details
 										items cardinality matches {1..*; unordered} matches {
-											ELEMENT[at0055] occurrences matches {0..1} matches {	-- Absent Result
+											ELEMENT[at0144] occurrences matches {0..1} matches {	-- Test eye
 												value matches {
 													DV_CODED_TEXT matches {
 														defining_code matches {
 															[local::
-															at0064, 	-- Not performed
-															at0065]	-- Not completed
+															at0145, 	-- Right eye
+															at0146]	-- Left eye
 														}
 													}
-													DV_TEXT matches {*}
 												}
 											}
 											allow_archetype CLUSTER[at0139] occurrences matches {0..1} matches {	-- Refraction details
 												include
 													archetype_id/value matches {/openEHR-EHR-CLUSTER\.refraction_details(-[a-zA-Z0-9_]+)*\.v1/}
+											}
+											ELEMENT[at0055] occurrences matches {0..1} matches {	-- No test result
+												value matches {
+													DV_BOOLEAN matches {
+														value matches {True}
+													}
+												}
+											}
+											ELEMENT[at0147] occurrences matches {0..1} matches {	-- Reason for no test result
+												value matches {
+													DV_TEXT matches {*}
+												}
 											}
 											ELEMENT[at0066] occurrences matches {0..*} matches {	-- Interpretation
 												value matches {
@@ -84,15 +102,19 @@ definition
 											}
 										}
 									}
-									ELEMENT[at0054] occurrences matches {0..*} matches {	-- Overall Interpretation
+									ELEMENT[at0054] occurrences matches {0..*} matches {	-- Overall interpretation
 										value matches {
 											DV_TEXT matches {*}
 										}
 									}
-									ELEMENT[at0040] occurrences matches {0..1} matches {	-- Additional Comment
+									ELEMENT[at0040] occurrences matches {0..1} matches {	-- Comment
 										value matches {
 											DV_TEXT matches {*}
 										}
+									}
+									allow_archetype CLUSTER[at0140] occurrences matches {0..*} matches {	-- Examination not done
+										include
+											archetype_id/value matches {/openEHR-EHR-CLUSTER\.exclusion_exam(-[a-zA-Z0-9_]+)*\.v1/}
 									}
 								}
 							}
@@ -133,6 +155,10 @@ definition
 						include
 							archetype_id/value matches {/openEHR-EHR-CLUSTER\.device(-[a-zA-Z0-9_]+)*\.v1/}
 					}
+					allow_archetype CLUSTER[at0141] occurrences matches {0..*} matches {	-- Extension
+						include
+							archetype_id/value matches {/.*/}
+					}
 				}
 			}
 		}
@@ -170,7 +196,7 @@ ontology
 					description = <"An overall narrative description of the visual acuity test result.">
 				>
 				["at0040"] = <
-					text = <"Additional Comment">
+					text = <"Comment">
 					description = <"Any additional narrative comment about the visual acuity test.">
 				>
 				["at0041"] = <
@@ -183,25 +209,17 @@ ontology
 					comment = <"Examples: 'No correction : unaided', 'Pinhole'.">
 				>
 				["at0053"] = <
-					text = <"Per Eye">
+					text = <"Result details">
 					description = <"Details of the refraction result for each eye.">
 				>
 				["at0054"] = <
-					text = <"Overall Interpretation">
+					text = <"Overall interpretation">
 					description = <"A term, commonly coded, expressing an overall interpretation of the visual acuity test.">
 				>
 				["at0055"] = <
-					text = <"Absent Result">
-					description = <"Details of a test result which could not be recorded.">
-					comment = <"Details of reasons for an absent test result can be described in Additional Comment or Confounding Factors.">
-				>
-				["at0064"] = <
-					text = <"Not performed">
-					description = <"The visual acuity test was never performed.">
-				>
-				["at0065"] = <
-					text = <"Not completed">
-					description = <"The visual acuity test was started but could not be completed.">
+					text = <"No test result">
+					description = <"No refraction test result is available for the test eye.">
+					comment = <"Record as True if the clinician was unable to record a result for the test eye.">
 				>
 				["at0066"] = <
 					text = <"Interpretation">
@@ -235,11 +253,37 @@ ontology
 				>
 				["at0134"] = <
 					text = <"Any event">
-					description = <"Any refraction assessment event.">
+					description = <"Default, unspecified point in time or interval event which may be explicitly defined in a template or at run-time.">
 				>
 				["at0139"] = <
 					text = <"Refraction details">
 					description = <"Details of refraction for a single eye.">
+				>
+				["at0140"] = <
+					text = <"Examination not done">
+					description = <"Details to explicitly record that this test was not performed.">
+				>
+				["at0141"] = <
+					text = <"Extension">
+					description = <"Additional information required to capture local content or to align with other reference models/formalisms.">
+					comment = <"For example: local information requirements or additional metadata to align with FHIR or CIMI equivalents.">
+				>
+				["at0144"] = <
+					text = <"Test eye">
+					description = <"Identification of the eye which is being tested.">
+				>
+				["at0145"] = <
+					text = <"Right eye">
+					description = <"Assessment of the right eye was performed.">
+				>
+				["at0146"] = <
+					text = <"Left eye">
+					description = <"Assessment of the left eye was performed.">
+				>
+				["at0147"] = <
+					text = <"Reason for no test result">
+					description = <"Reason why no refraction result is available for the test eye.">
+					comment = <"For example, patient was not cooperative; patient was not capable; ran out of time.">
 				>
 			>
 		>
