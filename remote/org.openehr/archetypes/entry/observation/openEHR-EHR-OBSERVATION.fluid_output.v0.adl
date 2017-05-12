@@ -6,6 +6,15 @@ concept
 language
 	original_language = <[ISO_639-1::en]>
 	translations = <
+		["nb"] = <
+			language = <[ISO_639-1::nb]>
+			author = <
+				["name"] = <"Vebjoern Arntzen">
+				["organisation"] = <"Oslo universitetssykehus HF">
+				["email"] = <"varntzen@ous-hf.no">
+			>
+			accreditation = <"Enterprise architect, Reg. nurse">
+		>
 		["sl"] = <
 			language = <[ISO_639-1::sl]>
 			author = <
@@ -49,9 +58,22 @@ May also be used to record descriptive assessments of input.
 			misuse = <"*Do not use as a primary record of the administration of fluids e.g intravascular, dialyisis. May be used alongside administration recrods ,normally an ACTION.(en)">
 			copyright = <"© National E-Health Transition Authority, openEHR Foundation">
 		>
+		["nb"] = <
+			language = <[ISO_639-1::nb]>
+			purpose = <"For å registrere enhver måling eller estimat av væsketap fra et individ, ofte brukt som del av væskebalanse.">
+			use = <"Brukes for å registrere detaljer om målinger eller estimat av et individs væsketap. Dette gjøres ofte rutinemessig i forbindelse med et væskeregnskap. For eksempel \"urin\", \"150 ml\"; eller \"aspirasjon\", \"50 ml\".
+
+Denne arketypen er laget for å registrere tap av væske fra en kilde, for eksempel et dren, et kateter eller fra oppkast. Er det flere kilder, som til et væskeregnskap, er det nødvendig at hver kilde blir registrert som en separat instans av arketypen i en templat for væskeregnskap.
+
+Et væskeregnskap vil trenge data fra denne arketypen, OBSERVATION.fluid_output, i tillegg til arketypene OBSERVATION.fluid_input og OBSERVATION.fluid_balance for å få med seg alle nødvendige komponenter.">
+			keywords = <"væske, inn/ut, væskebalanse, væsketap", ...>
+			misuse = <"Skal ikke brukes for å registrere væskeinntak. Bruk OBSERVATION.fluid_input (Væskeinntak) til dette. 
+
+Skal ikke brukes for å registrere væskebalanse. Bruk OBSERVATION.fluid_balance (Væskebalanse) til dette.">
+		>
 	>
 	lifecycle_state = <"in_development">
-	other_contributors = <"Stephen Chu, NEHTA, Australia", "Christian Ghan, The Chris O'Brien Lifehouse at RPA, Australia", "Sam Heard, Ocean Informatics, Australia (Editor)", "Oliver Hosking, Remote Health NT, Australia", "Heather Leslie, Ocean Informatics, Australia (Editor)", "Ian McNicoll, Ocean Informatics UK, United Kingdom", "Fabian Schwarz, NT Health, Australia", "Gary Sinclair, NT DoH, Australia">
+	other_contributors = <"Silje Ljosland Bakke, Nasjonal IKT HF, Norway (openEHR Editor)", "Stephen Chu, NEHTA, Australia", "Christian Ghan, The Chris O'Brien Lifehouse at RPA, Australia", "Sam Heard, Ocean Informatics, Australia (Editor)", "Oliver Hosking, Remote Health NT, Australia", "Heather Leslie, Ocean Informatics, Australia (openEHR Editor)", "Ian McNicoll, freshEHR Clinical Informatics, United Kingdom (openEHR Editor)", "Fabian Schwarz, NT Health, Australia", "Gary Sinclair, NT DoH, Australia", "Vebjørn Arntzen, Oslo University Hospital HF, Norway">
 	other_details = <
 		["custodian_organisation"] = <"openEHR Foundation">
 		["references"] = <"Derived from: http://dcm.nehta.org.au/ckm/#showArchetype_1013.1.1204">
@@ -59,8 +81,8 @@ May also be used to record descriptive assessments of input.
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"4BA414019131C8D2D1A2EC597330BA49">
-		["build_uid"] = <"3a077a97-85af-4c9a-851b-d7af64ffbc13">
+		["MD5-CAM-1.0.1"] = <"7304D6FA38586C1B0D85C1B4F0692C0B">
+		["build_uid"] = <"7634308f-13df-4057-9056-79c945681078">
 		["revision"] = <"0.0.1-alpha">
 	>
 
@@ -94,12 +116,7 @@ definition
 														precision = <|2|>
 													>
 													["3"] = <
-														units = <"cc">
-														magnitude = <|>=0.0|>
-														precision = <|1|>
-													>
-													["4"] = <
-														units = <"fl oz">
+														units = <"[foz_us]">
 													>
 												>
 											>
@@ -158,11 +175,14 @@ definition
 						exclude
 							archetype_id/value matches {/.*/}
 					}
+					allow_archetype CLUSTER[at0040] occurrences matches {0..*} matches {	-- Extension
+						include
+							archetype_id/value matches {/.*/}
+					}
 				}
 			}
 		}
 	}
-
 
 
 
@@ -231,11 +251,16 @@ ontology
 				["at0038"] = <
 					text = <"Fluid Details">
 					description = <"Details about the fluid output.">
-					comment = <"For example: further details about the urine, such as description of the color and presence of sediment.">
+					comment = <"For example: further details about the fluid, such as description of the color and presence of sediment in urine.">
 				>
 				["at0039"] = <
 					text = <"Measurement Interval">
 					description = <"The measurement, or estimation, of the volume of a specified fluid output during a specified interval of time. For example: the amount of urine output over the last 4 hours.">
+				>
+				["at0040"] = <
+					text = <"Extension">
+					description = <"Additional information required to capture local content or to align with other reference models/formalisms.">
+					comment = <"e.g. Local information requirements or additional metadata to align with FHIR or CIMI equivalents.">
 				>
 			>
 		>
@@ -307,6 +332,86 @@ ontology
 				["at0039"] = <
 					text = <"*Measurement Interval(en)">
 					description = <"*The measurement, or estimation, of the volume of a specified fluid output during a specified interval of time. For example: the amount of urine output over the last 4 hours.(en)">
+				>
+				["at0040"] = <
+					text = <"*Cluster(en)">
+					description = <"**(en)">
+				>
+			>
+		>
+		["nb"] = <
+			items = <
+				["at0000"] = <
+					text = <"Væsketap">
+					description = <"Registrering av ethvert væsketap hos et individ.">
+				>
+				["at0001"] = <
+					text = <"Event Series">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Måletidspunkt">
+					description = <"Målingen eller estimatet av mengden av et spesifikt væsketap på et gitt tidspunkt.">
+				>
+				["at0003"] = <
+					text = <"List">
+					description = <"@ internal @">
+				>
+				["at0008"] = <
+					text = <"List">
+					description = <"@ internal @">
+				>
+				["at0018"] = <
+					text = <"Estimert">
+					description = <"Mengden væsketap er estimert.">
+				>
+				["at0019"] = <
+					text = <"Målt">
+					description = <"Mengden væsketap er direkte observert og målt.">
+				>
+				["at0020"] = <
+					text = <"Rapportert">
+					description = <"Mengden væsketap har blitt rapportert av en tredjepart.">
+				>
+				["at0028"] = <
+					text = <"Måleutstyr">
+					description = <"Detaljer om måleutstyret som er brukt for å måle væsketapet.">
+				>
+				["at0031"] = <
+					text = <"Presisjonsnivå på målingen">
+					description = <"Presisjonsnivået til registreringen av væsketapet.">
+				>
+				["at0032"] = <
+					text = <"Kommentar">
+					description = <"Ytterligere fritekst om væsketapet som ikke er registrert i andre felt.">
+				>
+				["at0033"] = <
+					text = <"Væsketapets oppsamlingsanordning">
+					description = <"Detaljer om hvilken anordning væsketapet er oppsamlet med.">
+					comment = <"For eksempel urinkateter, doudenalsonde, dren, ileostomi, bleie, bandasje, bekken.">
+				>
+				["at0035"] = <
+					text = <"Mengde">
+					description = <"Mengden væsketap.">
+				>
+				["at0036"] = <
+					text = <"Væske">
+					description = <"Identifisering av typen væske eller kilde.">
+					comment = <"For eksempel urin, oppkast eller drensvæske. Dersom samme type væske, men fra forskjellige kilde skal registreres i en klinisk applikasjon, for eksempel fra flere dren fra samme område eller sår, kan kilden beskrives som \"Dren 1\" og \"Dren 2\".">
+				>
+				["at0038"] = <
+					text = <"Detaljer om væsken">
+					description = <"Detaljer om væsketapet.">
+					comment = <"For eksempel ytterligere detaljer om væsken, som beskrivelse av farge og om det er bunnfall i urin.">
+				>
+				["at0039"] = <
+					text = <"Målingsintervall">
+					description = <"Målingen eller estimatet av mengden av et spesifikt væsketap i løpet av et gitt intervall. For eksempel mengden urin de siste 4 timene.">
+				>
+				["at0040"] = <
+					text = <"Tilleggsinformasjon">
+					description = <"Ytterligere informasjon som trengs for å kunne registrere lokalt definert innhold eller for å tilpasse til andre referansemodeller/formalismer.">
+					comment = <"For eksempel lokale informasjonsbehov eller ytterligere metadata for å kunne tilpasse til tilsvarende konsepter i FHIR eller CIMI.">
 				>
 			>
 		>
