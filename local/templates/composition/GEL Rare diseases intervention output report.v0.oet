@@ -145,7 +145,9 @@
         <Rule path="/activities[at0001]/description[at0002]/items[at0113]" max="0" />
         <Rule path="/activities[at0001]/description[at0002]/items[at0129]" max="0" />
         <Rule path="/activities[at0001]/description[at0002]/items[at0167]" max="0" />
-        <Items xsi:type="CLUSTER" archetype_id="openEHR-EHR-CLUSTER.medication_order_summary.v0" concept_name="Medication course summary" path="/activities[at0001]/description[at0002]/items[at0166]">
+        <Rule path="/protocol[at0005]" hide_on_form="true" />
+        <Rule path="/protocol[at0005]/items[at0004]" max="0" />
+        <Items xsi:type="CLUSTER" archetype_id="openEHR-EHR-CLUSTER.medication_order_summary.v0" concept_name="Medication course summary" path="/activities[at0001]/description[at0002]/items[at0166]" hide_on_form="true">
           <Rule path="/items[at0001]" max="0" />
           <Rule path="/items[at0002]" max="0" />
           <Rule path="/items[at0002]" clone="true" name="Date discontinued" />
