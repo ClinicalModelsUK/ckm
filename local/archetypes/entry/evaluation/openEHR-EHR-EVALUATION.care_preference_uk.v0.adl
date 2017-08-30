@@ -1,5 +1,5 @@
-﻿archetype (adl_version=1.4)
-	openEHR-EHR-EVALUATION.care_preference_uk.v1
+﻿archetype (adl_version=1.4; uid=f275be39-6bc0-4899-82e2-2eb363bf37a3)
+	openEHR-EHR-EVALUATION.care_preference_uk.v0
 
 concept
 	[at0000]	-- Preferred priorities of care
@@ -21,10 +21,17 @@ description
 			copyright = <"© Clinical Models UK">
 		>
 	>
-	lifecycle_state = <"AuthorDraft">
+	lifecycle_state = <"in_development">
 	other_contributors = <>
 	other_details = <
-		["MD5-CAM-1.0.1"] = <"461A3F6D8B35F3CB84B51D1302A9DF99">
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 3.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/3.0/.">
+		["custodian_organisation"] = <"UK Clinical Models">
+		["original_namespace"] = <"uk.org.clinicalmodels">
+		["original_publisher"] = <"UK Clinical Models">
+		["custodian_namespace"] = <"uk.org.clinicalmodels">
+		["MD5-CAM-1.0.1"] = <"498AC7EB505D38D0C29B51A34B6D3A56">
+		["build_uid"] = <"69855861-f7de-4a6f-91c0-a8d5e677e401">
+		["revision"] = <"0.0.1-alpha">
 	>
 
 definition
@@ -125,6 +132,24 @@ definition
 					ELEMENT[at0029] occurrences matches {0..1} matches {	-- Comment
 						value matches {
 							DV_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0039] occurrences matches {0..1} matches {	-- Care priority scale
+						value matches {
+							DV_COUNT matches {
+								magnitude matches {|1..10|}
+							}
+						}
+					}
+					ELEMENT[at0038] occurrences matches {0..1} matches {	-- Care priority
+						value matches {
+							DV_CODED_TEXT matches {
+								defining_code matches {
+									[local::
+									at0040, 	-- Priority on sustaining life
+									at0041]	-- Priority on comfort
+								}
+							}
 						}
 					}
 				}
@@ -296,6 +321,22 @@ ontology
 				["at0037"] = <
 					text = <"Preferred place of death (second choice) location">
 					description = <"Details of the organisation/location of the preferred place of death (second choice).">
+				>
+				["at0038"] = <
+					text = <"Care priority">
+					description = <"Statement of importance of care priority.">
+				>
+				["at0039"] = <
+					text = <"Care priority scale">
+					description = <"Indication on a scale of 1 - 10 of where priority for care should be. 1 indicates absolute priority on sustaining life (even at the expense of comfort) and 10 indicates absolute priority on comfort (even at the expense of sustaining life).">
+				>
+				["at0040"] = <
+					text = <"Priority on sustaining life">
+					description = <"The subject consider the priority on sustaining life to be most important.">
+				>
+				["at0041"] = <
+					text = <"Priority on comfort">
+					description = <"The subject considers priority on comfort to be most important.">
 				>
 			>
 		>
