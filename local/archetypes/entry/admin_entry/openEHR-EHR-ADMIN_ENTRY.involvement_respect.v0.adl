@@ -1,0 +1,123 @@
+﻿archetype (adl_version=1.4; uid=316f7d9a-84e4-49bd-a859-1a71b50ee147)
+	openEHR-EHR-ADMIN_ENTRY.involvement_respect.v0
+
+concept
+	[at0000]	-- Involvement ReSPECT
+language
+	original_language = <[ISO_639-1::en]>
+description
+	original_author = <
+		["name"] = <"Hildegard Franke">
+		["organisation"] = <"freshEHR Clinical Informatics Ltd.">
+		["email"] = <"hildi@freshehr.com">
+		["date"] = <"2017-08-30">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"For the recording of details of involvement in making ReSPECT plan.">
+			use = <"Use to record details of involvement in making ReSPECT plan.">
+			misuse = <"">
+			copyright = <"© Clinical Models UK">
+		>
+	>
+	lifecycle_state = <"in_development">
+	other_contributors = <>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 3.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/3.0/.">
+		["custodian_organisation"] = <"UK Clinical Models">
+		["current_contact"] = <"Hildegard Franke, freshEHR Clinical Informatics Ltd.<hildi@freshehr.com>">
+		["original_namespace"] = <"uk.org.clinicalmodels">
+		["original_publisher"] = <"UK Clinical Models">
+		["custodian_namespace"] = <"uk.org.clinicalmodels">
+		["MD5-CAM-1.0.1"] = <"3BA0C7C6BF1EBEB85A3A4A3B995ECE1F">
+		["build_uid"] = <"b622dad7-b681-48c7-b17c-d4dc3ca11ba9">
+		["revision"] = <"0.0.1-alpha">
+	>
+
+definition
+	ADMIN_ENTRY[at0000] matches {	-- Involvement ReSPECT
+		data matches {
+			ITEM_TREE[at0001] matches {	-- Tree
+				items cardinality matches {0..*; unordered} matches {
+					ELEMENT[at0002] occurrences matches {0..*} matches {	-- Involvement in recommendations
+						value matches {
+							DV_CODED_TEXT matches {
+								defining_code matches {
+									[local::
+									at0003, 	-- A Discussion with subject
+									at0004, 	-- B Discussion with person with parental responsibility
+									at0005, 	-- C In accordance with capacity law
+									at0006]	-- D Without involving subject
+								}
+							}
+						}
+					}
+					ELEMENT[at0007] occurrences matches {0..*} matches {	-- Reason for not involving subject
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0008] occurrences matches {0..1} matches {	-- Recommendations date
+						value matches {
+							DV_DATE_TIME matches {*}
+						}
+					}
+					ELEMENT[at0009] occurrences matches {0..*} matches {	-- Link to discussion details
+						value matches {
+							DV_URI matches {*}
+						}
+					}
+				}
+			}
+		}
+	}
+
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Involvement ReSPECT">
+					description = <"Details of involvement in making plan.">
+				>
+				["at0001"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Involvement in recommendations">
+					description = <"The clinician(s) signing this plan is/are confirming that these recommendations have at least one of these involvements.">
+				>
+				["at0003"] = <
+					text = <"A Discussion with subject">
+					description = <"Recommendations have been recorded after discussion involving this person, who has suffcient mental capacity to  participate in making relevant decisions.">
+				>
+				["at0004"] = <
+					text = <"B Discussion with person with parental responsibility">
+					description = <"Recommendations have been recorded have where appropriate, been discussed with a person holding parental responsibility.">
+				>
+				["at0005"] = <
+					text = <"C In accordance with capacity law">
+					description = <"in the case of a person who does not have sufficient mental capacity to participate in relevant decision-making, recommendations have been made in accordance with capacity law.">
+				>
+				["at0006"] = <
+					text = <"D Without involving subject">
+					description = <"Recommendations have been made without involving the patient (or best interests/overall beneft meeting if the patient  lacks capacity).">
+				>
+				["at0007"] = <
+					text = <"Reason for not involving subject">
+					description = <"Description of reasons for making recommendations without involving subject.">
+				>
+				["at0008"] = <
+					text = <"Recommendations date">
+					description = <"Date when recommendations were made.">
+				>
+				["at0009"] = <
+					text = <"Link to discussion details">
+					description = <"Link to details of discussions.">
+				>
+			>
+		>
+	>
