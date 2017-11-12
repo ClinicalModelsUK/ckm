@@ -66,8 +66,10 @@
         <Rule path="/data[at0001]" hide_on_form="true" />
         <Rule path="/data[at0001]/items[at0002]" name="Causative agent" />
         <Rule path="/data[at0001]/items[at0063]">
-          <constraint xsi:type="multipleConstraint">
-            <includedTypes>Coded_text</includedTypes>
+          <constraint xsi:type="textConstraint">
+            <excludedValues>local::at0064</excludedValues>
+            <excludedValues>local::at0067</excludedValues>
+            <excludedValues>local::at0066</excludedValues>
           </constraint>
         </Rule>
         <Rule path="/data[at0001]/items[at0009]" max="1" name="Reaction details" />
