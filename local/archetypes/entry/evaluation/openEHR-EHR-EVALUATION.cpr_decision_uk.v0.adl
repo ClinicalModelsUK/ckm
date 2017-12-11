@@ -1,5 +1,5 @@
-﻿archetype (adl_version=1.4)
-	openEHR-EHR-EVALUATION.cpr_decision_uk.v1
+﻿archetype (adl_version=1.4; uid=02b49d5d-22ee-45eb-be87-80866ecb5dbb)
+	openEHR-EHR-EVALUATION.cpr_decision_uk.v0
 
 concept
 	[at0000]	-- CPR decision
@@ -26,9 +26,11 @@ Some patients with capacity to make their own decision may refuse attempted card
 			copyright = <"© Clinical Models UK">
 		>
 	>
-	lifecycle_state = <"AuthorDraft">
+	lifecycle_state = <"in_development">
 	other_contributors = <>
 	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 3.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/3.0/.">
+		["custodian_organisation"] = <"UK Clinical Models">
 		["references"] = <"Information Standards Board ISB Data Dictionary Available at http://www.datadictionary.nhs.uk/
 
 End of Life Care Co-ordination: Core Content Standard Specification Available at http://www.isb.nhs.uk/documents/isb-1580/amd-29-2012/index_html
@@ -36,7 +38,12 @@ End of Life Care Co-ordination: Core Content Standard Specification Available at
 NHS Scotland Key Information Summary
 
 Leeds ePaccs team">
-		["MD5-CAM-1.0.1"] = <"8D92CCAE32C4F81A7A1D1D71D2B4261F">
+		["original_namespace"] = <"uk.org.clinicalmodels">
+		["original_publisher"] = <"UK Clinical Models">
+		["custodian_namespace"] = <"uk.org.clinicalmodels">
+		["MD5-CAM-1.0.1"] = <"646A711CD1BE694777150E67517B6EF2">
+		["build_uid"] = <"ead94eae-d91a-45bc-8dfb-3d8fb270bf99">
+		["revision"] = <"0.0.1-alpha">
 	>
 
 definition
@@ -49,9 +56,10 @@ definition
 							DV_CODED_TEXT matches {
 								defining_code matches {
 									[local::
-									at0004, 	-- For attempted cardio-pulmonary resuscitation
-									at0005, 	-- Not for attempted cardiopulmonary resuscitation
-									at0022]	-- CPR decision status unknown
+									at0004, 	-- CPR attempts recommended adult or child
+									at0005, 	-- CPR attempts not recommended adult or child.
+									at0022, 	-- CPR decision status unknown
+									at0027]	-- For modified CPR child only
 								}
 							}
 						}
@@ -168,12 +176,12 @@ ontology
 					description = <"The clinical decision on whether cardiopulmonary resuscitation (CPR) should be attempted. In some cases a clear answer may not be available to the recording clinician.">
 				>
 				["at0004"] = <
-					text = <"For attempted cardio-pulmonary resuscitation">
-					description = <"Cardio-pulmonary resuscitation should be attempted.">
+					text = <"CPR attempts recommended adult or child">
+					description = <"Cardio-pulmonary resuscitation is recommended for adult or child.">
 				>
 				["at0005"] = <
-					text = <"Not for attempted cardiopulmonary resuscitation">
-					description = <"Cardiopulmonary resuscitation should not be attempted.">
+					text = <"CPR attempts not recommended adult or child.">
+					description = <"Cardiopulmonary resuscitation is not recommended for adult or child.">
 				>
 				["at0006"] = <
 					text = <"Patient awareness of decision">
@@ -254,6 +262,10 @@ ontology
 				["at0026"] = <
 					text = <"Informal carer aware of CPR decision">
 					description = <"The informal carer is aware of the do not attempt cardiopulmonary resucitation decision.">
+				>
+				["at0027"] = <
+					text = <"For modified CPR child only">
+					description = <"Modified CPR is recommended for child only.">
 				>
 			>
 		>
