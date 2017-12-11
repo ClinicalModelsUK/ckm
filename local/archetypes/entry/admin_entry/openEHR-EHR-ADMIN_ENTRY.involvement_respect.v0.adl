@@ -30,8 +30,8 @@ description
 		["original_namespace"] = <"uk.org.clinicalmodels">
 		["original_publisher"] = <"UK Clinical Models">
 		["custodian_namespace"] = <"uk.org.clinicalmodels">
-		["MD5-CAM-1.0.1"] = <"3BA0C7C6BF1EBEB85A3A4A3B995ECE1F">
-		["build_uid"] = <"b622dad7-b681-48c7-b17c-d4dc3ca11ba9">
+		["MD5-CAM-1.0.1"] = <"6238BEC44C0710DC15B2995544B9C596">
+		["build_uid"] = <"d489028a-c33a-42f5-ad0d-a99df8089e6e">
 		["revision"] = <"0.0.1-alpha">
 	>
 
@@ -45,27 +45,22 @@ definition
 							DV_CODED_TEXT matches {
 								defining_code matches {
 									[local::
-									at0003, 	-- A Discussion with subject
+									at0003, 	-- A Discussion with patient
 									at0004, 	-- B Discussion with person with parental responsibility
 									at0005, 	-- C In accordance with capacity law
-									at0006]	-- D Without involving subject
+									at0006]	-- D Without involving patient
 								}
 							}
 						}
 					}
-					ELEMENT[at0007] occurrences matches {0..*} matches {	-- Reason for not involving subject
+					ELEMENT[at0007] occurrences matches {0..*} matches {	-- Reason for not involving patient
 						value matches {
 							DV_TEXT matches {*}
 						}
 					}
-					ELEMENT[at0008] occurrences matches {0..1} matches {	-- Recommendations date
+					ELEMENT[at0009] occurrences matches {0..1} matches {	-- Location of record of discussion
 						value matches {
-							DV_DATE_TIME matches {*}
-						}
-					}
-					ELEMENT[at0009] occurrences matches {0..*} matches {	-- Link to discussion details
-						value matches {
-							DV_URI matches {*}
+							DV_TEXT matches {*}
 						}
 					}
 				}
@@ -91,7 +86,7 @@ ontology
 					description = <"The clinician(s) signing this plan is/are confirming that these recommendations have at least one of these involvements.">
 				>
 				["at0003"] = <
-					text = <"A Discussion with subject">
+					text = <"A Discussion with patient">
 					description = <"Recommendations have been recorded after discussion involving this person, who has suffcient mental capacity to  participate in making relevant decisions.">
 				>
 				["at0004"] = <
@@ -103,20 +98,16 @@ ontology
 					description = <"in the case of a person who does not have sufficient mental capacity to participate in relevant decision-making, recommendations have been made in accordance with capacity law.">
 				>
 				["at0006"] = <
-					text = <"D Without involving subject">
+					text = <"D Without involving patient">
 					description = <"Recommendations have been made without involving the patient (or best interests/overall beneft meeting if the patient  lacks capacity).">
 				>
 				["at0007"] = <
-					text = <"Reason for not involving subject">
-					description = <"Description of reasons for making recommendations without involving subject.">
-				>
-				["at0008"] = <
-					text = <"Recommendations date">
-					description = <"Date when recommendations were made.">
+					text = <"Reason for not involving patient">
+					description = <"Description of reasons for making recommendations without involving patient.">
 				>
 				["at0009"] = <
-					text = <"Link to discussion details">
-					description = <"Link to details of discussions.">
+					text = <"Location of record of discussion">
+					description = <"Details of location of records of discussion about recommendations.">
 				>
 			>
 		>
