@@ -5,7 +5,7 @@
   <description>
     <lifecycle_state>Initial</lifecycle_state>
     <details>
-      <purpose />
+      <purpose>Representing the dataset for capture, reporting and auditing the details of ReSPECT.</purpose>
       <use />
       <misuse />
     </details>
@@ -62,7 +62,7 @@
   </description>
   <definition xsi:type="COMPOSITION" archetype_id="openEHR-EHR-COMPOSITION.report-respect.v0" concept_name="ReSPECT" name="ReSPECT Form">
     <Content xsi:type="SECTION" archetype_id="openEHR-EHR-SECTION.respect_headings.v0" concept_name="ReSPECT headings" path="/content" hide_on_form="true">
-      <Item xsi:type="EVALUATION" archetype_id="openEHR-EHR-EVALUATION.problem_diagnosis-respect_principal.v0" concept_name="ReSPECT principal diagnosis" path="/items[at0001]/items[at0002]/items">
+      <Item xsi:type="EVALUATION" archetype_id="openEHR-EHR-EVALUATION.problem_diagnosis-respect_principal.v0" concept_name="ReSPECT principal diagnosis" max="1" path="/items[at0001]/items[at0002]/items">
         <Rule path="/data[at0001]" hide_on_form="true" />
         <Rule path="/data[at0001]/items[at0012]" max="0" />
         <Rule path="/data[at0001]/items[at0077]" max="0" />
@@ -227,10 +227,10 @@
     <digest id="MD5-CAM-1.0.1">42FBE4854BA5EF0A060308C9D26B7CF4</digest>
   </integrity_checks>
   <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-EVALUATION.problem_diagnosis-respect_principal.v0">
-    <digest id="MD5-CAM-1.0.1">5B33D7B18632528A8F754C14B14ECD67</digest>
+    <digest id="MD5-CAM-1.0.1">FE31C2F0EAE89B6FFA7B6A4E8D56271B</digest>
   </integrity_checks>
   <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-EVALUATION.problem_diagnosis-respect_other_significant.v0">
-    <digest id="MD5-CAM-1.0.1">DD69A35113CE50CAB29F9D2B108CA551</digest>
+    <digest id="MD5-CAM-1.0.1">1D66E1D2FB760B15D423186BAFE48434</digest>
   </integrity_checks>
   <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-ADMIN_ENTRY.respect_summary.v0">
     <digest id="MD5-CAM-1.0.1">14B3460C37A8BFFB37E79B1763832A46</digest>
@@ -248,7 +248,7 @@
     <digest id="MD5-CAM-1.0.1">153ABAC95C077A6068877649045426B1</digest>
   </integrity_checks>
   <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-EVALUATION.care_preference_uk.v0">
-    <digest id="MD5-CAM-1.0.1">498AC7EB505D38D0C29B51A34B6D3A56</digest>
+    <digest id="MD5-CAM-1.0.1">0906A8F3B337DA495C5AA962D0108CAA</digest>
   </integrity_checks>
   <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-EVALUATION.recommendation-respect.v0">
     <digest id="MD5-CAM-1.0.1">60E055AAC4423FB6DB9C542D3824A3BD</digest>
@@ -260,7 +260,7 @@
     <digest id="MD5-CAM-1.0.1">9DF5B23BF01246240BF2B91579FEE02D</digest>
   </integrity_checks>
   <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-ADMIN_ENTRY.involvement_respect.v0">
-    <digest id="MD5-CAM-1.0.1">6238BEC44C0710DC15B2995544B9C596</digest>
+    <digest id="MD5-CAM-1.0.1">F989A75E7482929E442CC936375C9F18</digest>
   </integrity_checks>
   <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-ADMIN_ENTRY.key_contacts.v1">
     <digest id="MD5-CAM-1.0.1">251E7D812F0FCF8C54EAC3867A1B9F31</digest>
