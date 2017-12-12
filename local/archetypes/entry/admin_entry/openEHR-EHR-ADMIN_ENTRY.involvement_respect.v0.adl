@@ -30,8 +30,8 @@ description
 		["original_namespace"] = <"uk.org.clinicalmodels">
 		["original_publisher"] = <"UK Clinical Models">
 		["custodian_namespace"] = <"uk.org.clinicalmodels">
-		["MD5-CAM-1.0.1"] = <"6238BEC44C0710DC15B2995544B9C596">
-		["build_uid"] = <"d489028a-c33a-42f5-ad0d-a99df8089e6e">
+		["MD5-CAM-1.0.1"] = <"F989A75E7482929E442CC936375C9F18">
+		["build_uid"] = <"50d7f94a-e1e6-4435-bcb1-167e0c993e0d">
 		["revision"] = <"0.0.1-alpha">
 	>
 
@@ -40,22 +40,28 @@ definition
 		data matches {
 			ITEM_TREE[at0001] matches {	-- Tree
 				items cardinality matches {0..*; unordered} matches {
-					ELEMENT[at0002] occurrences matches {0..*} matches {	-- Involvement in recommendations
-						value matches {
-							DV_CODED_TEXT matches {
-								defining_code matches {
-									[local::
-									at0003, 	-- A Discussion with patient
-									at0004, 	-- B Discussion with person with parental responsibility
-									at0005, 	-- C In accordance with capacity law
-									at0006]	-- D Without involving patient
+					CLUSTER[at0012] occurrences matches {0..1} matches {	-- Involvement in recommendations
+						items cardinality matches {1..*; unordered} matches {
+							ELEMENT[at0002] occurrences matches {0..*} matches {	-- Involvement
+								value matches {
+									DV_CODED_TEXT matches {
+										defining_code matches {
+											[local::
+											at0003, 	-- A Person has mental capacity
+											at0004, 	-- B Person does not have mental capacity
+											at0005, 	-- C1 Person less than 18 or 16 with sufficient maturity
+											at0010, 	-- C2 Person less than 18 or 16 without sufficient maturity
+											at0011, 	-- C3 Person less than 18 or 16 parental decision
+											at0013]	-- D No other option selected
+										}
+									}
 								}
 							}
-						}
-					}
-					ELEMENT[at0007] occurrences matches {0..*} matches {	-- Reason for not involving patient
-						value matches {
-							DV_TEXT matches {*}
+							ELEMENT[at0007] occurrences matches {0..1} matches {	-- Reason for not selecting Options A or B or C
+								value matches {
+									DV_TEXT matches {*}
+								}
+							}
 						}
 					}
 					ELEMENT[at0009] occurrences matches {0..1} matches {	-- Location of record of discussion
@@ -82,32 +88,44 @@ ontology
 					description = <"@ internal @">
 				>
 				["at0002"] = <
-					text = <"Involvement in recommendations">
-					description = <"The clinician(s) signing this plan is/are confirming that these recommendations have at least one of these involvements.">
+					text = <"Involvement">
+					description = <"Details of involvement in recommendations.">
 				>
 				["at0003"] = <
-					text = <"A Discussion with patient">
-					description = <"Recommendations have been recorded after discussion involving this person, who has suffcient mental capacity to  participate in making relevant decisions.">
+					text = <"A Person has mental capacity">
+					description = <"This person has the mental capacity to participate in making these recommendations. They have been fully involved in making this plan.">
 				>
 				["at0004"] = <
-					text = <"B Discussion with person with parental responsibility">
-					description = <"Recommendations have been recorded have where appropriate, been discussed with a person holding parental responsibility.">
+					text = <"B Person does not have mental capacity">
+					description = <"This person does not have the mental capacity to participate in making these recommendations. This plan has been made in accordance with capacity law, including, where applicable, in consultation with their legal proxy, or where no proxy, with relevant family members/friends.">
 				>
 				["at0005"] = <
-					text = <"C In accordance with capacity law">
-					description = <"in the case of a person who does not have sufficient mental capacity to participate in relevant decision-making, recommendations have been made in accordance with capacity law.">
-				>
-				["at0006"] = <
-					text = <"D Without involving patient">
-					description = <"Recommendations have been made without involving the patient (or best interests/overall beneft meeting if the patient  lacks capacity).">
+					text = <"C1 Person less than 18 or 16 with sufficient maturity">
+					description = <"This person is less than 18 (UK except Scotland) / 16 (Scotland) and they have sufficient maturity and understanding to participate in making this plan.">
 				>
 				["at0007"] = <
-					text = <"Reason for not involving patient">
-					description = <"Description of reasons for making recommendations without involving patient.">
+					text = <"Reason for not selecting Options A or B or C">
+					description = <"Description of reason for not selecting Options A, B or C.">
 				>
 				["at0009"] = <
 					text = <"Location of record of discussion">
 					description = <"Details of location of records of discussion about recommendations.">
+				>
+				["at0010"] = <
+					text = <"C2 Person less than 18 or 16 without sufficient maturity">
+					description = <"This person is less than 18 (UK except Scotland) / 16 (Scotland) and they do not have sufficient maturity and understanding to participate in this plan. Their views, where known, have been taken into account.">
+				>
+				["at0011"] = <
+					text = <"C3 Person less than 18 or 16 parental decision">
+					description = <"This person is less than 18 (UK except Scotland) /16 (Scotland) and those holding parental responsibility have been fully involved in discussing and making this plan. ">
+				>
+				["at0012"] = <
+					text = <"Involvement in recommendations">
+					description = <"The clinician(s) signing this plan is/are confirming that these recommendations have at least one of A, B or C or valid reason for not selecting A,B or C fully documented in clinical record.">
+				>
+				["at0013"] = <
+					text = <"D No other option selected">
+					description = <"No other option has been selected, and valid reason is stated below. Full explanation is documented in clinical record.">
 				>
 			>
 		>
