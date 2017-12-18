@@ -30,19 +30,19 @@ description
 		["original_namespace"] = <"uk.org.clinicalmodels">
 		["original_publisher"] = <"UK Clinical Models">
 		["custodian_namespace"] = <"uk.org.clinicalmodels">
-		["MD5-CAM-1.0.1"] = <"42FBE4854BA5EF0A060308C9D26B7CF4">
-		["build_uid"] = <"c04ef6e6-254b-4493-8753-8f59e980de18">
+		["MD5-CAM-1.0.1"] = <"47E3E14A8CCCFF9345B4EEA10E559AB0">
+		["build_uid"] = <"be49fa50-0e22-44ea-aeca-ee6340ea493a">
 		["revision"] = <"0.0.1-alpha">
 	>
 
 definition
 	SECTION[at0000] matches {	-- ReSPECT headings
-		items cardinality matches {0..*; unordered} matches {
+		items cardinality matches {1..*; unordered} matches {
 			SECTION[at0001] occurrences matches {0..1} matches {	-- 2. Summary of relevant information
 				items cardinality matches {1..*; unordered} matches {
+					SECTION[at0013] occurrences matches {0..1} matches {*}
 					SECTION[at0002] occurrences matches {0..1} matches {*}
 					SECTION[at0003] occurrences matches {0..1} matches {*}
-					SECTION[at0004] occurrences matches {0..1} matches {*}
 					SECTION[at0005] occurrences matches {0..1} matches {*}
 				}
 			}
@@ -77,12 +77,8 @@ ontology
 					text = <"2.2 Other significant conditions">
 					description = <"Details of other significant conditions relevant to the ReSPECT form.">
 				>
-				["at0004"] = <
-					text = <"2.3 Reasons and communication needs">
-					description = <"Details of reasons for preferences and recommendations and communication needs and aids.">
-				>
 				["at0005"] = <
-					text = <"2.4 Other relevant planning documents">
+					text = <"2.3 Other relevant planning documents">
 					description = <"Details of other relevant planning documents and where to find them (e.g. Advance Decision to Refuse Treatment, Advance Care Plan). Also include known wishes about organ donation.">
 				>
 				["at0006"] = <
@@ -112,6 +108,10 @@ ontology
 				["at0012"] = <
 					text = <"9. Confirmation of validity">
 					description = <"Details of review dates and clinician for the confirmation of validity (e.g. for change of condition).">
+				>
+				["at0013"] = <
+					text = <"2.0 Relevant information">
+					description = <"Narrative and structured details of relevant information.">
 				>
 			>
 		>
