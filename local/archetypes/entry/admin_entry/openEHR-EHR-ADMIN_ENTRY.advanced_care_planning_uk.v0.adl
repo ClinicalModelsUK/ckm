@@ -1,5 +1,5 @@
-﻿archetype (adl_version=1.4)
-	openEHR-EHR-ADMIN_ENTRY.advanced_care_planning_uk.v1
+﻿archetype (adl_version=1.4; uid=049e86d2-845b-4487-8a3b-deca2bd12e6a)
+	openEHR-EHR-ADMIN_ENTRY.advanced_care_planning_uk.v0
 
 concept
 	[at0000]	-- Advanced care planning
@@ -22,11 +22,18 @@ description
 			copyright = <"© Clinical Models UK">
 		>
 	>
-	lifecycle_state = <"AuthorDraft">
+	lifecycle_state = <"in_development">
 	other_contributors = <>
 	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 3.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/3.0/.">
+		["custodian_organisation"] = <"UK Clinical Models">
 		["references"] = <"ISB End of Life Care Co-ordination: Core content Standard Specification http://www.isb.nhs.uk/library/standard/236">
-		["MD5-CAM-1.0.1"] = <"877CAF63FD249CDEAA9B94712F3C4585">
+		["original_namespace"] = <"uk.org.clinicalmodels">
+		["original_publisher"] = <"UK Clinical Models">
+		["custodian_namespace"] = <"uk.org.clinicalmodels">
+		["MD5-CAM-1.0.1"] = <"D9BE11A09528529A82498F9B3BE6FC68">
+		["build_uid"] = <"5fcd85b7-f228-4ba4-aede-0c86b398b28b">
+		["revision"] = <"0.0.1-alpha">
 	>
 
 definition
@@ -80,6 +87,11 @@ definition
 					ELEMENT[at0025] occurrences matches {0..1} matches {	-- Date last updated
 						value matches {
 							DV_DATE_TIME matches {*}
+						}
+					}
+					ELEMENT[at0027] occurrences matches {0..1} matches {	-- Summary
+						value matches {
+							DV_TEXT matches {*}
 						}
 					}
 				}
@@ -172,6 +184,10 @@ ontology
 				["at0026"] = <
 					text = <"Discussion about advance care plan">
 					description = <"An advance care plan is under discussion.">
+				>
+				["at0027"] = <
+					text = <"Summary">
+					description = <"Narrative description of advanced care planning decisions and recommendations.">
 				>
 			>
 		>
