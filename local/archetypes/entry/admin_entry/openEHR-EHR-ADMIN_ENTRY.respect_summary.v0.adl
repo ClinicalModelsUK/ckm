@@ -30,8 +30,8 @@ description
 		["original_namespace"] = <"uk.org.clinicalmodels">
 		["original_publisher"] = <"UK Clinical Models">
 		["custodian_namespace"] = <"uk.org.clinicalmodels">
-		["MD5-CAM-1.0.1"] = <"14B3460C37A8BFFB37E79B1763832A46">
-		["build_uid"] = <"8d3017cc-77a1-40e6-aedb-aa5045b7ac2b">
+		["MD5-CAM-1.0.1"] = <"53F745A2F2A2621E6EEC210D2D6908DF">
+		["build_uid"] = <"466dd69b-ef92-4756-b248-1d00b5e38aff">
 		["revision"] = <"0.0.1-alpha">
 	>
 
@@ -40,12 +40,7 @@ definition
 		data matches {
 			ITEM_TREE[at0001] matches {	-- Tree
 				items cardinality matches {0..*; unordered} matches {
-					ELEMENT[at0002] occurrences matches {0..*} matches {	-- Reason for preferences
-						value matches {
-							DV_TEXT matches {*}
-						}
-					}
-					ELEMENT[at0003] occurrences matches {0..*} matches {	-- Reason for recommendations
+					ELEMENT[at0002] occurrences matches {0..1} matches {	-- Narrative summary
 						value matches {
 							DV_TEXT matches {*}
 						}
@@ -78,12 +73,8 @@ ontology
 					description = <"@ internal @">
 				>
 				["at0002"] = <
-					text = <"Reason for preferences">
-					description = <"Reason for recorded preferences.">
-				>
-				["at0003"] = <
-					text = <"Reason for recommendations">
-					description = <"Reason for recorded recommendations.">
+					text = <"Narrative summary">
+					description = <"Including diagnosis and reasons for the preferences and recommendations recorded.">
 				>
 				["at0004"] = <
 					text = <"Interpreter required">
