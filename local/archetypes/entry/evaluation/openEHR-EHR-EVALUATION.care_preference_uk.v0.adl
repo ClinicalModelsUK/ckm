@@ -29,8 +29,8 @@ description
 		["original_namespace"] = <"uk.org.clinicalmodels">
 		["original_publisher"] = <"UK Clinical Models">
 		["custodian_namespace"] = <"uk.org.clinicalmodels">
-		["MD5-CAM-1.0.1"] = <"0906A8F3B337DA495C5AA962D0108CAA">
-		["build_uid"] = <"3e85f7a4-ced6-47b8-9248-7ada077f72cd">
+		["MD5-CAM-1.0.1"] = <"9A164A3C0DB2A6B40DA7CE206F0779DB">
+		["build_uid"] = <"19bc048d-8cc2-4fc5-a454-3e49c424c3d9">
 		["revision"] = <"0.0.1-alpha">
 	>
 
@@ -318,7 +318,7 @@ ontology
 				>
 				["at0038"] = <
 					text = <"Care priority">
-					description = <"Statement of importance of care priority.">
+					description = <"A narrative statement by the patient on their preferred priorities of care.">
 				>
 				["at0039"] = <
 					text = <"Care priority scale">
