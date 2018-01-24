@@ -82,7 +82,7 @@
           </Items>
         </Items>
       </Item>
-      <Item xsi:type="EVALUATION" archetype_id="openEHR-EHR-EVALUATION.problem_diagnosis-respect_principal.v0" concept_name="ReSPECT key diagnosis" max="1" path="/items[at0001]/items[at0002]/items">
+      <Item xsi:type="EVALUATION" archetype_id="openEHR-EHR-EVALUATION.problem_diagnosis-respect_principal.v0" concept_name="ReSPECT key diagnosis" path="/items[at0001]/items[at0002]/items">
         <Rule path="/data[at0001]" hide_on_form="true" />
         <Rule path="/data[at0001]/items[at0012]" max="0" />
         <Rule path="/data[at0001]/items[at0077]" max="0" />
@@ -141,7 +141,8 @@
         <Rule path="/protocol[at0010]/items[at0009]" max="0" />
       </Item>
       <Item xsi:type="ADMIN_ENTRY" archetype_id="openEHR-EHR-ADMIN_ENTRY.capacity_respect.v0" concept_name="Capacity ReSPECT" path="/items[at0008]/items" hide_on_form="true">
-        <Items xsi:type="CLUSTER" archetype_id="openEHR-EHR-CLUSTER.person_name.v1" concept_name="Person name" path="/data[at0001]/items[at0007]">
+        <Rule path="/data[at0001]" hide_on_form="true" />
+        <Items xsi:type="CLUSTER" archetype_id="openEHR-EHR-CLUSTER.person_name.v1" concept_name="Person name" path="/data[at0001]/items[at0007]" hide_on_form="true">
           <Rule path="/items[at0006]" max="0" />
           <Rule path="/items[at0022]" max="0" />
           <Rule path="/items[at0001]" name="Name of person holding parental responsibility" />
@@ -167,6 +168,7 @@
         </Items>
       </Item>
       <Item xsi:type="ADMIN_ENTRY" archetype_id="openEHR-EHR-ADMIN_ENTRY.relevant_contact_rcp.v0" concept_name="Relevant contact" path="/items[at0010]/items" hide_on_form="true">
+        <Rule path="/data[at0001]" hide_on_form="true" />
         <Rule path="/data[at0001]/items[at0035]" max="0" />
         <Rule path="/data[at0001]/items[at0030]" max="0" />
         <Rule path="/data[at0001]/items[at0025]" max="0" />
@@ -187,6 +189,7 @@
         </Items>
       </Item>
       <Item xsi:type="ADMIN_ENTRY" archetype_id="openEHR-EHR-ADMIN_ENTRY.relevant_contact_rcp.v0" concept_name="Relevant contact" max="1" path="/items[at0010]/items" name="Relevant contact #1" hide_on_form="true">
+        <Rule path="/data[at0001]" hide_on_form="true" />
         <Rule path="/data[at0001]/items[at0035]" default="local::at0039::Key formal care worker" hide_on_form="true">
           <constraint xsi:type="textConstraint">
             <excludedValues>local::at0036</excludedValues>
@@ -212,7 +215,8 @@
           </Items>
         </Items>
       </Item>
-      <Item xsi:type="ADMIN_ENTRY" archetype_id="openEHR-EHR-ADMIN_ENTRY.relevant_contact_rcp.v0" concept_name="Relevant contact" path="/items[at0011]/items">
+      <Item xsi:type="ADMIN_ENTRY" archetype_id="openEHR-EHR-ADMIN_ENTRY.relevant_contact_rcp.v0" concept_name="Relevant contact" path="/items[at0011]/items" hide_on_form="true">
+        <Rule path="/data[at0001]" hide_on_form="true" />
         <Rule path="/data[at0001]/items[at0035]" max="0" />
         <Rule path="/data[at0001]/items[at0030]" name="Role">
           <constraint xsi:type="textConstraint">
@@ -225,18 +229,18 @@
         <Rule path="/data[at0001]/items[at0025]" max="0" />
         <Rule path="/data[at0001]/items[at0017]" name="Other details" />
         <Rule path="/data[at0001]/items[at0008]" max="0" />
-        <Items xsi:type="CLUSTER" archetype_id="openEHR-EHR-CLUSTER.comms_contact_uk.v0" concept_name="Comms contact details" path="/data[at0001]/items[at0013]" hide_on_form="true">
-          <Rule path="/items[at0002]" name="Telephone" />
-          <Rule path="/items[at0003]" max="0" />
-          <Rule path="/items[at0020]" max="0" />
-          <Rule path="/items[at0021]" max="0" />
-        </Items>
         <Items xsi:type="CLUSTER" archetype_id="openEHR-EHR-CLUSTER.person_name.v1" concept_name="Person name" path="/data[at0001]/items[at0013]" hide_on_form="true">
           <Rule path="/items[at0006]" max="0" />
           <Rule path="/items[at0022]" max="0" />
           <Rule path="/items[at0001]" name="Name" />
           <Rule path="/items[at0002]" max="0" />
           <Rule path="/items[at0014]" max="0" />
+        </Items>
+        <Items xsi:type="CLUSTER" archetype_id="openEHR-EHR-CLUSTER.comms_contact_uk.v0" concept_name="Comms contact details" path="/data[at0001]/items[at0013]" hide_on_form="true">
+          <Rule path="/items[at0002]" name="Telephone" />
+          <Rule path="/items[at0003]" max="0" />
+          <Rule path="/items[at0020]" max="0" />
+          <Rule path="/items[at0021]" max="0" />
         </Items>
       </Item>
       <Item xsi:type="ACTION" archetype_id="openEHR-EHR-ACTION.service.v0" concept_name="Service" path="/items[at0012]/items" hide_on_form="true">
