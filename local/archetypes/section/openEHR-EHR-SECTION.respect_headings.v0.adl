@@ -15,8 +15,8 @@ description
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
-			purpose = <"To provide an overall heading for the recording of ReSPECT details.">
-			use = <"Use as an overall heading for the recording of ReSPECT details.">
+			purpose = <"To provide an overall heading for the recording of details of ReSPECT process.">
+			use = <"Use as an overall heading for the recording of details of ReSPECT process.">
 			misuse = <"">
 			copyright = <"© Clinical Models UK">
 		>
@@ -30,8 +30,8 @@ description
 		["original_namespace"] = <"uk.org.clinicalmodels">
 		["original_publisher"] = <"UK Clinical Models">
 		["custodian_namespace"] = <"uk.org.clinicalmodels">
-		["MD5-CAM-1.0.1"] = <"47E3E14A8CCCFF9345B4EEA10E559AB0">
-		["build_uid"] = <"be49fa50-0e22-44ea-aeca-ee6340ea493a">
+		["MD5-CAM-1.0.1"] = <"678BF4CBCD3FD7FD4BD58EC523D5B12B">
+		["build_uid"] = <"808ee3f9-4ac4-44d2-bf10-f23a3eec6626">
 		["revision"] = <"0.0.1-alpha">
 	>
 
@@ -63,18 +63,18 @@ ontology
 			items = <
 				["at0000"] = <
 					text = <"ReSPECT headings">
-					description = <"Top level heading for ReSPECT details.">
+					description = <"Top level heading for capturing details of ReSPECT process.">
 				>
 				["at0001"] = <
 					text = <"2. Summary of relevant information">
-					description = <"Heading containing summary of relevant information for the ReSPECT plan.">
+					description = <"Heading containing summary of relevant information for the ReSPECT process.">
 				>
 				["at0002"] = <
-					text = <"2.1 Principal diagnosis">
-					description = <"Details of the principal diagnosis leading to the need for a ReSPECT form.">
+					text = <"2.1 Key diagnoses">
+					description = <"Details of the key diagnoses leading to the need for a ReSPECT form.">
 				>
 				["at0003"] = <
-					text = <"2.2 Other significant conditions">
+					text = <"2.2 Other relevant conditions">
 					description = <"Details of other significant conditions relevant to the ReSPECT form.">
 				>
 				["at0005"] = <
@@ -87,7 +87,7 @@ ontology
 				>
 				["at0007"] = <
 					text = <"4. Clinical recommendations">
-					description = <"Details of clinical recommendations for emergency care and treatment.">
+					description = <"Summary of clinical recommendations for emergency care and treatment.">
 				>
 				["at0008"] = <
 					text = <"5. Capacity and representation">
@@ -103,7 +103,7 @@ ontology
 				>
 				["at0011"] = <
 					text = <"8. Emergency contacts">
-					description = <"Details of emergeny contacts for ReSPECT plan.">
+					description = <"Details of emergency contacts for ReSPECT plan.">
 				>
 				["at0012"] = <
 					text = <"9. Confirmation of validity">
