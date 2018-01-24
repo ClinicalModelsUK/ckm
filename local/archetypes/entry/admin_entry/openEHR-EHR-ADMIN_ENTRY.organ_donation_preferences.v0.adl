@@ -30,8 +30,8 @@ description
 		["original_namespace"] = <"uk.org.clinicalmodels">
 		["original_publisher"] = <"UK Clinical Models">
 		["custodian_namespace"] = <"uk.org.clinicalmodels">
-		["MD5-CAM-1.0.1"] = <"153ABAC95C077A6068877649045426B1">
-		["build_uid"] = <"dcddfd27-29ee-4de9-b906-ba747fa914dd">
+		["MD5-CAM-1.0.1"] = <"0BCF599D154B6B3763FB7731A9887566">
+		["build_uid"] = <"ed677816-c6db-4239-bc83-204f89276172">
 		["revision"] = <"0.0.1-alpha">
 	>
 
@@ -40,6 +40,13 @@ definition
 		data matches {
 			ITEM_TREE[at0001] matches {	-- Tree
 				items cardinality matches {0..*; unordered} matches {
+					ELEMENT[at0012] occurrences matches {0..1} matches {	-- All organs
+						value matches {
+							DV_BOOLEAN matches {
+								value matches {True, False}
+							}
+						}
+					}
 					ELEMENT[at0002] occurrences matches {0..*} matches {	-- Specific organs
 						value matches {
 							DV_CODED_TEXT matches {
@@ -52,18 +59,10 @@ definition
 									at0007, 	-- Small bowel
 									at0008, 	-- Lungs
 									at0009, 	-- Corneas
-									at0010, 	-- Skin
 									at0011]	-- Tissue
 								}
 							}
 							DV_TEXT matches {*}
-						}
-					}
-					ELEMENT[at0012] occurrences matches {0..1} matches {	-- All organs
-						value matches {
-							DV_BOOLEAN matches {
-								value matches {True, False}
-							}
 						}
 					}
 				}
@@ -115,10 +114,6 @@ ontology
 				["at0009"] = <
 					text = <"Corneas">
 					description = <"The subject wishes to donate their corneas.">
-				>
-				["at0010"] = <
-					text = <"Skin">
-					description = <"The subject wishes to donate their skin.">
 				>
 				["at0011"] = <
 					text = <"Tissue">
