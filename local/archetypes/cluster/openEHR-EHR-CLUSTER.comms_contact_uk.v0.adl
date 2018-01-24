@@ -53,8 +53,8 @@ NHS England, HSCIC Data Dictionary Communication Contact Class, http://www.datad
 		["original_namespace"] = <"uk.org.clinicalmodels">
 		["original_publisher"] = <"UK Clinical Models">
 		["custodian_namespace"] = <"uk.org.clinicalmodels">
-		["MD5-CAM-1.0.1"] = <"54AF6AD7828C8D3DA4AF7B74194D15DB">
-		["build_uid"] = <"3ad5b201-03bd-4410-b34e-a6ec254f3018">
+		["MD5-CAM-1.0.1"] = <"0145BC98B33EE3F0AF419F90A8CF6F75">
+		["build_uid"] = <"c8e01e3c-72d2-4e3f-99e4-69fccbc54a6f">
 		["revision"] = <"0.0.1-alpha">
 	>
 
@@ -114,7 +114,7 @@ ontology
 				>
 				["at0002"] = <
 					text = <"Comms contact">
-					description = <"An unstructured description of telecom or other contact detials">
+					description = <"An unstructured description of telecom or other contact details.">
 				>
 				["at0003"] = <
 					text = <"Structured telecoms">
@@ -138,7 +138,7 @@ ontology
 				>
 				["at0020"] = <
 					text = <"Method">
-					description = <"The communications mode e.g Fax. Mobile, Landline, Skype">
+					description = <"The communications mode e.g Fax. Mobile, Landline, Skype.">
 				>
 				["at0021"] = <
 					text = <"Use context">
