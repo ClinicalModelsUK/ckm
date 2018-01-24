@@ -29,8 +29,8 @@ description
 		["original_namespace"] = <"uk.org.clinicalmodels">
 		["original_publisher"] = <"UK Clinical Models">
 		["custodian_namespace"] = <"uk.org.clinicalmodels">
-		["MD5-CAM-1.0.1"] = <"9A164A3C0DB2A6B40DA7CE206F0779DB">
-		["build_uid"] = <"19bc048d-8cc2-4fc5-a454-3e49c424c3d9">
+		["MD5-CAM-1.0.1"] = <"C0A3D0B45D0FBB28657D1C56229E85A7">
+		["build_uid"] = <"80b090d1-5aa0-43a8-a370-786770d93e52">
 		["revision"] = <"0.0.1-alpha">
 	>
 
@@ -137,7 +137,7 @@ definition
 					ELEMENT[at0039] occurrences matches {0..1} matches {	-- Care priority scale
 						value matches {
 							DV_COUNT matches {
-								magnitude matches {|1..10|}
+								magnitude matches {|1..100|}
 							}
 						}
 					}
@@ -170,7 +170,7 @@ ontology
 			items = <
 				["at0000"] = <
 					text = <"Preferred priorities of care">
-					description = <"The subject's preferred priorities of care and special requests.">
+					description = <"The subject's preferred priorities of care and 'What matters'.">
 				>
 				["at0001"] = <
 					text = <"Tree">
@@ -319,10 +319,11 @@ ontology
 				["at0038"] = <
 					text = <"Care priority">
 					description = <"A narrative statement by the patient on their preferred priorities of care.">
+					comment = <"In the UI, this should be represented as 'Considering the above priorities. what is most important to you? (optional)'.">
 				>
 				["at0039"] = <
 					text = <"Care priority scale">
-					description = <"Indication on a scale of 1 - 10 of where priority for care should be. 1 indicates absolute priority on sustaining life (even at the expense of comfort) and 10 indicates absolute priority on comfort (even at the expense of sustaining life).">
+					description = <"Indication on a scale of 1 - 100 of where priority for care should be. 1 indicates absolute priority on sustaining life (even at the expense of comfort) and 10 indicates absolute priority on comfort (even at the expense of sustaining life).">
 				>
 			>
 		>
