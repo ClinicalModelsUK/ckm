@@ -38,6 +38,17 @@ description
 		["date"] = <"2017-12-11">
 	>
 	details = <
+		["es-ar"] = <
+			language = <[ISO_639-1::es-ar]>
+			purpose = <"Arquetipo contenedor genérico para la portación de información que necesita ser compartida con otros.">
+			use = <"Utilizar como un arquetipo genérico para portar información que necesita ser compartida con otros. Son ejemplos habituales: documentación de la respuesta a una solicitud de información; el resultado de un test; actividades que han sido realizadas o eventos que han ocurrido.
+El componente de Contexto contiene un slot innominado que puede ser utilizado para:
+-agregar contenido opcional durante la confección de una plantilla para apoyar requerimientos específicos del caso de uso;
+-agregar arquetipos del modelo demográfico de openEHR que representen a las partes participantes. En tanto que esto puede no ser deseable durante una implementación, puede ser útil para demostrar como los datos demográficos pueden ser utilizados en una implementación (ejemplo: como apoyo a los requerimientos de recolección de contenido clínico o revisión de una plantilla). El componente de Secciones ha sido dejado libre de restricciones a fin de maximizar el uso de este arquetipo.">
+			keywords = <"informe", ...>
+			misuse = <"">
+			copyright = <"© openEHR Foundation, Clinical Models UK">
+		>
 		["ar-sy"] = <
 			language = <[ISO_639-1::ar-sy]>
 			purpose = <"نموذج جنيس (غير محدود الملكية) يحتوي على معلومات من أجل مشاركتها مع الجميع.">
@@ -62,21 +73,10 @@ The Sections component has been deliberately left unconstrained to maximise re-u
 			misuse = <"">
 			copyright = <"© openEHR Foundation, Clinical Models UK">
 		>
-		["es-ar"] = <
-			language = <[ISO_639-1::es-ar]>
-			purpose = <"Arquetipo contenedor genérico para la portación de información que necesita ser compartida con otros.">
-			use = <"Utilizar como un arquetipo genérico para portar información que necesita ser compartida con otros. Son ejemplos habituales: documentación de la respuesta a una solicitud de información; el resultado de un test; actividades que han sido realizadas o eventos que han ocurrido.
-El componente de Contexto contiene un slot innominado que puede ser utilizado para:
--agregar contenido opcional durante la confección de una plantilla para apoyar requerimientos específicos del caso de uso;
--agregar arquetipos del modelo demográfico de openEHR que representen a las partes participantes. En tanto que esto puede no ser deseable durante una implementación, puede ser útil para demostrar como los datos demográficos pueden ser utilizados en una implementación (ejemplo: como apoyo a los requerimientos de recolección de contenido clínico o revisión de una plantilla). El componente de Secciones ha sido dejado libre de restricciones a fin de maximizar el uso de este arquetipo.">
-			keywords = <"informe", ...>
-			misuse = <"">
-			copyright = <"© openEHR Foundation, Clinical Models UK">
-		>
 		["en"] = <
 			language = <[ISO_639-1::en]>
-			purpose = <"Container archetype to carry information about ReSPECT (Recommended Summary Plan for Emergency Care and Treatment).">
-			use = <"Use as a generic archetype to carry information about ReSPECT (Recommended Summary Plan for Emergency Care and Treatment). ">
+			purpose = <"Container archetype to carry relevant patient information and summary recommendations from ReSPECT (Recommended Summary Plan for Emergency Care and Treatment) process.">
+			use = <"Use as a generic archetype to carry relevant patient information and summary recommendations from ReSPECT (Recommended Summary Plan for Emergency Care and Treatment) process. ">
 			keywords = <"Respect", ...>
 			misuse = <"">
 			copyright = <"© openEHR Foundation, Clinical Models UK">
@@ -91,8 +91,8 @@ El componente de Contexto contiene un slot innominado que puede ser utilizado pa
 		["original_namespace"] = <"uk.org.clinicalmodels">
 		["original_publisher"] = <"UK Clinical Models">
 		["custodian_namespace"] = <"uk.org.clinicalmodels">
-		["MD5-CAM-1.0.1"] = <"994C81850ED0DB3AF780AE533FC6AC76">
-		["build_uid"] = <"0e917f9b-f898-4fcd-9f14-c4f051d480ad">
+		["MD5-CAM-1.0.1"] = <"FEFB2B28ABDA579320990530AE02A5D6">
+		["build_uid"] = <"bdf99346-6265-40d3-b5da-2420bf051b45">
 		["revision"] = <"0.0.1-alpha">
 	>
 
@@ -140,7 +140,7 @@ ontology
 				>
 				["at0000.1"] = <
 					text = <"*ReSPECT(en)">
-					description = <"*Document to communicate details of ReSPECT (Recommended Summary Plan for Emergency Care and Treatment).(en)">
+					description = <"*Document to communicate relevant patient information and summary recommendations from ReSPECT (Recommended Summary Plan for Emergency Care and Treatment) process.(en)">
 				>
 				["at0001"] = <
 					text = <"*Tree(en)">
@@ -173,7 +173,7 @@ ontology
 				>
 				["at0000.1"] = <
 					text = <"*ReSPECT(en)">
-					description = <"*Document to communicate details of ReSPECT (Recommended Summary Plan for Emergency Care and Treatment).(en)">
+					description = <"*Document to communicate relevant patient information and summary recommendations from ReSPECT (Recommended Summary Plan for Emergency Care and Treatment) process.(en)">
 				>
 				["at0001"] = <
 					text = <"Tree">
@@ -206,7 +206,7 @@ ontology
 				>
 				["at0000.1"] = <
 					text = <"ReSPECT">
-					description = <"Document to communicate details of ReSPECT (Recommended Summary Plan for Emergency Care and Treatment).">
+					description = <"Document to communicate relevant patient information and summary recommendations from ReSPECT (Recommended Summary Plan for Emergency Care and Treatment) process.">
 				>
 				["at0001"] = <
 					text = <"Tree">
@@ -239,7 +239,7 @@ ontology
 				>
 				["at0000.1"] = <
 					text = <"*ReSPECT(en)">
-					description = <"*Document to communicate details of ReSPECT (Recommended Summary Plan for Emergency Care and Treatment).(en)">
+					description = <"*Document to communicate relevant patient information and summary recommendations from ReSPECT (Recommended Summary Plan for Emergency Care and Treatment) process.(en)">
 				>
 				["at0001"] = <
 					text = <"Tree">
