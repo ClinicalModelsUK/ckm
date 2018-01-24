@@ -52,17 +52,6 @@ El caso de uso previsto se vincula a permitir el registro por parte del clínico
 			misuse = <"">
 			copyright = <"© openEHR Foundation, Clinical Models UK">
 		>
-		["pt-br"] = <
-			language = <[ISO_639-1::pt-br]>
-			purpose = <"Registrar uma sugestão, conselho ou proposta de manejo clínico num tempo específico.">
-			use = <"Utilizar para registrar uma sugestão, conselho ou proposta de manejo clínico num tempo específico.
-
-O caso de uso pretendido é apoiar o registro clínico de uma recomendação, ou recomendações, num ponto específico no tempo.
-Por exemplo, como um componente das conclusões tiradas como parte de uma consulta clínica.">
-			keywords = <"conselho", "proposta", "sugestão">
-			misuse = <"">
-			copyright = <"© openEHR Foundation, Clinical Models UK">
-		>
 		["nb"] = <
 			language = <[ISO_639-1::nb]>
 			purpose = <"Anvendes for å registrere et forslag, et råd eller en anmodning om klinisk oppfølging på et spesifikt tidspunkt.">
@@ -74,13 +63,21 @@ Anbefalingen kan for eksempel benyttes som en del av dokumentasjonen av konklusj
 			misuse = <"">
 			copyright = <"© openEHR Foundation, Clinical Models UK">
 		>
+		["pt-br"] = <
+			language = <[ISO_639-1::pt-br]>
+			purpose = <"Registrar uma sugestão, conselho ou proposta de manejo clínico num tempo específico.">
+			use = <"Utilizar para registrar uma sugestão, conselho ou proposta de manejo clínico num tempo específico.
+
+O caso de uso pretendido é apoiar o registro clínico de uma recomendação, ou recomendações, num ponto específico no tempo.
+Por exemplo, como um componente das conclusões tiradas como parte de uma consulta clínica.">
+			keywords = <"conselho", "proposta", "sugestão">
+			misuse = <"">
+			copyright = <"© openEHR Foundation, Clinical Models UK">
+		>
 		["en"] = <
 			language = <[ISO_639-1::en]>
-			purpose = <"To record a suggestion, advice or proposal for clinical management at a specific time.">
-			use = <"Use to record a suggestion, advice or proposal for clinical management at a specific time.
-
-The intended use case is to support a clinician recording a recommendation, or recommendations, at a specific point-in-time. 
-For example, as a component of the conclusions drawn as part of a clinical consultation.">
+			purpose = <"To record the summary of agreed and realistic clinical recommendations for emergency care and treatment in the context of the ReSPECT process.">
+			use = <"Use to record a summary of agreed and realistic clinical recommendations for emergency care and treatment as part of the ReSPECT process.">
 			keywords = <"advice", "proposal", "suggestion">
 			misuse = <"">
 			copyright = <"© openEHR Foundation, Clinical Models UK">
@@ -95,8 +92,8 @@ For example, as a component of the conclusions drawn as part of a clinical consu
 		["original_namespace"] = <"uk.org.clinicalmodels">
 		["original_publisher"] = <"UK Clinical Models">
 		["custodian_namespace"] = <"uk.org.clinicalmodels">
-		["MD5-CAM-1.0.1"] = <"60E055AAC4423FB6DB9C542D3824A3BD">
-		["build_uid"] = <"064d9a44-c2ec-415d-a031-5e87e8ad432c">
+		["MD5-CAM-1.0.1"] = <"E2268C8091910EEAA7907DFC142352FB">
+		["build_uid"] = <"2bc5748e-e9cf-43a3-83e5-6f7fa126e066">
 		["revision"] = <"0.0.1-alpha">
 	>
 
@@ -105,7 +102,7 @@ definition
 		data matches {
 			ITEM_TREE[at0001] matches {	-- Tree
 				items cardinality matches {0..*; unordered} matches {
-					ELEMENT[at0002.1] occurrences matches {0..*} matches {	-- Focus
+					ELEMENT[at0002.1] occurrences matches {0..1} matches {	-- Focus
 						value matches {
 							DV_CODED_TEXT matches {
 								defining_code matches {
@@ -155,7 +152,7 @@ ontology
 				>
 				["at0000.1"] = <
 					text = <"ReSPECT clinical recommendation">
-					description = <"The clinician's clinical recommendation for emergency care and treatment for the ReSPECT plan.">
+					description = <"Summary of agreed and realistic clinical recommendations for emergency care and treatment.">
 				>
 				["at0001"] = <
 					text = <"Tree">
@@ -177,6 +174,13 @@ ontology
 				["at0003.1"] = <
 					text = <"Clinical guidance on interventions">
 					description = <"Clinician's guidance on specific interventions that may or may not be wanted or be clinically appropriate, including being taken or admitted to hospital +/- receiving life support.">
+					comment = <"This includes but is not restricted to the following:
+1 Admission to hospital
+2 Admission to Intensive Care
+3 Non-invasive ventilation
+4 Invasive Ventilation
+5 Oral Antibiotics
+6 Intravenous antibiotics ">
 				>
 				["at0004"] = <
 					text = <"Tree">
@@ -204,8 +208,8 @@ ontology
 					description = <"Una sugerencia, consejo o propuesta para el manejo clínico.">
 				>
 				["at0000.1"] = <
-					text = <"*Recommendation!(en)">
-					description = <"*A suggestion, advice or proposal for clinical management.!(en)">
+					text = <"*ReSPECT clinical recommendation(en)">
+					description = <"*Summary of agreed and realistic clinical recommendations for emergency care and treatment.(en)">
 				>
 				["at0001"] = <
 					text = <"Tree">
@@ -225,8 +229,15 @@ ontology
 					description = <"*Justifications for the recommendation.(en)">
 				>
 				["at0003.1"] = <
-					text = <"*! - Rationale(en)">
-					description = <"*Justifications for the recommendation.(en)">
+					text = <"*Clinical guidance on interventions(en)">
+					description = <"*Clinician's guidance on specific interventions that may or may not be wanted or be clinically appropriate, including being taken or admitted to hospital +/- receiving life support.(en)">
+					comment = <"*This includes but is not restricted to the following:
+1 Admission to hospital
+2 Admission to Intensive Care
+3 Non-invasive ventilation
+4 Invasive Ventilation
+5 Oral Antibiotics
+6 Intravenous antibiotics (en)">
 				>
 				["at0004"] = <
 					text = <"Tree">
@@ -254,8 +265,8 @@ ontology
 					description = <"Uma sugestão, conselho ou proposta para manejo clínico.">
 				>
 				["at0000.1"] = <
-					text = <"*Recommendation!(en)">
-					description = <"*A suggestion, advice or proposal for clinical management.!(en)">
+					text = <"*ReSPECT clinical recommendation(en)">
+					description = <"*Summary of agreed and realistic clinical recommendations for emergency care and treatment.(en)">
 				>
 				["at0001"] = <
 					text = <"Tree">
@@ -275,8 +286,15 @@ ontology
 					description = <"*Justifications for the recommendation.(en)">
 				>
 				["at0003.1"] = <
-					text = <"*! - Rationale(en)">
-					description = <"*Justifications for the recommendation.(en)">
+					text = <"*Clinical guidance on interventions(en)">
+					description = <"*Clinician's guidance on specific interventions that may or may not be wanted or be clinically appropriate, including being taken or admitted to hospital +/- receiving life support.(en)">
+					comment = <"*This includes but is not restricted to the following:
+1 Admission to hospital
+2 Admission to Intensive Care
+3 Non-invasive ventilation
+4 Invasive Ventilation
+5 Oral Antibiotics
+6 Intravenous antibiotics (en)">
 				>
 				["at0004"] = <
 					text = <"Tree">
@@ -304,8 +322,8 @@ ontology
 					description = <"Et forslag, råd eller anmodning om klinisk oppfølging.">
 				>
 				["at0000.1"] = <
-					text = <"*Recommendation!(en)">
-					description = <"*A suggestion, advice or proposal for clinical management.!(en)">
+					text = <"*ReSPECT clinical recommendation(en)">
+					description = <"*Summary of agreed and realistic clinical recommendations for emergency care and treatment.(en)">
 				>
 				["at0001"] = <
 					text = <"Tree">
@@ -325,8 +343,15 @@ ontology
 					description = <"Begrunnelse for anbefalingen.">
 				>
 				["at0003.1"] = <
-					text = <"*! - Rationale(en)">
-					description = <"*Justifications for the recommendation.(en)">
+					text = <"*Clinical guidance on interventions(en)">
+					description = <"*Clinician's guidance on specific interventions that may or may not be wanted or be clinically appropriate, including being taken or admitted to hospital +/- receiving life support.(en)">
+					comment = <"*This includes but is not restricted to the following:
+1 Admission to hospital
+2 Admission to Intensive Care
+3 Non-invasive ventilation
+4 Invasive Ventilation
+5 Oral Antibiotics
+6 Intravenous antibiotics (en)">
 				>
 				["at0004"] = <
 					text = <"Tree">
