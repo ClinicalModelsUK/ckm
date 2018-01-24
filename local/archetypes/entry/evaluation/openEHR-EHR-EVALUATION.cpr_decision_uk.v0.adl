@@ -41,8 +41,8 @@ Leeds ePaccs team">
 		["original_namespace"] = <"uk.org.clinicalmodels">
 		["original_publisher"] = <"UK Clinical Models">
 		["custodian_namespace"] = <"uk.org.clinicalmodels">
-		["MD5-CAM-1.0.1"] = <"646A711CD1BE694777150E67517B6EF2">
-		["build_uid"] = <"fbb2802d-0b7d-4d02-866c-38bebe8a1933">
+		["MD5-CAM-1.0.1"] = <"0F6626B48ECBB041F15DC42CE98C7872">
+		["build_uid"] = <"a506f9ba-a07c-433c-86ba-3408a54fb22c">
 		["revision"] = <"0.0.1-alpha">
 	>
 
@@ -67,6 +67,11 @@ definition
 					ELEMENT[at0002] occurrences matches {0..1} matches {	-- Date of CPR decision
 						value matches {
 							DV_DATE_TIME matches {*}
+						}
+					}
+					ELEMENT[at0028] occurrences matches {0..1} matches {	-- Modification for Modified CPR child only
+						value matches {
+							DV_TEXT matches {*}
 						}
 					}
 					ELEMENT[at0006] occurrences matches {0..1} matches {	-- Patient awareness of decision
@@ -154,7 +159,6 @@ definition
 	}
 
 
-
 ontology
 	terminologies_available = <"SNOMED-CT", "RCD99", "READ2">
 	term_definitions = <
@@ -162,7 +166,7 @@ ontology
 			items = <
 				["at0000"] = <
 					text = <"CPR decision">
-					description = <"The outcome of a clinical decision as to whether cardio-pulmonary resuscitation should be undertaken or not. This is generally referred to in UK clinical guidance as the CPR (Cardio-pulmonary resuscitation) decision.">
+					description = <"The advance recommendation as to whether cardio-pulmonary resuscitation should be undertaken or not. This is generally referred to in UK clinical guidance as the CPR (Cardio-pulmonary resuscitation) decision.">
 				>
 				["at0001"] = <
 					text = <"Tree">
@@ -174,7 +178,7 @@ ontology
 				>
 				["at0003"] = <
 					text = <"CPR decision">
-					description = <"The clinical decision on whether cardiopulmonary resuscitation (CPR) should be attempted. In some cases a clear answer may not be available to the recording clinician.">
+					description = <"The advance recommendation as to whether cardiopulmonary resuscitation (CPR) should be attempted. In some cases a clear answer may not be available to the recording clinician.">
 				>
 				["at0004"] = <
 					text = <"CPR attempts recommended adult or child">
@@ -267,6 +271,10 @@ ontology
 				["at0027"] = <
 					text = <"For modified CPR child only">
 					description = <"Modified CPR is recommended for child only.">
+				>
+				["at0028"] = <
+					text = <"Modification for Modified CPR child only">
+					description = <"Narrative description of modification where modified CPR for child only has been selected.">
 				>
 			>
 		>
