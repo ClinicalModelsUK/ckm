@@ -30,8 +30,8 @@ description
 		["original_namespace"] = <"uk.org.clinicalmodels">
 		["original_publisher"] = <"UK Clinical Models">
 		["custodian_namespace"] = <"uk.org.clinicalmodels">
-		["MD5-CAM-1.0.1"] = <"53F745A2F2A2621E6EEC210D2D6908DF">
-		["build_uid"] = <"466dd69b-ef92-4756-b248-1d00b5e38aff">
+		["MD5-CAM-1.0.1"] = <"42B6229D24EED33B6F2F91135E0B4841">
+		["build_uid"] = <"8f6cd910-cc28-4dea-aceb-2345d1e2a0c2">
 		["revision"] = <"0.0.1-alpha">
 	>
 
@@ -74,7 +74,7 @@ ontology
 				>
 				["at0002"] = <
 					text = <"Narrative summary">
-					description = <"Including diagnosis and reasons for the preferences and recommendations recorded.">
+					description = <"This field is intended to capture relevant summary information about diagnoses, reasons for preferences and recommendations in a narrative format. It is envisaged that some of this information can be derived from more structured data, but this field allows the capture of a shared understanding between patient and clinician of the most important diagnoses and social factors, and it should act as a quick overview or snapshot which could be used for example in an emergency situation to gain a quick understanding of the most relevant information for this patient.">
 				>
 				["at0004"] = <
 					text = <"Interpreter required">
