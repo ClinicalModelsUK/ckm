@@ -1,4 +1,4 @@
-﻿archetype (adl_version=1.4)
+﻿archetype (adl_version=1.4; uid=57a17316-f7ae-4a17-8474-2459c90abacd)
 	openEHR-EHR-CLUSTER.tumour_colorectal_staging_non_tnm.v1
 
 concept
@@ -19,12 +19,14 @@ description
 			use = <"Use in conjunction with a suite of histo-pathology related archetypes or with a Diagnosis archetype.">
 			keywords = <"staging", "cancer", "tumour", "histo-pathology", "malignancy">
 			misuse = <"">
-			copyright = <"copyright (c) 2009 openEHR Foundation">
+			copyright = <"© openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"AuthorDraft">
+	lifecycle_state = <"in_development">
 	other_contributors = <>
 	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 3.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/3.0/.">
+		["custodian_organisation"] = <"openEHR Foundation">
 		["references"] = <"Davis N, Newland R. The reporting of colorectal cancer: The Australian clinico-pathological staging system. ANZ Journal of Surgery. 1982 ;52(4):395-397.
 
 Royal College of Pathologists. Dataset for colorectal cancer (2nd edition) [Internet]. 2007 Dec 4;[cited 2009 Jul 29 ]
@@ -33,7 +35,11 @@ Available from: http://www.rcpath.org/index.asp?PageID=1153
 
 
 ">
-		["MD5-CAM-1.0.1"] = <"7B91C01ED83E6504C8AFC02B1BFDD236">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["MD5-CAM-1.0.1"] = <"1F6783DE55DA0B945D432D245CC60B04">
+		["build_uid"] = <"e6bbd135-83fd-469f-b9d9-edb17ddd5778">
 	>
 
 definition

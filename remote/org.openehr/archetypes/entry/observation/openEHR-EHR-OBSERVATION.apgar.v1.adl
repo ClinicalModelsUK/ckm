@@ -63,7 +63,6 @@ language
 				["organisation"] = <"BIPH">
 				["email"] = <"linforest@163.com">
 			>
-			accreditation = <"What goes here?">
 		>
 		["nl"] = <
 			language = <[ISO_639-1::nl]>
@@ -83,28 +82,6 @@ description
 		["date"] = <"2004-05-18">
 	>
 	details = <
-		["en"] = <
-			language = <[ISO_639-1::en]>
-			purpose = <"Records the Apgar score as a simple, repeatable method to document the state of the newborn infant immediately after birth.
-The root time of the event series is always birth.">
-			use = <"Allows recording of an assessment of the state of a neonate explicitly as 1, 2, 3, 5 and/or 10 minute events after birth, plus additional events as required. 
-Usual practice is to document the Apgar score at 1 and 5 minutes; further scores can be recorded as clinically indicated.  It is possible to record the Apgar score at any time after birth using this archetype.
-Common clinical practice is to record all 5 parameters plus the total, however this archetype allows any partial information to be recorded, if that is all that is available eg from historical data.
-If the total is to be calculated, it is necessary for all 5 ordinal values to be recorded.  The total is the sum of the five ordinal values (min 0, max 10).
-
-It is recognised that mnemonic learning aid for APGAR is commonly taught.  For example, in English: A for Appearance (skin color), P for Pulse (heart rate), G for Grimace (reflex irritability), A for Activity (muscle tone), and R for Respiration.  As this is not universally applicable for all languages, it is suggested that this mnemonic can be applied by renaming the data elements within templates if desired for a specific clinical scenario.">
-			keywords = <"newborn", "index", "score", "birth", "infant", "neonate", "assessment">
-			misuse = <"Partially complete score and add the 5 to give the total values​​.">
-			copyright = <"© openEHR Foundation">
-		>
-		["es-cl"] = <
-			language = <[ISO_639-1::es-cl]>
-			purpose = <"Registrar el índice del Apgar o la valoración del recién nacido. El tiempo inicial de medida de la serie de eventos es siempre la hora de nacimiento.">
-			use = <"Permite registrar el bienestar del neonato al 1,2,5 y o 10 minutos después del nacimiento. Se puede registrar sólo el total - si es todo lo que está disponible - aúnque se deben completar los cinco valores númericos para que pueda ser calculado el total.  El total es la suma de los cinco valores númericos (el mínimo 0, el máximo 10).">
-			keywords = <"score", "apgar", "index", "recién nacido">
-			misuse = <"Completar el score parcialmente y no sumar los 5 valores para dar el total.">
-			copyright = <"© openEHR Foundation">
-		>
 		["de"] = <
 			language = <[ISO_639-1::de]>
 			purpose = <"Zur Dokumentation des Apgar Wertes als eine einfache, nachvollziehbare Methode zur Dokumentation des Status eines Neugeborenen direkt nach der Geburt. Der zu Grunde liegende Zeitpunkt der Ereignisreihe ist immer die Geburt.">
@@ -118,17 +95,59 @@ Häufig werden mnemonische Merkhilfen für APGAR gelehrt. Z.B. in Englisch: A f�
 			misuse = <"Completar el score parcialmente y no sumar los 5 valores para dar el total.">
 			copyright = <"© openEHR Foundation">
 		>
-		["fa"] = <
-			language = <[ISO_639-1::fa]>
-			purpose = <"برای ثبت نمره آپگار به عنوان روشی ساده و قابل تکرار در اسناد حالت نوزاد بلافاصله بعد از تولد بکار می رود
-زمان اصلی سری رویدادها همیشه زمان تولد است ">
-			use = <" ثبت ارزیابی حالت نوزاد را بطور آشکار در دقایق یک ، دو ، سه و پنج و یا ده بعد تولد بعلاوه رویدادهای بیشتر در صورت نیاز را امکان پذیر می کند
-عملکرد معمول ثبت نمره آپگار در دقایق یک و پنج است ، نمرات بیشتر را می توان در صورت نیاز بالینی می توان ثبت نمود با این الگو ساز ثبت نمره آپگار در عر لحظه بعد از تولد امگان پذیر است
-عملکرد مشترک بالینی ثبت کلیه پنج پارامتر به علاوه کل است اما در صورتی که همه اطلاعات در دسترس باشند، این الگو ساز امکان ثبت هر گونه اطلاعات جزیی را امکان پذیر می کند به عنوان مثال داد های بیمارستانی
-در صورتی که کل نمره باید محاسبه شود باید کلیه ارزشها ی ترتیبی ثبت شوند . کل مجموع پنج ارزش ترتیبی حداقل صفرو حداکثر ده می باشد
-مشحص شده است که یادگیری حافظه ای آپکار معمولا تدریس می شودبرای مثال در انگلیس حرف \"ا\" برای ظاهر (رنگ پوست)و حرف \"پ\" برای نبض (میزان قلبی) ، حرف \"جی \" برای شکلک(رفلکس تحریک پذیری) ، حرف \"ا\" برای فعالیت (تون عضلانی ) و  حرف \"ر\" برای تنفس استفاده می شود.گرچه این مورد برای تمام زبانها و بطور کلی قابل کاربرد نیست ، پیشنهاد می شود که  در صورت تمایل  در سناریوهای بالینی خاص ،یادگیری حافظه ای می تواند با نامگذاری مجدد عناصر داده ای در داخل الگو بکار رود">
-			keywords = <"تازه بدنیا آمده", "شاخص", "نمره", "تولد", "شیر خوار", "نوزاد", "ارزیابی">
+		["ru"] = <
+			language = <[ISO_639-1::ru]>
+			purpose = <"Запись оценки по шкале Апгар - простой, повторяемый метод оценки состояния новорожденного сразу после рождения.
+Первая оценка производится сразу после рождения, далее может быть серия повторных.">
+			use = <"Позволяет записывать состояние новорожденного по шкале Апгар  на 1, 2, 3, 4, 5 и / или 10 минуту после рождения, плюс дополнительно в более поздние сроки, если требуется
+Обычно практикуется документирование состояния новорожденного по Апгар на 1 и 5 минуте, друге оценки могут быть записаны по клиническим показаниям.
+Этот архетип позволяет записывать оценку по шкале Апгар в любое время после рождения.
+В общеклинической практике записывают 5 параметров плюс общую оценку, однако этот архетип позволяет вносить информацию частичное, если требуется, для формирования истории данных.
+Если общая оценка считается, то необходимо записать все 5 обычно используемых признаков. Общая оценка получается суммированием 5 обычных значений (мин 0, макс 10).">
+			keywords = <"новорожденный", "оценка", "балл", "младенец", "оценка состояния">
 			misuse = <"Completar el score parcialmente y no sumar los 5 valores para dar el total.">
+			copyright = <"© openEHR Foundation">
+		>
+		["nb"] = <
+			language = <[ISO_639-1::nb]>
+			purpose = <"Registrerer APGAR score som en enkel, repeterbare metode til dokumentasjon av tilstanden til den nyfødte barnet umiddelbart etter fødsel. Start tidspunkt for registrering er alltid fødselstidspunktet.">
+			use = <"Anvendes til registrering av tilstanden til en nyfødte ut fra enkle basale parametre vurdert etter 1, 2, 3, 5 og / eller 10 minutters tidspunkter etter fødselen, pluss ytterligere vurderinger etter behov. 
+Vanlig praksis er å dokumentere Apgar score på 1 og 5 minutter; ytterligere score kan registreres. Det er mulig å registrere Apgar score når som helst etter fødselen ved hjelp av denne arketypen. 
+Der scores en verdi på 0 som laveste score og 2 for normale forhold for hver parameter.
+Vanlig klinisk praksis er å registrere alle 5 parametere pluss total, men denne arketypen tillater også registrering av enkelt parametrene, hvis de er tilgjengelig f.eks fra historiske data. 
+Hvis den totale score skal beregnes, er det nødvendig at alle 5 ordinale verdier blir registreret Det er summen av de fem ordinale verdier (min 0, max 10) som er det egentlige APGAR.
+
+Den engelske mnemotekniske regel for å huske alle parametre er: A for Appearance (hudfarge), P for Pulse (puls), G for Grimace (refleks irritabilitet), A for Activity (muskeltonus), og R for respirasjon.
+">
+			keywords = <"Nyfødt", "Spebarn", "Indeks", "score", "fødsel", "neonatal", "vurdering", "respirasjon", "hud farge", "tonus", "refleks", "muskeltonus", "hjertefrekvens">
+			misuse = <"Misbruk er at anvende ufullstendig score og legge til 5 for å gi de totale verdiene.">
+			copyright = <"© openEHR Foundation">
+		>
+		["pt-br"] = <
+			language = <[ISO_639-1::pt-br]>
+			purpose = <"Registra a escala de Apgar como um método simples e reproduzível de documentar o estado de saúde do recém-nato imediatamente após o nascimento">
+			use = <"Permite o registro de uma avaliação do estado de saúde de um recém-nascido explicitamente em eventos a 1, 2, 3, 5 e/ou 10 minutos depois do nascimento, e outros eventos adicionais se requeridos.
+Geralmente se documenta os escores obtidos nos primeiro e quinto minutos na escala de Apgar, os demais podem ser registrados se tiver indicação clínica. É possível registrar o escore Apgar a qualquer tempo após o nascimento usando esse arquétipo.
+A prática clínica comum é registrar todos os cinco parâmetros, mais o resultado global, entretanto esse arquétipo permite que qualquer informação parcial seja registrada, se for essa a única informação disponível, por exemplo, no histórico do paciente.
+O total só pode ser calculado se os cinco valores ordinais forem registrados. O total é a soma dos cinco valores ordinais (min0, max 10).
+
+Se reconhece que uma ajuda mnemônica para aprender a interpretar o escore Apgar é comumente ensinada. Em Português, por exemplo: A para Aparência (cor da pele), P para pulso ( frequência cardíaca), G para Contração do rosto (grimace-fr); A para atividade (tônus muscular) e R pra Respiração. Embora não seja aplicável em todas as línguas, se sugere que se possa utilizar esse mnemônico para renomear os elementos de dados dentro dos templates se desejado para um cenário clínico específico.">
+			keywords = <"*recém-nascido(s), recém-nato(s)", "*índice", "*escore, escala", "*nascimento(s),", "*bebê(s)", "*neonato(s)", "*avaliação(ões)">
+			misuse = <"Escore parcialmente completado e adicionar o 5 para obter o valor total.">
+			copyright = <"© openEHR Foundation">
+		>
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"Records the Apgar score as a simple, repeatable method to document the state of the newborn infant immediately after birth.
+The root time of the event series is always birth.">
+			use = <"Allows recording of an assessment of the state of a neonate explicitly as 1, 2, 3, 5 and/or 10 minute events after birth, plus additional events as required. 
+Usual practice is to document the Apgar score at 1 and 5 minutes; further scores can be recorded as clinically indicated.  It is possible to record the Apgar score at any time after birth using this archetype.
+Common clinical practice is to record all 5 parameters plus the total, however this archetype allows any partial information to be recorded, if that is all that is available eg from historical data.
+If the total is to be calculated, it is necessary for all 5 ordinal values to be recorded.  The total is the sum of the five ordinal values (min 0, max 10).
+
+It is recognised that mnemonic learning aid for APGAR is commonly taught.  For example, in English: A for Appearance (skin color), P for Pulse (heart rate), G for Grimace (reflex irritability), A for Activity (muscle tone), and R for Respiration.  As this is not universally applicable for all languages, it is suggested that this mnemonic can be applied by renaming the data elements within templates if desired for a specific clinical scenario.">
+			keywords = <"newborn", "index", "score", "birth", "infant", "neonate", "assessment">
+			misuse = <"Partially complete score and add the 5 to give the total values​​.">
 			copyright = <"© openEHR Foundation">
 		>
 		["ar-sy"] = <
@@ -150,41 +169,25 @@ Häufig werden mnemonische Merkhilfen für APGAR gelehrt. Z.B. in Englisch: A f�
 			misuse = <"Completar el score parcialmente y no sumar los 5 valores para dar el total.">
 			copyright = <"© openEHR Foundation">
 		>
-		["ru"] = <
-			language = <[ISO_639-1::ru]>
-			purpose = <"Запись оценки по шкале Апгар - простой, повторяемый метод оценки состояния новорожденного сразу после рождения.
-Первая оценка производится сразу после рождения, далее может быть серия повторных.">
-			use = <"Позволяет записывать состояние новорожденного по шкале Апгар  на 1, 2, 3, 4, 5 и / или 10 минуту после рождения, плюс дополнительно в более поздние сроки, если требуется
-Обычно практикуется документирование состояния новорожденного по Апгар на 1 и 5 минуте, друге оценки могут быть записаны по клиническим показаниям.
-Этот архетип позволяет записывать оценку по шкале Апгар в любое время после рождения.
-В общеклинической практике записывают 5 параметров плюс общую оценку, однако этот архетип позволяет вносить информацию частичное, если требуется, для формирования истории данных.
-Если общая оценка считается, то необходимо записать все 5 обычно используемых признаков. Общая оценка получается суммированием 5 обычных значений (мин 0, макс 10).">
-			keywords = <"новорожденный", "оценка", "балл", "младенец", "оценка состояния">
+		["fa"] = <
+			language = <[ISO_639-1::fa]>
+			purpose = <"برای ثبت نمره آپگار به عنوان روشی ساده و قابل تکرار در اسناد حالت نوزاد بلافاصله بعد از تولد بکار می رود
+زمان اصلی سری رویدادها همیشه زمان تولد است ">
+			use = <" ثبت ارزیابی حالت نوزاد را بطور آشکار در دقایق یک ، دو ، سه و پنج و یا ده بعد تولد بعلاوه رویدادهای بیشتر در صورت نیاز را امکان پذیر می کند
+عملکرد معمول ثبت نمره آپگار در دقایق یک و پنج است ، نمرات بیشتر را می توان در صورت نیاز بالینی می توان ثبت نمود با این الگو ساز ثبت نمره آپگار در عر لحظه بعد از تولد امگان پذیر است
+عملکرد مشترک بالینی ثبت کلیه پنج پارامتر به علاوه کل است اما در صورتی که همه اطلاعات در دسترس باشند، این الگو ساز امکان ثبت هر گونه اطلاعات جزیی را امکان پذیر می کند به عنوان مثال داد های بیمارستانی
+در صورتی که کل نمره باید محاسبه شود باید کلیه ارزشها ی ترتیبی ثبت شوند . کل مجموع پنج ارزش ترتیبی حداقل صفرو حداکثر ده می باشد
+مشحص شده است که یادگیری حافظه ای آپکار معمولا تدریس می شودبرای مثال در انگلیس حرف \"ا\" برای ظاهر (رنگ پوست)و حرف \"پ\" برای نبض (میزان قلبی) ، حرف \"جی \" برای شکلک(رفلکس تحریک پذیری) ، حرف \"ا\" برای فعالیت (تون عضلانی ) و  حرف \"ر\" برای تنفس استفاده می شود.گرچه این مورد برای تمام زبانها و بطور کلی قابل کاربرد نیست ، پیشنهاد می شود که  در صورت تمایل  در سناریوهای بالینی خاص ،یادگیری حافظه ای می تواند با نامگذاری مجدد عناصر داده ای در داخل الگو بکار رود">
+			keywords = <"تازه بدنیا آمده", "شاخص", "نمره", "تولد", "شیر خوار", "نوزاد", "ارزیابی">
 			misuse = <"Completar el score parcialmente y no sumar los 5 valores para dar el total.">
 			copyright = <"© openEHR Foundation">
 		>
-		["nl"] = <
-			language = <[ISO_639-1::nl]>
-			purpose = <"Registreren van de Apgar score; een eenvoudige, te herhalen score, om de toestand van de pasgeborene onmiddelijk na de geboorte te documenteren.">
-			use = <"Staat registratie toe van de beoordeling van de toestand van een pasgeborene, op 1, 2, 3, 5, en/of 10 minuten na de geboorte, plus toegevoegde gebeurtenissen, indien gewenst.
-Gewoonlijk wordt de Apgar score na 1 en 5 minuten gedaan, meerdere scores kunnen geregistreerd worden als dat klinisch geïndiceerd is. Het is bij gebruik van dit archetype mogelijk de Apgar score op ieder gewenst moment na de geboorte te registreren.
-Algemeen klinische praktijk is om alle 5 parameters plus het totaal te registreren, maar in dit archtype kan iedere gedeeltelijke informatie opgeslagen worden, dat beschikbaar is in b.v. historische data. Als het totaal berekend wordt, is het noodzakelijk dat alle 5 parameters als waarde geregistreerd worden. Het totaal is de som van de 5 waardes (min 0, max 10).
-Erkend wordt dat er gewoonlijk een ezelsbruggetje word gebruikt bij het aanleren van de Apgar score. Bijvoorbeeld: Appearance (kleur), Pulse (hartslag), Grimace (reactie op prikkels), Activity (spiertonus) en Respiration (ademhaling). Dit is niet universeel bruikbaar voor alle talen, gesuggereerd wordt dat dit geheugensteuntje kan worden toegepast door het hernoemen van de data elementen binnen templates, indien gewenst voor een specifiek klinisch scenario.">
-			keywords = <"pasgeborene", "index", "score", "geboorte", "kind", "neonaat", "beoordeling", "baby">
+		["es-cl"] = <
+			language = <[ISO_639-1::es-cl]>
+			purpose = <"Registrar el índice del Apgar o la valoración del recién nacido. El tiempo inicial de medida de la serie de eventos es siempre la hora de nacimiento.">
+			use = <"Permite registrar el bienestar del neonato al 1,2,5 y o 10 minutos después del nacimiento. Se puede registrar sólo el total - si es todo lo que está disponible - aúnque se deben completar los cinco valores númericos para que pueda ser calculado el total.  El total es la suma de los cinco valores númericos (el mínimo 0, el máximo 10).">
+			keywords = <"score", "apgar", "index", "recién nacido">
 			misuse = <"Completar el score parcialmente y no sumar los 5 valores para dar el total.">
-			copyright = <"© openEHR Foundation">
-		>
-		["pt-br"] = <
-			language = <[ISO_639-1::pt-br]>
-			purpose = <"Registra a escala de Apgar como um método simples e reproduzível de documentar o estado de saúde do recém-nato imediatamente após o nascimento">
-			use = <"Permite o registro de uma avaliação do estado de saúde de um recém-nascido explicitamente em eventos a 1, 2, 3, 5 e/ou 10 minutos depois do nascimento, e outros eventos adicionais se requeridos.
-Geralmente se documenta os escores obtidos nos primeiro e quinto minutos na escala de Apgar, os demais podem ser registrados se tiver indicação clínica. É possível registrar o escore Apgar a qualquer tempo após o nascimento usando esse arquétipo.
-A prática clínica comum é registrar todos os cinco parâmetros, mais o resultado global, entretanto esse arquétipo permite que qualquer informação parcial seja registrada, se for essa a única informação disponível, por exemplo, no histórico do paciente.
-O total só pode ser calculado se os cinco valores ordinais forem registrados. O total é a soma dos cinco valores ordinais (min0, max 10).
-
-Se reconhece que uma ajuda mnemônica para aprender a interpretar o escore Apgar é comumente ensinada. Em Português, por exemplo: A para Aparência (cor da pele), P para pulso ( frequência cardíaca), G para Contração do rosto (grimace-fr); A para atividade (tônus muscular) e R pra Respiração. Embora não seja aplicável em todas as línguas, se sugere que se possa utilizar esse mnemônico para renomear os elementos de dados dentro dos templates se desejado para um cenário clínico específico.">
-			keywords = <"*recém-nascido(s), recém-nato(s)", "*índice", "*escore, escala", "*nascimento(s),", "*bebê(s)", "*neonato(s)", "*avaliação(ões)">
-			misuse = <"Escore parcialmente completado e adicionar o 5 para obter o valor total.">
 			copyright = <"© openEHR Foundation">
 		>
 		["zh-cn"] = <
@@ -196,29 +199,25 @@ Se reconhece que uma ajuda mnemônica para aprender a interpretar o escore Apgar
 如果要计算总分的话，则需要记录所有5项分级分值（等级型分值）。总分是5项分级分值的总和（最小为0，最大为10）。
 
 目前，在教学时采用助记手段来帮助学习APGAR。例如，采用英语时：
-      A 表示外貌（Appearance）（肤色）
-      P 表示脉搏（Pulse）（心率）
-      G 表示皱眉（Grimace）（反射应激性）
-      A 表示活动（Activity）（肌张力）
-      R 表示呼吸（Respiration）
+ A 表示外貌（Appearance）（肤色）
+ P 表示脉搏（Pulse）（心率）
+ G 表示皱眉（Grimace）（反射应激性）
+ A 表示活动（Activity）（肌张力）
+ R 表示呼吸（Respiration）
 这种方法并不普遍适用于所有的语种，因此建议，如果特定的临床场景需要的话，可以通过在模板之中对相应的数据元重新命名，以便能够运用这种助记方法。">
 			keywords = <"新生儿", "指标", "指数", "分数", "评分", "分值", "得分", "出生", "生产", "婴幼儿", "婴儿", "新生婴儿", "评价", "评估">
 			misuse = <"不完整的评分加上5，得到总分。">
 			copyright = <"© openEHR Foundation">
 		>
-		["nb"] = <
-			language = <[ISO_639-1::nb]>
-			purpose = <"Registrerer APGAR score som en enkel, repeterbare metode til dokumentasjon av tilstanden til den nyfødte barnet umiddelbart etter fødsel. Start tidspunkt for registrering er alltid fødselstidspunktet.">
-			use = <"Anvendes til registrering av tilstanden til en nyfødte ut fra enkle basale parametre vurdert etter 1, 2, 3, 5 og / eller 10 minutters tidspunkter etter fødselen, pluss ytterligere vurderinger etter behov. 
-Vanlig praksis er å dokumentere Apgar score på 1 og 5 minutter; ytterligere score kan registreres. Det er mulig å registrere Apgar score når som helst etter fødselen ved hjelp av denne arketypen. 
-Der scores en verdi på 0 som laveste score og 2 for normale forhold for hver parameter.
-Vanlig klinisk praksis er å registrere alle 5 parametere pluss total, men denne arketypen tillater også registrering av enkelt parametrene, hvis de er tilgjengelig f.eks fra historiske data. 
-Hvis den totale score skal beregnes, er det nødvendig at alle 5 ordinale verdier blir registreret Det er summen av de fem ordinale verdier (min 0, max 10) som er det egentlige APGAR.
-
-Den engelske mnemotekniske regel for å huske alle parametre er: A for Appearance (hudfarge), P for Pulse (puls), G for Grimace (refleks irritabilitet), A for Activity (muskeltonus), og R for respirasjon.
-">
-			keywords = <"Nyfødt", "Spebarn", "Indeks", "score", "fødsel", "neonatal", "vurdering", "respirasjon", "hud farge", "tonus", "refleks", "muskeltonus", "hjertefrekvens">
-			misuse = <"Misbruk er at anvende ufullstendig score og legge til 5 for å gi de totale verdiene.">
+		["nl"] = <
+			language = <[ISO_639-1::nl]>
+			purpose = <"Registreren van de Apgar score; een eenvoudige, te herhalen score, om de toestand van de pasgeborene onmiddelijk na de geboorte te documenteren.">
+			use = <"Staat registratie toe van de beoordeling van de toestand van een pasgeborene, op 1, 2, 3, 5, en/of 10 minuten na de geboorte, plus toegevoegde gebeurtenissen, indien gewenst.
+Gewoonlijk wordt de Apgar score na 1 en 5 minuten gedaan, meerdere scores kunnen geregistreerd worden als dat klinisch geïndiceerd is. Het is bij gebruik van dit archetype mogelijk de Apgar score op ieder gewenst moment na de geboorte te registreren.
+Algemeen klinische praktijk is om alle 5 parameters plus het totaal te registreren, maar in dit archtype kan iedere gedeeltelijke informatie opgeslagen worden, dat beschikbaar is in b.v. historische data. Als het totaal berekend wordt, is het noodzakelijk dat alle 5 parameters als waarde geregistreerd worden. Het totaal is de som van de 5 waardes (min 0, max 10).
+Erkend wordt dat er gewoonlijk een ezelsbruggetje word gebruikt bij het aanleren van de Apgar score. Bijvoorbeeld: Appearance (kleur), Pulse (hartslag), Grimace (reactie op prikkels), Activity (spiertonus) en Respiration (ademhaling). Dit is niet universeel bruikbaar voor alle talen, gesuggereerd wordt dat dit geheugensteuntje kan worden toegepast door het hernoemen van de data elementen binnen templates, indien gewenst voor een specifiek klinisch scenario.">
+			keywords = <"pasgeborene", "index", "score", "geboorte", "kind", "neonaat", "beoordeling", "baby">
+			misuse = <"Completar el score parcialmente y no sumar los 5 valores para dar el total.">
 			copyright = <"© openEHR Foundation">
 		>
 	>
@@ -239,8 +238,8 @@ http://en.wikipedia.org/wiki/Apgar_score">
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"592654180C6F720E6288B073D4889C6E">
-		["build_uid"] = <"a22387fd-5862-4d60-a3a9-520a74e52f12">
+		["MD5-CAM-1.0.1"] = <"AB6037DEA29A0EBE168C342D45AAB316">
+		["build_uid"] = <"28344ee6-7882-4ec4-af1c-fdbea981b336">
 		["revision"] = <"1.0.1-alpha">
 	>
 
