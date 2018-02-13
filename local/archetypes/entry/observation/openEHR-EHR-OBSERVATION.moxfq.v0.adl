@@ -35,8 +35,8 @@ While openEHR archetypes are all freely available under an open license, the spe
 		["original_namespace"] = <"uk.org.clinicalmodels">
 		["original_publisher"] = <"UK Clinical Models">
 		["custodian_namespace"] = <"uk.org.clinicalmodels">
-		["MD5-CAM-1.0.1"] = <"FB1C0F72753B3904F66440A016EF5A39">
-		["build_uid"] = <"bbd6d165-4b37-46a6-a8ce-13bf57c8570e">
+		["MD5-CAM-1.0.1"] = <"90D23C4494D9E69F6D4519A399CFDB4B">
+		["build_uid"] = <"4218ce62-ec18-464b-84bb-5fe9b815a1ea">
 		["revision"] = <"0.0.1-alpha">
 	>
 
@@ -196,7 +196,33 @@ definition
 									ELEMENT[at0104] occurrences matches {0..1} matches {	-- Total score
 										value matches {
 											DV_COUNT matches {
-												magnitude matches {|0..64|}
+												magnitude matches {|0..300|}
+											}
+										}
+									}
+									ELEMENT[at0105] occurrences matches {0..1} matches {	-- Average score
+										value matches {
+											DV_COUNT matches {
+												magnitude matches {|0..100|}
+											}
+										}
+									}
+									ELEMENT[at0106] occurrences matches {0..1} matches {	-- Pain score
+										value matches {
+											DV_COUNT matches {*}
+										}
+									}
+									ELEMENT[at0107] occurrences matches {0..1} matches {	-- Walking and standing score
+										value matches {
+											DV_COUNT matches {
+												magnitude matches {|0..100|}
+											}
+										}
+									}
+									ELEMENT[at0108] occurrences matches {0..1} matches {	-- Social interaction score
+										value matches {
+											DV_COUNT matches {
+												magnitude matches {|0..100|}
 											}
 										}
 									}
@@ -689,7 +715,23 @@ During the past 4 weeks have you been troubled by pain from your foot/ankle in b
 				>
 				["at0104"] = <
 					text = <"Total score">
-					description = <"Total score from Questions 1 to 16.">
+					description = <"Total score from Questions 1 to 16, weighted according to these rules: sum of Questions 1,11,12,15 and 16 multiplied by 5 PLUS sum of Questions 2-8 multiplied by 3.57 PLUS sum of Questions 9, 10, 13 and 14 multiplied by 6.25 rounded to nearest integer.">
+				>
+				["at0105"] = <
+					text = <"Average score">
+					description = <"Average score from Questions 1-16, weighted according to these rules: sum of Questions 1,11,12,15 and 16 multiplied by 5 PLUS sum of Questions 2-8 multiplied by 3.57 PLUS sum of Questions 9, 10, 13 and 14 multiplied by 6.25, rounded to nearest integer.">
+				>
+				["at0106"] = <
+					text = <"Pain score">
+					description = <"Total pain score calculated from Questions 1, 11,12,15 and 16 multiplied by 5 rounded to nearest integer.">
+				>
+				["at0107"] = <
+					text = <"Walking and standing score">
+					description = <"Total score from questions 2-8 multiplied by 3.57 and rounded to nearest integer.">
+				>
+				["at0108"] = <
+					text = <"Social interaction score">
+					description = <"Total score from questions 9, 10, 13 and 14 multiplied by 6.25 and rounded to nearest integer.">
 				>
 			>
 		>
