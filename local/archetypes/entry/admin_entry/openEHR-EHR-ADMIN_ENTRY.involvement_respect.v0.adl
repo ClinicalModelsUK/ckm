@@ -30,8 +30,8 @@ description
 		["original_namespace"] = <"uk.org.clinicalmodels">
 		["original_publisher"] = <"UK Clinical Models">
 		["custodian_namespace"] = <"uk.org.clinicalmodels">
-		["MD5-CAM-1.0.1"] = <"EB14E164E93AE8B8D4AD2D2C73E55CC8">
-		["build_uid"] = <"b0b50c09-3084-49c3-9bc5-c2aa2228bf41">
+		["MD5-CAM-1.0.1"] = <"7FB6236F0601938A55B509F4384C57C5">
+		["build_uid"] = <"eb56ae09-9e65-4502-8e4b-f9d5a2bf4e46">
 		["revision"] = <"0.0.1-alpha">
 	>
 
@@ -102,7 +102,7 @@ ontology
 				>
 				["at0002"] = <
 					text = <"Involvement">
-					description = <"Details of involvement in recommendations.">
+					description = <"Details of involvement in making this plan.">
 				>
 				["at0003"] = <
 					text = <"A Person has mental capacity">
