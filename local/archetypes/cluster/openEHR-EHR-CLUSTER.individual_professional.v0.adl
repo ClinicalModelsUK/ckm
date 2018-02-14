@@ -49,8 +49,8 @@ description
 		["original_namespace"] = <"uk.org.clinicalmodels">
 		["original_publisher"] = <"UK Clinical Models">
 		["custodian_namespace"] = <"uk.org.clinicalmodels">
-		["MD5-CAM-1.0.1"] = <"A13FD26B2B788701EC7845ACDC24F1FB">
-		["build_uid"] = <"6133d895-2e52-431d-8f19-d437310a0607">
+		["MD5-CAM-1.0.1"] = <"1FCE7ADA959B5E7C434BFAE466A9568F">
+		["build_uid"] = <"834f2c4f-86a1-4f49-ac78-74451d2fe89d">
 		["revision"] = <"0.0.1-alpha">
 	>
 
@@ -59,7 +59,7 @@ definition
 		items cardinality matches {1..*; unordered} matches {
 			allow_archetype CLUSTER[at0015] occurrences matches {0..1} matches {	-- Name
 				include
-					archetype_id/value matches {/openEHR-EHR-CLUSTER\.person_name\.v1/}
+					archetype_id/value matches {/openEHR-EHR-CLUSTER\.person_name(-[a-zA-Z0-9_]+)*\.v0|openEHR-EHR-CLUSTER\.person_name(-[a-zA-Z0-9_]+)*\.v1/}
 				exclude
 					archetype_id/value matches {/.*/}
 			}
