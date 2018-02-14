@@ -29,8 +29,8 @@ description
 		["original_namespace"] = <"uk.org.clinicalmodels">
 		["original_publisher"] = <"UK Clinical Models">
 		["custodian_namespace"] = <"uk.org.clinicalmodels">
-		["MD5-CAM-1.0.1"] = <"C0A3D0B45D0FBB28657D1C56229E85A7">
-		["build_uid"] = <"80b090d1-5aa0-43a8-a370-786770d93e52">
+		["MD5-CAM-1.0.1"] = <"AA45A4552E64A5CC08104414CDA59D7A">
+		["build_uid"] = <"c9e34c32-2608-45df-a66c-e758bca7c699">
 		["revision"] = <"0.0.1-alpha">
 	>
 
@@ -323,7 +323,7 @@ ontology
 				>
 				["at0039"] = <
 					text = <"Care priority scale">
-					description = <"Indication on a scale of 1 - 100 of where priority for care should be. 1 indicates absolute priority on sustaining life (even at the expense of comfort) and 10 indicates absolute priority on comfort (even at the expense of sustaining life).">
+					description = <"Indication on a scale of 1 - 100 of where priority for care should be. 1 indicates absolute priority on sustaining life (even at the expense of comfort) and 100 indicates absolute priority on comfort (even at the expense of sustaining life).">
 				>
 			>
 		>
