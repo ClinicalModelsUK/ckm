@@ -30,8 +30,8 @@ description
 		["original_namespace"] = <"uk.org.clinicalmodels">
 		["original_publisher"] = <"UK Clinical Models">
 		["custodian_namespace"] = <"uk.org.clinicalmodels">
-		["MD5-CAM-1.0.1"] = <"7F0585D5630BDF45FCB12B1A34DC89F6">
-		["build_uid"] = <"8d7c432a-ad24-43ef-b4a9-b1f547e5f307">
+		["MD5-CAM-1.0.1"] = <"515C9D0941C71DB216C881A73E7D8680">
+		["build_uid"] = <"b72dd078-0cbc-480e-842a-dfe38f901420">
 		["revision"] = <"0.0.1-alpha">
 	>
 
@@ -68,6 +68,10 @@ definition
 						value matches {
 							DV_TEXT matches {*}
 						}
+					}
+					allow_archetype CLUSTER[at0016] occurrences matches {0..*} matches {	-- Link to record of discussion
+						include
+							archetype_id/value matches {/openEHR-EHR-CLUSTER\.multimedia(-[a-zA-Z0-9_]+)*\.v1/}
 					}
 					ELEMENT[at0014] occurrences matches {0..1} matches {	-- Date of recommendations
 						value matches {
@@ -147,6 +151,10 @@ ontology
 				["at0015"] = <
 					text = <"Name and role of those involved in decision making">
 					description = <"Name and role of those involved in decision making.">
+				>
+				["at0016"] = <
+					text = <"Link to record of discussion">
+					description = <"Link to record of discussion if held in a remote location.">
 				>
 			>
 		>
