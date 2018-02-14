@@ -15,9 +15,9 @@ description
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
-			purpose = <"To record relevant contacts for the patient or client, including formal and informal carers, next of kin and key workers. These may be used within the context of a specific care plan or care pathway or may represent a more holistic vew of the key contacts involved in a person's care.">
+			purpose = <"To record relevant contacts for the patient or client, including formal and informal carers, next of kin, legal proxy and key workers. These may be used within the context of a specific care plan or care pathway or may represent a more holistic vew of the key contacts involved in a person's care.">
 			use = <"">
-			keywords = <"contact", "carer", "worker", "professional">
+			keywords = <"contact", "carer", "worker", "professional", "legal proxy">
 			misuse = <"">
 			copyright = <"© Clinical Models UK">
 		>
@@ -36,8 +36,8 @@ Available from: https://www.rcplondon.ac.uk/sites/default/files/standards-for-th
 		["original_namespace"] = <"uk.org.clinicalmodels">
 		["original_publisher"] = <"UK Clinical Models">
 		["custodian_namespace"] = <"uk.org.clinicalmodels">
-		["MD5-CAM-1.0.1"] = <"8D443812E4D98F215BF3127521C52BB8">
-		["build_uid"] = <"2e3f1d03-3245-4c70-9f88-a3f6050b319c">
+		["MD5-CAM-1.0.1"] = <"9CC0B83E6A153CB7FF937C37C42835FB">
+		["build_uid"] = <"441cc48f-1a9b-4457-95ef-92fa4c3c798e">
 		["revision"] = <"0.0.1-alpha">
 	>
 
@@ -97,7 +97,7 @@ ontology
 			items = <
 				["at0000"] = <
 					text = <"Relevant contact">
-					description = <"Relevant contact for the patient or client, including formal and informal carers, next of kin and key workers.">
+					description = <"Relevant contact for the patient or client, including formal and informal carers, next of kin, legal proxy and key workers.">
 				>
 				["at0001"] = <
 					text = <"Tree">
@@ -109,7 +109,7 @@ ontology
 				>
 				["at0013"] = <
 					text = <"Personal details">
-					description = <"Personal details of the informal carer.">
+					description = <"Personal details of the relevant contact.">
 				>
 				["at0017"] = <
 					text = <"Note">
@@ -121,7 +121,7 @@ ontology
 				>
 				["at0030"] = <
 					text = <"Relationship">
-					description = <"For an informal carer, the personal relationship with the client/carer e.g spouse or friend . For a formal carer, the professional role or responsibility of the carer with respect to the person which should help identify them as being an appropriate contact for an aspect of care, usually a professional role or care pathway name.">
+					description = <"For an informal carer, the personal relationship with the client/carer e.g spouse or friend. For a formal carer, the professional role or responsibility of the carer with respect to the person which should help identify them as being an appropriate contact for an aspect of care, usually a professional role or care pathway name.">
 				>
 				["at0035"] = <
 					text = <"Relationship category">
