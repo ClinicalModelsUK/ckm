@@ -108,8 +108,14 @@
         <Rule path="/protocol[at0032]" hide_on_form="true" />
         <Rule path="/protocol[at0032]/items[at0070]" max="0" />
       </Item>
-      <Item xsi:type="EVALUATION" archetype_id="openEHR-EHR-EVALUATION.advance_planning_documentation.v0" concept_name="Advance planning documentation" max="1" path="/items[at0001]/items[at0005]/items">
-        <Rule path="/data[at0001]" hide_on_form="true" />
+      <Item xsi:type="EVALUATION" archetype_id="openEHR-EHR-EVALUATION.advance_planning_documentation.v0" concept_name="Advance planning documentation" path="/items[at0001]/items[at0005]/items">
+        <Items xsi:type="CLUSTER" archetype_id="openEHR-EHR-CLUSTER.multimedia.v1" concept_name="Multimedia Resource" path="/data[at0001]/items[at0003]/items[at0005]" hide_on_form="true">
+          <Rule path="/items[at0001]" name="Link to document" />
+          <Rule path="/items[at0002]" max="0" />
+          <Rule path="/items[at0005]" max="0" />
+          <Rule path="/items[at0003]" max="0" />
+          <Rule path="/items[at0004]" max="0" />
+        </Items>
       </Item>
       <Item xsi:type="ADMIN_ENTRY" archetype_id="openEHR-EHR-ADMIN_ENTRY.organ_donation_preferences.v0" concept_name="Organ donation preferences" max="1" path="/items[at0001]/items[at0005]/items">
         <Rule path="/data[at0001]" hide_on_form="true" />
@@ -122,11 +128,13 @@
         <Rule path="/data[at0001]/items[at0036]" max="0" />
         <Rule path="/data[at0001]/items[at0030]" max="0" />
         <Rule path="/data[at0001]/items[at0029]" max="0" />
+        <Rule path="/data[at0001]/items[at0038]" name="Patient care priority" />
         <Rule path="/protocol[at0031]" hide_on_form="true" />
         <Rule path="/protocol[at0031]/items[at0026]" max="0" />
       </Item>
       <Item xsi:type="EVALUATION" archetype_id="openEHR-EHR-EVALUATION.recommendation-respect.v0" concept_name="ReSPECT clinical recommendation" max="1" path="/items[at0007]/items" name="Clinical recommendation">
         <Rule path="/data[at0001]" hide_on_form="true" />
+        <Rule path="/data[at0001]/items[at0002.1]" name="Clinical focus" />
         <Rule path="/protocol[at0004]" hide_on_form="true" />
       </Item>
       <Item xsi:type="EVALUATION" archetype_id="openEHR-EHR-EVALUATION.cpr_decision_uk.v0" concept_name="CPR decision" max="1" path="/items[at0007]/items">
@@ -142,7 +150,7 @@
       </Item>
       <Item xsi:type="ADMIN_ENTRY" archetype_id="openEHR-EHR-ADMIN_ENTRY.capacity_respect.v0" concept_name="Capacity ReSPECT" max="1" path="/items[at0008]/items" hide_on_form="true">
         <Rule path="/data[at0001]" hide_on_form="true" />
-        <Items xsi:type="CLUSTER" archetype_id="openEHR-EHR-CLUSTER.person_name.v1" concept_name="Person name" path="/data[at0001]/items[at0007]" hide_on_form="true">
+        <Items xsi:type="CLUSTER" archetype_id="openEHR-EHR-CLUSTER.person_name.v0" concept_name="Person name" path="/data[at0001]/items[at0007]">
           <Rule path="/items[at0006]" max="0" />
           <Rule path="/items[at0022]" max="0" />
           <Rule path="/items[at0001]" name="Name of person holding parental responsibility" />
@@ -153,12 +161,19 @@
       <Item xsi:type="ADMIN_ENTRY" archetype_id="openEHR-EHR-ADMIN_ENTRY.involvement_respect.v0" concept_name="Involvement ReSPECT" max="1" path="/items[at0009]/items" hide_on_form="true">
         <Rule path="/data[at0001]" hide_on_form="true" />
         <Rule path="/data[at0001]/items[at0012]/items[at0002]" min="1" />
+        <Items xsi:type="CLUSTER" archetype_id="openEHR-EHR-CLUSTER.multimedia.v1" concept_name="Multimedia Resource" path="/data[at0001]/items[at0016]" hide_on_form="true">
+          <Rule path="/items[at0001]" name="Link to record of discussion" />
+          <Rule path="/items[at0002]" max="0" />
+          <Rule path="/items[at0005]" max="0" />
+          <Rule path="/items[at0003]" max="0" />
+          <Rule path="/items[at0004]" max="0" />
+        </Items>
         <Items xsi:type="CLUSTER" archetype_id="openEHR-EHR-CLUSTER.individual_professional.v0" concept_name="Individual professional demographics (UK)" path="/data[at0001]/items[at0015]" hide_on_form="true">
           <Rule path="/items[at0006]" max="0" />
           <Rule path="/items[at0005]" name="Role of person involved in decision making" />
           <Rule path="/items[at0012]" max="0" />
           <Rule path="/items[at0011]" max="0" />
-          <Items xsi:type="CLUSTER" archetype_id="openEHR-EHR-CLUSTER.person_name.v1" concept_name="Person name" max="1" path="/items[at0015]" hide_on_form="true">
+          <Items xsi:type="CLUSTER" archetype_id="openEHR-EHR-CLUSTER.person_name.v0" concept_name="Person name" max="1" path="/items[at0015]" hide_on_form="true">
             <Rule path="/items[at0006]" max="0" />
             <Rule path="/items[at0022]" max="0" />
             <Rule path="/items[at0001]" name="Name of person involved in decision making" />
@@ -179,12 +194,24 @@
           <Rule path="/items[at0005]" name="Clinician Grade" />
           <Rule path="/items[at0012]" max="0" />
           <Rule path="/items[at0011]" max="1" name="Clinician Professional Identifier" />
-          <Items xsi:type="CLUSTER" archetype_id="openEHR-EHR-CLUSTER.person_name.v1" concept_name="Person name" max="1" path="/items[at0015]" hide_on_form="true">
+          <Items xsi:type="CLUSTER" archetype_id="openEHR-EHR-CLUSTER.person_name.v0" concept_name="Person name" max="1" path="/items[at0015]" hide_on_form="true">
             <Rule path="/items[at0006]" max="0" />
             <Rule path="/items[at0022]" max="0" />
             <Rule path="/items[at0001]" name="Clinician name other than Senior Responsible Clinician" />
             <Rule path="/items[at0002]" max="0" />
             <Rule path="/items[at0014]" max="0" />
+          </Items>
+          <Items xsi:type="CLUSTER" archetype_id="openEHR-EHR-CLUSTER.comms_contact_uk.v0" concept_name="Comms contact details" path="/items[at0017]" hide_on_form="true">
+            <Rule path="/items[at0002]" name="Telephone" />
+            <Rule path="/items[at0003]" max="0" />
+            <Rule path="/items[at0020]" max="0" />
+            <Rule path="/items[at0021]" max="0" />
+          </Items>
+          <Items xsi:type="CLUSTER" archetype_id="openEHR-EHR-CLUSTER.comms_contact_uk.v0" concept_name="Comms contact details" max="1" path="/items[at0017]" name="Comms contact details #1" hide_on_form="true">
+            <Rule path="/items[at0002]" name="Email" />
+            <Rule path="/items[at0003]" max="0" />
+            <Rule path="/items[at0020]" max="0" />
+            <Rule path="/items[at0021]" max="0" />
           </Items>
         </Items>
       </Item>
@@ -206,12 +233,24 @@
           <Rule path="/items[at0005]" name="Senior Responsible Clinician Grade" />
           <Rule path="/items[at0012]" max="0" />
           <Rule path="/items[at0011]" max="1" name="Senior Responsible Clinician Professional Identifier" />
-          <Items xsi:type="CLUSTER" archetype_id="openEHR-EHR-CLUSTER.person_name.v1" concept_name="Person name" max="1" path="/items[at0015]" hide_on_form="true">
+          <Items xsi:type="CLUSTER" archetype_id="openEHR-EHR-CLUSTER.person_name.v0" concept_name="Person name" max="1" path="/items[at0015]" hide_on_form="true">
             <Rule path="/items[at0006]" max="0" />
             <Rule path="/items[at0022]" max="0" />
             <Rule path="/items[at0001]" name="Senior Responsible Clinician name" />
             <Rule path="/items[at0002]" max="0" />
             <Rule path="/items[at0014]" max="0" />
+          </Items>
+          <Items xsi:type="CLUSTER" archetype_id="openEHR-EHR-CLUSTER.comms_contact_uk.v0" concept_name="Comms contact details" path="/items[at0017]" hide_on_form="true">
+            <Rule path="/items[at0002]" name="Telephone" />
+            <Rule path="/items[at0003]" max="0" />
+            <Rule path="/items[at0020]" max="0" />
+            <Rule path="/items[at0021]" max="0" />
+          </Items>
+          <Items xsi:type="CLUSTER" archetype_id="openEHR-EHR-CLUSTER.comms_contact_uk.v0" concept_name="Comms contact details" max="1" path="/items[at0017]" name="Comms contact details #2" hide_on_form="true">
+            <Rule path="/items[at0002]" name="Email" />
+            <Rule path="/items[at0003]" max="0" />
+            <Rule path="/items[at0020]" max="0" />
+            <Rule path="/items[at0021]" max="0" />
           </Items>
         </Items>
       </Item>
@@ -229,7 +268,7 @@
         <Rule path="/data[at0001]/items[at0025]" max="0" />
         <Rule path="/data[at0001]/items[at0017]" name="Other details" />
         <Rule path="/data[at0001]/items[at0008]" max="0" />
-        <Items xsi:type="CLUSTER" archetype_id="openEHR-EHR-CLUSTER.person_name.v1" concept_name="Person name" max="1" path="/data[at0001]/items[at0013]" hide_on_form="true">
+        <Items xsi:type="CLUSTER" archetype_id="openEHR-EHR-CLUSTER.person_name.v0" concept_name="Person name" max="1" path="/data[at0001]/items[at0013]" hide_on_form="true">
           <Rule path="/items[at0006]" max="0" />
           <Rule path="/items[at0022]" max="0" />
           <Rule path="/items[at0001]" name="Name" />
@@ -238,6 +277,12 @@
         </Items>
         <Items xsi:type="CLUSTER" archetype_id="openEHR-EHR-CLUSTER.comms_contact_uk.v0" concept_name="Comms contact details" path="/data[at0001]/items[at0013]" hide_on_form="true">
           <Rule path="/items[at0002]" name="Telephone" />
+          <Rule path="/items[at0003]" max="0" />
+          <Rule path="/items[at0020]" max="0" />
+          <Rule path="/items[at0021]" max="0" />
+        </Items>
+        <Items xsi:type="CLUSTER" archetype_id="openEHR-EHR-CLUSTER.comms_contact_uk.v0" concept_name="Comms contact details" max="1" path="/data[at0001]/items[at0013]" name="Comms contact details #1" hide_on_form="true">
+          <Rule path="/items[at0002]" name="Email" />
           <Rule path="/items[at0003]" max="0" />
           <Rule path="/items[at0020]" max="0" />
           <Rule path="/items[at0021]" max="0" />
@@ -259,12 +304,24 @@
           <Rule path="/items[at0006]" name="Specialty" />
           <Rule path="/items[at0012]" max="0" />
           <Rule path="/items[at0011]" max="1" />
-          <Items xsi:type="CLUSTER" archetype_id="openEHR-EHR-CLUSTER.person_name.v1" concept_name="Person name" max="1" path="/items[at0015]" hide_on_form="true">
+          <Items xsi:type="CLUSTER" archetype_id="openEHR-EHR-CLUSTER.person_name.v0" concept_name="Person name" max="1" path="/items[at0015]" hide_on_form="true">
             <Rule path="/items[at0006]" max="0" />
             <Rule path="/items[at0022]" max="0" />
             <Rule path="/items[at0001]" name="Clinician name" />
             <Rule path="/items[at0002]" max="0" />
             <Rule path="/items[at0014]" max="0" />
+          </Items>
+          <Items xsi:type="CLUSTER" archetype_id="openEHR-EHR-CLUSTER.comms_contact_uk.v0" concept_name="Comms contact details" path="/items[at0017]" hide_on_form="true">
+            <Rule path="/items[at0002]" name="Telephone" />
+            <Rule path="/items[at0003]" max="0" />
+            <Rule path="/items[at0020]" max="0" />
+            <Rule path="/items[at0021]" max="0" />
+          </Items>
+          <Items xsi:type="CLUSTER" archetype_id="openEHR-EHR-CLUSTER.comms_contact_uk.v0" concept_name="Comms contact details" max="1" path="/items[at0017]" name="Comms contact details #1" hide_on_form="true">
+            <Rule path="/items[at0002]" name="Email" />
+            <Rule path="/items[at0003]" max="0" />
+            <Rule path="/items[at0020]" max="0" />
+            <Rule path="/items[at0021]" max="0" />
           </Items>
         </Items>
       </Item>
@@ -280,7 +337,7 @@
     <digest id="MD5-CAM-1.0.1">FEFB2B28ABDA579320990530AE02A5D6</digest>
   </integrity_checks>
   <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-SECTION.respect_headings.v0">
-    <digest id="MD5-CAM-1.0.1">678BF4CBCD3FD7FD4BD58EC523D5B12B</digest>
+    <digest id="MD5-CAM-1.0.1">A1030EE109C62C1994B2B6DEB4DCA3A2</digest>
   </integrity_checks>
   <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-ADMIN_ENTRY.respect_summary.v0">
     <digest id="MD5-CAM-1.0.1">42B6229D24EED33B6F2F91135E0B4841</digest>
@@ -298,13 +355,16 @@
     <digest id="MD5-CAM-1.0.1">BAD4AC1A9EC2630E3CED381D1EBBAEE2</digest>
   </integrity_checks>
   <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-EVALUATION.advance_planning_documentation.v0">
-    <digest id="MD5-CAM-1.0.1">B365A6866D8E4B489777B332CEA7F70D</digest>
+    <digest id="MD5-CAM-1.0.1">0234ABFF2EF49C6131377ACB89A9507F</digest>
+  </integrity_checks>
+  <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-CLUSTER.multimedia.v1">
+    <digest id="MD5-CAM-1.0.1">626AFF94BCD3048F45914AD130D54262</digest>
   </integrity_checks>
   <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-ADMIN_ENTRY.organ_donation_preferences.v0">
-    <digest id="MD5-CAM-1.0.1">0BCF599D154B6B3763FB7731A9887566</digest>
+    <digest id="MD5-CAM-1.0.1">9600D96AB99E8C64E6BAC82A2C40AE05</digest>
   </integrity_checks>
   <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-EVALUATION.care_preference_uk.v0">
-    <digest id="MD5-CAM-1.0.1">C0A3D0B45D0FBB28657D1C56229E85A7</digest>
+    <digest id="MD5-CAM-1.0.1">AA45A4552E64A5CC08104414CDA59D7A</digest>
   </integrity_checks>
   <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-EVALUATION.recommendation-respect.v0">
     <digest id="MD5-CAM-1.0.1">E2268C8091910EEAA7907DFC142352FB</digest>
@@ -315,17 +375,17 @@
   <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-ADMIN_ENTRY.capacity_respect.v0">
     <digest id="MD5-CAM-1.0.1">DB522FC91E92B10221F17FA8AE1C6555</digest>
   </integrity_checks>
-  <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-CLUSTER.person_name.v1">
-    <digest id="MD5-CAM-1.0.1">2D8CF370D3AEC6DDC6F9847963051B89</digest>
+  <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-CLUSTER.person_name.v0">
+    <digest id="MD5-CAM-1.0.1">4A2B8D4C0E557A14843B5DBA7D434820</digest>
   </integrity_checks>
   <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-ADMIN_ENTRY.involvement_respect.v0">
-    <digest id="MD5-CAM-1.0.1">7F0585D5630BDF45FCB12B1A34DC89F6</digest>
+    <digest id="MD5-CAM-1.0.1">7FB6236F0601938A55B509F4384C57C5</digest>
   </integrity_checks>
   <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-CLUSTER.individual_professional.v0">
-    <digest id="MD5-CAM-1.0.1">A13FD26B2B788701EC7845ACDC24F1FB</digest>
+    <digest id="MD5-CAM-1.0.1">1FCE7ADA959B5E7C434BFAE466A9568F</digest>
   </integrity_checks>
   <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-ADMIN_ENTRY.relevant_contact_rcp.v0">
-    <digest id="MD5-CAM-1.0.1">8D443812E4D98F215BF3127521C52BB8</digest>
+    <digest id="MD5-CAM-1.0.1">9CC0B83E6A153CB7FF937C37C42835FB</digest>
   </integrity_checks>
   <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-CLUSTER.comms_contact_uk.v0">
     <digest id="MD5-CAM-1.0.1">0145BC98B33EE3F0AF419F90A8CF6F75</digest>
