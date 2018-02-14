@@ -30,8 +30,8 @@ description
 		["original_namespace"] = <"uk.org.clinicalmodels">
 		["original_publisher"] = <"UK Clinical Models">
 		["custodian_namespace"] = <"uk.org.clinicalmodels">
-		["MD5-CAM-1.0.1"] = <"B365A6866D8E4B489777B332CEA7F70D">
-		["build_uid"] = <"02dee874-14f0-4a04-b0d3-487e3239d93b">
+		["MD5-CAM-1.0.1"] = <"0234ABFF2EF49C6131377ACB89A9507F">
+		["build_uid"] = <"1caf1d4e-0200-4e64-9654-b4026580d489">
 		["revision"] = <"0.0.1-alpha">
 	>
 
@@ -51,6 +51,10 @@ definition
 								value matches {
 									DV_TEXT matches {*}
 								}
+							}
+							allow_archetype CLUSTER[at0005] occurrences matches {0..*} matches {	-- Link to document
+								include
+									archetype_id/value matches {/.*/}
 							}
 						}
 					}
@@ -83,6 +87,10 @@ ontology
 				["at0004"] = <
 					text = <"Location">
 					description = <"Location of advance planning document.">
+				>
+				["at0005"] = <
+					text = <"Link to document">
+					description = <"Link to Advance planning document if this is stored in a remote location.">
 				>
 			>
 		>
