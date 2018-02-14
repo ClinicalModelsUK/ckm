@@ -30,8 +30,8 @@ description
 		["original_namespace"] = <"uk.org.clinicalmodels">
 		["original_publisher"] = <"UK Clinical Models">
 		["custodian_namespace"] = <"uk.org.clinicalmodels">
-		["MD5-CAM-1.0.1"] = <"678BF4CBCD3FD7FD4BD58EC523D5B12B">
-		["build_uid"] = <"808ee3f9-4ac4-44d2-bf10-f23a3eec6626">
+		["MD5-CAM-1.0.1"] = <"A1030EE109C62C1994B2B6DEB4DCA3A2">
+		["build_uid"] = <"9ace90ff-4e80-4da7-b31d-cfdfaa670720">
 		["revision"] = <"0.0.1-alpha">
 	>
 
@@ -100,6 +100,7 @@ ontology
 				["at0010"] = <
 					text = <"7. Clinician signatures">
 					description = <"Details of clinicians involved in making ReSPECT plan.">
+					comment = <"Implementation guidance - Add prompt to UI: The clinical signature is to indicate that the decision-making process has fully complied with relevant capacity and Human Rights legislation.">
 				>
 				["at0011"] = <
 					text = <"8. Emergency contacts">
