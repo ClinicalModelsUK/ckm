@@ -30,8 +30,8 @@ description
 		["original_namespace"] = <"uk.org.clinicalmodels">
 		["original_publisher"] = <"UK Clinical Models">
 		["custodian_namespace"] = <"uk.org.clinicalmodels">
-		["MD5-CAM-1.0.1"] = <"515C9D0941C71DB216C881A73E7D8680">
-		["build_uid"] = <"b72dd078-0cbc-480e-842a-dfe38f901420">
+		["MD5-CAM-1.0.1"] = <"EB14E164E93AE8B8D4AD2D2C73E55CC8">
+		["build_uid"] = <"b0b50c09-3084-49c3-9bc5-c2aa2228bf41">
 		["revision"] = <"0.0.1-alpha">
 	>
 
@@ -73,7 +73,7 @@ definition
 						include
 							archetype_id/value matches {/openEHR-EHR-CLUSTER\.multimedia(-[a-zA-Z0-9_]+)*\.v1/}
 					}
-					ELEMENT[at0014] occurrences matches {0..1} matches {	-- Date of recommendations
+					ELEMENT[at0014] occurrences matches {0..1} matches {	-- Date recommendations made
 						value matches {
 							DV_DATE_TIME matches {*}
 						}
@@ -121,7 +121,8 @@ ontology
 					description = <"Description of reason for not selecting Options A, B or C or where C1 or C2 is selected without selecting C3.">
 					comment = <"Additional implementation guidance: in an electronic format, if someone selects D we could have a line coming up explaining that the only legal reasons for selecting D are:
 1. if the physician thinks it would cause the patient physiological or psychological harm
-2. if the patient lacks capacity, and it is not practicable or appropriate to contact those close to them.">
+2. if the patient lacks capacity, and it is not practicable or appropriate to contact those close to them.
+If C1 or C2 has been selected without selecting C3, please document why involvement of those holding parental responsibility has not been possible.">
 				>
 				["at0009"] = <
 					text = <"Location of record of discussion">
@@ -145,7 +146,7 @@ ontology
 					description = <"No other option has been selected, and valid reason is stated below. Full explanation is documented in clinical record.">
 				>
 				["at0014"] = <
-					text = <"Date of recommendations">
+					text = <"Date recommendations made">
 					description = <"Date when recommendations are made.">
 				>
 				["at0015"] = <
